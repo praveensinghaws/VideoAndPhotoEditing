@@ -1,0 +1,221 @@
+{
+        Tools = ordered() {
+                JustAutoZoom1 = MacroOperator {
+                        Inputs = ordered() {
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "Resize1",
+                                        Source = "Input",
+                                },
+                                Input1 = InstanceInput {
+                                        SourceOp = "TransformMain",
+                                        Source = "Pivot",
+                                        Name = "Position",
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "TransformMain",
+                                        Source = "Size",
+                                        Name = "Zoom",
+                                        Default = 1.3,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "FramesIn",
+                                        Default = 15,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "FramesOut",
+                                        Default = 15,
+                                },
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "JTC",
+                                        Source = "Output",
+                                }
+                        },
+                        ViewInfo = GroupInfo { Pos = { 0, 0 } },
+                        Tools = ordered() {
+                                PipeRouter1 = PipeRouter {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Input = Input {
+                                                        SourceOp = "TransformOver",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = PipeRouterInfo { Pos = { 98.8231, 8.04572 } },
+                                },
+                                Resize1 = BetterResize {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                HiQOnly = Input { Value = 0, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -227.083, 75.9254 } },
+                                },
+                                Merge4_1 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Resize1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "TransformMain",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -40.407, 101.469 } },
+                                },
+                                TransformOver = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Center = Input { Expression = ":local tani=JTC.Value;\nif tani>=1 then;\n  return Point(.5,.5);\nend;\nlocal fr=JTC.FramesIn;\n\nlocal tm=iif(time>fr,comp.RenderEnd-fr,fr)\nlocal scale=TransformMain:GetValue(\"Size\",tm);local pv=TransformMain:GetValue(\"Pivot\",tm);\nlocal offy=.5-(.5-(.5-pv.Y)*(1-scale));\nlocal offx=.5-(.5+(.5-pv.X)*(1-scale));\nlocal pt=nil;\nif tani>=1  then;\n  pt=Point(1-pv.X,1-pv.Y);\nelse;\n  pt=Point(.5+offx*tani,.5-offy*tani);\nend;\nreturn pt\n", },
+                                                Size = Input { Expression = ":local tani=JTC.Value;\nif tani>=1 then;\nreturn 1;\nend;\nlocal fr=JTC.FramesIn;\nlocal tm=iif(time>fr,comp.RenderEnd-fr,fr);\nlocal tsize=TransformMain:GetValue(\"Size\",tm)-1;\ntsize=iif(tani>=1,tsize,tsize*tani);return (tsize+1)\n", },
+                                                Input = Input {
+                                                        SourceOp = "Resize1",
+                                                        Source = "Output",
+                                                },
+                                                StartRenderScripts = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -40.407, 8.04572 } },
+                                },
+                                Merge5 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Blend = Input {
+                                                        Value = 0,
+                                                        Expression = "floor(1.9999-JTC.Value)",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Merge4_1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "PipeRouter1",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 99.129, 101.385 } },
+                                },
+                                TransformMain = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Size = Input { Value = 1.3, },
+                                                Input = Input {
+                                                        SourceOp = "Resize1",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -40.8719, 57.6734 } },
+                                },
+                                JTC = Merge {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Blend = Input { Expression = "Value", },
+                                                Background = Input {
+                                                        SourceOp = "Merge5",
+                                                        Source = "Output",
+                                                },
+                                                Merge = Input { Value = 0, },
+                                                AnimatedValues = Input { Value = 1, },
+                                                ValueIn = Input {
+                                                        SourceOp = "EaseInCurves",
+                                                        Source = "Value",
+                                                },
+                                                ValueOut = Input {
+                                                        SourceOp = "EaseOutCurves",
+                                                        Source = "Value",
+                                                },
+                                                Value = Input {
+                                                        Value = 1,
+                                                        Expression = "iif((time-comp.RenderStart)<(comp.RenderEnd-comp.RenderStart)/2,ValueIn,ValueOut) ",
+                                                },
+                                                ValueRange = Input { Value = 1, },
+                                                Hold = Input { Value = 1, },
+                                                TimingControl = Input { Value = 1, },
+                                                FramesIn = Input { Value = 15, },
+                                                FramesOut = Input { Value = 15, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 233.642, 101.385 } },
+                                        UserControls = ordered() { AnimatedValues = { INP_Integer = false, LBLC_DropDownButton = true, LBLC_NumInputs = 3, LINKID_DataType = "Number", INPID_InputControl = "LabelControl", LINKS_Name = "Animated Values" }, ValueIn = { INP_MaxAllowed = 5000, INP_Integer = false, INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", LINKS_Name = "Value In" }, ValueOut = { INP_MaxAllowed = 5000, INP_Integer = false, INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", LINKS_Name = "Value Out" }, Value = { INP_MaxAllowed = 5000, INP_Integer = false, INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", LINKS_Name = "Value" }, ValueRange = { INP_Integer = false, LBLC_DropDownButton = true, LBLC_NumInputs = 3, LINKID_DataType = "Number", INPID_InputControl = "LabelControl", LINKS_Name = "Value Range" }, Start = { INP_MaxAllowed = 5000, INP_Integer = false, INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", LINKS_Name = "Start" }, Hold = { INP_MaxAllowed = 5000, INP_Integer = false, INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", LINKS_Name = "Hold" }, End = { INP_MaxAllowed = 5000, INP_Integer = false, INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", LINKS_Name = "End" }, TimingControl = { INP_Integer = false, LBLC_DropDownButton = true, LBLC_NumInputs = 4, LINKID_DataType = "Number", INPID_InputControl = "LabelControl", LINKS_Name = "Timing Control" }, FramesIn = { INP_MaxAllowed = 5000, INP_Integer = false,  INP_MaxScale = 100, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", LINKS_Name = "Frames In" }, FramesOut = { INP_MaxAllowed = 5000, INP_Integer = false, INP_MaxScale = 100, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", LINKS_Name = "Frames Out" }, DelayIn = { INP_MaxAllowed = 10000, INP_Integer = false, INP_MaxScale = 250, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", LINKS_Name = "DelayIn" }, DelayOut = { INP_MaxAllowed = 10000, INP_Integer = false, INP_MaxScale = 250, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", LINKS_Name = "DelayOut" } }
+                                },
+                                EaseInCurves = LUTLookup {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Source = Input { Value = FuID { "Duration" }, },
+                                                Curve = Input { Value = FuID { "Easing" }, },
+                                                EaseIn = Input { Value = FuID { "Sine" }, },
+                                                EaseOut = Input { Value = FuID { "Sine" }, },
+                                                Lookup = Input {
+                                                        SourceOp = "AnimCurvesonJTCLookup",
+                                                        Source = "Value",
+                                                },
+                                                Scale = Input { Expression = "JTC.Hold-JTC.Start", },
+                                                Offset = Input { Expression = "JTC.Start", },
+                                                TimeScale = Input {
+                                                        Value = 7.93333333333333,
+                                                        Expression = "(comp.RenderEnd-comp.RenderStart)/JTC.FramesIn",
+                                                },
+                                                TimeOffset = Input { Expression = "JTC.DelayIn/(comp.RenderEnd-comp.RenderStart)", },
+                                        },
+                                },
+                                AnimCurvesonJTCLookup = LUTBezier {
+                                        KeyColorSplines = {
+                                                [0] = {
+                                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                                }
+                                        },
+                                        SplineColor = { Red = 255, Green = 255, Blue = 255 },
+                                },
+                                EaseOutCurves = LUTLookup {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Source = Input { Value = FuID { "Duration" }, },
+                                                Curve = Input { Value = FuID { "Easing" }, },
+                                                EaseIn = Input { Value = FuID { "Sine" }, },
+                                                EaseOut = Input { Value = FuID { "Sine" }, },
+                                                Lookup = Input {
+                                                        SourceOp = "AnimCurvesonJTCLookup1",
+                                                        Source = "Value",
+                                                },
+                                                Scale = Input {
+                                                        Value = -1,
+                                                        Expression = "JTC.End-JTC.Hold",
+                                                },
+                                                Offset = Input {
+                                                        Value = 1,
+                                                        Expression = "JTC.Hold",
+                                                },
+                                                TimeScale = Input {
+                                                        Value = 7.93333333333333,
+                                                        Expression = "(comp.RenderEnd-comp.RenderStart)/JTC.FramesOut",
+                                                },
+                                                TimeOffset = Input {
+                                                        Value = 0.865546218487395,
+                                                        Expression = ":local clen=comp.RenderEnd-comp.RenderStart;return (clen-JTC.FramesOut-1)/clen-(JTC.DelayOut/clen)",
+                                                },
+                                        },
+                                },
+                                AnimCurvesonJTCLookup1 = LUTBezier {
+                                        KeyColorSplines = {
+                                                [0] = {
+                                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                                }
+                                        },
+                                        SplineColor = { Red = 255, Green = 255, Blue = 255 },
+                                }
+                        },
+                }
+        },
+        ActiveTool = "JustAutoZoom1"
+}

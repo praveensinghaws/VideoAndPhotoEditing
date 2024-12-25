@@ -1,0 +1,658 @@
+{
+        Tools = ordered() {
+                AnimateExpress = GroupOperator {
+                        CtrlWZoom = false,
+                        CustomData = {
+                                Settings = {
+                                }
+                        },
+                        Inputs = ordered() {
+                                Input1 = InstanceInput {
+                                        SourceOp = "CT",
+                                        Source = "About",
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "SET",
+                                        Source = "Direction",
+                                        Default = 1,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "SET",
+                                        Source = "Distance",
+                                        Default = 1,
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "SET",
+                                        Source = "Size",
+                                        Default = 1,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "SET",
+                                        Source = "Angle",
+                                        Default = 0,
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "SET",
+                                        Source = "Alpha",
+                                        Default = 1,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "SET",
+                                        Source = "Blur",
+                                        Default = 0,
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "SET",
+                                        Source = "DirectionalBlur",
+                                        Default = 1,
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "SET",
+                                        Source = "EditPivot",
+                                        MinAllowed = -1000000,
+                                        MaxAllowed = 1000000,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "Transform3",
+                                        Source = "Pivot",
+                                },
+                                cInput1 = InstanceInput {
+                                        SourceOp = "AnimCurves1",
+                                        Source = "EaseIn",
+                                },
+                                cInput2 = InstanceInput {
+                                        SourceOp = "AnimCurves1",
+                                        Source = "EaseOut",
+                                },
+                                Input12 = InstanceInput {
+                                        SourceOp = "TransformIN2",
+                                        Source = "MotionBlur",
+                                        Default = 0,
+                                },
+                                Input13 = InstanceInput {
+                                        SourceOp = "TransformIN2",
+                                        Source = "Quality",
+                                        Default = 2,
+                                },
+                                Input14 = InstanceInput {
+                                        SourceOp = "TransformIN2",
+                                        Source = "ShutterAngle",
+                                        Default = 180,
+                                },
+                                Input15 = InstanceInput {
+                                        SourceOp = "TransformIN2",
+                                        Source = "CenterBias",
+                                        Default = 0,
+                                },
+                                Input16 = InstanceInput {
+                                        SourceOp = "TransformIN2",
+                                        Source = "SampleSpread",
+                                        Default = 1,
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "TransformOUT1",
+                                        Source = "Input",
+                                        Name = "Background",
+                                },
+                                MainInput2 = InstanceInput {
+                                        SourceOp = "TransformIN1",
+                                        Source = "Input",
+                                        Name = "Foreground",
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "Merge2",
+                                        Source = "Output",
+                                }
+                        },
+                        ViewInfo = GroupInfo {
+                                Pos = { 404.975, 148.5 },
+                                Flags = {
+                                        Expanded = true,
+                                        AllowPan = false,
+                                        ConnectedSnap = true,
+                                        AutoSnap = true,
+                                        RemoveRouters = true
+                                },
+                                Size = { 957.057, 357.414, 348.528, 24.2424 },
+                                Direction = "Horizontal",
+                                PipeStyle = "Direct",
+                                Scale = 1,
+                                Offset = { -2.57819, 0 }
+                        },
+                        Tools = ordered() {
+                                CT = Custom {
+                                        NameSet = true,
+                                        Inputs = {
+                                                NumberIn3 = Input {
+                                                        SourceOp = "AnimCurves1",
+                                                        Source = "Value",
+                                                },
+                                                LUTIn1 = Input {
+                                                        SourceOp = "CTLUTIn1",
+                                                        Source = "Value",
+                                                },
+                                                LUTIn2 = Input {
+                                                        SourceOp = "CTLUTIn2",
+                                                        Source = "Value",
+                                                },
+                                                LUTIn3 = Input {
+                                                        SourceOp = "CTLUTIn3",
+                                                        Source = "Value",
+                                                },
+                                                LUTIn4 = Input {
+                                                        SourceOp = "CTLUTIn4",
+                                                        Source = "Value",
+                                                },
+                                                About = Input { Value = "JustAnimateExpress by William Justice.  MORE INFO : https://billjustice.com", },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 279.343, 77.7089 } },
+                                        UserControls = ordered() { NewControl = { INP_Integer = false, LINKID_DataType = "Number", CC_LabelPosition = "Horizontal", INPID_InputControl = "ComboControl", LINKS_Name = "New Control", }, NewBARK = { { CCS_AddString = "0 TOP" }, { CCS_AddString = "90 BOTTOM" }, { CCS_AddString = "180 SIDE" }, INP_Integer = false, LINKID_DataType = "Number", INP_Passive = true, CC_LabelPosition = "Horizontal", INPID_InputControl = "ComboControl", LINKS_Name = "New BARK", }, Distance = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Distance", }, Newa2 = { INP_MaxAllowed = 360, INP_Integer = false, INPID_InputControl = "ScrewControl", INP_MaxScale = 360, INP_Default = 0, INP_MinScale = -360, INP_MinAllowed = -360, LINKID_DataType = "Number", LINKS_Name = "New a2", }, About = { TEC_ReadOnly = true, LINKID_DataType = "Text", LINKS_Name = "About", INPID_InputControl = "TextEditControl", TEC_Lines = 5, TEC_Wrap = true, } }
+                                },
+                                SET = Custom {
+                                        NameSet = true,
+                                        Inputs = {
+                                                EditPivot = Input {
+                                                        SourceOp = "Publish2_1_1_1",
+                                                        Source = "Value",
+                                                },
+                                                LUTIn1 = Input {
+                                                        SourceOp = "SETLUTIn1",
+                                                        Source = "Value",
+                                                },
+                                                LUTIn2 = Input {
+                                                        SourceOp = "SETLUTIn2",
+                                                        Source = "Value",
+                                                },
+                                                LUTIn3 = Input {
+                                                        SourceOp = "SETLUTIn3",
+                                                        Source = "Value",
+                                                },
+                                                LUTIn4 = Input {
+                                                        SourceOp = "SETLUTIn4",
+                                                        Source = "Value",
+                                                },
+                                                Direction = Input { Value = 1, },
+                                                Alpha = Input { Value = 0, },
+                                                DirectionalBlur = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 282.032, 30.8031 } },
+                                        UserControls = ordered() { Direction = { { CCS_AddString = "Go Up" }, { CCS_AddString = "Go Right" }, { CCS_AddString = "Go Down" }, { CCS_AddString = "Go Left" }, INP_Integer = false, LINKID_DataType = "Number", CC_LabelPosition = "Horizontal", INPID_InputControl = "ComboControl", LINKS_Name = "Direction", }, Distance = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Distance", }, Angle = { INP_MaxAllowed = 360, INP_Integer = false, INPID_InputControl = "ScrewControl", INP_MaxScale = 360, INP_Default = 0, INP_MinScale = -360, INP_MinAllowed = -360, LINKID_DataType = "Number", LINKS_Name = "Angle", }, Size = { INP_MaxAllowed = 10, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Size", }, Blur = { INP_MaxAllowed = 100, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 100, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Blur", }, Alpha = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Alpha", }, DirectionalBlur = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Directional Blur", }, Pivot = {
+                                                        INPID_PreviewControl = "CrosshairControl",
+                                                        LINKID_DataType = "Point",
+                                                        INPID_InputControl = "OffsetControl",
+                                                        CHC_Style = "DiagonalCross",
+                                                        LINKS_Name = "Pivot",
+                                                } }
+                                },
+                                Publish2 = PublishNumber {
+                                        CtrlWZoom = false,
+                                },
+                                TransformOUT1 = Transform {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Center = Input {
+                                                        Value = { 1.49798714699762, 0.5 },
+                                                        Expression = "Point(0.5-(SET.Distance*CT.NumberIn3*sin((SET.Direction+2)*90*pi/180)), 0.5-(SET.Distance*CT.NumberIn3*cos((SET.Direction+2)*90*pi/180)))",
+                                                },
+                                                Size = Input { Expression = "1-(CT.NumberIn3*(1-SET.Size))", },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -120.626, 13.3411 } },
+                                },
+                                TransformOUT2 = Transform {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                MotionBlur = Input {
+                                                        SourceOp = "Publish1",
+                                                        Source = "Value",
+                                                },
+                                                Quality = Input {
+                                                        SourceOp = "Publish4",
+                                                        Source = "Value",
+                                                },
+                                                ShutterAngle = Input {
+                                                        SourceOp = "Publish5",
+                                                        Source = "Value",
+                                                },
+                                                CenterBias = Input {
+                                                        SourceOp = "Publish6",
+                                                        Source = "Value",
+                                                },
+                                                SampleSpread = Input {
+                                                        SourceOp = "Publish7",
+                                                        Source = "Value",
+                                                },
+                                                Pivot = Input { Expression = "Transform3.Pivot", },
+                                                Angle = Input { Expression = "SET.Angle*CT.NumberIn3", },
+                                                Input = Input {
+                                                        SourceOp = "TransformOUT1",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -120.626, 46.7851 } },
+                                },
+                                Publish1 = PublishNumber {
+                                        CtrlWZoom = false,
+                                },
+                                Publish4 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 2, },
+                                        },
+                                },
+                                Publish5 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 180, },
+                                        },
+                                },
+                                Publish6 = PublishNumber {
+                                        CtrlWZoom = false,
+                                },
+                                Publish7 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 1, },
+                                        },
+                                },
+                                Publish3 = PublishPoint {
+                                        CtrlWZoom = false,
+                                },
+                                BlurOUT2 = Blur {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                XBlurSize = Input {
+                                                        Value = 0,
+                                                        Expression = "SET.Blur*(CT.NumberIn3)",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "TransformOUT2",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -120.626, 78.9351 } },
+                                },
+                                DirBlurOut = ofx.com.blackmagicdesign.resolvefx.DirectionalBlur {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Source = Input {
+                                                        SourceOp = "BlurOUT2",
+                                                        Source = "Output",
+                                                },
+                                                BlurStrength = Input {
+                                                        Value = 0.420200043995151,
+                                                        Expression = "SET.DirectionalBlur*CT.NumberIn3",
+                                                },
+                                                BlurAngle = Input {
+                                                        Value = 180,
+                                                        Expression = "SET.Direction*90+90",
+                                                },
+                                                advancedControlsGroup = Input { Value = 1, },
+                                                blurTypeChoice = Input { Value = FuID { "BlurTypeStylized" }, },
+                                                isSymmetric = Input { Value = 1, },
+                                                BorderType = Input { Value = FuID { "BORDER_TYPE_CONSTANT" }, },
+                                                BlendAmount = Input { Value = 0, },
+                                                blendGroup = Input { Value = 1, },
+                                                blendIn = Input { Value = 1, },
+                                                blend = Input { Value = 0, },
+                                                ignoreContentShape = Input { Value = 0, },
+                                                legacyIsProcessRGBOnly = Input { Value = 0, },
+                                                refreshTrigger = Input { Value = 1, },
+                                                resolvefxVersion = Input { Value = "3.0", },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -120.626, 114.758 } },
+                                },
+                                Merge3 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Blend = Input { Expression = "1-((1-SET.Alpha)*(CT.NumberIn3))", },
+                                                Background = Input {
+                                                        SourceOp = "Background2",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "DirBlurOut",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -120.626, 152.949 } },
+                                },
+                                TransformIN1 = Transform {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Center = Input { Expression = "Point(0.5-(SET.Distance*(1-CT.NumberIn3)*sin(SET.Direction*90*pi/180)), 0.5-(SET.Distance*(1-CT.NumberIn3)*cos(SET.Direction*90*pi/180)))", },
+                                                Size = Input { Expression = "1-((1-CT.NumberIn3)*(1-SET.Size))", },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 14.952, 8.56607 } },
+                                },
+                                TransformIN2 = Transform {
+                                        NameSet = true,
+                                        Inputs = {
+                                                MotionBlur = Input {
+                                                        SourceOp = "Publish1_1_1",
+                                                        Source = "Value",
+                                                },
+                                                Quality = Input {
+                                                        SourceOp = "Publish4_1_1",
+                                                        Source = "Value",
+                                                },
+                                                ShutterAngle = Input {
+                                                        SourceOp = "Publish5_1_1",
+                                                        Source = "Value",
+                                                },
+                                                CenterBias = Input {
+                                                        SourceOp = "Publish6_1_1",
+                                                        Source = "Value",
+                                                },
+                                                SampleSpread = Input {
+                                                        SourceOp = "Publish7_1_1",
+                                                        Source = "Value",
+                                                },
+                                                Pivot = Input { Expression = "Transform3.Pivot", },
+                                                Angle = Input { Expression = "SET.Angle*(1-CT.NumberIn3)", },
+                                                Input = Input {
+                                                        SourceOp = "TransformIN1",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 14.952, 43.0891 } },
+                                },
+                                BlurIN1 = Blur {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                XBlurSize = Input {
+                                                        Value = 0,
+                                                        Expression = "SET.Blur*(1-CT.NumberIn3)",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "TransformIN2",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 14.952, 80.5461 } },
+                                },
+                                DirBlurIn = ofx.com.blackmagicdesign.resolvefx.DirectionalBlur {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Source = Input {
+                                                        SourceOp = "BlurIN1",
+                                                        Source = "Output",
+                                                },
+                                                BlurStrength = Input {
+                                                        Value = 0.579799956004849,
+                                                        Expression = "SET.DirectionalBlur*(1-CT.NumberIn3)",
+                                                },
+                                                BlurAngle = Input {
+                                                        Value = 180,
+                                                        Expression = "SET.Direction*90+90",
+                                                },
+                                                advancedControlsGroup = Input { Value = 1, },
+                                                blurTypeChoice = Input { Value = FuID { "BlurTypeStylized" }, },
+                                                isSymmetric = Input { Value = 1, },
+                                                BorderType = Input { Value = FuID { "BORDER_TYPE_CONSTANT" }, },
+                                                BlendAmount = Input { Value = 0, },
+                                                blendGroup = Input { Value = 1, },
+                                                blendIn = Input { Value = 1, },
+                                                blend = Input { Value = 0, },
+                                                ignoreContentShape = Input { Value = 0, },
+                                                legacyIsProcessRGBOnly = Input { Value = 0, },
+                                                refreshTrigger = Input { Value = 1, },
+                                                resolvefxVersion = Input { Value = "3.0", },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 14.952, 115.455 } },
+                                },
+                                Merge1 = Merge {
+                                        Inputs = {
+                                                Blend = Input { Expression = "1-((1-SET.Alpha)*(1-CT.NumberIn3))", },
+                                                MotionBlur = Input { Value = 1, },
+                                                Background = Input {
+                                                        SourceOp = "Merge3",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "DirBlurIn",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 14.952, 152.949 } },
+                                },
+                                Rect1 = RectangleMask {
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Width = Input { Value = 0.0040110323953, },
+                                                Height = Input { Value = 0.1145636455064, },
+                                                Angle = Input { Value = -45, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 149.766, 10.8921 } },
+                                },
+                                Rect2 = RectangleMask {
+                                        NameSet = true,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "Rect1",
+                                                        Source = "Mask",
+                                                },
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Width = Input { Value = 0.0040110323953, },
+                                                Height = Input { Value = 0.1145636455064, },
+                                                Angle = Input { Value = 45, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 149.766, 44.9871 } },
+                                },
+                                BK1 = Background {
+                                        NameSet = true,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "Rect2",
+                                                        Source = "Mask",
+                                                },
+                                                GlobalOut = Input { Value = 49, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftRed = Input { Value = 0.464, },
+                                                TopLeftGreen = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 149.766, 80.657 } },
+                                },
+                                Transform3 = Transform {
+                                        Inputs = {
+                                                Center = Input {
+                                                        SourceOp = "Publish3",
+                                                        Source = "Value",
+                                                },
+                                                Size = Input { Value = 0.847, },
+                                                Input = Input {
+                                                        SourceOp = "BK1",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 149.766, 115.563 } },
+                                },
+                                Merge2 = Merge {
+                                        Inputs = {
+                                                Blend = Input {
+                                                        SourceOp = "Publish2",
+                                                        Source = "Value",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Merge1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Transform3",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 149.766, 152.949 } },
+                                },
+                                Background2 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 49, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftAlpha = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -286.056, 152.949 } },
+                                },
+                                Publish2_1_1_1 = PublishNumber {
+                                        CtrlWZoom = false,
+                                },
+                                Publish1_1_1 = PublishNumber {
+                                        CtrlWZoom = false,
+                                },
+                                Publish4_1_1 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 2, },
+                                        },
+                                },
+                                Publish5_1_1 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 180, },
+                                        },
+                                },
+                                Publish6_1_1 = PublishNumber {
+                                        CtrlWZoom = false,
+                                },
+                                Publish7_1_1 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 1, },
+                                        },
+                                }
+                        },
+                },
+                AnimCurves1 = LUTLookup {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Curve = Input { Value = FuID { "Easing" }, },
+                                EaseIn = Input { Value = FuID { "Sine" }, },
+                                EaseOut = Input { Value = FuID { "Sine" }, },
+                                Lookup = Input {
+                                        SourceOp = "AnimCurves1Lookup",
+                                        Source = "Value",
+                                },
+                        },
+                },
+                AnimCurves1Lookup = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 255, Green = 255, Blue = 255 },
+                },
+                CTLUTIn1 = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 204, Green = 0, Blue = 0 },
+                        NameSet = true,
+                },
+                CTLUTIn2 = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 0, Green = 204, Blue = 0 },
+                        NameSet = true,
+                },
+                CTLUTIn3 = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 0, Green = 0, Blue = 204 },
+                        NameSet = true,
+                },
+                CTLUTIn4 = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 204, Green = 204, Blue = 204 },
+                        NameSet = true,
+                },
+                SETLUTIn1 = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 204, Green = 0, Blue = 0 },
+                        NameSet = true,
+                },
+                SETLUTIn2 = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 0, Green = 204, Blue = 0 },
+                        NameSet = true,
+                },
+                SETLUTIn3 = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 0, Green = 0, Blue = 204 },
+                        NameSet = true,
+                },
+                SETLUTIn4 = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 204, Green = 204, Blue = 204 },
+                        NameSet = true,
+                }
+        },
+        ActiveTool = "AnimateExpress"
+}

@@ -1,0 +1,801 @@
+{
+        Tools = ordered() {
+                JustCounterPop = GroupOperator {
+                        CtrlWZoom = false,
+                        Inputs = ordered() {
+                                About = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "About",
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "COUNT",
+                                        Name = "Counter Type",
+                                        Default = 0,
+                                },
+                                Input8off = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "tm",
+                                },
+                                TextLab = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "TextLab",
+                                },
+                                Input1 = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "Font",
+                                        ControlGroup = 1,
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "Style",
+                                        ControlGroup = 1,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "Red1Clone",
+                                        Name = "Color",
+                                        ControlGroup = 2,
+                                        Default = 1,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "Green1Clone",
+                                        ControlGroup = 2,
+                                        Default = 1,
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "Blue1Clone",
+                                        ControlGroup = 2,
+                                        Default = 1,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "Alpha1Clone",
+                                        ControlGroup = 2,
+                                        Default = 1,
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "Size",
+                                        Default = 0.0989,
+                                },
+                                RectLab = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "RectLab",
+                                },
+                                Input37 = InstanceInput {
+                                        SourceOp = "R1",
+                                        Source = "Level",
+                                        Default = 1,
+                                },
+                                Input38 = InstanceInput {
+                                        SourceOp = "R1",
+                                        Source = "BorderWidth",
+                                },
+                                Input39 = InstanceInput {
+                                        SourceOp = "R1",
+                                        Source = "Solid",
+                                        Default = 1,
+                                },
+                                Input40 = InstanceInput {
+                                        SourceOp = "R1",
+                                        Source = "Width",
+                                        Default = 0.059,
+                                },
+                                Input41 = InstanceInput {
+                                        SourceOp = "R1",
+                                        Source = "Height",
+                                        Default = 0.144,
+                                },
+                                Input42 = InstanceInput {
+                                        SourceOp = "R1",
+                                        Source = "CornerRadius",
+                                        Default = 0.294,
+                                },
+                                Input40ts1 = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "SPACING",
+                                        Default = 0.059,
+                                },
+                                Input40ts2 = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "CSPACE",
+                                        Default = 0.059,
+                                },
+                                BkgLab = InstanceInput {
+                                        SourceOp = "T1",
+                                        Source = "BkgLab",
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "Type",
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "TopLeftRed",
+                                        Name = "Color",
+                                        ControlGroup = 6,
+                                        Default = 0.0745098039216,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "TopLeftGreen",
+                                        ControlGroup = 6,
+                                        Default = 0.3098039215686,
+                                },
+                                Input12 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "TopLeftBlue",
+                                        ControlGroup = 6,
+                                        Default = 0.8196078431373,
+                                },
+                                Input13 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "TopLeftAlpha",
+                                        ControlGroup = 6,
+                                        Default = 1,
+                                },
+                                Input14 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "TopRightSep",
+                                },
+                                Input15 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "TopRightRed",
+                                        Name = "Top Right",
+                                        ControlGroup = 8,
+                                        Default = 0,
+                                },
+                                Input16 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "TopRightGreen",
+                                        ControlGroup = 8,
+                                        Default = 0,
+                                },
+                                Input17 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "TopRightBlue",
+                                        ControlGroup = 8,
+                                        Default = 0,
+                                },
+                                Input18 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "TopRightAlpha",
+                                        ControlGroup = 8,
+                                        Default = 1,
+                                },
+                                Input19 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "BottomLeftSep",
+                                },
+                                Input20 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "BottomLeftRed",
+                                        Name = "Bottom Left",
+                                        ControlGroup = 10,
+                                        Default = 0,
+                                },
+                                Input21 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "BottomLeftGreen",
+                                        ControlGroup = 10,
+                                        Default = 0,
+                                },
+                                Input22 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "BottomLeftBlue",
+                                        ControlGroup = 10,
+                                        Default = 0,
+                                },
+                                Input23 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "BottomLeftAlpha",
+                                        ControlGroup = 10,
+                                        Default = 1,
+                                },
+                                Input24 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "BottomRightSep",
+                                },
+                                Input25 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "BottomRightRed",
+                                        Name = "Bottom Right",
+                                        ControlGroup = 12,
+                                        Default = 0,
+                                },
+                                Input26 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "BottomRightGreen",
+                                        ControlGroup = 12,
+                                        Default = 0,
+                                },
+                                Input27 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "BottomRightBlue",
+                                        ControlGroup = 12,
+                                        Default = 0,
+                                },
+                                Input28 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "BottomRightAlpha",
+                                        ControlGroup = 12,
+                                        Default = 1,
+                                },
+                                Input29 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "GradientType",
+                                },
+                                Input30 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "Start",
+                                        DefaultX = 0,
+                                        DefaultY = 0.5,
+                                },
+                                Input31 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "End",
+                                        DefaultX = 1,
+                                        DefaultY = 0.5,
+                                },
+                                Input32 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "Gradient",
+                                },
+                                Input33 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "GradientInterpolationMethod",
+                                },
+                                Input34 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "Offset",
+                                        Default = 0,
+                                },
+                                Input35 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "Repeat",
+                                },
+                                Input36 = InstanceInput {
+                                        SourceOp = "B1",
+                                        Source = "SubPixel",
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "MediaOut1_1",
+                                        Source = "Output",
+                                }
+                        },
+                        ViewInfo = GroupInfo {
+                                Pos = { 474.668, 202.425 },
+                                Flags = {
+                                        AllowPan = false,
+                                        ConnectedSnap = true,
+                                        AutoSnap = true,
+                                        RemoveRouters = true
+                                },
+                                Size = { 1428.45, 274.376, 714.227, 24.2424 },
+                                Direction = "Horizontal",
+                                PipeStyle = "Direct",
+                                Scale = 1,
+                                Offset = { 0, 0 }
+                        },
+                        Tools = ordered() {
+                                MediaOut1_1 = MediaOut {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Index = Input { Value = "0", },
+                                                Input = Input {
+                                                        SourceOp = "Merge4",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 651, 215.078 } },
+                                },
+                                Merge4 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Merge3",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "DVE4",
+                                                        Source = "Output",
+                                                },
+                                                Center = Input {
+                                                        Value = { 0.3937, 0.5 },
+                                                        Expression = "Point(0.5-R1.Width*1.5-T1.CSPACE/2-T1.SPACING, 0.5)",
+                                                },
+                                                Size = Input { Expression = ":local fr=comp:GetPrefs(\"Comp.FrameFormat.Rate\")\nlocal tm=T1.tms;\nlocal mt=600*fr;\ncycle=tm%mt;\nif (cycle<2) then;\n   local off=1-(.15*(2-cycle)/2);\n   return off;\nelseif (mt-cycle<=4) then;\n   local off=1-(.15*(1-(mt-cycle)/4));\n   return off;\nend;\nreturn 1", },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 301, 215.078 } },
+                                },
+                                DVE3 = DVE {
+                                        PassThrough = true,
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                XRotation = Input { Expression = ":local tm=T1.tms;\nif(tm<=4) then;\n   return 0;\nend;\nlocal mt=1440;\ncycle=tm%mt;\ncycle=cycle%mt;\nif (cycle<4) then;\n   local off=90*(4-cycle)/4;\n   return off;\nelseif (mt-cycle<=4) then;\n   local off=90-90*(mt-cycle)/4;\n   return off;\nend;", },
+                                                AlphaMode = Input { Value = 2, },
+                                                Input = Input {
+                                                        SourceOp = "Merge5",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 141.67, 133.479 } },
+                                },
+                                Merge3 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Merge7",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "DVE3",
+                                                        Source = "Output",
+                                                },
+                                                Center = Input {
+                                                        Value = { 0.4555, 0.5 },
+                                                        Expression = "Point(0.5-R1.Width/2-T1.CSPACE/2, 0.5)",
+                                                },
+                                                Size = Input { Expression = ":local fr=comp:GetPrefs(\"Comp.FrameFormat.Rate\")\nlocal tm=T1.tms;\nlocal mt=60*fr;\ncycle=tm%mt;\nif (cycle<2) then;\n   local off=1-(.15*(2-cycle)/2);\n   return off;\nelseif (mt-cycle<=4) then;\n   local off=1-(.15*(1-(mt-cycle)/4));\n   return off;\nend;\nreturn 1", },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 141.67, 215.078 } },
+                                },
+                                DVE4 = DVE {
+                                        PassThrough = true,
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                XRotation = Input { Expression = ":local tm=T1.tms;\nlocal mt=14400;\nlocal cycle=(comp.RenderEnd-time);\nif(cycle<mt) then; \n  return 0;\nend\ncycle=cycle%mt;\nif (cycle<4) then;\n   local off=90*(4-cycle)/4;\n   return off;\nelseif (mt-cycle<=4) then;\n   local off=90-90*(mt-cycle)/4;\n   return off;\nend;\nreturn 0", },
+                                                AlphaMode = Input { Value = 2, },
+                                                Input = Input {
+                                                        SourceOp = "Merge6",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 301, 142.466 } },
+                                },
+                                Merge7 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Merge2",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Instance_T1",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -69.07, 217.502 } },
+                                },
+                                Merge5 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "MM",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "T3",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 141.67, 73.4676 } },
+                                },
+                                Merge6 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "MM",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "T4",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 301, 73.4676 } },
+                                },
+                                M2 = Merge {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "MM",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "T2",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -233.666, 75.8918 } },
+                                },
+                                Merge2 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Merge1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "DVE2",
+                                                        Source = "Output",
+                                                },
+                                                Center = Input {
+                                                        Value = { 0.5445, 0.5 },
+                                                        Expression = "Point(0.5+R1.Width/2+T1.CSPACE/2, 0.5)",
+                                                },
+                                                Size = Input { Expression = ":local fr=comp:GetPrefs(\"Comp.FrameFormat.Rate\")\nlocal mt=24*10;\nlocal tm=T1.tms;\n\ncycle=tm%mt;\nif (cycle<2) then;\n   local off=1-(.15*(2-cycle)/2);\n   return off;\nelseif (mt-cycle<=4) then;\n   local off=1-(.15*(1-(mt-cycle)/4));\n  return off;\nend;\nreturn 1", },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -233.666, 217.502 } },
+                                },
+                                DVE2 = DVE {
+                                        PassThrough = true,
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                XRotation = Input { Expression = ":local mt=240;\nlocal tm=T1.tms;\nif(tm<=4) then;\n  return 0;\nend;\ncycle=tm%mt;\nif (cycle<4) then;\n   local off=90*(4-cycle)/4;\n   return off;\nelseif (mt-cycle<=4) then;\n   local off=90-90*(mt-cycle)/4;\n   return off;\nend;\nreturn 0", },
+                                                AlphaMode = Input { Value = 2, },
+                                                Input = Input {
+                                                        SourceOp = "M2",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -233.666, 136.405 } },
+                                },
+                                DVE1 = DVE {
+                                        PassThrough = true,
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                XRotation = Input { Expression = ":local tm=T1.tms;\nif(tm<=4) then;\n   return 0;\nend;\ncycle=tm%24\nif (cycle<4) then;\n   local off=90*(4-cycle)/4;\n   return off;\nelseif (cycle>20) then;\n   local off=90*(cycle-20)/4;\n   return off;\nend;\nreturn 0 ", },
+                                                AlphaMode = Input { Value = 2, },
+                                                Input = Input {
+                                                        SourceOp = "M1",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -363.666, 139.037 } },
+                                },
+                                M1 = Merge {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "MM",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "T1",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -363.666, 75.8918 } },
+                                },
+                                Merge1 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Background1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "DVE1",
+                                                        Source = "Output",
+                                                },
+                                                Center = Input {
+                                                        Value = { 0.6063, 0.5 },
+                                                        Expression = "Point(0.5+R1.Width*1.5+T1.CSPACE/2+T1.SPACING, 0.5)",
+                                                },
+                                                Size = Input { Expression = ":local tm=T1.tms;\nlocal fr=comp:GetPrefs(\"Comp.FrameFormat.Rate\")\ncycle=tm%fr;\nif (cycle<2) then;\n   local off=1-(.15*(2-cycle)/2);\n   return off;\nelseif (fr-cycle<4) then;\n   local off=1-(.15*(cycle-fr+4)/4);\n   return off;\nend;\nreturn 1", },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -363.666, 217.502 } },
+                                },
+                                Instance_T1 = TextPlus {
+                                        CtrlWZoom = false,
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        SourceOp = "T1",
+                                        Inputs = {
+                                                EffectMask = Input { },
+                                                SettingsNest = Input { },
+                                                ImageNest = Input { },
+                                                ["Gamut.ColorSpaceNest"] = Input { },
+                                                ["Gamut.GammaSpaceNest"] = Input { },
+                                                Layout = Input { },
+                                                LayoutRotation = Input { },
+                                                Background = Input { },
+                                                TransformTransform = Input { },
+                                                TransformRotation = Input { },
+                                                TransformShear = Input { },
+                                                TransformSize = Input { },
+                                                Properties1 = Input { },
+                                                Softness1 = Input { },
+                                                Position1 = Input { },
+                                                Rotation1 = Input { },
+                                                Shear1 = Input { },
+                                                Size1 = Input { },
+                                                TextText = Input { },
+                                                StyledText = Input { Value = ":", },
+                                                AdvancedFontControls = Input { },
+                                                ClearManualKerningPlacementOnSelection = Input { },
+                                                ClearAllManualKerningPlacement = Input { },
+                                                Internal = Input { },
+                                                TabSpacing = Input { },
+                                                CommentsNest = Input { },
+                                                FrameRenderScriptNest = Input { },
+                                                StartRenderScripts = Input { },
+                                                EndRenderScripts = Input { },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -69.07, 20.1 } },
+                                        UserControls = ordered() { COUNT = { { CCS_AddString = "Down" }, { CCS_AddString = "Up" }, INP_Integer = false, LINKID_DataType = "Number", CC_LabelPosition = "Horizontal", INPID_InputControl = "ComboControl", LINKS_Name = "COUNT", }, SPACING = { INP_MaxAllowed = 0.100000001490116, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.100000001490116, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "SPACING", } }
+                                },
+                                T4 = TextPlus {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        SourceOp = "T1",
+                                        Inputs = {
+                                                EffectMask = Input { },
+                                                SettingsNest = Input { },
+                                                ImageNest = Input { },
+                                                ["Gamut.ColorSpaceNest"] = Input { },
+                                                ["Gamut.GammaSpaceNest"] = Input { },
+                                                Layout = Input { },
+                                                LayoutRotation = Input { },
+                                                Background = Input { },
+                                                TransformTransform = Input { },
+                                                TransformRotation = Input { },
+                                                TransformShear = Input { },
+                                                TransformSize = Input { },
+                                                Properties1 = Input { },
+                                                Softness1 = Input { },
+                                                Position1 = Input { },
+                                                Rotation1 = Input { },
+                                                Shear1 = Input { },
+                                                Size1 = Input { },
+                                                TextText = Input { },
+                                                StyledText = Input {
+                                                        Value = "0",
+                                                        Expression = "string.sub(T1.CTIME,2,2)"
+                                                },
+                                                AdvancedFontControls = Input { },
+                                                ClearManualKerningPlacementOnSelection = Input { },
+                                                ClearAllManualKerningPlacement = Input { },
+                                                Internal = Input { },
+                                                TabSpacing = Input { },
+                                                CommentsNest = Input { },
+                                                FrameRenderScriptNest = Input { },
+                                                StartRenderScripts = Input { },
+                                                EndRenderScripts = Input { },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 301, 16.4978 } },
+                                },
+                                T1 = TextPlus {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 2710, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                StyledText = Input {
+                                                        Value = "1",
+                                                        Expression = "string.sub(T1.CTIME,5,5)",
+                                                },
+                                                Font = Input { Value = "Open Sans", },
+                                                Style = Input { Value = "Bold", },
+                                                Size = Input { Value = 0.0989, },
+                                                VerticalJustificationNew = Input { Value = 3, },
+                                                HorizontalJustificationNew = Input { Value = 3, },
+                                                ManualFontKerningPlacement = Input {
+                                                        Value = StyledText {
+                                                                Array = {
+                                                                },
+                                                                Value = ""
+                                                        },
+                                                },
+                                                TextLab = Input { Value = 1, },
+                                                RectLab = Input { Value = 1, },
+                                                About = Input { Value = "JustCounterPop by William Justice.  MORE INFO : https://billjustice.com", },
+                                                BkgLab = Input { Value = 1, },
+                                                SPACING = Input { Value = 0.0028, },
+                                                CSPACE = Input { Value = 0.03, },
+                                                tm = Input { Value = 0, },
+                                                tms = Input {
+                                                        SourceOp = "Expression1",
+                                                        Source = "NumberResult",
+                                                },
+                                                CTIME = Input {
+                                                        SourceOp = "Expression2",
+                                                        Source = "NumberResult",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -363.666, 19.733 } },
+                                        UserControls = ordered() {
+                                                TextLab = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 7, INPID_InputControl = "LabelControl", LINKS_Name = "Text Settings", },
+                                                RectLab = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 8, INPID_InputControl = "LabelControl", LINKS_Name = "Rect Settings", },
+                                                About = { TEC_ReadOnly = true, LINKID_DataType = "Text", TEC_Wrap = true, INPID_InputControl = "TextEditControl", TEC_Lines = 3, LINKS_Name = "About", },
+                                                BkgLab = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 27, INPID_InputControl = "LabelControl", LINKS_Name = "Rect Color", },
+                                                COUNT = { { CCS_AddString = "Down" }, { CCS_AddString = "Up" }, INP_Integer = false, LINKID_DataType = "Number", CC_LabelPosition = "Horizontal", INPID_InputControl = "ComboControl", LINKS_Name = "COUNT", },
+                                                SPACING = { INP_MaxAllowed = 0.100000001490116, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.100000001490116, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Number Spacing", },
+                                                CSPACE = { INP_MaxAllowed = 0.1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Colon Spacing", },
+                                                tm = { INP_Integer = true, INP_Default = 0, INPID_InputControl = "SliderControl", INP_MaxAllowed=100000, INP_MinAllowed=0, INP_MinScale = 0, LINKID_DataType = "Number", INP_MaxScale = 10000, LINKS_Name = "Time Offset", },
+                                                tms = { INP_MaxAllowed = 1000000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200000, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = -1000000, LINKID_DataType = "Number", LINKS_Name = "tms", },
+                                                CTIME = { INP_Integer = false, LINKS_Name = "CTIME", INPID_InputControl = "SliderControl", INP_MinScale = 0, LINKID_DataType = "Number", INP_MaxScale = 10000000, INP_Default = 0, }
+                                        }
+                                },
+                                Expression1 = Expression {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                NumberExpression = Input {
+                                                        Value = "633",
+                                                        Expression = ":local tm=time-comp.RenderStart;\nif(T1.COUNT==0) then;\n  tm=comp.RenderEnd-comp.RenderStart-tm;\nend;\nreturn tm+T1.tm",
+                                                },
+                                        },
+                                },
+                                Expression2 = Expression {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                NumberExpression = Input {
+                                                        Value = "10032",
+                                                        Expression = ":local tm=T1.tms;\nlocal tsec=floor(tm/comp:GetPrefs(\"Comp.FrameFormat.Rate\"));\nlocal tmin=math.floor(tsec/60);\nlocal sec=math.floor(tsec - tmin *60);\nlocal vv=string.format(\"1%02d%02d\",tmin,sec);\nreturn vv;",
+                                                },
+                                        },
+                                },
+                                T3 = TextPlus {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        SourceOp = "T1",
+                                        Inputs = {
+                                                EffectMask = Input { },
+                                                SettingsNest = Input { },
+                                                ImageNest = Input { },
+                                                ["Gamut.ColorSpaceNest"] = Input { },
+                                                ["Gamut.GammaSpaceNest"] = Input { },
+                                                Layout = Input { },
+                                                LayoutRotation = Input { },
+                                                Background = Input { },
+                                                TransformTransform = Input { },
+                                                TransformRotation = Input { },
+                                                TransformShear = Input { },
+                                                TransformSize = Input { },
+                                                Properties1 = Input { },
+                                                Softness1 = Input { },
+                                                Position1 = Input { },
+                                                Rotation1 = Input { },
+                                                Shear1 = Input { },
+                                                Size1 = Input { },
+                                                TextText = Input { },
+                                                StyledText = Input {
+                                                        Value = "0",
+                                                        Expression = "string.sub(T1.CTIME,3,3)"
+                                                },
+                                                AdvancedFontControls = Input { },
+                                                ClearManualKerningPlacementOnSelection = Input { },
+                                                ClearAllManualKerningPlacement = Input { },
+                                                Internal = Input { },
+                                                TabSpacing = Input { },
+                                                CommentsNest = Input { },
+                                                FrameRenderScriptNest = Input { },
+                                                StartRenderScripts = Input { },
+                                                EndRenderScripts = Input { },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 141.67, 16.4978 } },
+                                },
+                                T2 = TextPlus {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        SourceOp = "T1",
+                                        Inputs = {
+                                                EffectMask = Input { },
+                                                SettingsNest = Input { },
+                                                ImageNest = Input { },
+                                                ["Gamut.ColorSpaceNest"] = Input { },
+                                                ["Gamut.GammaSpaceNest"] = Input { },
+                                                Layout = Input { },
+                                                LayoutRotation = Input { },
+                                                Background = Input { },
+                                                TransformTransform = Input { },
+                                                TransformRotation = Input { },
+                                                TransformShear = Input { },
+                                                TransformSize = Input { },
+                                                Properties1 = Input { },
+                                                Softness1 = Input { },
+                                                Position1 = Input { },
+                                                Rotation1 = Input { },
+                                                Shear1 = Input { },
+                                                Size1 = Input { },
+                                                TextText = Input { },
+                                                StyledText = Input {
+                                                        Value = "5",
+                                                        Expression = "string.sub(T1.CTIME,4,4)"
+                                                },
+                                                AdvancedFontControls = Input { },
+                                                ClearManualKerningPlacementOnSelection = Input { },
+                                                ClearAllManualKerningPlacement = Input { },
+                                                Internal = Input { },
+                                                TabSpacing = Input { },
+                                                CommentsNest = Input { },
+                                                FrameRenderScriptNest = Input { },
+                                                StartRenderScripts = Input { },
+                                                EndRenderScripts = Input { },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -233.666, 17.7099 } },
+                                },
+                                MM = Merge {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "B1",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -511.855, 75.8918 } },
+                                },
+                                Background1 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 2710, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftAlpha = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -528.999, 217.502 } },
+                                },
+                                B1 = Background {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "R1",
+                                                        Source = "Mask",
+                                                },
+                                                GlobalOut = Input { Value = 2710, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftRed = Input { Value = 0.0745098039216, },
+                                                TopLeftGreen = Input { Value = 0.3098039215686, },
+                                                TopLeftBlue = Input { Value = 0.8196078431373, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -651.454, 75.8918 } },
+                                },
+                                R1 = RectangleMask {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Width = Input { Value = 0.059, },
+                                                Height = Input { Value = 0.144, },
+                                                CornerRadius = Input { Value = 0.294, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -651.454, 8.01287 } },
+                                }
+                        },
+                }
+        },
+        ActiveTool = "JustCounterPop"
+}

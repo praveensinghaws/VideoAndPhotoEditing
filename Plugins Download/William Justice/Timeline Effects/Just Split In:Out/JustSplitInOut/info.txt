@@ -1,0 +1,24 @@
+JustSplitInOut - Davinci Resolve 17 timeline effect
+
+Effect created by William Justice | https://billjustice.com
+
+INSTALL
+  - Download effect files
+  - UnZip effect
+  - Copy the files to the folder location
+
+
+FILE LOCATIONS
+PC
+/Users/%username%/AppData/Roaming/Blackmagic Design/DaVinci Resolve/Support/Fusion/Templates/Edit/Effects/
+
+MAC
+/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Templates/Edit/Effects/
+
+
+FIND LOCATIONS IN RESOLVE
+  - In Resolve Click the Fusion button
+  - Open the effects panel
+  - Click Edit Templates and then Effects
+  - In the top right area, click "..." and choose Show Folder
+

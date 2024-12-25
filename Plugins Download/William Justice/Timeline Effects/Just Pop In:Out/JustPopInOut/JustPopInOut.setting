@@ -1,0 +1,232 @@
+{
+        Tools = ordered() {
+                JustPopInOut = MacroOperator {
+                        CtrlWZoom = false,
+                        Inputs = ordered() {
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "Transform1",
+                                        Source = "Input",
+                                },
+                                About = InstanceInput {
+                                        SourceOp = "Transform1",
+                                        Source = "About",
+                                },
+                                Input1 = InstanceInput {
+                                        SourceOp = "Transform1",
+                                        Source = "Center",
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "Transform1",
+                                        Source = "Pivot",
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "Transform1",
+                                        Source = "STARTANGLE",
+                                        Name = "Start Angle",
+                                        Default = 0,
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "FramesIn",
+                                        Default = 18,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "Transform1",
+                                        Source = "MotionBlur",
+                                        Default = 0,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "Transform1",
+                                        Source = "Quality",
+                                        Default = 2,
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "Transform1",
+                                        Source = "ShutterAngle",
+                                        Default = 180,
+                                },
+                                EasingLabel = InstanceInput {
+                                        SourceOp = "Transform1",
+                                        Source = "EasingLabel",
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "EaseInCurves",
+                                        Source = "Curve",
+                                        Name = "Curve In",
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "EaseInCurves",
+                                        Source = "EaseIn",
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "EaseInCurves",
+                                        Source = "EaseOut",
+                                },
+                                Input12 = InstanceInput {
+                                        SourceOp = "EaseInCurves",
+                                        Source = "Lookup",
+                                        ControlGroup = 13,
+                                },
+                                Input13 = InstanceInput {
+                                        SourceOp = "EaseOutCurves",
+                                        Source = "Curve",
+                                        Name = "Curve Out",
+                                },
+                                Input14 = InstanceInput {
+                                        SourceOp = "EaseOutCurves",
+                                        Source = "EaseIn",
+                                },
+                                Input15 = InstanceInput {
+                                        SourceOp = "EaseOutCurves",
+                                        Source = "EaseOut",
+                                },
+                                Input16 = InstanceInput {
+                                        SourceOp = "EaseOutCurves",
+                                        Source = "Lookup",
+                                        ControlGroup = 17,
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "JTC",
+                                        Source = "Output",
+                                }
+                        },
+                        ViewInfo = GroupInfo {
+                                Pos = { 273.403, 107.656 },
+                                Flags = {
+                                        Expanded = true,
+                                        AllowPan = false,
+                                        ConnectedSnap = true,
+                                        AutoSnap = true,
+                                        RemoveRouters = true
+                                },
+                                Size = { 279.369, 66.3636, 139.684, 24.2424 },
+                                Direction = "Horizontal",
+                                PipeStyle = "Direct",
+                                Scale = 1,
+                                Offset = { 0, 0 }
+                        },
+                        Tools = ordered() {
+                                Transform1 = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Size = Input { Expression = "JTC.Value", },
+                                                Angle = Input { Expression = "STARTANGLE*(1-JTC.Value)", },
+                                                About = Input { Value = "JustPopInOut by William Justice.  MORE INFO : https://billjustice.com", },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -77.369, 8.75758 } },
+                                        UserControls = ordered() {
+                                                STARTANGLE = { INP_MaxAllowed = 360, INP_Integer = false, INPID_InputControl = "ScrewControl", INP_MaxScale = 360, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = -360, LINKID_DataType = "Number", LINKS_Name = "STARTANGLE", },
+                                                About = { TEC_ReadOnly = true, LINKID_DataType = "Text", LINKS_Name = "About", INPID_InputControl = "TextEditControl", TEC_Lines = 3, TEC_Wrap = true, },
+                                                EasingLabel = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 7, INPID_InputControl = "LabelControl", LINKS_Name = "Easing", }
+                                        }
+                                },
+                                JTC = Merge {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Blend = Input { Expression = "Value", },
+                                                Background = Input {
+                                                        SourceOp = "Transform1",
+                                                        Source = "Output",
+                                                },
+                                                Merge = Input { Value = 0, },
+                                                AnimatedValues = Input { Value = 1, },
+                                                ValueIn = Input {
+                                                        SourceOp = "EaseInCurves",
+                                                        Source = "Value",
+                                                },
+                                                ValueOut = Input {
+                                                        SourceOp = "EaseOutCurves",
+                                                        Source = "Value",
+                                                },
+                                                Value = Input {
+                                                        Value = 1,
+                                                        Expression = "iif((time-comp.RenderStart)<(comp.RenderEnd-comp.RenderStart)/2,ValueIn,ValueOut) ",
+                                                },
+                                                ValueRange = Input { Value = 1, },
+                                                Hold = Input { Value = 1, },
+                                                TimingControl = Input { Value = 1, },
+                                                FramesIn = Input { Value = 7, },
+                                                FramesOut = Input {
+                                                        Value = 18,
+                                                        Expression = "FramesIn",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 76, 8.75758 } },
+                                        UserControls = ordered() { AnimatedValues = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 3, INPID_InputControl = "LabelControl", LINKS_Name = "Animated Values", }, ValueIn = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value In", }, ValueOut = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value Out", }, Value = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value", }, ValueRange = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 3, INPID_InputControl = "LabelControl", LINKS_Name = "Value Range", }, Start = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Start", }, Hold = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Hold", }, End = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "End", }, TimingControl = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 4, INPID_InputControl = "LabelControl", LINKS_Name = "Timing Control", }, FramesIn = { INP_MaxAllowed = 5000, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 100, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Frames Ani", }, FramesOut = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 100, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Frames Out", }, DelayIn = { INP_MaxAllowed = 10000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 250, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "DelayIn", }, DelayOut = { INP_MaxAllowed = 10000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 250, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "DelayOut", } }
+                                },
+                                EaseInCurves = LUTLookup {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Source = Input { Value = FuID { "Duration" }, },
+                                                Curve = Input { Value = FuID { "Easing" }, },
+                                                EaseIn = Input { Value = FuID { "Sine" }, },
+                                                EaseOut = Input { Value = FuID { "Back" }, },
+                                                Lookup = Input {
+                                                        SourceOp = "AnimCurvesonJTCLookup",
+                                                        Source = "Value",
+                                                },
+                                                Scale = Input { Expression = "JTC.Hold-JTC.Start", },
+                                                Offset = Input { Expression = "JTC.Start", },
+                                                TimeScale = Input {
+                                                        Value = 30.7777777777778,
+                                                        Expression = "(comp.RenderEnd-comp.RenderStart)/JTC.FramesIn",
+                                                },
+                                                TimeOffset = Input { Expression = "JTC.DelayIn/(comp.RenderEnd-comp.RenderStart)", },
+                                        },
+                                },
+                                AnimCurvesonJTCLookup = LUTBezier {
+                                        KeyColorSplines = {
+                                                [0] = {
+                                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                                }
+                                        },
+                                        SplineColor = { Red = 255, Green = 255, Blue = 255 },
+                                },
+                                EaseOutCurves = LUTLookup {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Source = Input { Value = FuID { "Duration" }, },
+                                                Curve = Input { Value = FuID { "Easing" }, },
+                                                EaseIn = Input { Value = FuID { "Back" }, },
+                                                EaseOut = Input { Value = FuID { "Sine" }, },
+                                                Lookup = Input {
+                                                        SourceOp = "AnimCurvesonJTCLookup1",
+                                                        Source = "Value",
+                                                },
+                                                Scale = Input {
+                                                        Value = -1,
+                                                        Expression = "JTC.End-JTC.Hold",
+                                                },
+                                                Offset = Input {
+                                                        Value = 1,
+                                                        Expression = "JTC.Hold",
+                                                },
+                                                TimeScale = Input {
+                                                        Value = 6.61111111111111,
+                                                        Expression = "(comp.RenderEnd-comp.RenderStart)/JTC.FramesOut",
+                                                },
+                                                TimeOffset = Input {
+                                                        Value = 0.840336134453782,
+                                                        Expression = ":local clen=comp.RenderEnd-comp.RenderStart;return (clen-JTC.FramesOut-1)/clen-(JTC.DelayOut/clen)",
+                                                },
+                                        },
+                                },
+                                AnimCurvesonJTCLookup1 = LUTBezier {
+                                        KeyColorSplines = {
+                                                [0] = {
+                                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                                }
+                                        },
+                                        SplineColor = { Red = 255, Green = 255, Blue = 255 },
+                                        NameSet = true,
+                                }
+                        },
+                }
+        },
+        ActiveTool = "JustPopInOut"
+}

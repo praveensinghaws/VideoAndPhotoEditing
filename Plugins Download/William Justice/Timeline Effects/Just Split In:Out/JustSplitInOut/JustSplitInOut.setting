@@ -1,0 +1,776 @@
+{
+        Tools = ordered() {
+                JustSplitInOut = MacroOperator {
+                        CtrlWZoom = false,
+                        CustomData = {
+                                Settings = {
+                                }
+                        },
+                        Inputs = ordered() {
+                                About = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "About",
+                                },
+                                Input1 = InstanceInput {
+                                        SourceOp = "TransitionOut",
+                                        Source = "Center",
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "TransitionOut",
+                                        Source = "Angle",
+                                        Default = 0,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "Transform1Mask",
+                                        Source = "Angle",
+                                        Name = "Split Angle",
+                                        Default = 0,
+                                },
+                                AniLabel = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "AniLabel",
+                                },
+                                InputHS = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "HSTART",
+                                },
+                                InputHE = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "HEND",
+                                },
+                                InputVS = InstanceInput {
+                                        SourceOp = "JTCY",
+                                        Source = "VSTART",
+                                },
+                                InputVE = InstanceInput {
+                                        SourceOp = "JTCY",
+                                        Source = "VEND",
+                                },
+                                Input7JTC = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "FramesIn",
+                                        Default = 18,
+                                },
+                                Input8JTC = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "FramesOut",
+                                        Default = 18,
+                                },
+                                EasingLabel = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "EasingLabel",
+                                },
+                                Input10e = InstanceInput {
+                                        SourceOp = "EaseInCurves",
+                                        Source = "EaseIn",
+                                },
+                                Input11e = InstanceInput {
+                                        SourceOp = "EaseInCurves",
+                                        Source = "EaseOut",
+                                },
+                                Input14e = InstanceInput {
+                                        SourceOp = "EaseOutCurves",
+                                        Source = "EaseIn",
+                                },
+                                Input15e = InstanceInput {
+                                        SourceOp = "EaseOutCurves",
+                                        Source = "EaseOut",
+                                },
+                                EasingLabelY = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "EasingLabelY",
+                                },
+                                Input10ey = InstanceInput {
+                                        SourceOp = "EaseInCurves_1",
+                                        Source = "EaseIn",
+                                },
+                                Input11ey = InstanceInput {
+                                        SourceOp = "EaseInCurves_1",
+                                        Source = "EaseOut",
+                                },
+                                Input14ey = InstanceInput {
+                                        SourceOp = "EaseOutCurves_1",
+                                        Source = "EaseIn",
+                                },
+                                Input15ey = InstanceInput {
+                                        SourceOp = "EaseOutCurves_1",
+                                        Source = "EaseOut",
+                                },
+                                AdvLabel = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "AdvLabel",
+                                },
+                                Input17 = InstanceInput {
+                                        SourceOp = "Rect1",
+                                        Source = "MaskOffsetX",
+                                        Default = 0,
+                                },
+                                Input18 = InstanceInput {
+                                        SourceOp = "Rect1",
+                                        Source = "MaskOffsetY",
+                                        Default = 0,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "TransitionOut",
+                                        Source = "MotionBlur",
+                                        Default = 1,
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "TransitionOut",
+                                        Source = "Quality",
+                                        Default = 2,
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "TransitionOut",
+                                        Source = "ShutterAngle",
+                                        Default = 180,
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "TransitionOut",
+                                        Source = "CenterBias",
+                                        Default = 0,
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "TransitionOut",
+                                        Source = "SampleSpread",
+                                        Default = 1,
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "PipeRouter1",
+                                        Source = "Input",
+                                },
+                                MainInput2 = InstanceInput {
+                                        SourceOp = "M3",
+                                        Source = "Foreground",
+                                        Name = "Fill Background",
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "TransitionOut",
+                                        Source = "Output",
+                                }
+                        },
+                        ViewInfo = GroupInfo {
+                                Pos = { -705.6, -390.099 },
+                                Flags = {
+                                        Expanded = true,
+                                        AllowPan = false,
+                                        ConnectedSnap = true,
+                                        AutoSnap = true,
+                                        RemoveRouters = true
+                                },
+                                Size = { 1232.37, 350.275, 428.515, 69.091 },
+                                Direction = "Horizontal",
+                                PipeStyle = "Direct",
+                                Scale = 1,
+                                Offset = { 0, 0 }
+                        },
+                        Tools = ordered() {
+                                TransitionOut = Transform {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Input = Input {
+                                                        SourceOp = "JTCY",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 691.667, 108.13 } },
+                                },
+                                Transform1Mask = Transform {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Center = Input {
+                                                        SourceOp = "Publish2",
+                                                        Source = "Value",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "Rect1",
+                                                        Source = "Mask",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -170.79, 47.5414 } },
+                                },
+                                Publish2 = PublishPoint {
+                                        CtrlWZoom = false,
+                                },
+                                Transform1 = Transform {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                ApplyMaskInverted = Input { Value = 1, },
+                                                Center = Input {
+                                                        Value = { 0.5, 0.151517634816387 },
+                                                        Expression = "Point(0.5+SplitX, 0.5+SplitY)",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "MC1",
+                                                        Source = "Output",
+                                                },
+                                                SplitX = Input {
+                                                        Value = -0.168298005326454,
+                                                        Expression = "1-JTC.Value",
+                                                },
+                                                SplitY = Input { Expression = "1-JTCY.Value", },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -172.36, 108.13 } },
+                                        UserControls = ordered() { SplitX = { INP_Integer = false, LINKS_Name = "Split X", INPID_InputControl = "SliderControl", INP_MinScale = -1.5, LINKID_DataType = "Number", INP_MaxScale = 1.5, INP_Default = 0, }, SplitY = { INP_Integer = false, LINKS_Name = "Split Y", INPID_InputControl = "SliderControl", INP_MinScale = -1.5, LINKID_DataType = "Number", INP_MaxScale = 1.5, INP_Default = 0, } }
+                                },
+                                Piece1 = Transform {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Input = Input {
+                                                        SourceOp = "PieceMask1",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 50.6901, 108.13 } },
+                                },
+                                Rect1 = RectangleMask {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                BorderWidth = Input { Value = 0.003, },
+                                                Invert = Input { Value = 1, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input {
+                                                        Value = { 0.5, 0 },
+                                                        Expression = "Point(0.5+MaskOffsetX, MaskOffsetY)",
+                                                },
+                                                Width = Input { Value = 1.5, },
+                                                Height = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -170.79, 6.69236 } },
+                                        UserControls = ordered() { MaskOffsetX = { INP_Integer = false, LINKS_Name = "Mask Offset X", INPID_InputControl = "SliderControl", INP_MinScale = -1.5, LINKID_DataType = "Number", INP_MaxScale = 1.5, INP_Default = 0, }, MaskOffsetY = { INP_Integer = false, LINKS_Name = "Mask Offset Y", INPID_InputControl = "SliderControl", INP_MinScale = -1.5, LINKID_DataType = "Number", INP_MaxScale = 1.5, INP_Default = 0, } }
+                                },
+                                Publish1 = PublishNumber {
+                                        CtrlWZoom = false,
+                                },
+                                RSplit = RectangleMask {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input {
+                                                        SourceOp = "Publish2",
+                                                        Source = "Value",
+                                                },
+                                                Width = Input { Value = 2, },
+                                                Height = Input {
+                                                        Value = 0,
+                                                        Expression = "(.5-Transform1.Center.Y)*2",
+                                                },
+                                                Angle = Input { Expression = "Transform1Mask.Angle", },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 270.69, 153.544 } },
+                                },
+                                PieceMask1 = MatteControl {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                ["Garbage.Matte"] = Input {
+                                                        SourceOp = "Transform1Mask",
+                                                        Source = "Output",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Transform1",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -57.74, 108.13 } },
+                                },
+                                Publish3 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 1, },
+                                        },
+                                },
+                                M3 = Merge {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "RSplit",
+                                                        Source = "Mask",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Merge1",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 270.69, 108.13 } },
+                                },
+                                Merge1 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Piece1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Piece2",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 159.12, 108.13 } },
+                                },
+                                Piece2 = Transform {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Size = Input { Expression = "1-Piece1.Size+1", },
+                                                Angle = Input {
+                                                        Value = 720,
+                                                        Expression = "360-Piece1.Angle",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "PieceMask2",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 50.6901, 145.259 } },
+                                },
+                                PieceMask2 = MatteControl {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Blend = Input {
+                                                        SourceOp = "Publish3",
+                                                        Source = "Value",
+                                                },
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                ["Garbage.Matte"] = Input {
+                                                        SourceOp = "Transform2Mask",
+                                                        Source = "Output",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Transform2",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -59.3099, 145.259 } },
+                                },
+                                R2 = RectangleMask {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                SoftEdge = Input {
+                                                        SourceOp = "Publish1",
+                                                        Source = "Value",
+                                                },
+                                                BorderWidth = Input { Value = 0.003, },
+                                                Invert = Input { Value = 1, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input {
+                                                        Value = { 0.5, 1 },
+                                                        Expression = "Point(1-Rect1.Center.X, 1-Rect1.Center.Y)",
+                                                },
+                                                Width = Input { Value = 1.5, },
+                                                Height = Input { Value = 1, },
+                                                Angle = Input { Expression = "Rect1.Angle", },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -174.02, 248.823 } },
+                                },
+                                Transform2Mask = Transform {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Center = Input {
+                                                        SourceOp = "Publish2",
+                                                        Source = "Value",
+                                                },
+                                                Angle = Input { Expression = "Transform1Mask.Angle", },
+                                                Input = Input {
+                                                        SourceOp = "R2",
+                                                        Source = "Mask",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -171.66, 203.111 } },
+                                },
+                                Transform2 = Transform {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Center = Input {
+                                                        Value = { 0.5, 0.848482365183613 },
+                                                        Expression = "Point(1-Transform1.Center.X, 1-Transform1.Center.Y)",
+                                                },
+                                                Angle = Input { Expression = "Transform1.Angle", },
+                                                Input = Input {
+                                                        SourceOp = "MC2",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -171.66, 145.259 } },
+                                },
+                                MC1 = MatteControl {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                ["Garbage.Matte"] = Input {
+                                                        SourceOp = "Transform1Mask",
+                                                        Source = "Output",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "PipeRouter1",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -281.08, 108.13 } },
+                                },
+                                MC2 = MatteControl {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                ["Garbage.Matte"] = Input {
+                                                        SourceOp = "Transform2Mask",
+                                                        Source = "Output",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "PipeRouter1",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -281.24, 145.259 } },
+                                },
+                                PipeRouter1 = PipeRouter {
+                                        CtrlWShown = false,
+                                        ViewInfo = PipeRouterInfo { Pos = { -384.03, 123.54 } },
+                                },
+                                JTC = Merge {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Blend = Input { Expression = "Value", },
+                                                Background = Input {
+                                                        SourceOp = "M3",
+                                                        Source = "Output",
+                                                },
+                                                Merge = Input { Value = 0, },
+                                                AnimatedValues = Input { Value = 1, },
+                                                ValueIn = Input {
+                                                        SourceOp = "EaseInCurves",
+                                                        Source = "Value",
+                                                },
+                                                ValueOut = Input {
+                                                        SourceOp = "EaseOutCurves",
+                                                        Source = "Value",
+                                                },
+                                                Value = Input {
+                                                        Value = 2,
+                                                        Expression = "iif((time-comp.RenderStart)<(comp.RenderEnd-comp.RenderStart)/2,ValueIn,ValueOut) ",
+                                                },
+                                                ValueRange = Input { Value = 1, },
+                                                Start = Input {
+                                                        Value = 2,
+                                                        Expression = "HSTART",
+                                                },
+                                                Hold = Input { Value = 1, },
+                                                End = Input {
+                                                        Value = 1,
+                                                        Expression = "HEND",
+                                                },
+                                                TimingControl = Input { Value = 1, },
+                                                FramesIn = Input {
+                                                        SourceOp = "Publish4",
+                                                        Source = "Value",
+                                                },
+                                                FramesOut = Input {
+                                                        SourceOp = "Publish5",
+                                                        Source = "Value",
+                                                },
+                                                AniLabel = Input { Value = 1, },
+                                                About = Input { Value = "JustSplitInOut by William Justice.  MORE INFO : https://billjustice.com", },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 397.357, 108.13 } },
+                                        UserControls = ordered() { AnimatedValues = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 3, INPID_InputControl = "LabelControl", LINKS_Name = "Animated Values", }, ValueIn = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value In", }, ValueOut = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value Out", }, Value = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value", }, ValueRange = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 3, INPID_InputControl = "LabelControl", LINKS_Name = "Value Range", }, Start = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Start", }, Hold = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Hold", }, End = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "End", }, TimingControl = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 4, INPID_InputControl = "LabelControl", LINKS_Name = "Timing Control", }, FramesIn = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 100, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Frames In", }, FramesOut = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 100, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Frames Out", }, DelayIn = { INP_MaxAllowed = 10000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 250, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "DelayIn", }, DelayOut = { INP_MaxAllowed = 10000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 250, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "DelayOut", }, HSTART = {
+                                                        { CCS_AddString = "Left/Right" },
+                                                        { CCS_AddString = "None" },
+                                                        { CCS_AddString = "Right/Left" },
+                                                        INP_MaxAllowed = 1000000,
+                                                        INP_Integer = false,
+                                                        INPID_InputControl = "ComboControl",
+                                                        CC_LabelPosition = "Horizontal",
+                                                        INP_MaxScale = 1,
+                                                        INP_MinScale = 0,
+                                                        INP_MinAllowed = -1000000,
+                                                        LINKID_DataType = "Number",
+                                                        LINKS_Name = "Start Horizontal",
+                                                }, AdvLabel = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 4, INPID_InputControl = "LabelControl", LINKS_Name = "Advanced", }, AniLabel = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 6, INPID_InputControl = "LabelControl", LINKS_Name = "Animation", }, EasingLabel = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 4, INPID_InputControl = "LabelControl", LINKS_Name = "Timing/Easing (horiz)", }, EasingLabelY = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 4, INPID_InputControl = "LabelControl", LINKS_Name = "Timing/Easing (vert)", }, About = { TEC_ReadOnly = true, LINKID_DataType = "Text", LINKS_Name = "About", INPID_InputControl = "TextEditControl", TEC_Lines = 3, TEC_Wrap = true, }, HEND = {
+                                                        { CCS_AddString = "Left/Right" },
+                                                        { CCS_AddString = "None" },
+                                                        { CCS_AddString = "Right/Left" },
+                                                        INP_Integer = false,
+                                                        LINKID_DataType = "Number",
+                                                        CC_LabelPosition = "Horizontal",
+                                                        INPID_InputControl = "ComboControl",
+                                                        LINKS_Name = "End Horizontal",
+                                                } }
+                                },
+                                JTCY = Merge {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Blend = Input { Expression = "Value", },
+                                                Background = Input {
+                                                        SourceOp = "JTC",
+                                                        Source = "Output",
+                                                },
+                                                Merge = Input { Value = 0, },
+                                                AnimatedValues = Input { Value = 1, },
+                                                ValueIn = Input {
+                                                        SourceOp = "EaseInCurves_1",
+                                                        Source = "Value",
+                                                },
+                                                ValueOut = Input {
+                                                        SourceOp = "EaseOutCurves_1",
+                                                        Source = "Value",
+                                                },
+                                                Value = Input {
+                                                        Value = 1,
+                                                        Expression = "iif((time-comp.RenderStart)<(comp.RenderEnd-comp.RenderStart)/2,ValueIn,ValueOut) ",
+                                                },
+                                                ValueRange = Input { Value = 1, },
+                                                Start = Input {
+                                                        Value = 1,
+                                                        Expression = "VSTART",
+                                                },
+                                                Hold = Input { Value = 1, },
+                                                End = Input { Expression = "VEND", },
+                                                TimingControl = Input { Value = 1, },
+                                                FramesIn = Input {
+                                                        SourceOp = "Publish4",
+                                                        Source = "Value",
+                                                },
+                                                FramesOut = Input {
+                                                        SourceOp = "Publish5",
+                                                        Source = "Value",
+                                                },
+                                                VEND = Input { Value = 1, },
+                                                VSTART = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 522.023, 108.13 } },
+                                        UserControls = ordered() { AnimatedValues = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 3, INPID_InputControl = "LabelControl", LINKS_Name = "Animated Values", }, ValueIn = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value In", }, ValueOut = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value Out", }, Value = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value", }, ValueRange = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 3, INPID_InputControl = "LabelControl", LINKS_Name = "Value Range", }, Start = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Start", }, Hold = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Hold", }, End = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "End", }, TimingControl = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 4, INPID_InputControl = "LabelControl", LINKS_Name = "Timing Control", }, FramesIn = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 100, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Frames In", }, FramesOut = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 100, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Frames Out", }, DelayIn = { INP_MaxAllowed = 10000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 250, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "DelayIn", }, DelayOut = { INP_MaxAllowed = 10000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 250, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "DelayOut", }, VEND = {
+                                                        { CCS_AddString = "Top/Bottom" },
+                                                        { CCS_AddString = "none" },
+                                                        { CCS_AddString = "Bottom/Top" },
+                                                        INP_Integer = false,
+                                                        LINKID_DataType = "Number",
+                                                        CC_LabelPosition = "Horizontal",
+                                                        INPID_InputControl = "ComboControl",
+                                                        LINKS_Name = "End Vertical",
+                                                }, VSTART = {
+                                                        { CCS_AddString = "Top/Bottom" },
+                                                        { CCS_AddString = "none" },
+                                                        { CCS_AddString = "Bottom/Top" },
+                                                        INP_Integer = false,
+                                                        LINKID_DataType = "Number",
+                                                        CC_LabelPosition = "Horizontal",
+                                                        INPID_InputControl = "ComboControl",
+                                                        LINKS_Name = "Start Vertical",
+                                                } }
+                                }
+                        },
+                },
+                Publish4 = PublishNumber {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Value = Input { Value = 24, },
+                        },
+                },
+                Publish5 = PublishNumber {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Value = Input { Value = 24, },
+                        },
+                },
+                Publish6 = PublishFuID {
+                        Inputs = {
+                                Value = Input { Value = FuID { "None" }, }
+                        },
+                },
+                Publish7 = PublishFuID {
+                        Inputs = {
+                                Value = Input { Value = FuID { "Cubic" }, }
+                        },
+                },
+                EaseInCurves = LUTLookup {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Source = Input { Value = FuID { "Duration" }, },
+                                Curve = Input { Value = FuID { "Easing" }, },
+                                EaseIn = Input {
+                                        SourceOp = "Publish6",
+                                        Source = "Value",
+                                },
+                                EaseOut = Input { Value = FuID { "Cubic" }, },
+                                Lookup = Input {
+                                        SourceOp = "AnimCurvesonJTCLookup",
+                                        Source = "Value",
+                                },
+                                Scale = Input {
+                                        Value = -1,
+                                        Expression = "JTC.Hold-JTC.Start",
+                                },
+                                Offset = Input {
+                                        Value = 2,
+                                        Expression = "JTC.Start",
+                                },
+                                TimeScale = Input {
+                                        Value = 19.9333333333333,
+                                        Expression = "(comp.RenderEnd-comp.RenderStart)/JTC.FramesIn",
+                                },
+                                TimeOffset = Input { Expression = "JTC.DelayIn/(comp.RenderEnd-comp.RenderStart)", },
+                        },
+                },
+                AnimCurvesonJTCLookup = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 255, Green = 255, Blue = 255 },
+                },
+                EaseOutCurves = LUTLookup {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Source = Input { Value = FuID { "Duration" }, },
+                                Curve = Input { Value = FuID { "Easing" }, },
+                                EaseIn = Input {
+                                        SourceOp = "Publish7",
+                                        Source = "Value",
+                                },
+                                Lookup = Input {
+                                        SourceOp = "AnimCurvesonJTCLookup1",
+                                        Source = "Value",
+                                },
+                                Scale = Input {
+                                        Value = 0,
+                                        Expression = "JTC.End-JTC.Hold",
+                                },
+                                Offset = Input {
+                                        Value = 1,
+                                        Expression = "JTC.Hold",
+                                },
+                                TimeScale = Input {
+                                        Value = 19.9333333333333,
+                                        Expression = "(comp.RenderEnd-comp.RenderStart)/JTC.FramesOut",
+                                },
+                                TimeOffset = Input {
+                                        Value = 0.946488294314381,
+                                        Expression = ":local clen=comp.RenderEnd-comp.RenderStart;return (clen-JTC.FramesOut-1)/clen-(JTC.DelayOut/clen)",
+                                },
+                        },
+                },
+                AnimCurvesonJTCLookup1 = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 255, Green = 255, Blue = 255 },
+                },
+                EaseInCurves_1 = LUTLookup {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Source = Input { Value = FuID { "Duration" }, },
+                                Curve = Input { Value = FuID { "Easing" }, },
+                                EaseIn = Input {
+                                        SourceOp = "Publish6",
+                                        Source = "Value",
+                                },
+                                EaseOut = Input { Value = FuID { "Cubic" }, },
+                                Lookup = Input {
+                                        SourceOp = "AnimCurvesonJTCYLookup",
+                                        Source = "Value",
+                                },
+                                Scale = Input {
+                                        Value = 0,
+                                        Expression = "JTCY.Hold-JTCY.Start",
+                                },
+                                Offset = Input {
+                                        Value = 1,
+                                        Expression = "JTCY.Start",
+                                },
+                                TimeScale = Input {
+                                        Value = 19.9333333333333,
+                                        Expression = "(comp.RenderEnd-comp.RenderStart)/JTCY.FramesIn",
+                                },
+                                TimeOffset = Input { Expression = "JTCY.DelayIn/(comp.RenderEnd-comp.RenderStart)", },
+                        },
+                },
+                AnimCurvesonJTCYLookup = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 255, Green = 255, Blue = 255 },
+                },
+                EaseOutCurves_1 = LUTLookup {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Source = Input { Value = FuID { "Duration" }, },
+                                Curve = Input { Value = FuID { "Easing" }, },
+                                EaseIn = Input {
+                                        SourceOp = "Publish7",
+                                        Source = "Value",
+                                },
+                                EaseOut = Input { Value = FuID { "Sine" }, },
+                                Lookup = Input {
+                                        SourceOp = "AnimCurvesonJTCYLookup1",
+                                        Source = "Value",
+                                },
+                                Scale = Input {
+                                        Value = -1,
+                                        Expression = "JTCY.End-JTCY.Hold",
+                                },
+                                Offset = Input {
+                                        Value = 1,
+                                        Expression = "JTCY.Hold",
+                                },
+                                TimeScale = Input {
+                                        Value = 19.9333333333333,
+                                        Expression = "(comp.RenderEnd-comp.RenderStart)/JTCY.FramesOut",
+                                },
+                                TimeOffset = Input {
+                                        Value = 0.946488294314381,
+                                        Expression = ":local clen=comp.RenderEnd-comp.RenderStart;return (clen-JTCY.FramesOut-1)/clen-(JTCY.DelayOut/clen)",
+                                },
+                        },
+                },
+                AnimCurvesonJTCYLookup1 = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 255, Green = 255, Blue = 255 },
+                }
+        },
+        ActiveTool = "JustSplitInOut"
+}

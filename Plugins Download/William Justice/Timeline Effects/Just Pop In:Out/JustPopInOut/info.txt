@@ -1,0 +1,26 @@
+JustPopInOut - Davinci Resolve 17 timeline effect
+
+Effect created by William Justice | https://billjustice.com
+
+The JustPopInOut effect will take any text/clip and zoom in from 0 to 1 at the beginning of the clip and zoom out from 1 to 0 at the end of the clip.  The timeline automatically adjusts to the length of the clip.
+
+INSTALL
+  - Download effect files
+  - UnZip effect
+  - Copy the files to the folder location
+
+
+FILE LOCATIONS
+PC
+/Users/%username%/AppData/Roaming/Blackmagic Design/DaVinci Resolve/Support/Fusion/Templates/Edit/Effects/
+
+MAC
+/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Templates/Edit/Effects/
+
+
+FIND LOCATIONS IN RESOLVE
+  - In Resolve Click the Fusion button
+  - Open the effects panel
+  - Click Edit Templates and then Effects
+  - In the top right area, click "..." and choose Show Folder
+

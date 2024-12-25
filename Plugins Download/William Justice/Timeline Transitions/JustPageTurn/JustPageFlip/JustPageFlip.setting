@@ -1,0 +1,338 @@
+{
+        Tools = ordered() {
+                JustPageFlip = MacroOperator {
+                        CtrlWZoom = false,
+                        Inputs = ordered() {
+                                Input3 = InstanceInput {
+                                        SourceOp = "DVE1",
+                                        Source = "MotionBlur",
+                                        Default = 0,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "DVE1",
+                                        Source = "Quality",
+                                        Default = 2,
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "DVE1",
+                                        Source = "ShutterAngle",
+                                        Default = 180,
+                                },
+                                MainInput2 = InstanceInput {
+                                        SourceOp = "PipeRouter1",
+                                        Source = "Input",
+                                        Name = "Background",
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "DVE1",
+                                        Source = "Input",
+                                        Name = "Foreground",
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "Merge2",
+                                        Source = "Output",
+                                }
+                        },
+                        ViewInfo = GroupInfo {
+                                Pos = { 174, 199.409 },
+                                Flags = {
+                                        Expanded = true,
+                                        AllowPan = false,
+                                        ConnectedSnap = true,
+                                        AutoSnap = true,
+                                        RemoveRouters = true
+                                },
+                                Size = { 770.684, 258.317, 171.324, 24.2424 },
+                                Direction = "Horizontal",
+                                PipeStyle = "Direct",
+                                Scale = 1,
+                                Offset = { 0, 0 }
+                        },
+                        Tools = ordered() {
+                                PipeRouter1 = PipeRouter {
+                                        CtrlWShown = false,
+                                        ViewInfo = PipeRouterInfo { Pos = { -121.334, 111.378 } },
+                                },
+                                Merge1 = Merge {
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "PipeRouter1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "DVE1",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -15.667, 89.2275 } },
+                                },
+                                DVE1 = DVE {
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "Rectangle1",
+                                                        Source = "Mask",
+                                                },
+                                                MotionBlur = Input {
+                                                        SourceOp = "Publish5",
+                                                        Source = "Value",
+                                                },
+                                                Quality = Input {
+                                                        SourceOp = "Publish1",
+                                                        Source = "Value",
+                                                },
+                                                ShutterAngle = Input {
+                                                        SourceOp = "Publish2",
+                                                        Source = "Value",
+                                                },
+                                                CenterBias = Input {
+                                                        SourceOp = "Publish3",
+                                                        Source = "Value",
+                                                },
+                                                SampleSpread = Input {
+                                                        SourceOp = "Publish4",
+                                                        Source = "Value",
+                                                },
+                                                YRotation = Input {
+                                                        Value = -90,
+                                                        Expression = "JTC.ValueIn*-90",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -14, 40.4699 } },
+                                },
+                                Rectangle1 = RectangleMask {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input { Value = { 0.75, 0.5 }, },
+                                                Height = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -14, 7.46996 } },
+                                },
+                                DVE2 = DVE {
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "Rectangle2",
+                                                        Source = "Mask",
+                                                },
+                                                MotionBlur = Input {
+                                                        SourceOp = "Publish5",
+                                                        Source = "Value",
+                                                },
+                                                Quality = Input {
+                                                        SourceOp = "Publish1",
+                                                        Source = "Value",
+                                                },
+                                                ShutterAngle = Input {
+                                                        SourceOp = "Publish2",
+                                                        Source = "Value",
+                                                },
+                                                CenterBias = Input {
+                                                        SourceOp = "Publish3",
+                                                        Source = "Value",
+                                                },
+                                                SampleSpread = Input {
+                                                        SourceOp = "Publish4",
+                                                        Source = "Value",
+                                                },
+                                                YRotation = Input {
+                                                        Value = 69.9026197159505,
+                                                        Expression = "90-(1-JTC.ValueOut)*90",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "PipeRouter1",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -15.334, 158.045 } },
+                                },
+                                Rectangle2 = RectangleMask {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input { Value = { 0.25, 0.5 }, },
+                                                Height = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -15.334, 125.045 } },
+                                },
+                                Merge2 = Merge {
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "Rectangle3",
+                                                        Source = "Mask",
+                                                },
+                                                Blend = Input {
+                                                        Value = 0,
+                                                        Expression = "iif(time<comp.RenderEnd/2,0,1)",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "JTC",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "DVE2",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 320.819, 89.2275 } },
+                                },
+                                Rectangle3 = RectangleMask {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input { Value = { 0.25, 0.5 }, },
+                                                Height = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 320.819, 34.3802 } },
+                                },
+                                JTC = Merge {
+                                        NameSet = true,
+                                        Inputs = {
+                                                Blend = Input { Expression = "Value", },
+                                                Background = Input {
+                                                        SourceOp = "Merge1",
+                                                        Source = "Output",
+                                                },
+                                                Merge = Input { Value = 0, },
+                                                AnimatedValues = Input { Value = 1, },
+                                                ValueIn = Input {
+                                                        SourceOp = "EaseInCurves",
+                                                        Source = "Value",
+                                                },
+                                                ValueOut = Input {
+                                                        SourceOp = "EaseOutCurves",
+                                                        Source = "Value",
+                                                },
+                                                Value = Input {
+                                                        Value = 0.552264231633827,
+                                                        Expression = "iif((time-comp.RenderStart)<(comp.RenderEnd-comp.RenderStart)/2,ValueIn,ValueOut) ",
+                                                },
+                                                ValueRange = Input { Value = 1, },
+                                                Hold = Input { Value = 1, },
+                                                TimingControl = Input { Value = 1, },
+                                                FramesIn = Input {
+                                                        Value = 11.5,
+                                                        Expression = "comp.RenderEnd/2",
+                                                },
+                                                FramesOut = Input {
+                                                        Value = 12.5,
+                                                        Expression = "FramesIn+1",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 130.16, 89.2275 } },
+                                        UserControls = ordered() { AnimatedValues = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 3, INPID_InputControl = "LabelControl", LINKS_Name = "Animated Values", }, ValueIn = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value In", }, ValueOut = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value Out", }, Value = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value", }, ValueRange = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 3, INPID_InputControl = "LabelControl", LINKS_Name = "Value Range", }, Start = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Start", }, Hold = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Hold", }, End = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "End", }, TimingControl = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 4, INPID_InputControl = "LabelControl", LINKS_Name = "Timing Control", }, FramesIn = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 100, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Frames In", }, FramesOut = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 100, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Frames Out", }, DelayIn = { INP_MaxAllowed = 10000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 250, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "DelayIn", }, DelayOut = { INP_MaxAllowed = 10000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 250, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "DelayOut", } }
+                                }
+                        },
+                },
+                Publish5 = PublishNumber {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Value = Input { Value = 0, },
+                        },
+                },
+                Publish1 = PublishNumber {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Value = Input { Value = 2, },
+                        },
+                },
+                Publish2 = PublishNumber {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Value = Input { Value = 80, },
+                        },
+                },
+                Publish3 = PublishNumber {
+                        CtrlWZoom = false,
+                },
+                Publish4 = PublishNumber {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Value = Input { Value = 1, },
+                        },
+                },
+                EaseInCurves = LUTLookup {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Source = Input { Value = FuID { "Duration" }, },
+                                Curve = Input { Value = FuID { "Easing" }, },
+                                EaseIn = Input { Value = FuID { "Sine" }, },
+                                EaseOut = Input { Value = FuID { "Sine" }, },
+                                Lookup = Input {
+                                        SourceOp = "AnimCurvesonJTCLookup",
+                                        Source = "Value",
+                                },
+                                Scale = Input { Expression = "JTC.Hold-JTC.Start", },
+                                Offset = Input { Expression = "JTC.Start", },
+                                TimeScale = Input {
+                                        Value = 2,
+                                        Expression = "(comp.RenderEnd-comp.RenderStart)/JTC.FramesIn",
+                                },
+                                TimeOffset = Input { Expression = "JTC.DelayIn/(comp.RenderEnd-comp.RenderStart)", },
+                        },
+                },
+                AnimCurvesonJTCLookup = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 255, Green = 255, Blue = 255 },
+                },
+                EaseOutCurves = LUTLookup {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Source = Input { Value = FuID { "Duration" }, },
+                                Curve = Input { Value = FuID { "Easing" }, },
+                                EaseIn = Input { Value = FuID { "Sine" }, },
+                                EaseOut = Input { Value = FuID { "Sine" }, },
+                                Lookup = Input {
+                                        SourceOp = "AnimCurvesonJTCLookup1",
+                                        Source = "Value",
+                                },
+                                Scale = Input {
+                                        Value = -1,
+                                        Expression = "JTC.End-JTC.Hold",
+                                },
+                                Offset = Input {
+                                        Value = 1,
+                                        Expression = "JTC.Hold",
+                                },
+                                TimeScale = Input {
+                                        Value = 1.84,
+                                        Expression = "(comp.RenderEnd-comp.RenderStart)/JTC.FramesOut",
+                                },
+                                TimeOffset = Input {
+                                        Value = 0.41304347826087,
+                                        Expression = ":local clen=comp.RenderEnd-comp.RenderStart;return (clen-JTC.FramesOut-1)/clen-(JTC.DelayOut/clen)",
+                                },
+                        },
+                },
+                AnimCurvesonJTCLookup1 = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 255, Green = 255, Blue = 255 },
+                }
+        },
+        ActiveTool = "JustPageFlip"
+}

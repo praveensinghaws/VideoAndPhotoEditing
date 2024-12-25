@@ -1,0 +1,697 @@
+{
+        Tools = ordered() {
+                JustSlidePanel = MacroOperator {
+                        CtrlWZoom = false,
+                        Inputs = ordered() {
+                                Input4 = Input { Value = 20, },
+                                Input5 = Input { Value = 20, },
+                                About = InstanceInput {
+                                        SourceOp = "Merge1",
+                                        Source = "About",
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "Merge1",
+                                        Source = "PanelPosition",
+                                        Default = -0.4,
+                                },
+                                Input1 = InstanceInput {
+                                        SourceOp = "Merge1",
+                                        Source = "Blend",
+                                        Name = "Panel Blend",
+                                        Default = 1,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "Transform1",
+                                        Source = "MainPosition",
+                                        Name = "Clip Position",
+                                        Default = -0.2,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "Transform2",
+                                        Source = "PanelAngle",
+                                        Name = "Panel Angle",
+                                        Default = 0,
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "Rectangle1",
+                                        Source = "Level",
+                                        Name = "Border Level",
+                                        Default = 0.772,
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "Rectangle1",
+                                        Source = "BorderWidth",
+                                        Default = 0.01,
+                                },
+                                InputFin = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "FramesIn",
+                                        Default = 15,
+                                },
+                                InputFout = InstanceInput {
+                                        SourceOp = "JTC",
+                                        Source = "FramesOut",
+                                        Default = 15,
+                                },
+                                ColorBKG = InstanceInput {
+                                        SourceOp = "Merge1",
+                                        Source = "ColorBKG",
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "Type",
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "TopLeftRed",
+                                        Name = "Top",
+                                        ControlGroup = 10,
+                                        Default = 0.9882352941176,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "TopLeftGreen",
+                                        ControlGroup = 10,
+                                        Default = 0.0509803921569,
+                                },
+                                Input12 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "TopLeftBlue",
+                                        ControlGroup = 10,
+                                        Default = 0.5529411764706,
+                                },
+                                Input13 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "TopLeftAlpha",
+                                        ControlGroup = 10,
+                                        Default = 1,
+                                },
+                                Input14 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "TopRightSep",
+                                },
+                                Input15 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "TopRightRed",
+                                        Name = "Top Right",
+                                        ControlGroup = 12,
+                                        Default = 0,
+                                },
+                                Input16 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "TopRightGreen",
+                                        ControlGroup = 12,
+                                        Default = 0,
+                                },
+                                Input17 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "TopRightBlue",
+                                        ControlGroup = 12,
+                                        Default = 0,
+                                },
+                                Input18 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "TopRightAlpha",
+                                        ControlGroup = 12,
+                                        Default = 1,
+                                },
+                                Input19 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "BottomLeftSep",
+                                },
+                                Input20 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "BottomLeftRed",
+                                        Name = "Bottom",
+                                        ControlGroup = 14,
+                                        Default = 0.5411764705882,
+                                },
+                                Input21 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "BottomLeftGreen",
+                                        ControlGroup = 14,
+                                        Default = 0.0705882352941,
+                                },
+                                Input22 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "BottomLeftBlue",
+                                        ControlGroup = 14,
+                                        Default = 0.2509803921569,
+                                },
+                                Input23 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "BottomLeftAlpha",
+                                        ControlGroup = 14,
+                                        Default = 1,
+                                },
+                                Input24 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "BottomRightSep",
+                                },
+                                Input25 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "BottomRightRed",
+                                        Name = "Bottom Right",
+                                        ControlGroup = 16,
+                                        Default = 0,
+                                },
+                                Input26 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "BottomRightGreen",
+                                        ControlGroup = 16,
+                                        Default = 0,
+                                },
+                                Input27 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "BottomRightBlue",
+                                        ControlGroup = 16,
+                                        Default = 0,
+                                },
+                                Input28 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "BottomRightAlpha",
+                                        ControlGroup = 16,
+                                        Default = 1,
+                                },
+                                Input29 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "GradientType",
+                                },
+                                Input30 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "Start",
+                                        DefaultX = 0,
+                                        DefaultY = 0.5,
+                                },
+                                Input31 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "End",
+                                        DefaultX = 1,
+                                        DefaultY = 0.5,
+                                },
+                                Input32 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "Gradient",
+                                },
+                                Input33 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "GradientInterpolationMethod",
+                                },
+                                Input34 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "Offset",
+                                        Default = 0,
+                                },
+                                Input35 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "Repeat",
+                                },
+                                Input36 = InstanceInput {
+                                        SourceOp = "Background3",
+                                        Source = "SubPixel",
+                                },
+                                ColorBorder = InstanceInput {
+                                        SourceOp = "Merge1",
+                                        Source = "ColorBorder",
+                                },
+                                Input37 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "Type",
+                                },
+                                Input38 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "TopLeftRed",
+                                        Name = "Color",
+                                        ControlGroup = 26,
+                                        Default = 0,
+                                },
+                                Input39 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "TopLeftGreen",
+                                        ControlGroup = 26,
+                                        Default = 0,
+                                },
+                                Input40 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "TopLeftBlue",
+                                        ControlGroup = 26,
+                                        Default = 0,
+                                },
+                                Input41 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "TopLeftAlpha",
+                                        ControlGroup = 26,
+                                        Default = 1,
+                                },
+                                Input42 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "TopRightSep",
+                                },
+                                Input43 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "TopRightRed",
+                                        Name = "Top Right",
+                                        ControlGroup = 28,
+                                        Default = 0,
+                                },
+                                Input44 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "TopRightGreen",
+                                        ControlGroup = 28,
+                                        Default = 0,
+                                },
+                                Input45 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "TopRightBlue",
+                                        ControlGroup = 28,
+                                        Default = 0,
+                                },
+                                Input46 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "TopRightAlpha",
+                                        ControlGroup = 28,
+                                        Default = 1,
+                                },
+                                Input47 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "BottomLeftSep",
+                                },
+                                Input48 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "BottomLeftRed",
+                                        Name = "Bottom Left",
+                                        ControlGroup = 30,
+                                        Default = 0,
+                                },
+                                Input49 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "BottomLeftGreen",
+                                        ControlGroup = 30,
+                                        Default = 0,
+                                },
+                                Input50 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "BottomLeftBlue",
+                                        ControlGroup = 30,
+                                        Default = 0,
+                                },
+                                Input51 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "BottomLeftAlpha",
+                                        ControlGroup = 30,
+                                        Default = 1,
+                                },
+                                Input52 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "BottomRightSep",
+                                },
+                                Input53 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "BottomRightRed",
+                                        Name = "Bottom Right",
+                                        ControlGroup = 32,
+                                        Default = 0,
+                                },
+                                Input54 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "BottomRightGreen",
+                                        ControlGroup = 32,
+                                        Default = 0,
+                                },
+                                Input55 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "BottomRightBlue",
+                                        ControlGroup = 32,
+                                        Default = 0,
+                                },
+                                Input56 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "BottomRightAlpha",
+                                        ControlGroup = 32,
+                                        Default = 1,
+                                },
+                                Input57 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "GradientType",
+                                },
+                                Input58 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "Start",
+                                        DefaultX = 0,
+                                        DefaultY = 0.5,
+                                },
+                                Input59 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "End",
+                                        DefaultX = 1,
+                                        DefaultY = 0.5,
+                                },
+                                Input60 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "Gradient",
+                                },
+                                Input61 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "GradientInterpolationMethod",
+                                },
+                                Input62 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "Offset",
+                                        Default = 0,
+                                },
+                                Input63 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "Repeat",
+                                },
+                                Input64 = InstanceInput {
+                                        SourceOp = "Background4",
+                                        Source = "SubPixel",
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "Transform1",
+                                        Source = "Input",
+                                },
+                                MainInput2 = InstanceInput {
+                                        SourceOp = "Merge5_1",
+                                        Source = "Foreground",
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "JTC",
+                                        Source = "Output",
+                                }
+                        },
+                        ViewInfo = GroupInfo {
+                                Pos = { 650.231, 209.99 },
+                                Flags = {
+                                        AllowPan = false,
+                                        ConnectedSnap = true,
+                                        AutoSnap = true,
+                                        RemoveRouters = true
+                                },
+                                Size = { 537.673, 329.219, 268.836, 24.2424 },
+                                Direction = "Horizontal",
+                                PipeStyle = "Direct",
+                                Scale = 1,
+                                Offset = { 0, 0 }
+                        },
+                        Tools = ordered() {
+                                Merge1 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Transform1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Transform2",
+                                                        Source = "Output",
+                                                },
+                                                Center = Input {
+                                                        Value = { 0.16, 0.5 },
+                                                        Expression = "Point(0.5+PanelPosition*JTC.Value, 0.5)",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                                PanelPosition = Input { Value = -0.4, },
+                                                About = Input { Value = "JustAutoSlidePanel by William Justice.  MORE INFO : https://billjustice.com", },
+                                                SetLab = Input {
+                                                        Value = Text {
+                                                                Value = "1"
+                                                        },
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 95, 271.924 } },
+                                        UserControls = ordered() { PanelPosition = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = -1, INP_MinAllowed = -1, LINKID_DataType = "Number", LINKS_Name = "Panel Position", }, PanelAngle = { INP_MaxAllowed = 45, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 45, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "PanelAngle", }, About = { TEC_ReadOnly = true, LINKID_DataType = "Text", TEC_Wrap = true, INPID_InputControl = "TextEditControl", TEC_Lines = 3, LINKS_Name = "About", }, SetLab = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 7, INPID_InputControl = "LabelControl", LINKS_Name = "Slide Panel Settings", }, ColorBKG = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 27, INPID_InputControl = "LabelControl", LINKS_Name = "Background Color", }, ColorBorder = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 27, INPID_InputControl = "LabelControl", LINKS_Name = "Border Color", } }
+                                },
+                                Transform1 = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Center = Input {
+                                                        Value = { 0.3, 0.5 },
+                                                        Expression = "Point(0.5+MainPosition*JTC.Value, 0.5)",
+                                                },
+                                                MainPosition = Input { Value = -0.2, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -30.9844, 271.924 } },
+                                        UserControls = ordered() { MainPosition = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0.5, INP_MinScale = -1, INP_MinAllowed = -1, LINKID_DataType = "Number", LINKS_Name = "MainPosition", } }
+                                },
+                                Transform2 = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Pivot = Input {
+                                                        Value = { 1, 1 },
+                                                        Expression = "iif(Merge1.PanelPosition<0,iif(PanelAngle<0,Point(1,0),Point(1, 1)),iif(PanelAngle<0,Point(0,1),Point(0, 0)))",
+                                                },
+                                                Angle = Input { Expression = "PanelAngle", },
+                                                Input = Input {
+                                                        SourceOp = "Merge3",
+                                                        Source = "Output",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 95, 229.185 } },
+                                        UserControls = ordered() { PanelAngle = { INP_MaxAllowed = 45, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 45, INP_Default = 0, INP_MinScale = -45, INP_MinAllowed = -45, LINKID_DataType = "Number", INP_External = false, LINKS_Name = "PanelAngle", } }
+                                },
+                                Rectangle1 = RectangleMask {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Level = Input { Value = 0.772, },
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                BorderWidth = Input { Value = 0.01, },
+                                                Solid = Input { Value = 0, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Width = Input { Value = 1, },
+                                                Height = Input { Value = 1.4, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -63.6204, 7.59103 } },
+                                },
+                                Background3 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 119, },
+                                                Width = Input {
+                                                        Value = 3840,
+                                                        Expression = "comp:GetPrefs(\"Comp.FrameFormat.Width\")",
+                                                },
+                                                Height = Input {
+                                                        Value = 6480,
+                                                        Expression = "comp:GetPrefs(\"Comp.FrameFormat.Height\")*3",
+                                                },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                Type = Input { Value = FuID { "Vertical" }, },
+                                                TopLeftRed = Input { Value = 0.0784313725490196, },
+                                                TopLeftGreen = Input { Value = 0.427450980392157, },
+                                                TopLeftBlue = Input { Value = 0.984313725490196, },
+                                                BottomLeftRed = Input { Value = 0.796078431372549, },
+                                                BottomLeftGreen = Input { Value = 0.0274509803921569, },
+                                                BottomLeftBlue = Input { Value = 0.0666666666666667, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -206.673, 113.19 } },
+                                },
+                                Background4 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "Rectangle1",
+                                                        Source = "Mask",
+                                                },
+                                                GlobalOut = Input { Value = 119, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input {
+                                                        Value = 6480,
+                                                        Expression = "comp:GetPrefs(\"Comp.FrameFormat.Height\")*3",
+                                                },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -63.6204, 53.1894 } },
+                                },
+                                Merge4 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Background3",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Background4",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -63.6204, 113.19 } },
+                                },
+                                Merge5_1 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Merge4",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 42.6086, 113.19 } },
+                                },
+                                Merge3 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Blend = Input { Expression = "iif(Merge1.PanelPosition<0,1,0)", },
+                                                Background = Input {
+                                                        SourceOp = "Merge2",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Merge5_1",
+                                                        Source = "Output",
+                                                },
+                                                Center = Input { Value = { 1.5, 0.5 }, },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 94.057, 196.185 } },
+                                },
+                                Background2 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 119, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftAlpha = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -194.274, 196.185 } },
+                                },
+                                Merge2 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Blend = Input {
+                                                        Value = 0,
+                                                        Expression = "iif(Merge1.PanelPosition<0,0,1)",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Background2",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Merge5_1",
+                                                        Source = "Output",
+                                                },
+                                                Center = Input { Value = { -0.5, 0.5 }, },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -60.5194, 196.185 } },
+                                },
+                                JTC = Merge {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Blend = Input {
+                                                        Value = 0.162848806208176,
+                                                        Expression = "Value",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Merge1",
+                                                        Source = "Output",
+                                                },
+                                                Merge = Input { Value = 0, },
+                                                AnimatedValues = Input { Value = 1, },
+                                                ValueIn = Input {
+                                                        SourceOp = "EaseInCurves_1",
+                                                        Source = "Value",
+                                                },
+                                                ValueOut = Input {
+                                                        SourceOp = "EaseOutCurves_1",
+                                                        Source = "Value",
+                                                },
+                                                Value = Input {
+                                                        Value = 0.162848806208176,
+                                                        Expression = "iif((time-comp.RenderStart)<(comp.RenderEnd-comp.RenderStart)/2,ValueIn,ValueOut) ",
+                                                },
+                                                ValueRange = Input { Value = 1, },
+                                                Hold = Input { Value = 1, },
+                                                TimingControl = Input { Value = 1, },
+                                                FramesIn = Input { Value = 15, },
+                                                FramesOut = Input { Value = 15, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 205, 271.924 } },
+                                        UserControls = ordered() { AnimatedValues = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 3, INPID_InputControl = "LabelControl", LINKS_Name = "Animated Values", }, ValueIn = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value In", }, ValueOut = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value Out", }, Value = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Value", }, ValueRange = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 3, INPID_InputControl = "LabelControl", LINKS_Name = "Value Range", }, Start = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Start", }, Hold = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Hold", }, End = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "End", }, TimingControl = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 4, INPID_InputControl = "LabelControl", LINKS_Name = "Timing Control", }, FramesIn = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 100, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Frames In", }, FramesOut = { INP_MaxAllowed = 5000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 100, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Frames Out", }, DelayIn = { INP_MaxAllowed = 10000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 250, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "DelayIn", }, DelayOut = { INP_MaxAllowed = 10000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 250, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "DelayOut", } }
+                                }
+                        },
+                },
+                EaseInCurves_1 = LUTLookup {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Source = Input { Value = FuID { "Duration" }, },
+                                Curve = Input { Value = FuID { "Easing" }, },
+                                EaseIn = Input { Value = FuID { "Sine" }, },
+                                EaseOut = Input { Value = FuID { "Sine" }, },
+                                Lookup = Input {
+                                        SourceOp = "AnimCurvesonJTCLookup_1",
+                                        Source = "Value",
+                                },
+                                Scale = Input { Expression = "JTC.Hold-JTC.Start", },
+                                Offset = Input { Expression = "JTC.Start", },
+                                TimeScale = Input {
+                                        Value = 7.93333333333333,
+                                        Expression = "(comp.RenderEnd-comp.RenderStart)/JTC.FramesIn",
+                                },
+                                TimeOffset = Input {
+                                        Value = 0.0840336134453782,
+                                        Expression = "JTC.DelayIn/(comp.RenderEnd-comp.RenderStart)",
+                                },
+                        },
+                },
+                AnimCurvesonJTCLookup_1 = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 255, Green = 255, Blue = 255 },
+                },
+                EaseOutCurves_1 = LUTLookup {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                Source = Input { Value = FuID { "Duration" }, },
+                                Curve = Input { Value = FuID { "Easing" }, },
+                                EaseIn = Input { Value = FuID { "Sine" }, },
+                                EaseOut = Input { Value = FuID { "Sine" }, },
+                                Lookup = Input {
+                                        SourceOp = "AnimCurvesonJTCLookup1_1",
+                                        Source = "Value",
+                                },
+                                Scale = Input {
+                                        Value = -1,
+                                        Expression = "JTC.End-JTC.Hold",
+                                },
+                                Offset = Input {
+                                        Value = 1,
+                                        Expression = "JTC.Hold",
+                                },
+                                TimeScale = Input {
+                                        Value = 7.93333333333333,
+                                        Expression = "(comp.RenderEnd-comp.RenderStart)/JTC.FramesOut",
+                                },
+                                TimeOffset = Input {
+                                        Value = 0.781512605042017,
+                                        Expression = ":local clen=comp.RenderEnd-comp.RenderStart;return (clen-JTC.FramesOut-1)/clen-(JTC.DelayOut/clen)",
+                                },
+                        },
+                },
+                AnimCurvesonJTCLookup1_1 = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+                                        [1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 255, Green = 255, Blue = 255 },
+                }
+        },
+        ActiveTool = "JustSlidePanel"
+}

@@ -1,0 +1,206 @@
+{
+        Tools = ordered() {
+                JustShapeMask = MacroOperator {
+                        Inputs = ordered() {
+                                 About = InstanceInput {
+                                       SourceOp = "Ellipse1",
+                                       Source = "About",
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "Ellipse1",
+                                        Source = "MaskShape",
+                                        Default = 0,
+                                },
+                                Input1 = InstanceInput {
+                                        SourceOp = "Ellipse1",
+                                        Source = "Level",
+                                        Default = 1,
+                                },
+
+                                Input2 = InstanceInput {
+                                        SourceOp = "Ellipse1",
+                                        Source = "SoftEdge",
+                                },
+                                BorderWidth = InstanceInput {
+                                        SourceOp = "Ellipse1",
+                                        Source = "BorderWidth",
+                                        Default = 0,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "Ellipse1",
+                                        Source = "Invert",
+                                },
+                                Solid = InstanceInput {
+                                        SourceOp = "Ellipse1",
+                                        Source = "Solid",
+                                        Default = 0,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "Ellipse1",
+                                        Source = "Center",
+                                },
+
+                                Input7 = InstanceInput {
+                                        SourceOp = "Ellipse1",
+                                        Source = "Angle",
+                                        Default = 0,
+                                },
+
+
+
+                                RectLabel = InstanceInput {
+                                       SourceOp = "Ellipse1",
+                                       Source = "RectLabel",
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "Rectangle1",
+                                        Source = "Width",
+                                        Default = 0.4,
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "Rectangle1",
+                                        Source = "Height",
+                                        Default = 0.4,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "Rectangle1",
+                                        Source = "CornerRadius",
+                                        Default = 0,
+                                },
+
+                                EllipseLabel = InstanceInput {
+                                       SourceOp = "Ellipse1",
+                                       Source = "EllipseLabel",
+                                },
+
+                                Input5 = InstanceInput {
+                                        SourceOp = "Ellipse1",
+                                        Source = "Width",
+                                        Default = 0.25,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "Ellipse1",
+                                        Source = "Height",
+                                        Default = 0.25,
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "Merge1",
+                                        Source = "Foreground",
+                                },
+
+
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "Merge1",
+                                        Source = "Output",
+                                }
+                        },
+                        ViewInfo = GroupInfo { Pos = { 0, 0 } },
+                        Tools = ordered() {
+                                Ellipse1 = EllipseMask {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                RectLabel = Input { Value = "1", },
+                                                About = Input { Value = "JustShapeMask by William Justice.  MORE INFO : https://billjustice.com", },
+                                                EllipseLabel = Input { Value = "1", },
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Width = Input { Value = 0.25, },
+                                                Height = Input { Value = 0.25, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 295.333, 167.364 } },
+                                        UserControls = ordered() {
+                                                MaskShape = {
+                                                        LINKS_Name = "MaskShape",
+                                                        LINKID_DataType = "Number",
+                                                        INPID_InputControl = "ComboControl",
+                                                        INP_Default = 0,
+                                                        INP_Integer = false,
+                                                        INP_MinScale = 0,
+                                                        INP_MaxScale = 1,
+                                                        INP_MinAllowed = 0,
+                                                        INP_MaxAllowed = 1,
+                                                        { CCS_AddString = "Rectangle" },
+                                                        { CCS_AddString = "Circle" },
+                                                        CC_LabelPosition = "Horizontal",
+                                                },
+                                                About = { TEC_ReadOnly = true, LINKID_DataType = "Text", LINKS_Name = "About", INPID_InputControl = "TextEditControl", TEC_Lines = 3, TEC_Wrap = true, },
+                                                RectLabel = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 3, INPID_InputControl = "LabelControl", LINKS_Name = "Rectangle", },
+                                                EllipseLabel = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 2, INPID_InputControl = "LabelControl", LINKS_Name = "Ellipse", }
+                                        }
+                                },
+                                Rectangle1 = RectangleMask {
+                                        Inputs = {
+                                                Level = Input { Expression = "Ellipse1.Level", },
+                                                BorderWidth = Input { Expression = "Ellipse1.BorderWidth", },
+                                                Solid = Input { Expression = "Ellipse1.Solid", },
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                SoftEdge = Input { Expression = "Ellipse1.SoftEdge", },
+                                                Invert = Input { Expression = "Ellipse1.Invert", },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input { Expression = "Ellipse1.Center", },
+                                                Width = Input { Value = 0.4, },
+                                                Height = Input { Value = 0.4, },
+                                                Angle = Input { Expression = "Ellipse1.Angle", },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 578, 166.151 } },
+                                },
+                                Dissolve1 = Dissolve {
+                                        Transitions = {
+                                                [0] = "DFTDissolve"
+                                        },
+                                        Inputs = {
+                                                Mix = Input {
+                                                        Value = 0,
+                                                        Expression = "Ellipse1.MaskShape",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Rectangle1",
+                                                        Source = "Mask",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Ellipse1",
+                                                        Source = "Mask",
+                                                },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 442, 94.6356 } },
+                                },
+                                Merge1 = Merge {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "Dissolve1",
+                                                        Source = "Output",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Background1",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 464, 3.72654 } },
+                                },
+                                Background1 = Background {
+                                        Inputs = {
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftAlpha = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 300.667, 3.72654 } },
+                                }
+                        },
+                }
+        },
+        ActiveTool = "JustShapeMask"
+}
