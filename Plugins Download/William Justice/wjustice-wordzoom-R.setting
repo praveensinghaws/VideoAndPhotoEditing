@@ -1,0 +1,354 @@
+{
+        Tools = ordered() {
+
+
+                Instance_Text3D2 = Text3D {
+                        SourceOp = "Text3D1",
+                        Inputs = {
+                                SceneInput = Input { },
+                                ["Transform3DOp.Translation"] = Input { },
+                                ["Transform3DOp.Translate.X"] = Input { Value = -3.157640473657808, },
+                                ["Transform3DOp.Translate.Y"] = Input { Value = 1.1699940434180593, },
+                                ["Transform3DOp.Translate.Z"] = Input { Value = -64.43336254008, },
+                                ["Transform3DOp.Rotation"] = Input { },
+                                ["Transform3DOp.Rotate.X"] = Input { },
+                                ["Transform3DOp.Rotate.Y"] = Input { },
+                                ["Transform3DOp.Rotate.Z"] = Input { Value = 90, },
+                                ["Transform3DOp.PivotNest"] = Input { },
+                                ["Transform3DOp.ScaleNest"] = Input { },
+                                ["Transform3DOp.TargetNest"] = Input { },
+                                Layout = Input { },
+                                LayoutRotation = Input { },
+                                TransformTransform = Input { },
+                                TransformRotation = Input { },
+                                TransformShear = Input { },
+                                TransformSize = Input { },
+                                Properties1 = Input { },
+                                Color1 = Input { },
+                                BevelMaterial = Input { },
+                                Position1 = Input { },
+                                Rotation1 = Input { },
+                                Shear1 = Input { },
+                                Size1 = Input { },
+                                TextText = Input { },
+                                StyledText = Input { Value = "Praveen Singh", },
+                                Extrusion = Input { },
+                                AdvancedFontControls = Input { },
+                                Internal = Input { },
+                                CommentsNest = Input { },
+                                FrameRenderScriptNest = Input { },
+                                StartRenderScripts = Input { },
+                                EndRenderScripts = Input { },
+                        },
+                        ViewInfo = OperatorInfo { Pos = { 329.806, 150 } },
+                },
+                Instance_Text3D3 = Text3D {
+                        SourceOp = "Text3D1",
+                        Inputs = {
+                                SceneInput = Input { },
+                                ["Transform3DOp.Translation"] = Input { },
+                                ["Transform3DOp.Translate.X"] = Input { Value = -4.519610252441483, },
+                                ["Transform3DOp.Translate.Y"] = Input { Value = -1.5659528917046668, },
+                                ["Transform3DOp.Translate.Z"] = Input { Value = -16.433732648765066, },
+                                ["Transform3DOp.Rotation"] = Input { },
+                                ["Transform3DOp.Rotate.X"] = Input { },
+                                ["Transform3DOp.Rotate.Y"] = Input { },
+                                ["Transform3DOp.Rotate.Z"] = Input { Value = 90, },
+                                ["Transform3DOp.PivotNest"] = Input { },
+                                ["Transform3DOp.ScaleNest"] = Input { },
+                                ["Transform3DOp.TargetNest"] = Input { },
+                                Layout = Input { },
+                                LayoutRotation = Input { },
+                                TransformTransform = Input { },
+                                TransformRotation = Input { },
+                                TransformShear = Input { },
+                                TransformSize = Input { },
+                                Properties1 = Input { },
+                                Color1 = Input { },
+                                BevelMaterial = Input { },
+                                Position1 = Input { },
+                                Rotation1 = Input { },
+                                Shear1 = Input { },
+                                Size1 = Input { },
+                                TextText = Input { },
+                                StyledText = Input { Value = "Praveen Singh", },
+                                Extrusion = Input { },
+                                AdvancedFontControls = Input { },
+                                Internal = Input { },
+                                CommentsNest = Input { },
+                                FrameRenderScriptNest = Input { },
+                                StartRenderScripts = Input { },
+                                EndRenderScripts = Input { },
+                        },
+                        ViewInfo = OperatorInfo { Pos = { 329.806, 122 } },
+                },
+                Instance_Text3D4 = Text3D {
+                        SourceOp = "Text3D1",
+                        Inputs = {
+                                SceneInput = Input { },
+                                ["Transform3DOp.Translation"] = Input { },
+                                ["Transform3DOp.Translate.X"] = Input { Value = 9.35069271610228, },
+                                ["Transform3DOp.Translate.Y"] = Input { Value = 8.637571374221626, },
+                                ["Transform3DOp.Translate.Z"] = Input { Value = -18.81973160819294, },
+                                ["Transform3DOp.Rotation"] = Input { },
+                                ["Transform3DOp.Rotate.X"] = Input { },
+                                ["Transform3DOp.Rotate.Y"] = Input { },
+                                ["Transform3DOp.Rotate.Z"] = Input { Value = 0, },
+                                ["Transform3DOp.PivotNest"] = Input { },
+                                ["Transform3DOp.ScaleNest"] = Input { },
+                                ["Transform3DOp.TargetNest"] = Input { },
+                                Layout = Input { },
+                                LayoutRotation = Input { },
+                                TransformTransform = Input { },
+                                TransformRotation = Input { },
+                                TransformShear = Input { },
+                                TransformSize = Input { },
+                                Properties1 = Input { },
+                                Color1 = Input { },
+                                BevelMaterial = Input { },
+                                Position1 = Input { },
+                                Rotation1 = Input { },
+                                Shear1 = Input { },
+                                Size1 = Input { },
+                                TextText = Input { },
+                                StyledText = Input { Value = "Praveen Singh", },
+                                Extrusion = Input { },
+                                AdvancedFontControls = Input { },
+                                Internal = Input { },
+                                CommentsNest = Input { },
+                                FrameRenderScriptNest = Input { },
+                                StartRenderScripts = Input { },
+                                EndRenderScripts = Input { },
+                        },
+                        ViewInfo = OperatorInfo { Pos = { 329.806, 94 } },
+                },
+                Instance_Text3D5 = Text3D {
+                        SourceOp = "Text3D1",
+                        Inputs = {
+                                SceneInput = Input { },
+                                ["Transform3DOp.Translation"] = Input { },
+                                ["Transform3DOp.Translate.X"] = Input { Value = -5.114394471333917, },
+                                ["Transform3DOp.Translate.Y"] = Input { Value = 11.655853114580175, },
+                                ["Transform3DOp.Translate.Z"] = Input { Value = -11.95110956496563, },
+                                ["Transform3DOp.Rotation"] = Input { },
+                                ["Transform3DOp.Rotate.X"] = Input { },
+                                ["Transform3DOp.Rotate.Y"] = Input { },
+                                ["Transform3DOp.Rotate.Z"] = Input { Value = 0, },
+                                ["Transform3DOp.PivotNest"] = Input { },
+                                ["Transform3DOp.ScaleNest"] = Input { },
+                                ["Transform3DOp.TargetNest"] = Input { },
+                                Layout = Input { },
+                                LayoutRotation = Input { },
+                                TransformTransform = Input { },
+                                TransformRotation = Input { },
+                                TransformShear = Input { },
+                                TransformSize = Input { },
+                                Properties1 = Input { },
+                                Color1 = Input { },
+                                BevelMaterial = Input { },
+                                Position1 = Input { },
+                                Rotation1 = Input { },
+                                Shear1 = Input { },
+                                Size1 = Input { },
+                                TextText = Input { },
+                                StyledText = Input { Value = "Praveen Singh", },
+                                Extrusion = Input { },
+                                AdvancedFontControls = Input { },
+                                Internal = Input { },
+                                CommentsNest = Input { },
+                                FrameRenderScriptNest = Input { },
+                                StartRenderScripts = Input { },
+                                EndRenderScripts = Input { },
+                        },
+                        ViewInfo = OperatorInfo { Pos = { 329.806, 66 } },
+                },
+                Text3D1 = Text3D {
+                        Inputs = {
+                                ["Transform3DOp.Translate.X"] = Input { Value = 2, },
+                                ["Transform3DOp.Translate.Y"] = Input { Value = 4, },
+                                StyledText = Input { Value = "", },
+                                Font = Input { Value = "Open Sans", },
+                                Style = Input { Value = "Bold", },
+                                VerticalJustification = Input { Value = 3, },
+                                VerticalJustificationNew = Input { Value = 3, },
+                                HorizontalJustificationNew = Input { Value = 3, },
+                                ExtrusionProfile = Input {
+                                        SourceOp = "Text3D1ExtrusionProfile",
+                                        Source = "Value",
+                                },
+                                ManualFontKerningPlacement = Input {
+                                        Value = StyledText {
+                                                Array = {
+                                                },
+                                                Value = ""
+                                        },
+                                },
+                        },
+                        ViewInfo = OperatorInfo { Pos = { 871.921, 49 } },
+                },
+                Text3D1ExtrusionProfile = LUTBezier {
+                        KeyColorSplines = {
+                                [0] = {
+                                        [0] = { 0, RH = { 0.0196116135138184, 0.098058067569092 }, Flags = { Linear = true } },
+                                        [0.2] = { 1, LH = { 0.180388386486182, 0.901941932430908 }, RH = { 0.3, 1 }, Flags = { Linear = true } },
+                                        [0.8] = { 1, LH = { 0.7, 1 }, RH = { 0.819611613513818, 0.901941932430908 }, Flags = { Linear = true } },
+                                        [1] = { 0, LH = { 0.980388386486182, 0.098058067569092 }, Flags = { Linear = true } }
+                                }
+                        },
+                        SplineColor = { Red = 192, Green = 128, Blue = 64 },
+                        NameSet = true,
+                },
+
+                Merge3D1 = Merge3D {
+                        CtrlWZoom = false,
+                        Inputs = {
+                                SceneInput1 = Input {
+                                        SourceOp = "Instance_Text3D1",
+                                        Source = "Output",
+                                },
+                                SceneInput2 = Input {
+                                        SourceOp = "Camera3D1",
+                                        Source = "Output",
+                                },
+                                SceneInput3 = Input {
+                                        SourceOp = "Text3D1",
+                                        Source = "Output",
+                                },
+                                                                SceneInput3 = Input {
+                                        SourceOp = "Instance_Text3D2",
+                                        Source = "Output",
+                                },
+
+                                SceneInput4 = Input {
+                                        SourceOp = "Instance_Text3D3",
+                                        Source = "Output",
+                                },
+
+                                SceneInput5 = Input {
+                                        SourceOp = "Instance_Text3D4",
+                                        Source = "Output",
+                                },
+
+                                SceneInput6 = Input {
+                                        SourceOp = "Instance_Text3D5",
+                                        Source = "Output",
+                                },
+
+
+                        },
+                        ViewInfo = OperatorInfo { Pos = { 624.574, -23.3674 } },
+
+                },
+                Renderer3D1 = Renderer3D {
+                        CustomData = {
+                                ToolVersion = 2,
+                        },
+                        Inputs = {
+                                GlobalOut = Input { Value = 599, },
+                                Width = Input { Value = 1920, },
+                                Height = Input { Value = 1080, },
+                                UseFrameFormatSettings = Input { Value = 1, },
+                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                SceneInput = Input {
+                                        SourceOp = "Merge3D1",
+                                        Source = "Output",
+                                },
+                        },
+                        ViewInfo = OperatorInfo { Pos = { 759.716, -24.0816 } },
+                },
+                Background1 = Background {
+                        Inputs = {
+                                GlobalOut = Input { Value = 599, },
+                                Width = Input { Value = 1920, },
+                                Height = Input { Value = 1080, },
+                                UseFrameFormatSettings = Input { Value = 1, },
+                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                        },
+                        ViewInfo = OperatorInfo { Pos = { 871.921, 19.2155 } },
+                },
+                Merge1 = Merge {
+                        Inputs = {
+                                Background = Input {
+                                        SourceOp = "Background1",
+                                        Source = "Output",
+                                },
+                                Foreground = Input {
+                                        SourceOp = "Renderer3D1",
+                                        Source = "Output",
+                                },
+                                PerformDepthMerge = Input { Value = 0, },
+                        },
+                        ViewInfo = OperatorInfo { Pos = { 870.355, -24.3537 } },
+                },
+                Camera3D1 = Camera3D {
+                        Inputs = {
+                                ["Transform3DOp.Translate.X"] = Input {
+                                        SourceOp = "Camera3D1XOffset",
+                                        Source = "Value",
+                                },
+                                ["Transform3DOp.Translate.Y"] = Input {
+                                        SourceOp = "Camera3D1YOffset",
+                                        Source = "Value",
+                                },
+                                ["Transform3DOp.Translate.Z"] = Input {
+                                        SourceOp = "Camera3D1ZOffset",
+                                        Source = "Value",
+                                },
+                                ["Transform3DOp.Rotate.Z"] = Input {
+                                        SourceOp = "Camera3D1ZRotation",
+                                        Source = "Value",
+                                },
+                                AoV = Input { Value = 34, },
+                                FLength = Input { Value = 19.4288645537958, },
+                                PlaneOfFocus = Input { Value = 1.173, },
+                                ["Stereo.Mode"] = Input { Value = FuID { "Mono" }, },
+                                FilmGate = Input { Value = FuID { "BMD_URSA_4K_16x9" }, },
+                                ApertureW = Input { Value = 0.831496062992126, },
+                                ApertureH = Input { Value = 0.467716535433071, },
+                                ["SurfacePlaneInputs.ObjectID.ObjectID"] = Input { Value = 1, },
+                                ["MtlStdInputs.MaterialID"] = Input { Value = 1, },
+                        },
+                        ViewInfo = OperatorInfo { Pos = { 871.921, 89 } },
+                },
+                Camera3D1ZRotation = BezierSpline {
+                        SplineColor = { Red = 128, Green = 128, Blue = 255 },
+                        NameSet = true,
+                        KeyFrames = {
+                              [12]= { 90, LH = { 4, 90 }, RH = { 20, 90 } },[28]= { 90, LH = { 20, 90 }, RH = { 36, 90 }, Flags = { Linear = true } },
+                        }
+                },
+                Camera3D1XOffset = BezierSpline {
+                        SplineColor = { Red = 250, Green = 59, Blue = 49 },
+                        NameSet = true,
+                        KeyFrames = {
+                                [12]= { -3.157640473657808, LH = { 4, -3.157640473657808 }, RH = { 20, -3.157640473657808 } },[28]= { -3.157640473657808, LH = { 20, -3.157640473657808 }, RH = { 36, -3.157640473657808 }, Flags = { Linear = true } },
+                        }
+                },
+                Camera3D1YOffset = BezierSpline {
+                        SplineColor = { Red = 252, Green = 131, Blue = 47 },
+                        NameSet = true,
+                        KeyFrames = {
+                                [12]= { 1.1699940434180593, LH = { 4, 1.1699940434180593 }, RH = { 20, 1.1699940434180593 } },[28]= { 1.1699940434180593, LH = { 20, 1.1699940434180593 }, RH = { 36, 1.1699940434180593 }, Flags = { Linear = true } },
+                        }
+                },
+                Camera3D1ZOffset = BezierSpline {
+                        SplineColor = { Red = 254, Green = 207, Blue = 46 },
+                        NameSet = true,
+                        KeyFrames = {
+                                [12]= { -59.43336254008, LH = { 4, -59.43336254008 }, RH = { 20, -59.43336254008 } },[28]= { -60.233362540079995, LH = { 20, -60.233362540079995 }, RH = { 36, -60.233362540079995 }, Flags = { Linear = true } },
+                        }
+                },                MediaOut1 = MediaOut {
+                        Inputs = {
+                                Index = Input { Value = "0", },
+                                Input = Input {
+                                        SourceOp = "Merge1",
+                                        Source = "Output",
+                                },
+                        },
+                        ViewInfo = OperatorInfo { Pos = { 1004.05, -23.5119 } },
+                }
+
+        },
+        ActiveTool = "MediaOut1"
+}
+

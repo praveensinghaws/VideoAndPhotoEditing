@@ -1,0 +1,1912 @@
+{
+        Tools = ordered() {
+ 		                PipeRouter1 = PipeRouter {
+                        Inputs = {
+                                Input = Input {
+                                        SourceOp = "Merge1_1x3",
+                                        Source = "Output",
+                                },
+                        },
+                        ViewInfo = PipeRouterInfo { Pos = { 1786, 218 } },
+                },
+
+                PipeRouter2 = PipeRouter {
+                        Inputs = {
+                                Input = Input {
+                                        SourceOp = "Merge1_2x1",
+                                        Source = "Output",
+                                },
+                        },
+                        ViewInfo = PipeRouterInfo { Pos = { 1226, 338 } },
+                },
+
+
+                Note1 = Note {
+                        Inputs = {
+                                Comments = Input { Value = "William Justice / Davinc Resolve Grid\nhttps://billjustice.com. \nNOT required, but if you like it, buy me a coffee.  ENJOY!\nhttps://www.buymeacoffee.com/WilliamJustice", }
+                        },
+                        ViewInfo = StickyNoteInfo {
+                                Pos = { 1223.76, -30 },
+                                Flags = {
+                                        Expanded = true
+                                },
+                                Size = { 500, 100 }
+                        },
+                },
+                GridControl = MacroOperator {
+                        Inputs = ordered() {
+                                Input1 = InstanceInput {
+                                        SourceOp = "GC",
+                                        Source = "MARGIN",
+                                        MaxScale = 0.1500000059605,
+                                        Default = 0.04,
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "GC",
+                                        Source = "CornerRadius",
+                                        Default = 0,
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "GC",
+                                        Source = "Output",
+                                }
+                        },
+                        ViewInfo = GroupInfo { Pos = { 1223.76, 111.796 } },
+                        Tools = ordered() {
+                                GC = Background {
+                                        CtrlWZoom = false,
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 1079, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                StartRenderScripts = Input { Value = 1, },
+                                                ROWS = Input { Value = 3, },
+                                                COLS = Input { Value = 3, },
+                                                WID = Input {
+                                                        Value = 0.333333333333333,
+                                                        Expression = "1/COLS",
+                                                },
+                                                HI = Input {
+                                                        Value = 0.333333333333333,
+                                                        Expression = "1/ROWS",
+                                                },
+                                                MARGIN = Input { Value = 0.0087, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 0, 8.75758 } },
+                                        UserControls = ordered() { ROWS = { INP_MaxAllowed = 10, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 10, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", LINKS_Name = "ROWS", }, COLS = { INP_MaxAllowed = 10, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 10, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", LINKS_Name = "COLS", }, WID = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "WID", }, HI = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "HI", }, FWIDTH = { INP_MaxAllowed = 40000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 40000, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "FWIDTH", }, FHEIGHT = { INP_MaxAllowed = 40000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 40000, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "FHEIGHT", }, MARGIN = { INP_MaxAllowed = 0.200000002980232, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.150000005960464, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "MARGIN", }, CornerRadius = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Corner Radius", } }
+                                }
+                        },
+                },
+                Background = Background {
+                        Inputs = {
+                                GlobalOut = Input { Value = 1079, },
+                                Width = Input { Value = 1920, },
+                                Height = Input { Value = 1080, },
+                                UseFrameFormatSettings = Input { Value = 1, },
+                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                TopLeftAlpha = Input { Value = 1, },
+                        },
+                        ViewInfo = OperatorInfo { Pos = { 1228.04, 158.745 } },
+                },
+                                Grid_1x1 = GroupOperator {
+                        CtrlWZoom = false,
+                        NameSet = true,
+                        Inputs = ordered() {
+                                Input1 = InstanceInput {
+                                        SourceOp = "R1_1x1",
+                                        Source = "ROW",
+                                        Default = 1,
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "R1_1x1",
+                                        Source = "COL",
+                                        Default = 1,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "R1_1x1",
+                                        Source = "ROWSPAN",
+                                        Default = 0,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "R1_1x1",
+                                        Source = "COLSPAN",
+                                        Default = 0,
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "Transform1_1x1",
+                                        Source = "SCALE",
+                                        Default = 1,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "Transform1_1x1",
+                                        Source = "POSITION",
+                                        Default = 0,
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "Merge1_1x1",
+                                        Source = "Background",
+                                },
+                                MainInput2 = InstanceInput {
+                                        SourceOp = "Transform2_1x1",
+                                        Source = "Input",
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "Transform2_1x1",
+                                        Source = "Center",
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "Transform2_1x1",
+                                        Source = "Pivot",
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "Transform2_1x1",
+                                        Source = "Size",
+                                        Default = 1,
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "Transform2_1x1",
+                                        Source = "Angle",
+                                        Default = 0,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "Merge1_1x1",
+                                        Source = "BlendClone",
+                                        Default = 1,
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "Merge1_1x1",
+                                        Source = "Output",
+                                },
+                                MainOutput2 = InstanceOutput {
+                                        SourceOp = "Merge3_1x1",
+                                        Source = "Output",
+                                        Name = "Overlay",
+                                },
+                        },
+                        ViewInfo = GroupInfo { Pos = { 1366,158 } },
+                        Tools = ordered() {
+                                R1_1x1 = RectangleMask {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input {
+                                                        SourceOp = "Publish1_1x1",
+                                                        Source = "Value",
+                                                        Expression = "Point(0.16666666666666666,0.8333333333333334)",
+                                                },
+                                                Width = Input {
+                                                        SourceOp = "Publish2_1x1",
+                                                        Source = "Value",
+                                                        Expression = "0.3333333333333333-(GC.MARGIN/1.7777777777777777)",
+                                                },
+                                                Height = Input {
+                                                        Value = 0.324633333333333,
+                                                        Expression = "0.3333333333333333-GC.MARGIN",
+                                                },
+                                                CornerRadius = Input { Expression = "GC.CornerRadius", },
+                                                ROWS = Input { Value = 2, },
+                                                COLS = Input { Value = 2, },
+                                                ROW = Input { Value = 1, },
+                                                COL = Input { Value = 1, },
+
+                                                BORDER = Input { Value = 3.1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 113.031, 105.175 } },
+                                        UserControls = ordered() { ROWS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROWS", }, COLS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", LINKS_Name = "COLS", }, ROW = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROW", }, COL = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", LINKS_Name = "COL", }, BORDER = { INP_MaxAllowed = 350, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "BORDER", }, MARGIN = { INP_MaxAllowed = 300, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "MARGIN", }, ROWSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "ROWSPAN", }, COLSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "COLSPAN", } }
+                                },
+                                Publish1_1x1 = PublishPoint {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = { 0.266064257028112, 0.217857142857143 }, },
+                                        },
+                                },
+                                Publish2_1x1 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 0.41, },
+                                        },
+                                },
+                                Transform1_1x1 = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Center = Input {
+                                                        Value = { 0.257684748427673, 0.736378205128205 },
+                                                        Expression = "iif(POSITION==0,R1_1x1.Center,Point(.5,.5))",
+                                                },
+                                                Size = Input {
+                                                        SourceOp = "Publish2_1x1",
+                                                        Source = "Value",
+                                                        Expression = "iif(SCALE==0,1,iif(SCALE==1,R1_1x1.Width,R1_1x1.Height))",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "Transform2_1x1",
+                                                        Source = "Output",
+                                                },
+                                                SCALE = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 55.8846 } },
+                                        UserControls = ordered() { SCALE = { { CCS_AddString = "None" }, { CCS_AddString = "Width" }, { CCS_AddString = "Height" }, INP_MaxAllowed = 2, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 2, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "SCALE", }, POSITION = { { CCS_AddString = "Grid Position" }, { CCS_AddString = "Center Screen" }, INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "POSITION", } }
+                                },
+                                Transform2_1x1 = Transform {
+                                        CtrlWZoom = false,
+                                        CtrlWShown = false,
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 8.30193 } },
+                                },
+                                Merge3_1x1 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "R1_1x1",
+                                                        Source = "Mask",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Background2_1x1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Transform1_1x1",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 105.175 } },
+                                },
+                                Background2_1x1 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 1079, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftAlpha = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -114.371, 105.175 } },
+                                },
+                                Merge1_1x1 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Background",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Merge3_1x1",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 171.213 } },
+                                }
+                        },
+                },
+
+                Grid_1x2 = GroupOperator {
+                        CtrlWZoom = false,
+                        NameSet = true,
+                        Inputs = ordered() {
+                                Input1 = InstanceInput {
+                                        SourceOp = "R1_1x2",
+                                        Source = "ROW",
+                                        Default = 1,
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "R1_1x2",
+                                        Source = "COL",
+                                        Default = 1,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "R1_1x2",
+                                        Source = "ROWSPAN",
+                                        Default = 0,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "R1_1x2",
+                                        Source = "COLSPAN",
+                                        Default = 0,
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "Transform1_1x2",
+                                        Source = "SCALE",
+                                        Default = 1,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "Transform1_1x2",
+                                        Source = "POSITION",
+                                        Default = 0,
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "Merge1_1x2",
+                                        Source = "Background",
+                                },
+                                MainInput2 = InstanceInput {
+                                        SourceOp = "Transform2_1x2",
+                                        Source = "Input",
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "Transform2_1x2",
+                                        Source = "Center",
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "Transform2_1x2",
+                                        Source = "Pivot",
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "Transform2_1x2",
+                                        Source = "Size",
+                                        Default = 1,
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "Transform2_1x2",
+                                        Source = "Angle",
+                                        Default = 0,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "Merge1_1x2",
+                                        Source = "BlendClone",
+                                        Default = 1,
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "Merge1_1x2",
+                                        Source = "Output",
+                                },
+                                MainOutput2 = InstanceOutput {
+                                        SourceOp = "Merge3_1x2",
+                                        Source = "Output",
+                                        Name = "Overlay",
+                                },
+                        },
+                        ViewInfo = GroupInfo { Pos = { 1506,158 } },
+                        Tools = ordered() {
+                                R1_1x2 = RectangleMask {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input {
+                                                        SourceOp = "Publish1_1x2",
+                                                        Source = "Value",
+                                                        Expression = "Point(0.5,0.8333333333333334)",
+                                                },
+                                                Width = Input {
+                                                        SourceOp = "Publish2_1x2",
+                                                        Source = "Value",
+                                                        Expression = "0.3333333333333333-(GC.MARGIN/1.7777777777777777)",
+                                                },
+                                                Height = Input {
+                                                        Value = 0.324633333333333,
+                                                        Expression = "0.3333333333333333-GC.MARGIN",
+                                                },
+                                                CornerRadius = Input { Expression = "GC.CornerRadius", },
+                                                ROWS = Input { Value = 2, },
+                                                COLS = Input { Value = 2, },
+                                                ROW = Input { Value = 1, },
+                                                COL = Input { Value = 2, },
+
+                                                BORDER = Input { Value = 3.1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 113.031, 105.175 } },
+                                        UserControls = ordered() { ROWS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROWS", }, COLS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", LINKS_Name = "COLS", }, ROW = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROW", }, COL = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", LINKS_Name = "COL", }, BORDER = { INP_MaxAllowed = 350, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "BORDER", }, MARGIN = { INP_MaxAllowed = 300, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "MARGIN", }, ROWSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "ROWSPAN", }, COLSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "COLSPAN", } }
+                                },
+                                Publish1_1x2 = PublishPoint {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = { 0.266064257028112, 0.217857142857143 }, },
+                                        },
+                                },
+                                Publish2_1x2 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 0.41, },
+                                        },
+                                },
+                                Transform1_1x2 = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Center = Input {
+                                                        Value = { 0.257684748427673, 0.736378205128205 },
+                                                        Expression = "iif(POSITION==0,R1_1x2.Center,Point(.5,.5))",
+                                                },
+                                                Size = Input {
+                                                        SourceOp = "Publish2_1x2",
+                                                        Source = "Value",
+                                                        Expression = "iif(SCALE==0,1,iif(SCALE==1,R1_1x2.Width,R1_1x2.Height))",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "Transform2_1x2",
+                                                        Source = "Output",
+                                                },
+                                                SCALE = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 55.8846 } },
+                                        UserControls = ordered() { SCALE = { { CCS_AddString = "None" }, { CCS_AddString = "Width" }, { CCS_AddString = "Height" }, INP_MaxAllowed = 2, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 2, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "SCALE", }, POSITION = { { CCS_AddString = "Grid Position" }, { CCS_AddString = "Center Screen" }, INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "POSITION", } }
+                                },
+                                Transform2_1x2 = Transform {
+                                        CtrlWZoom = false,
+                                        CtrlWShown = false,
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 8.30193 } },
+                                },
+                                Merge3_1x2 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "R1_1x2",
+                                                        Source = "Mask",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Background2_1x2",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Transform1_1x2",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 105.175 } },
+                                },
+                                Background2_1x2 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 1079, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftAlpha = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -114.371, 105.175 } },
+                                },
+                                Merge1_1x2 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Merge1_1x1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Merge3_1x2",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 171.213 } },
+                                }
+                        },
+                },
+
+                Grid_1x3 = GroupOperator {
+                        CtrlWZoom = false,
+                        NameSet = true,
+                        Inputs = ordered() {
+                                Input1 = InstanceInput {
+                                        SourceOp = "R1_1x3",
+                                        Source = "ROW",
+                                        Default = 1,
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "R1_1x3",
+                                        Source = "COL",
+                                        Default = 1,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "R1_1x3",
+                                        Source = "ROWSPAN",
+                                        Default = 0,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "R1_1x3",
+                                        Source = "COLSPAN",
+                                        Default = 0,
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "Transform1_1x3",
+                                        Source = "SCALE",
+                                        Default = 1,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "Transform1_1x3",
+                                        Source = "POSITION",
+                                        Default = 0,
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "Merge1_1x3",
+                                        Source = "Background",
+                                },
+                                MainInput2 = InstanceInput {
+                                        SourceOp = "Transform2_1x3",
+                                        Source = "Input",
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "Transform2_1x3",
+                                        Source = "Center",
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "Transform2_1x3",
+                                        Source = "Pivot",
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "Transform2_1x3",
+                                        Source = "Size",
+                                        Default = 1,
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "Transform2_1x3",
+                                        Source = "Angle",
+                                        Default = 0,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "Merge1_1x3",
+                                        Source = "BlendClone",
+                                        Default = 1,
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "Merge1_1x3",
+                                        Source = "Output",
+                                },
+                                MainOutput2 = InstanceOutput {
+                                        SourceOp = "Merge3_1x3",
+                                        Source = "Output",
+                                        Name = "Overlay",
+                                },
+                        },
+                        ViewInfo = GroupInfo { Pos = { 1646,158 } },
+                        Tools = ordered() {
+                                R1_1x3 = RectangleMask {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input {
+                                                        SourceOp = "Publish1_1x3",
+                                                        Source = "Value",
+                                                        Expression = "Point(0.8333333333333333,0.8333333333333334)",
+                                                },
+                                                Width = Input {
+                                                        SourceOp = "Publish2_1x3",
+                                                        Source = "Value",
+                                                        Expression = "0.3333333333333333-(GC.MARGIN/1.7777777777777777)",
+                                                },
+                                                Height = Input {
+                                                        Value = 0.324633333333333,
+                                                        Expression = "0.3333333333333333-GC.MARGIN",
+                                                },
+                                                CornerRadius = Input { Expression = "GC.CornerRadius", },
+                                                ROWS = Input { Value = 2, },
+                                                COLS = Input { Value = 2, },
+                                                ROW = Input { Value = 1, },
+                                                COL = Input { Value = 3, },
+
+                                                BORDER = Input { Value = 3.1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 113.031, 105.175 } },
+                                        UserControls = ordered() { ROWS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROWS", }, COLS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", LINKS_Name = "COLS", }, ROW = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROW", }, COL = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", LINKS_Name = "COL", }, BORDER = { INP_MaxAllowed = 350, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "BORDER", }, MARGIN = { INP_MaxAllowed = 300, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "MARGIN", }, ROWSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "ROWSPAN", }, COLSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "COLSPAN", } }
+                                },
+                                Publish1_1x3 = PublishPoint {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = { 0.266064257028112, 0.217857142857143 }, },
+                                        },
+                                },
+                                Publish2_1x3 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 0.41, },
+                                        },
+                                },
+                                Transform1_1x3 = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Center = Input {
+                                                        Value = { 0.257684748427673, 0.736378205128205 },
+                                                        Expression = "iif(POSITION==0,R1_1x3.Center,Point(.5,.5))",
+                                                },
+                                                Size = Input {
+                                                        SourceOp = "Publish2_1x3",
+                                                        Source = "Value",
+                                                        Expression = "iif(SCALE==0,1,iif(SCALE==1,R1_1x3.Width,R1_1x3.Height))",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "Transform2_1x3",
+                                                        Source = "Output",
+                                                },
+                                                SCALE = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 55.8846 } },
+                                        UserControls = ordered() { SCALE = { { CCS_AddString = "None" }, { CCS_AddString = "Width" }, { CCS_AddString = "Height" }, INP_MaxAllowed = 2, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 2, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "SCALE", }, POSITION = { { CCS_AddString = "Grid Position" }, { CCS_AddString = "Center Screen" }, INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "POSITION", } }
+                                },
+                                Transform2_1x3 = Transform {
+                                        CtrlWZoom = false,
+                                        CtrlWShown = false,
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 8.30193 } },
+                                },
+                                Merge3_1x3 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "R1_1x3",
+                                                        Source = "Mask",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Background2_1x3",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Transform1_1x3",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 105.175 } },
+                                },
+                                Background2_1x3 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 1079, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftAlpha = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -114.371, 105.175 } },
+                                },
+                                Merge1_1x3 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Merge1_1x2",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Merge3_1x3",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 171.213 } },
+                                }
+                        },
+                },
+
+                Grid_2x3 = GroupOperator {
+                        CtrlWZoom = false,
+                        NameSet = true,
+                        Inputs = ordered() {
+                                Input1 = InstanceInput {
+                                        SourceOp = "R1_2x3",
+                                        Source = "ROW",
+                                        Default = 1,
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "R1_2x3",
+                                        Source = "COL",
+                                        Default = 1,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "R1_2x3",
+                                        Source = "ROWSPAN",
+                                        Default = 0,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "R1_2x3",
+                                        Source = "COLSPAN",
+                                        Default = 0,
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "Transform1_2x3",
+                                        Source = "SCALE",
+                                        Default = 1,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "Transform1_2x3",
+                                        Source = "POSITION",
+                                        Default = 0,
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "Merge1_2x3",
+                                        Source = "Background",
+                                },
+                                MainInput2 = InstanceInput {
+                                        SourceOp = "Transform2_2x3",
+                                        Source = "Input",
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "Transform2_2x3",
+                                        Source = "Center",
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "Transform2_2x3",
+                                        Source = "Pivot",
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "Transform2_2x3",
+                                        Source = "Size",
+                                        Default = 1,
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "Transform2_2x3",
+                                        Source = "Angle",
+                                        Default = 0,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "Merge1_2x3",
+                                        Source = "BlendClone",
+                                        Default = 1,
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "Merge1_2x3",
+                                        Source = "Output",
+                                },
+                                MainOutput2 = InstanceOutput {
+                                        SourceOp = "Merge3_2x3",
+                                        Source = "Output",
+                                        Name = "Overlay",
+                                },
+                        },
+                        ViewInfo = GroupInfo { Pos = { 1646,278 } },
+                        Tools = ordered() {
+                                R1_2x3 = RectangleMask {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input {
+                                                        SourceOp = "Publish1_2x3",
+                                                        Source = "Value",
+                                                        Expression = "Point(0.8333333333333333,0.5)",
+                                                },
+                                                Width = Input {
+                                                        SourceOp = "Publish2_2x3",
+                                                        Source = "Value",
+                                                        Expression = "0.3333333333333333-(GC.MARGIN/1.7777777777777777)",
+                                                },
+                                                Height = Input {
+                                                        Value = 0.324633333333333,
+                                                        Expression = "0.3333333333333333-GC.MARGIN",
+                                                },
+                                                CornerRadius = Input { Expression = "GC.CornerRadius", },
+                                                ROWS = Input { Value = 2, },
+                                                COLS = Input { Value = 2, },
+                                                ROW = Input { Value = 2, },
+                                                COL = Input { Value = 3, },
+
+                                                BORDER = Input { Value = 3.1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 113.031, 105.175 } },
+                                        UserControls = ordered() { ROWS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROWS", }, COLS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", LINKS_Name = "COLS", }, ROW = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROW", }, COL = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", LINKS_Name = "COL", }, BORDER = { INP_MaxAllowed = 350, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "BORDER", }, MARGIN = { INP_MaxAllowed = 300, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "MARGIN", }, ROWSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "ROWSPAN", }, COLSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "COLSPAN", } }
+                                },
+                                Publish1_2x3 = PublishPoint {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = { 0.266064257028112, 0.217857142857143 }, },
+                                        },
+                                },
+                                Publish2_2x3 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 0.41, },
+                                        },
+                                },
+                                Transform1_2x3 = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Center = Input {
+                                                        Value = { 0.257684748427673, 0.736378205128205 },
+                                                        Expression = "iif(POSITION==0,R1_2x3.Center,Point(.5,.5))",
+                                                },
+                                                Size = Input {
+                                                        SourceOp = "Publish2_2x3",
+                                                        Source = "Value",
+                                                        Expression = "iif(SCALE==0,1,iif(SCALE==1,R1_2x3.Width,R1_2x3.Height))",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "Transform2_2x3",
+                                                        Source = "Output",
+                                                },
+                                                SCALE = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 55.8846 } },
+                                        UserControls = ordered() { SCALE = { { CCS_AddString = "None" }, { CCS_AddString = "Width" }, { CCS_AddString = "Height" }, INP_MaxAllowed = 2, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 2, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "SCALE", }, POSITION = { { CCS_AddString = "Grid Position" }, { CCS_AddString = "Center Screen" }, INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "POSITION", } }
+                                },
+                                Transform2_2x3 = Transform {
+                                        CtrlWZoom = false,
+                                        CtrlWShown = false,
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 8.30193 } },
+                                },
+                                Merge3_2x3 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "R1_2x3",
+                                                        Source = "Mask",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Background2_2x3",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Transform1_2x3",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 105.175 } },
+                                },
+                                Background2_2x3 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 1079, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftAlpha = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -114.371, 105.175 } },
+                                },
+                                Merge1_2x3 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "PipeRouter1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Merge3_2x3",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 171.213 } },
+                                }
+                        },
+                },
+
+                Grid_2x2 = GroupOperator {
+                        CtrlWZoom = false,
+                        NameSet = true,
+                        Inputs = ordered() {
+                                Input1 = InstanceInput {
+                                        SourceOp = "R1_2x2",
+                                        Source = "ROW",
+                                        Default = 1,
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "R1_2x2",
+                                        Source = "COL",
+                                        Default = 1,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "R1_2x2",
+                                        Source = "ROWSPAN",
+                                        Default = 0,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "R1_2x2",
+                                        Source = "COLSPAN",
+                                        Default = 0,
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "Transform1_2x2",
+                                        Source = "SCALE",
+                                        Default = 1,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "Transform1_2x2",
+                                        Source = "POSITION",
+                                        Default = 0,
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "Merge1_2x2",
+                                        Source = "Background",
+                                },
+                                MainInput2 = InstanceInput {
+                                        SourceOp = "Transform2_2x2",
+                                        Source = "Input",
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "Transform2_2x2",
+                                        Source = "Center",
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "Transform2_2x2",
+                                        Source = "Pivot",
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "Transform2_2x2",
+                                        Source = "Size",
+                                        Default = 1,
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "Transform2_2x2",
+                                        Source = "Angle",
+                                        Default = 0,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "Merge1_2x2",
+                                        Source = "BlendClone",
+                                        Default = 1,
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "Merge1_2x2",
+                                        Source = "Output",
+                                },
+                                MainOutput2 = InstanceOutput {
+                                        SourceOp = "Merge3_2x2",
+                                        Source = "Output",
+                                        Name = "Overlay",
+                                },
+                        },
+                        ViewInfo = GroupInfo { Pos = { 1506,278 } },
+                        Tools = ordered() {
+                                R1_2x2 = RectangleMask {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input {
+                                                        SourceOp = "Publish1_2x2",
+                                                        Source = "Value",
+                                                        Expression = "Point(0.5,0.5)",
+                                                },
+                                                Width = Input {
+                                                        SourceOp = "Publish2_2x2",
+                                                        Source = "Value",
+                                                        Expression = "0.3333333333333333-(GC.MARGIN/1.7777777777777777)",
+                                                },
+                                                Height = Input {
+                                                        Value = 0.324633333333333,
+                                                        Expression = "0.3333333333333333-GC.MARGIN",
+                                                },
+                                                CornerRadius = Input { Expression = "GC.CornerRadius", },
+                                                ROWS = Input { Value = 2, },
+                                                COLS = Input { Value = 2, },
+                                                ROW = Input { Value = 2, },
+                                                COL = Input { Value = 2, },
+
+                                                BORDER = Input { Value = 3.1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 113.031, 105.175 } },
+                                        UserControls = ordered() { ROWS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROWS", }, COLS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", LINKS_Name = "COLS", }, ROW = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROW", }, COL = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", LINKS_Name = "COL", }, BORDER = { INP_MaxAllowed = 350, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "BORDER", }, MARGIN = { INP_MaxAllowed = 300, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "MARGIN", }, ROWSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "ROWSPAN", }, COLSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "COLSPAN", } }
+                                },
+                                Publish1_2x2 = PublishPoint {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = { 0.266064257028112, 0.217857142857143 }, },
+                                        },
+                                },
+                                Publish2_2x2 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 0.41, },
+                                        },
+                                },
+                                Transform1_2x2 = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Center = Input {
+                                                        Value = { 0.257684748427673, 0.736378205128205 },
+                                                        Expression = "iif(POSITION==0,R1_2x2.Center,Point(.5,.5))",
+                                                },
+                                                Size = Input {
+                                                        SourceOp = "Publish2_2x2",
+                                                        Source = "Value",
+                                                        Expression = "iif(SCALE==0,1,iif(SCALE==1,R1_2x2.Width,R1_2x2.Height))",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "Transform2_2x2",
+                                                        Source = "Output",
+                                                },
+                                                SCALE = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 55.8846 } },
+                                        UserControls = ordered() { SCALE = { { CCS_AddString = "None" }, { CCS_AddString = "Width" }, { CCS_AddString = "Height" }, INP_MaxAllowed = 2, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 2, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "SCALE", }, POSITION = { { CCS_AddString = "Grid Position" }, { CCS_AddString = "Center Screen" }, INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "POSITION", } }
+                                },
+                                Transform2_2x2 = Transform {
+                                        CtrlWZoom = false,
+                                        CtrlWShown = false,
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 8.30193 } },
+                                },
+                                Merge3_2x2 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "R1_2x2",
+                                                        Source = "Mask",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Background2_2x2",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Transform1_2x2",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 105.175 } },
+                                },
+                                Background2_2x2 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 1079, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftAlpha = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -114.371, 105.175 } },
+                                },
+                                Merge1_2x2 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Merge1_2x3",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Merge3_2x2",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 171.213 } },
+                                }
+                        },
+                },
+
+                Grid_2x1 = GroupOperator {
+                        CtrlWZoom = false,
+                        NameSet = true,
+                        Inputs = ordered() {
+                                Input1 = InstanceInput {
+                                        SourceOp = "R1_2x1",
+                                        Source = "ROW",
+                                        Default = 1,
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "R1_2x1",
+                                        Source = "COL",
+                                        Default = 1,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "R1_2x1",
+                                        Source = "ROWSPAN",
+                                        Default = 0,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "R1_2x1",
+                                        Source = "COLSPAN",
+                                        Default = 0,
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "Transform1_2x1",
+                                        Source = "SCALE",
+                                        Default = 1,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "Transform1_2x1",
+                                        Source = "POSITION",
+                                        Default = 0,
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "Merge1_2x1",
+                                        Source = "Background",
+                                },
+                                MainInput2 = InstanceInput {
+                                        SourceOp = "Transform2_2x1",
+                                        Source = "Input",
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "Transform2_2x1",
+                                        Source = "Center",
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "Transform2_2x1",
+                                        Source = "Pivot",
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "Transform2_2x1",
+                                        Source = "Size",
+                                        Default = 1,
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "Transform2_2x1",
+                                        Source = "Angle",
+                                        Default = 0,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "Merge1_2x1",
+                                        Source = "BlendClone",
+                                        Default = 1,
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "Merge1_2x1",
+                                        Source = "Output",
+                                },
+                                MainOutput2 = InstanceOutput {
+                                        SourceOp = "Merge3_2x1",
+                                        Source = "Output",
+                                        Name = "Overlay",
+                                },
+                        },
+                        ViewInfo = GroupInfo { Pos = { 1366,278 } },
+                        Tools = ordered() {
+                                R1_2x1 = RectangleMask {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input {
+                                                        SourceOp = "Publish1_2x1",
+                                                        Source = "Value",
+                                                        Expression = "Point(0.16666666666666666,0.5)",
+                                                },
+                                                Width = Input {
+                                                        SourceOp = "Publish2_2x1",
+                                                        Source = "Value",
+                                                        Expression = "0.3333333333333333-(GC.MARGIN/1.7777777777777777)",
+                                                },
+                                                Height = Input {
+                                                        Value = 0.324633333333333,
+                                                        Expression = "0.3333333333333333-GC.MARGIN",
+                                                },
+                                                CornerRadius = Input { Expression = "GC.CornerRadius", },
+                                                ROWS = Input { Value = 2, },
+                                                COLS = Input { Value = 2, },
+                                                ROW = Input { Value = 2, },
+                                                COL = Input { Value = 1, },
+
+                                                BORDER = Input { Value = 3.1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 113.031, 105.175 } },
+                                        UserControls = ordered() { ROWS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROWS", }, COLS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", LINKS_Name = "COLS", }, ROW = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROW", }, COL = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", LINKS_Name = "COL", }, BORDER = { INP_MaxAllowed = 350, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "BORDER", }, MARGIN = { INP_MaxAllowed = 300, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "MARGIN", }, ROWSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "ROWSPAN", }, COLSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "COLSPAN", } }
+                                },
+                                Publish1_2x1 = PublishPoint {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = { 0.266064257028112, 0.217857142857143 }, },
+                                        },
+                                },
+                                Publish2_2x1 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 0.41, },
+                                        },
+                                },
+                                Transform1_2x1 = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Center = Input {
+                                                        Value = { 0.257684748427673, 0.736378205128205 },
+                                                        Expression = "iif(POSITION==0,R1_2x1.Center,Point(.5,.5))",
+                                                },
+                                                Size = Input {
+                                                        SourceOp = "Publish2_2x1",
+                                                        Source = "Value",
+                                                        Expression = "iif(SCALE==0,1,iif(SCALE==1,R1_2x1.Width,R1_2x1.Height))",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "Transform2_2x1",
+                                                        Source = "Output",
+                                                },
+                                                SCALE = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 55.8846 } },
+                                        UserControls = ordered() { SCALE = { { CCS_AddString = "None" }, { CCS_AddString = "Width" }, { CCS_AddString = "Height" }, INP_MaxAllowed = 2, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 2, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "SCALE", }, POSITION = { { CCS_AddString = "Grid Position" }, { CCS_AddString = "Center Screen" }, INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "POSITION", } }
+                                },
+                                Transform2_2x1 = Transform {
+                                        CtrlWZoom = false,
+                                        CtrlWShown = false,
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 8.30193 } },
+                                },
+                                Merge3_2x1 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "R1_2x1",
+                                                        Source = "Mask",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Background2_2x1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Transform1_2x1",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 105.175 } },
+                                },
+                                Background2_2x1 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 1079, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftAlpha = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -114.371, 105.175 } },
+                                },
+                                Merge1_2x1 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Merge1_2x2",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Merge3_2x1",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 171.213 } },
+                                }
+                        },
+                },
+
+                Grid_3x1 = GroupOperator {
+                        CtrlWZoom = false,
+                        NameSet = true,
+                        Inputs = ordered() {
+                                Input1 = InstanceInput {
+                                        SourceOp = "R1_3x1",
+                                        Source = "ROW",
+                                        Default = 1,
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "R1_3x1",
+                                        Source = "COL",
+                                        Default = 1,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "R1_3x1",
+                                        Source = "ROWSPAN",
+                                        Default = 0,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "R1_3x1",
+                                        Source = "COLSPAN",
+                                        Default = 0,
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "Transform1_3x1",
+                                        Source = "SCALE",
+                                        Default = 1,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "Transform1_3x1",
+                                        Source = "POSITION",
+                                        Default = 0,
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "Merge1_3x1",
+                                        Source = "Background",
+                                },
+                                MainInput2 = InstanceInput {
+                                        SourceOp = "Transform2_3x1",
+                                        Source = "Input",
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "Transform2_3x1",
+                                        Source = "Center",
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "Transform2_3x1",
+                                        Source = "Pivot",
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "Transform2_3x1",
+                                        Source = "Size",
+                                        Default = 1,
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "Transform2_3x1",
+                                        Source = "Angle",
+                                        Default = 0,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "Merge1_3x1",
+                                        Source = "BlendClone",
+                                        Default = 1,
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "Merge1_3x1",
+                                        Source = "Output",
+                                },
+                                MainOutput2 = InstanceOutput {
+                                        SourceOp = "Merge3_3x1",
+                                        Source = "Output",
+                                        Name = "Overlay",
+                                },
+                        },
+                        ViewInfo = GroupInfo { Pos = { 1366,398 } },
+                        Tools = ordered() {
+                                R1_3x1 = RectangleMask {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input {
+                                                        SourceOp = "Publish1_3x1",
+                                                        Source = "Value",
+                                                        Expression = "Point(0.16666666666666666,0.16666666666666674)",
+                                                },
+                                                Width = Input {
+                                                        SourceOp = "Publish2_3x1",
+                                                        Source = "Value",
+                                                        Expression = "0.3333333333333333-(GC.MARGIN/1.7777777777777777)",
+                                                },
+                                                Height = Input {
+                                                        Value = 0.324633333333333,
+                                                        Expression = "0.3333333333333333-GC.MARGIN",
+                                                },
+                                                CornerRadius = Input { Expression = "GC.CornerRadius", },
+                                                ROWS = Input { Value = 2, },
+                                                COLS = Input { Value = 2, },
+                                                ROW = Input { Value = 3, },
+                                                COL = Input { Value = 1, },
+
+                                                BORDER = Input { Value = 3.1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 113.031, 105.175 } },
+                                        UserControls = ordered() { ROWS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROWS", }, COLS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", LINKS_Name = "COLS", }, ROW = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROW", }, COL = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", LINKS_Name = "COL", }, BORDER = { INP_MaxAllowed = 350, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "BORDER", }, MARGIN = { INP_MaxAllowed = 300, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "MARGIN", }, ROWSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "ROWSPAN", }, COLSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "COLSPAN", } }
+                                },
+                                Publish1_3x1 = PublishPoint {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = { 0.266064257028112, 0.217857142857143 }, },
+                                        },
+                                },
+                                Publish2_3x1 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 0.41, },
+                                        },
+                                },
+                                Transform1_3x1 = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Center = Input {
+                                                        Value = { 0.257684748427673, 0.736378205128205 },
+                                                        Expression = "iif(POSITION==0,R1_3x1.Center,Point(.5,.5))",
+                                                },
+                                                Size = Input {
+                                                        SourceOp = "Publish2_3x1",
+                                                        Source = "Value",
+                                                        Expression = "iif(SCALE==0,1,iif(SCALE==1,R1_3x1.Width,R1_3x1.Height))",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "Transform2_3x1",
+                                                        Source = "Output",
+                                                },
+                                                SCALE = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 55.8846 } },
+                                        UserControls = ordered() { SCALE = { { CCS_AddString = "None" }, { CCS_AddString = "Width" }, { CCS_AddString = "Height" }, INP_MaxAllowed = 2, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 2, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "SCALE", }, POSITION = { { CCS_AddString = "Grid Position" }, { CCS_AddString = "Center Screen" }, INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "POSITION", } }
+                                },
+                                Transform2_3x1 = Transform {
+                                        CtrlWZoom = false,
+                                        CtrlWShown = false,
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 8.30193 } },
+                                },
+                                Merge3_3x1 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "R1_3x1",
+                                                        Source = "Mask",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Background2_3x1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Transform1_3x1",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 105.175 } },
+                                },
+                                Background2_3x1 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 1079, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftAlpha = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -114.371, 105.175 } },
+                                },
+                                Merge1_3x1 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "PipeRouter2",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Merge3_3x1",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 171.213 } },
+                                }
+                        },
+                },
+
+                Grid_3x2 = GroupOperator {
+                        CtrlWZoom = false,
+                        NameSet = true,
+                        Inputs = ordered() {
+                                Input1 = InstanceInput {
+                                        SourceOp = "R1_3x2",
+                                        Source = "ROW",
+                                        Default = 1,
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "R1_3x2",
+                                        Source = "COL",
+                                        Default = 1,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "R1_3x2",
+                                        Source = "ROWSPAN",
+                                        Default = 0,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "R1_3x2",
+                                        Source = "COLSPAN",
+                                        Default = 0,
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "Transform1_3x2",
+                                        Source = "SCALE",
+                                        Default = 1,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "Transform1_3x2",
+                                        Source = "POSITION",
+                                        Default = 0,
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "Merge1_3x2",
+                                        Source = "Background",
+                                },
+                                MainInput2 = InstanceInput {
+                                        SourceOp = "Transform2_3x2",
+                                        Source = "Input",
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "Transform2_3x2",
+                                        Source = "Center",
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "Transform2_3x2",
+                                        Source = "Pivot",
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "Transform2_3x2",
+                                        Source = "Size",
+                                        Default = 1,
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "Transform2_3x2",
+                                        Source = "Angle",
+                                        Default = 0,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "Merge1_3x2",
+                                        Source = "BlendClone",
+                                        Default = 1,
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "Merge1_3x2",
+                                        Source = "Output",
+                                },
+                                MainOutput2 = InstanceOutput {
+                                        SourceOp = "Merge3_3x2",
+                                        Source = "Output",
+                                        Name = "Overlay",
+                                },
+                        },
+                        ViewInfo = GroupInfo { Pos = { 1506,398 } },
+                        Tools = ordered() {
+                                R1_3x2 = RectangleMask {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input {
+                                                        SourceOp = "Publish1_3x2",
+                                                        Source = "Value",
+                                                        Expression = "Point(0.5,0.16666666666666674)",
+                                                },
+                                                Width = Input {
+                                                        SourceOp = "Publish2_3x2",
+                                                        Source = "Value",
+                                                        Expression = "0.3333333333333333-(GC.MARGIN/1.7777777777777777)",
+                                                },
+                                                Height = Input {
+                                                        Value = 0.324633333333333,
+                                                        Expression = "0.3333333333333333-GC.MARGIN",
+                                                },
+                                                CornerRadius = Input { Expression = "GC.CornerRadius", },
+                                                ROWS = Input { Value = 2, },
+                                                COLS = Input { Value = 2, },
+                                                ROW = Input { Value = 3, },
+                                                COL = Input { Value = 2, },
+
+                                                BORDER = Input { Value = 3.1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 113.031, 105.175 } },
+                                        UserControls = ordered() { ROWS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROWS", }, COLS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", LINKS_Name = "COLS", }, ROW = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROW", }, COL = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", LINKS_Name = "COL", }, BORDER = { INP_MaxAllowed = 350, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "BORDER", }, MARGIN = { INP_MaxAllowed = 300, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "MARGIN", }, ROWSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "ROWSPAN", }, COLSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "COLSPAN", } }
+                                },
+                                Publish1_3x2 = PublishPoint {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = { 0.266064257028112, 0.217857142857143 }, },
+                                        },
+                                },
+                                Publish2_3x2 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 0.41, },
+                                        },
+                                },
+                                Transform1_3x2 = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Center = Input {
+                                                        Value = { 0.257684748427673, 0.736378205128205 },
+                                                        Expression = "iif(POSITION==0,R1_3x2.Center,Point(.5,.5))",
+                                                },
+                                                Size = Input {
+                                                        SourceOp = "Publish2_3x2",
+                                                        Source = "Value",
+                                                        Expression = "iif(SCALE==0,1,iif(SCALE==1,R1_3x2.Width,R1_3x2.Height))",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "Transform2_3x2",
+                                                        Source = "Output",
+                                                },
+                                                SCALE = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 55.8846 } },
+                                        UserControls = ordered() { SCALE = { { CCS_AddString = "None" }, { CCS_AddString = "Width" }, { CCS_AddString = "Height" }, INP_MaxAllowed = 2, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 2, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "SCALE", }, POSITION = { { CCS_AddString = "Grid Position" }, { CCS_AddString = "Center Screen" }, INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "POSITION", } }
+                                },
+                                Transform2_3x2 = Transform {
+                                        CtrlWZoom = false,
+                                        CtrlWShown = false,
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 8.30193 } },
+                                },
+                                Merge3_3x2 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "R1_3x2",
+                                                        Source = "Mask",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Background2_3x2",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Transform1_3x2",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 105.175 } },
+                                },
+                                Background2_3x2 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 1079, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftAlpha = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -114.371, 105.175 } },
+                                },
+                                Merge1_3x2 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Merge1_3x1",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Merge3_3x2",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 171.213 } },
+                                }
+                        },
+                },
+
+                Grid_3x3 = GroupOperator {
+                        CtrlWZoom = false,
+                        NameSet = true,
+                        Inputs = ordered() {
+                                Input1 = InstanceInput {
+                                        SourceOp = "R1_3x3",
+                                        Source = "ROW",
+                                        Default = 1,
+                                },
+                                Input2 = InstanceInput {
+                                        SourceOp = "R1_3x3",
+                                        Source = "COL",
+                                        Default = 1,
+                                },
+                                Input3 = InstanceInput {
+                                        SourceOp = "R1_3x3",
+                                        Source = "ROWSPAN",
+                                        Default = 0,
+                                },
+                                Input4 = InstanceInput {
+                                        SourceOp = "R1_3x3",
+                                        Source = "COLSPAN",
+                                        Default = 0,
+                                },
+                                Input5 = InstanceInput {
+                                        SourceOp = "Transform1_3x3",
+                                        Source = "SCALE",
+                                        Default = 1,
+                                },
+                                Input6 = InstanceInput {
+                                        SourceOp = "Transform1_3x3",
+                                        Source = "POSITION",
+                                        Default = 0,
+                                },
+                                MainInput1 = InstanceInput {
+                                        SourceOp = "Merge1_3x3",
+                                        Source = "Background",
+                                },
+                                MainInput2 = InstanceInput {
+                                        SourceOp = "Transform2_3x3",
+                                        Source = "Input",
+                                },
+                                Input7 = InstanceInput {
+                                        SourceOp = "Transform2_3x3",
+                                        Source = "Center",
+                                },
+                                Input8 = InstanceInput {
+                                        SourceOp = "Transform2_3x3",
+                                        Source = "Pivot",
+                                },
+                                Input9 = InstanceInput {
+                                        SourceOp = "Transform2_3x3",
+                                        Source = "Size",
+                                        Default = 1,
+                                },
+                                Input10 = InstanceInput {
+                                        SourceOp = "Transform2_3x3",
+                                        Source = "Angle",
+                                        Default = 0,
+                                },
+                                Input11 = InstanceInput {
+                                        SourceOp = "Merge1_3x3",
+                                        Source = "BlendClone",
+                                        Default = 1,
+                                }
+                        },
+                        Outputs = {
+                                MainOutput1 = InstanceOutput {
+                                        SourceOp = "Merge1_3x3",
+                                        Source = "Output",
+                                },
+                                MainOutput2 = InstanceOutput {
+                                        SourceOp = "Merge3_3x3",
+                                        Source = "Output",
+                                        Name = "Overlay",
+                                },
+                        },
+                        ViewInfo = GroupInfo { Pos = { 1646,398 } },
+                        Tools = ordered() {
+                                R1_3x3 = RectangleMask {
+                                        CtrlWShown = false,
+                                        NameSet = true,
+                                        Inputs = {
+                                                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                                                MaskWidth = Input { Value = 1920, },
+                                                MaskHeight = Input { Value = 1080, },
+                                                PixelAspect = Input { Value = { 1, 1 }, },
+                                                ClippingMode = Input { Value = FuID { "None" }, },
+                                                Center = Input {
+                                                        SourceOp = "Publish1_3x3",
+                                                        Source = "Value",
+                                                        Expression = "Point(0.8333333333333333,0.16666666666666674)",
+                                                },
+                                                Width = Input {
+                                                        SourceOp = "Publish2_3x3",
+                                                        Source = "Value",
+                                                        Expression = "0.3333333333333333-(GC.MARGIN/1.7777777777777777)",
+                                                },
+                                                Height = Input {
+                                                        Value = 0.324633333333333,
+                                                        Expression = "0.3333333333333333-GC.MARGIN",
+                                                },
+                                                CornerRadius = Input { Expression = "GC.CornerRadius", },
+                                                ROWS = Input { Value = 2, },
+                                                COLS = Input { Value = 2, },
+                                                ROW = Input { Value = 3, },
+                                                COL = Input { Value = 3, },
+
+                                                BORDER = Input { Value = 3.1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { 113.031, 105.175 } },
+                                        UserControls = ordered() { ROWS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROWS", }, COLS = { INP_MaxAllowed = 15, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 3, INP_MinScale = 1, INP_MinAllowed = 1, LINKID_DataType = "Number", LINKS_Name = "COLS", }, ROW = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", INP_Passive = true, LINKS_Name = "ROW", }, COL = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 15, INP_Default = 1, INP_MinScale = 1, INP_MinAllowed = -6, LINKID_DataType = "Number", LINKS_Name = "COL", }, BORDER = { INP_MaxAllowed = 350, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "BORDER", }, MARGIN = { INP_MaxAllowed = 300, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 200, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "MARGIN", }, ROWSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "ROWSPAN", }, COLSPAN = { INP_MaxAllowed = 15, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 6, INP_Default = 0, INP_MinScale = -6, INP_MinAllowed = -15, LINKID_DataType = "Number", LINKS_Name = "COLSPAN", } }
+                                },
+                                Publish1_3x3 = PublishPoint {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = { 0.266064257028112, 0.217857142857143 }, },
+                                        },
+                                },
+                                Publish2_3x3 = PublishNumber {
+                                        CtrlWZoom = false,
+                                        Inputs = {
+                                                Value = Input { Value = 0.41, },
+                                        },
+                                },
+                                Transform1_3x3 = Transform {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Center = Input {
+                                                        Value = { 0.257684748427673, 0.736378205128205 },
+                                                        Expression = "iif(POSITION==0,R1_3x3.Center,Point(.5,.5))",
+                                                },
+                                                Size = Input {
+                                                        SourceOp = "Publish2_3x3",
+                                                        Source = "Value",
+                                                        Expression = "iif(SCALE==0,1,iif(SCALE==1,R1_3x3.Width,R1_3x3.Height))",
+                                                },
+                                                Input = Input {
+                                                        SourceOp = "Transform2_3x3",
+                                                        Source = "Output",
+                                                },
+                                                SCALE = Input { Value = 1, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 55.8846 } },
+                                        UserControls = ordered() { SCALE = { { CCS_AddString = "None" }, { CCS_AddString = "Width" }, { CCS_AddString = "Height" }, INP_MaxAllowed = 2, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 2, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "SCALE", }, POSITION = { { CCS_AddString = "Grid Position" }, { CCS_AddString = "Center Screen" }, INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "POSITION", } }
+                                },
+                                Transform2_3x3 = Transform {
+                                        CtrlWZoom = false,
+                                        CtrlWShown = false,
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 8.30193 } },
+                                },
+                                Merge3_3x3 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                EffectMask = Input {
+                                                        SourceOp = "R1_3x3",
+                                                        Source = "Mask",
+                                                },
+                                                Background = Input {
+                                                        SourceOp = "Background2_3x3",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Transform1_3x3",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 105.175 } },
+                                },
+                                Background2_3x3 = Background {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                GlobalOut = Input { Value = 1079, },
+                                                Width = Input { Value = 1920, },
+                                                Height = Input { Value = 1080, },
+                                                UseFrameFormatSettings = Input { Value = 1, },
+                                                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                                                TopLeftAlpha = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -114.371, 105.175 } },
+                                },
+                                Merge1_3x3 = Merge {
+                                        CtrlWShown = false,
+                                        Inputs = {
+                                                Background = Input {
+                                                        SourceOp = "Merge1_3x2",
+                                                        Source = "Output",
+                                                },
+                                                Foreground = Input {
+                                                        SourceOp = "Merge3_3x3",
+                                                        Source = "Output",
+                                                },
+                                                PerformDepthMerge = Input { Value = 0, },
+                                        },
+                                        ViewInfo = OperatorInfo { Pos = { -4.37049, 171.213 } },
+                                }
+                        },
+                },
+
+
+
+                MediaOut1 = MediaOut {
+                        Inputs = {
+                                Index = Input { Value = "0", },
+                                Input = Input {
+                                        SourceOp = "Merge1_3x3",
+                                        Source = "Output",
+                                },
+                        },
+                        ViewInfo = OperatorInfo { Pos = { 1786,398 } },
+                }
+        },
+        ActiveTool = "MediaOut1"
+}
+
