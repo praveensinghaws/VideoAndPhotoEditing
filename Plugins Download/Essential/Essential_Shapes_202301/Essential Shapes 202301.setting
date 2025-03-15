@@ -1,0 +1,1397 @@
+{
+	Tools = ordered() {
+		EssentialShapes = GroupOperator {
+			Inputs = ordered() {
+				Input_BlanklineShape = InstanceInput {
+					SourceOp = "ShapeResult",
+					Source = "ApplyBlank2",
+				},
+				Input_BtnRectangle = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BtnRectangle",
+				},
+				Input_BtnEllipse = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BtnEllipse",
+				},
+				Input_BtnPolygon = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BtnPolygon",
+				},
+				Input_BtnStar = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BtnStar",
+				},
+				Input_BtnMergeMolde = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BtnMergeMode",
+					Name = "Toggle Solo/Group Mode",
+				},
+				Input_EditingMode = InstanceInput {
+					SourceOp = "Background1",
+					Source = "EditingMode",
+					Name = "Shape Mode",
+				},
+				Input_Show_Label_Rectangle = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Show_RectangleLabel",
+				},
+				Input_Label_Rectangle = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Label_Rectangle",
+				},
+				Input2 = InstanceInput {
+					SourceOp = "_ShapeLayout",
+					Source = "Center",
+					DefaultX = 0.5,
+					DefaultY = 0.5,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "_ShapeLayout",
+					Source = "Width",
+					Default = 0.1,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "_ShapeLayout",
+					Source = "Height",
+					Default = 0.17777777778,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "_ShapeLayout",
+					Source = "Angle",
+					Default = 0,
+				},
+				Input_Show_Label_Ellipse = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Show_EllipseLabel",
+				},
+				Input_Label_Ellipse = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Label_Ellipse",
+				},
+
+				Input_HideEllipseOperation = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Hide_OerationList",
+				},
+				Input_Ellipse_Mode = InstanceInput {
+					SourceOp = "sBoolean1",
+					Source = "Operation",
+				},
+				InputEllipse_2 = InstanceInput {
+					SourceOp = "_ShapeLayoutEllipse",
+					Source = "Center",
+					DefaultX = 0.5,
+					DefaultY = 0.5,
+				},
+				InputEllipse_4 = InstanceInput {
+					SourceOp = "_ShapeLayoutEllipse",
+					Source = "Width",
+					Default = 0.1,
+				},
+				InputEllipse_5 = InstanceInput {
+					SourceOp = "_ShapeLayoutEllipse",
+					Source = "Height",
+					Default = 0.1,
+				},
+				InputEllipse_7 = InstanceInput {
+					SourceOp = "_ShapeLayoutEllipse",
+					Source = "Angle",
+					Default = 0,
+				},
+				Input_Show_PolygonSides = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Show_PolygonSides",
+				},
+				Input_Label_Polygon = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Label_Polygon",
+				},
+				Input_HidePolygonOperation = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Hide_OerationList",
+				},
+				Input_Polygon_Mode = InstanceInput {
+					SourceOp = "sBoolean2",
+					Source = "Operation",
+				},
+
+				Input50 = InstanceInput {
+					SourceOp = "sNGon1",
+					Source = "Sides",
+					Name = "Polygon Sides",
+					Default = 6,
+				},
+				InputPolygon_2 = InstanceInput {
+					SourceOp = "_ShapeLayoutPolygon",
+					Source = "Center",
+					DefaultX = 0.5,
+					DefaultY = 0.5,
+				},
+				InputPolygon_4 = InstanceInput {
+					SourceOp = "_ShapeLayoutPolygon",
+					Source = "Width",
+					Default = 0.1,
+				},
+				InputPolygon_5 = InstanceInput {
+					SourceOp = "_ShapeLayoutPolygon",
+					Source = "Height",
+					Default = 0.17777777778,
+				},
+				InputPolygon_7 = InstanceInput {
+					SourceOp = "_ShapeLayoutPolygon",
+					Source = "Angle",
+					Default = 0,
+				},
+				Input_Show_StarOptions = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Show_StarOptions",
+				},
+				Input_Label_Star = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Label_Star",
+				},
+				Input_HideStarOperation = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Hide_OerationList",
+				},
+				Input_Star_Mode = InstanceInput {
+					SourceOp = "sBoolean3",
+					Source = "Operation",
+				},
+				Input51 = InstanceInput {
+					SourceOp = "sStar1",
+					Source = "Points",
+					Name = "Star Points",
+					Default = 5,
+				},
+				Input52 = InstanceInput {
+					SourceOp = "sStar1",
+					Source = "Depth",
+					Name = "Star Depth",
+					Default = 0.5,
+				},
+				InputStar_2 = InstanceInput {
+					SourceOp = "_ShapeLayoutStar",
+					Source = "Center",
+					DefaultX = 0.5,
+					DefaultY = 0.5,
+				},
+				InputStar_4 = InstanceInput {
+					SourceOp = "_ShapeLayoutStar",
+					Source = "Width",
+					Default = 0.1,
+				},
+				InputStar_5 = InstanceInput {
+					SourceOp = "_ShapeLayoutStar",
+					Source = "Height",
+					Default = 0.17777777778,
+				},
+				InputStar_7 = InstanceInput {
+					SourceOp = "_ShapeLayoutStar",
+					Source = "Angle",
+					Default = 0,
+				},
+				Input_EnableBackground = InstanceInput {
+					SourceOp = "Background1",
+					Source = "EnableBackground",
+				},
+				Show_Background = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Show_Background",
+				},
+				Input18 = InstanceInput {
+					SourceOp = "shapeArea",
+					Source = "Red",
+					Name = "Color",
+					ControlGroup = 14,
+					Default = 1,
+				},
+				Input19 = InstanceInput {
+					SourceOp = "shapeArea",
+					Source = "Green",
+					ControlGroup = 14,
+					Default = 1,
+				},
+				Input20 = InstanceInput {
+					SourceOp = "shapeArea",
+					Source = "Blue",
+					ControlGroup = 14,
+					Default = 1,
+				},
+				Input21 = InstanceInput {
+					SourceOp = "shapeArea",
+					Source = "Alpha",
+					ControlGroup = 14,
+					Default = 1,
+				},
+				Input_LabelShapeBorder = InstanceInput {
+					SourceOp = "Background1",
+					Source = "LabelShapeBorder",
+				},
+				Input12 = InstanceInput {
+					SourceOp = "ShapeBorder",
+					Source = "Thickness",
+					MinScale = 0,
+					Default = 0.005,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "ShapeBorder",
+					Source = "WritePosition",
+					Name = "Start Position",
+					Default = 0,
+				},
+				InputAnimateBorder = InstanceInput {
+					SourceOp = "ShapeBorder",
+					Source = "AnimateBorder",
+					Name = "Animate Border",
+				},
+				InputHide_AnimationTime = InstanceInput {
+					SourceOp = "ShapeBorder",
+					Source = "Hide_AnimationTime",
+				},
+				InputAnimateBorderOut = InstanceInput {
+					SourceOp = "ShapeBorder",
+					Source = "AnimateBorderOut",
+					Name = "Animate Out",
+				},
+				InputAnimationTime = InstanceInput {
+					SourceOp = "ShapeBorder",
+					Source = "AnimationTime",
+				},
+				InputHide_BorderLength = InstanceInput {
+					SourceOp = "ShapeBorder",
+					Source = "Hide_BorderLength",
+				},
+				Input17 = InstanceInput {
+					SourceOp = "ShapeBorder",
+					Source = "BorderLength",
+					Default = 1,
+				},
+				Input_Show_RectangleCorner = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Show_RectangleCorner",
+				},
+				Input6 = InstanceInput {
+					SourceOp = "sRectangle1",
+					Source = "CornerRadius",
+					Default = 0,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "ShapeBorder",
+					Source = "JoinStyle",
+					Name = "Border Style",
+					ControlGroup = 10,
+					Default = 2,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "ShapeBorder",
+					Source = "CapStyle",
+					ControlGroup = 10,
+					Default = 2,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "ShapeBorder",
+					Source = "MiterLimit",
+					Default = 10,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "Border_Color",
+					Source = "Red",
+					Name = "Border Color",
+					ControlGroup = 8,
+					Default = 1,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "Border_Color",
+					Source = "Green",
+					ControlGroup = 8,
+					Default = 0.3333333333333,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "Border_Color",
+					Source = "Blue",
+					ControlGroup = 8,
+					Default = 0,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "Border_Color",
+					Source = "Alpha",
+					ControlGroup = 8,
+					Default = 1,
+				},
+
+				Input_ShapeTransform_Center = InstanceInput {
+					SourceOp = "Background1",
+					Source = "DisplayOffset",
+					DefaultX = 0,
+					DefaultY = 0,
+				},
+				Input_ShapeTransform_Angle = InstanceInput {
+					SourceOp = "Background1",
+					Source = "DisplayAngle",
+				},
+
+				Input_Blankline_Transform = InstanceInput {
+					SourceOp = "ShapeResult",
+					Source = "Blank6",
+				},
+				Input_Blankline0 = InstanceInput {
+					SourceOp = "ShapeResult",
+					Source = "ApplyBlank2",
+				},
+				Input_DonateButton = InstanceInput {
+					SourceOp = "Background1",
+					Source = "DonateButton",
+				},
+				Input_SubscribeButton = InstanceInput {
+					SourceOp = "Background1",
+					Source = "SubscribeButton",
+				},
+				Input22 = InstanceInput {
+					SourceOp = "sDuplicate1",
+					Source = "Copies",
+					Page = "Duplicate",
+					Default = 0,
+				},
+				Input23 = InstanceInput {
+					SourceOp = "sDuplicate1",
+					Source = "XOffset",
+					Default = 0,
+				},
+				Input24 = InstanceInput {
+					SourceOp = "sDuplicate1",
+					Source = "YOffset",
+					Default = 0,
+				},
+				Input25 = InstanceInput {
+					SourceOp = "sDuplicate1",
+					Source = "XSize",
+					Default = 1,
+				},
+				Input26 = InstanceInput {
+					SourceOp = "sDuplicate1",
+					Source = "YSize",
+					Default = 1,
+				},
+				Input27 = InstanceInput {
+					SourceOp = "sDuplicate1",
+					Source = "AxisMode",
+				},
+				Input28 = InstanceInput {
+					SourceOp = "sDuplicate1",
+					Source = "XPivot",
+					Default = 0,
+				},
+				Input29 = InstanceInput {
+					SourceOp = "sDuplicate1",
+					Source = "YPivot",
+					Default = 0,
+				},
+				Input30 = InstanceInput {
+					SourceOp = "sDuplicate1",
+					Source = "ZRotation",
+					Default = 0,
+				},
+				Input_GridBlankLine = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Blank6",
+				},
+				Input46 = InstanceInput {
+					SourceOp = "sGrid1",
+					Source = "CellsX",
+					Default = 1,
+				},
+				Input47 = InstanceInput {
+					SourceOp = "sGrid1",
+					Source = "CellsY",
+					Default = 1,
+				},
+				Input48 = InstanceInput {
+					SourceOp = "sGrid1",
+					Source = "XOffset",
+					Default = 0.2,
+				},
+				Input49 = InstanceInput {
+					SourceOp = "sGrid1",
+					Source = "YOffset",
+					Default = 0.2,
+				},
+				Input31 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "JitterMode",
+					Page = "Jitter",
+				},
+				Input32 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Shape.OffsetX.Min",
+					Name = "",
+					ControlGroup = 2,
+					Default = 0,
+				},
+				Input33 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Shape.OffsetX.Max",
+					Name = "",
+					ControlGroup = 2,
+					Default = 0,
+				},
+				Input34 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Shape.OffsetY.Min",
+					Name = "",
+					ControlGroup = 3,
+					Default = 0,
+				},
+				Input35 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Shape.OffsetY.Max",
+					Name = "",
+					ControlGroup = 3,
+					Default = 0,
+				},
+				Input36 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Shape.SizeX.Min",
+					Name = "",
+					ControlGroup = 4,
+					Default = 1,
+				},
+				Input37 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Shape.SizeX.Max",
+					Name = "",
+					ControlGroup = 4,
+					Default = 1,
+				},
+				Input38 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Shape.SizeY.Min",
+					Name = "",
+					ControlGroup = 5,
+					Default = 1,
+				},
+				Input39 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Shape.SizeY.Max",
+					Name = "",
+					ControlGroup = 5,
+					Default = 1,
+				},
+				Input40 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Shape.Rotate.Min",
+					Name = "",
+					ControlGroup = 6,
+					Default = 0,
+				},
+				Input41 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Shape.Rotate.Max",
+					Name = "",
+					ControlGroup = 6,
+					Default = 0,
+				},
+				Input42 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Point.OffsetX.Min",
+					Name = "",
+					ControlGroup = 7,
+					Default = 0,
+				},
+				Input43 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Point.OffsetX.Max",
+					Name = "",
+					ControlGroup = 7,
+					Default = 0,
+				},
+				Input44 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Point.OffsetY.Min",
+					Name = "",
+					ControlGroup = 8,
+					Default = 0,
+				},
+				Input45 = InstanceInput {
+					SourceOp = "sJitter1",
+					Source = "Point.OffsetY.Max",
+					Name = "",
+					ControlGroup = 8,
+					Default = 0,
+				},
+				Input68 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Filter",
+					Page = "SoftGlow",
+				},
+				Input69 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Red",
+					Name = " ",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input70 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Green",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input71 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Blue",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input72 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Alpha",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input56 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Threshold",
+					Default = 0,
+				},
+				Input57 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Gain",
+					Default = 0,
+				},
+				Input58 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "LockXY",
+					Default = 1,
+				},
+				Input59 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "XGlowSize",
+					Default = 10,
+				},
+				Input60 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "YGlowSize",
+					Default = 10,
+				},
+				Input66 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Passes",
+					Default = 4,
+				},
+				Input67 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "ClippingMode",
+				},
+				Input61 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "BlendClone",
+					Default = 1,
+				},
+				Input62 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "RedScale",
+					Default = 1,
+				},
+				Input63 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "GreenScale",
+					Default = 1,
+				},
+				Input64 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "BlueScale",
+					Default = 1,
+				},
+				Input65 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "AlphaScale",
+					Default = 1,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "SoftGlow1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { -385, 49.5 },
+				Flags = {
+					AllowPan = false,
+					GridSnap = true,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 941.219, 213.924, 475.5, 24.2424 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				Background1 = Background {
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, },
+						ShapeLayout = Input { Value = 1, },
+						Show_Background = Input {
+							Value = 1,
+							Expression = "EnableBackground",
+						},
+						Show_RectangleLabel = Input {
+							Value = 1,
+							Expression = "iif(ShapeType==0,1,0)",
+						},
+						Show_EllipseLabel = Input { Expression = "iif(ShapeType==1,1,0)", },
+						Show_RectangleCorner = Input {
+							Value = 1,
+							Expression = "iif(ShapeType==0,1,0)",
+						},
+						Show_PolygonSides = Input { Expression = "iif(ShapeType==2,1,0)", },
+						Show_StarOptions = Input { Expression = "iif(ShapeType==3,1,0)", },
+						EditingMode = Input { Value = "Solo", },
+						Hide_OerationList = Input { Expression = "IsMergeMode", }
+					},
+					ViewInfo = OperatorInfo { Pos = { -385, 148.5 } },
+					UserControls = ordered() {
+						ShapeType = {
+							{ MBTNC_AddButton = "Rect" },
+							{ MBTNC_AddButton = "Ellipse" },
+							{ MBTNC_AddButton = "Poly" },
+							{ MBTNC_AddButton = "Star" },
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "MultiButtonControl",
+							MBTNC_ShowBasicButton = true,
+							INP_MaxScale = 1,
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							MBTNC_ShowName = false,
+							MBTNC_StretchToFit = true,
+							MBTNC_ShowToolTip = false,
+							LINKS_Name = "Shape Type",
+						},
+						BtnRectangle = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "ButtonControl",
+							BTNCS_Execute = "t=Background1.IsMergeMode[TIME_UNDEFINED]; if (t==0) then PipeRouter2.Input:ConnectTo(sRectangle1.Output) end Background1.ShapeType=0;",
+							INP_MaxScale = 1,
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							ICD_Width = 0.3,
+							LINKS_Name = "Rectangle",
+						},
+						BtnEllipse = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "ButtonControl",
+							BTNCS_Execute = "t=Background1.IsMergeMode[TIME_UNDEFINED]; if (t==0) then PipeRouter2.Input:ConnectTo(sEllipse1.Output) end Background1.ShapeType=1;",
+							INP_MaxScale = 1,
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							ICD_Width = 0.2,
+							LINKS_Name = "Ellipse",
+						},
+						BtnPolygon = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "ButtonControl",
+							BTNCS_Execute = "t=Background1.IsMergeMode[TIME_UNDEFINED]; if (t==0) then PipeRouter2.Input:ConnectTo(sNGon1.Output) end Background1.ShapeType=2;",
+							INP_MaxScale = 1,
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							ICD_Width = 0.2,
+							LINKS_Name = "Polygon",
+						},
+						BtnStar = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "ButtonControl",
+							BTNCS_Execute = "t=Background1.IsMergeMode[TIME_UNDEFINED]; if (t==0) then PipeRouter2.Input:ConnectTo(sStar1.Output) end Background1.ShapeType=3;",
+							INP_MaxScale = 1,
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							ICD_Width = 0.2,
+							LINKS_Name = "Star",
+						},
+						IsMergeMode = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INP_Default = 0,
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Merge Mode",
+						},
+						BtnMergeMode = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "ButtonControl",
+							BTNCS_Execute = "t=1-Background1.IsMergeMode[TIME_UNDEFINED];Background1.IsMergeMode=t; if (t==1) then PipeRouter2.Input:ConnectTo(sBoolean3.Output); Background1.EditingMode='Group'; else Background1.EditingMode='Solo'; _s=Background1.ShapeType[TIME_UNDEFINED] _shape={sRectangle1,sEllipse1,sNGon1,sStar1}; PipeRouter2.Input:ConnectTo(_shape[_s+1].Output) end",
+							INP_MaxScale = 1,
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							ICD_Width = 1,
+							LINKS_Name = "Enable/Disable Merge Mode",
+						},
+						Label_Rectangle = {
+							INP_Integer = false,
+							LBLC_DropDownButton = false,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							INP_Default = 1,
+							INPID_InputControl = "LabelControl",
+							LINKS_Name = "Rectangle",
+						},
+						Label_Ellipse = {
+							INP_Integer = false,
+							LBLC_DropDownButton = false,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							INP_Default = 1,
+							INPID_InputControl = "LabelControl",
+							LINKS_Name = "Ellipse",
+						},
+						Label_Polygon = {
+							INP_Integer = false,
+							LBLC_DropDownButton = false,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							INP_Default = 1,
+							INPID_InputControl = "LabelControl",
+							LINKS_Name = "Polygon",
+						},
+						Label_Star = {
+							INP_Integer = false,
+							LBLC_DropDownButton = false,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							INP_Default = 1,
+							INPID_InputControl = "LabelControl",
+							LINKS_Name = "Star",
+						},
+						ShapeLayout = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+							LBLC_NumInputs = 4,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							LBLC_NestLevel = 1,
+							INP_Passive = true,
+							LINKS_Name = "Layout",
+						},
+						LabelShapeBorder = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+							LBLC_NumInputs = 17,
+							INP_Default = 1,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							LBLC_NestLevel = 1,
+							INP_Passive = true,
+							LINKS_Name = "Border",
+						},
+						EnableBackground = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INP_Default = 1,
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Enable Background",
+						},
+						Show_Background = {
+							LBLC_NumInputs = 4,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						Show_RectangleLabel = {
+							LBLC_NumInputs = 5,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						Show_EllipseLabel = {
+							LBLC_NumInputs = 7,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						Show_RectangleCorner = {
+							LBLC_NumInputs = 1,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						Show_PolygonSides = {
+							LBLC_NumInputs = 8,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						Show_StarOptions = {
+							LBLC_NumInputs = 9,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						DonateButton = {
+							ICD_Width = 0.5,
+							INPID_InputControl = "ButtonControl",
+							BTNCS_Execute = "os.execute('open https://www.buymeacoffee.com/essentialvideo'); os.execute('start https://www.buymeacoffee.com/essentialvideo');",
+							LINKID_DataType = "Number",
+							LINKS_Name = "Donate!",
+						},
+						SubscribeButton = {
+							ICD_Width = 0.5,
+							INPID_InputControl = "ButtonControl",
+							BTNCS_Execute = "os.execute('open https://www.youtube.com/@EssentialVideoEditing/videos?sub_confirmation=1'); os.execute('start https://www.youtube.com/@EssentialVideoEditing/videos?sub_confirmation=1');",
+							LINKID_DataType = "Number",
+							LINKS_Name = "Subscribe!",
+						},
+						DisplayOffset = {
+							LINKS_Name = "Display Offset",
+							LINKID_DataType = "Point",
+							INPID_InputControl = "OffsetControl",
+							INPID_PreviewControl = "CrosshairControl",
+							INP_DefaultX = 0,
+							INP_DefaultY = 0,
+							CHC_Style = "NormalCross",
+						},
+						DisplayAngle = {
+							LINKS_Name = "Display Angle",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "ScrewControl",
+							INP_Integer = false,
+							INP_MinScale = 0,
+							INP_MaxScale = 360,
+						},
+						EditingMode = {
+							TEC_ReadOnly = true,
+							INP_Default = "Solo",
+							INP_External = false,
+							LINKID_DataType = "Text",
+							TEC_Wrap = false,
+							INPID_InputControl = "TextEditControl",
+							TEC_Lines = 1,
+							LINKS_Name = "Editing Mode",
+						},
+						Hide_OerationList = {
+							LBLC_NumInputs = 1,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+					}
+				},
+				sRectangle1 = sRectangle {
+					Inputs = {
+						["Translate.X"] = Input { Expression = "_ShapeLayout.Center.X-0.5", },
+						["Translate.Y"] = Input { Expression = "(_ShapeLayout.Center.Y-0.5)/1.7777777778", },
+						Width = Input {
+							Value = 0.1,
+							Expression = "_ShapeLayout.Width",
+						},
+						Height = Input {
+							Value = 0.1,
+							Expression = "_ShapeLayout.Height/1.7777777778",
+						},
+						Angle = Input { Expression = "_ShapeLayout.Angle", },
+					},
+					ViewInfo = OperatorInfo { Pos = { -275, 115.5 } },
+				},
+				ShapeProcess = GroupOperator {
+					NameSet = true,
+					Inputs = ordered() {
+						Input1 = InstanceInput {
+							SourceOp = "PipeRouter2",
+							Source = "Input",
+						}
+					},
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "sRender1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo {
+						Pos = { 165, 115.5 },
+						Flags = {
+							AllowPan = false,
+							AutoSnap = true,
+							RemoveRouters = true
+						},
+						Size = { 676, 196.848, 338, 24.2424 },
+						Direction = "Horizontal",
+						PipeStyle = "Direct",
+						Scale = 1,
+						Offset = { 0, 0 }
+					},
+					Tools = ordered() {
+						Border_Color = sBoolean {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								Operation = Input { Value = FuID { "Union" }, },
+								Input1 = Input {
+									SourceOp = "PipeRouter2",
+									Source = "Output",
+								},
+								Input2 = Input {
+									SourceOp = "PipeRouter2",
+									Source = "Output",
+								},
+								Green = Input { Value = 0.3333333333333, },
+								Blue = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { -165, 73.7576 } },
+						},
+						ShapeBorder = sOutline {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								JoinStyle = Input { Value = 2, },
+								CapStyle = Input { Value = 2, },
+								Thickness = Input { Value = 0.005, },
+								Input = Input {
+									SourceOp = "Border_Color",
+									Source = "Output",
+								},
+								WriteLength = Input {
+									SourceOp = "ExpressionBorderLength",
+									Source = "NumberResult",
+								},
+								BorderLength = Input { Value = 1, },
+								AnimationTime = Input { Value = 15, },
+								Hide_AnimationTime = Input { Expression = "AnimateBorder", },
+								Hide_BorderLength = Input { Expression = "1-AnimateBorder", },
+							},
+							ViewInfo = OperatorInfo { Pos = { -165, 106.758 } },
+							UserControls = ordered() {
+								AnimateBorder = {
+									LINKS_Name = "AnimateBorder",
+									LINKID_DataType = "Number",
+									INPID_InputControl = "CheckboxControl",
+									INP_Integer = false,
+									CBC_TriState = false,
+									INP_External = false,
+								},
+								AnimateBorderOut = {
+									LINKS_Name = "Animate Border Out",
+									LINKID_DataType = "Number",
+									INPID_InputControl = "CheckboxControl",
+									INP_Integer = false,
+									CBC_TriState = false,
+									INP_External = false,
+								},
+								BorderLength = {
+									LINKS_Name = "Border Length",
+									LINKID_DataType = "Number",
+									INPID_InputControl = "SliderControl",
+									INP_Integer = false,
+									INP_MinScale = 0,
+									INP_MaxScale = 1,
+									INP_MinAllowed = 0,
+									INP_MaxAllowed = 1,
+								},
+								AnimationTime = {
+									LINKS_Name = "Animation Time",
+									LINKID_DataType = "Number",
+									INPID_InputControl = "SliderControl",
+									INP_Integer = true,
+									INP_MinScale = 1,
+									INP_MaxScale = 100,
+									INP_MinAllowed = 1,
+									INP_MaxAllowed = 100,
+									INP_External = false,
+								},
+								Hide_AnimationTime = {
+									LBLC_NumInputs = 2,
+									IC_Visible = false,
+									LBLC_DropDownButton = true,
+									INPID_InputControl = "LabelControl",
+								},
+								Hide_BorderLength = {
+									LBLC_NumInputs = 1,
+									IC_Visible = false,
+									LBLC_DropDownButton = true,
+									INPID_InputControl = "LabelControl",
+								},
+							}
+						},
+						ExpressionBorderLength = Expression {
+							CtrlWZoom = false,
+							NameSet = true,
+							Inputs = {
+								n1 = Input {
+									SourceOp = "AnimCurveIn",
+									Source = "Value",
+								},
+								n2 = Input {
+									SourceOp = "AnimCurveOut",
+									Source = "Value",
+								},
+								n3 = Input {
+									Value = 1,
+									Expression = "ShapeBorder.AnimateBorder==1 and n1*iif(ShapeBorder.AnimateBorderOut==1, n2, 1) or ShapeBorder.BorderLength",
+								},
+								NumberExpression = Input { Value = "n3", },
+							},
+						},
+						AnimCurveIn = LUTLookup {
+							NameSet = true,
+							Inputs = {
+								Source = Input { Value = FuID { "Duration" }, },
+								Lookup = Input {
+									SourceOp = "AnimCurves1Lookup",
+									Source = "Value",
+								},
+								ClipHigh = Input { Value = 1, },
+								TimeScale = Input {
+									Value = 10,
+									Expression = "(comp.RenderEnd-comp.RenderStart+1)/ShapeBorder.AnimationTime",
+								},
+							},
+						},
+						AnimCurves1Lookup = LUTBezier {
+							KeyColorSplines = {
+								[0] = {
+									[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+									[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+								}
+							},
+							SplineColor = { Red = 255, Green = 255, Blue = 255 },
+							NameSet = true,
+						},
+						AnimCurveOut = LUTLookup {
+							NameSet = true,
+							Inputs = {
+								Source = Input { Value = FuID { "Duration" }, },
+								Lookup = Input {
+									SourceOp = "AnimCurveOutLookup",
+									Source = "Value",
+								},
+								Invert = Input { Value = 1, },
+								ClipLow = Input { Value = 1, },
+								ClipHigh = Input { Value = 1, },
+								TimeScale = Input {
+									Value = 10,
+									Expression = "(comp.RenderEnd-comp.RenderStart+1)/ShapeBorder.AnimationTime",
+								},
+								TimeOffset = Input {
+									Value = 0.9,
+									Expression = "1-(ShapeBorder.AnimationTime+1)/(comp.RenderEnd-comp.RenderStart+1)",
+								},
+							},
+						},
+						AnimCurveOutLookup = LUTBezier {
+							KeyColorSplines = {
+								[0] = {
+									[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+									[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+								}
+							},
+							SplineColor = { Red = 255, Green = 255, Blue = 255 },
+							NameSet = true,
+						},
+						sRender1 = sRender {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Input = Input {
+									SourceOp = "sJitter1",
+									Source = "Output",
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { 275, 139.758 } },
+						},
+						sMerge1_1 = sMerge {
+							CtrlWShown = false,
+							Inputs = {
+								Input2 = Input {
+									SourceOp = "ShapeBorder",
+									Source = "Output",
+								},
+								Input1 = Input {
+									SourceOp = "shapeArea",
+									Source = "Output",
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { -165, 139.758 } },
+						},
+						PipeRouter2 = PipeRouter {
+							CtrlWShown = false,
+							Inputs = {
+								Input = Input {
+									SourceOp = "sRectangle1",
+									Source = "Output",
+								},
+							},
+							ViewInfo = PipeRouterInfo { Pos = { -220, 7.75757 } },
+						},
+						shapeArea = sBoolean {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								Operation = Input { Value = FuID { "Union" }, },
+								Input1 = Input {
+									SourceOp = "PipeRouter2",
+									Source = "Output",
+								},
+								Input2 = Input {
+									SourceOp = "PipeRouter2",
+									Source = "Output",
+								},
+								FrameRenderScript = Input { Value = "if (Background1.EnableBackground==0) then\n	Red=0; Green=0; Blue=0;Alpha=0;\nend", },
+							},
+							ViewInfo = OperatorInfo { Pos = { -275, 73.7576 } },
+						},
+						sDuplicate1 = sDuplicate {
+							CtrlWShown = false,
+							Inputs = {
+								Input = Input {
+									SourceOp = "sMerge1_1",
+									Source = "Output",
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 139.758 } },
+						},
+						sJitter1 = sJitter {
+							CtrlWShown = false,
+							Inputs = {
+								Input = Input {
+									SourceOp = "sGrid1",
+									Source = "Output",
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { 165, 139.758 } },
+						},
+						sGrid1 = sGrid {
+							CtrlWShown = false,
+							Inputs = {
+								CellsX = Input { Value = 1, },
+								CellsY = Input { Value = 1, },
+								Input = Input {
+									SourceOp = "sDuplicate1",
+									Source = "Output",
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 139.758 } },
+						}
+					},
+				},
+				sEllipse1 = sEllipse {
+					NameSet = true,
+					Inputs = {
+						["Translate.X"] = Input { Expression = "_ShapeLayoutEllipse.Center.X-0.5", },
+						["Translate.Y"] = Input { Expression = "(_ShapeLayoutEllipse.Center.Y-0.5)/1.7777777778", },
+						Width = Input {
+							Value = 0.05,
+							Expression = "_ShapeLayoutEllipse.Width",
+						},
+						Height = Input {
+							Value = 0.05,
+							Expression = "_ShapeLayoutEllipse.Height",
+						},
+						Angle = Input { Expression = "_ShapeLayoutEllipse.Angle", },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 82.5 } },
+				},
+				sNGon1 = sNGon {
+					NameSet = true,
+					Inputs = {
+						JoinStyle = Input { Value = 2, },
+						["Translate.X"] = Input { Expression = "_ShapeLayoutPolygon.Center.X-0.5", },
+						["Translate.Y"] = Input { Expression = "(_ShapeLayoutPolygon.Center.Y-0.5)/1.7777777778", },
+						Width = Input {
+							Value = 0.1,
+							Expression = "_ShapeLayoutPolygon.Width",
+						},
+						Height = Input {
+							Value = 0.1,
+							Expression = "_ShapeLayoutPolygon.Height/1.7777777778",
+						},
+						Angle = Input { Expression = "_ShapeLayoutPolygon.Angle", },
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 82.5 } },
+				},
+				sStar1 = sStar {
+					NameSet = true,
+					Inputs = {
+						Points = Input { Value = 5, },
+						["Translate.X"] = Input { Expression = "_ShapeLayoutStar.Center.X-0.5", },
+						["Translate.Y"] = Input { Expression = "(_ShapeLayoutStar.Center.Y-0.5)/1.7777777778", },
+						Width = Input {
+							Value = 0.05,
+							Expression = "_ShapeLayoutStar.Width",
+						},
+						Height = Input {
+							Value = 0.05,
+							Expression = "_ShapeLayoutStar.Height/1.7777777778",
+						},
+						Angle = Input { Expression = "_ShapeLayoutStar.Angle", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 82.5 } },
+				},
+				ShapeResult = Merge {
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "sRender1",
+							Source = "Output",
+						},
+						Center = Input { Expression = "Point(0.5,0.5)+Background1.DisplayOffset", },
+						Angle = Input { Expression = "Background1.DisplayAngle", },
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 148.5 } },
+				},
+				SoftGlow1 = SoftGlow {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						Gain = Input { Value = 0, },
+						ColorScale = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "ShapeResult",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, 148.5 } },
+				},
+				_ShapeLayout = RectangleMask {
+					NameSet = true,
+					Inputs = {
+						ShowViewControls = Input { Expression = "Background1.ShapeType==0 and 1 or 0", },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input { Value = 0.1, },
+						Height = Input { Value = 0.17777777778, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -385, 16.5 } },
+				},
+				_ShapeLayoutEllipse = EllipseMask {
+					NameSet = true,
+					Inputs = {
+						ShowViewControls = Input { Expression = "Background1.ShapeType==1 and 1 or 0", },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input { Value = 0.1, },
+						Height = Input { Value = 0.1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -385, 49.5 } },
+				},
+				_ShapeLayoutPolygon = RectangleMask {
+					NameSet = true,
+					Inputs = {
+						ShowViewControls = Input { Expression = "Background1.ShapeType==2 and 1 or 0", },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input { Value = 0.1, },
+						Height = Input { Value = 0.17777777778, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -385, 82.5 } },
+				},
+				_ShapeLayoutStar = RectangleMask {
+					NameSet = true,
+					Inputs = {
+						ShowViewControls = Input { Expression = "Background1.ShapeType==3 and 1 or 0", },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input { Value = 0.1, },
+						Height = Input { Value = 0.17777777778, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -385, 115.5 } },
+				},
+				sBoolean1 = sBoolean {
+					Inputs = {
+						Input1 = Input {
+							SourceOp = "sRectangle1",
+							Source = "Output",
+						},
+						Input2 = Input {
+							SourceOp = "sEllipse1",
+							Source = "Output",
+						},
+						Operation = Input { Value = FuID { "Union" }, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 16.5 } },
+				},
+				sBoolean2 = sBoolean {
+					Inputs = {
+						Input1 = Input {
+							SourceOp = "sBoolean1",
+							Source = "Output",
+						},
+						Input2 = Input {
+							SourceOp = "sNGon1",
+							Source = "Output",
+						},
+						Operation = Input { Value = FuID { "Union" }, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 16.5 } },
+				},
+				sBoolean3 = sBoolean {
+					Inputs = {
+						Input1 = Input {
+							SourceOp = "sBoolean2",
+							Source = "Output",
+						},
+						Input2 = Input {
+							SourceOp = "sStar1",
+							Source = "Output",
+						},
+						Operation = Input { Value = FuID { "Union" }, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 16.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialShapes"
+}

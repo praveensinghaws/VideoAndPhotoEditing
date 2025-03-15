@@ -1,0 +1,642 @@
+{
+	Tools = ordered() {
+		EssentialDissolve = GroupOperator {
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "Background",
+				},
+				MainInput2 = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "Foreground",
+				},
+
+				Input1 = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "DissolveType",
+				},
+				InputHideGradientWipe = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "Hide_GradientWipe",
+				},
+				Input39 = InstanceInput {
+					SourceOp = "ChannelBooleans1",
+					Source = "InvertWipe",
+					Name = "Invert Wipe",
+					Default = 0,
+				},
+				InputGradientWipeType = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "GradientType",
+					Name = "Wipe Type",
+					Default = 1,
+				},
+				InputHideClipName = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "Hide_ClipName",
+				},
+				Input9 = InstanceInput {
+					SourceOp = "MediaIn3",
+					Source = "ClipName",
+					Name = "Gradient Map",
+					DefaultText = "",
+				},
+				InputDFTLumaRamp1 = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "DFTLumaRamp.Softness",
+					Default = 0.1,
+				},
+				InputDFTLumaRamp2 = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "DFTLumaRamp.Border",
+					Default = 0,
+				},
+				InputDFTLumaRamp3 = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "DFTLumaRamp.BorderSoftness",
+					Default = 1,
+				},
+				InputDFTLumaRamp4 = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "DFTLumaRamp.Red",
+					Name = "Border Color",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				InputDFTLumaRamp5 = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "DFTLumaRamp.Green",
+					Name = "Color",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				InputDFTLumaRamp6 = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "DFTLumaRamp.Blue",
+					Name = "Color",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				InputDFTLumaRamp7 = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "DFTLumaRamp.Alpha",
+					Name = "Color",
+					ControlGroup = 7,
+					Default = 1,
+				},
+
+				InputLabelNoise = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "LabelNoise",
+				},
+				InputBtnNoise1 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "BtnNoiseType1",
+				},
+				InputBtnNoise2 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "BtnNoiseType2",
+				},
+				InputBtnNoise3 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "BtnNoiseType3",
+				},
+				InputBtnNoise4 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "BtnNoiseType4",
+				},
+				InputBtnNoise5 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "BtnNoiseType5",
+				},
+				Input31 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "GradientType",
+					Name = "Type",
+				},
+				Input32 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Start",
+					DefaultX = 0,
+					DefaultY = 0.5,
+				},
+				Input33 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "End",
+					DefaultX = 1,
+					DefaultY = 0.5,
+				},
+				Input37 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Repeat",
+					Default = 1,
+				},
+				InputBlank = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "ApplyBlank2",
+				},
+				Input11 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Detail",
+					Default = 2,
+				},
+				Input12 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Contrast",
+					Default = 1,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Brightness",
+					Default = 0,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "LockXY",
+					Default = 1,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "XScale",
+					Default = 2,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "YScale",
+					Default = 20,
+				},
+				Input17 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Angle",
+					Default = 0,
+				},
+				Input18 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Seethe",
+					Default = 0,
+				},
+				Input19 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "SeetheRate",
+					Default = 0,
+				},
+
+				InputLabelBlur = InstanceInput {
+					SourceOp = "Dissolve1",
+					Source = "LabelBlur",
+				},
+				Input4 = InstanceInput {
+					SourceOp = "DirectionalBlur1",
+					Source = "EnableBlur",
+					Name = "Enable Blur",
+					Default = 0,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "DirectionalBlur1",
+					Source = "Type",
+				},
+				Input3 = InstanceInput {
+					SourceOp = "DirectionalBlur1",
+					Source = "Center",
+				},
+				Input5 = InstanceInput {
+					SourceOp = "DirectionalBlur1",
+					Source = "BlurStrength",
+					Name = "Strength",
+					Default = 0.1,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "DirectionalBlur1",
+					Source = "BlurAngle",
+					Name = "Angle",
+					Default = 0,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "DirectionalBlur1",
+					Source = "AnimateAngle",
+				},
+				Input8 = InstanceInput {
+					SourceOp = "DirectionalBlur1",
+					Source = "GlowValue",
+					Name = "Glow",
+					Default = 0,
+				},
+
+			},
+			Outputs = {
+				Output2 = InstanceOutput {
+					SourceOp = "Right",
+					Source = "Data",
+				},
+				MainOutput1 = InstanceOutput {
+					SourceOp = "DirectionalBlur1",
+					Source = "Output",
+				},
+				Output1 = InstanceOutput {
+					SourceOp = "Left",
+					Source = "Data",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 275, 148.5 },
+				Flags = {
+					AllowPan = false,
+					GridSnap = true,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 591.262, 215.776, 306.576, 61.3886 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				Dissolve1 = Dissolve {
+					Transitions = {
+						[0] = "DFTDissolve",
+						"DFTLumaRamp"
+					},
+					NameSet = true,
+					Inputs = {
+						Operation = Input { 
+							Value = FuID { "DFTLumaRamp"},
+							Expression = ":o={'DFTLumaRamp','DFTDissolve','DFTAddDissolve','DFTErode','DFTRandom','DFTRandomNoise'}; return o[DissolveType+1];",
+					 	},
+						["DFTLumaRamp.Border"] = Input { Value = 0, },
+						["DFTLumaRamp.Softness"] = Input { Value = 0.1, },
+						Mix = Input {
+							SourceOp = "AnimCurves1",
+							Source = "Value",
+						},
+						Map = Input {
+							SourceOp = "ChannelBooleans1",
+							Source = "Output",
+						},
+						GradientType = Input { Value = 0 },
+						Hide_ClipName = Input { Expression = "1-GradientType", },
+						Hide_GradientWipe = Input { Expression = "DissolveType==0 and 1 or 0", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, -16.5 } },
+					UserControls = ordered() {
+						LabelBlur = {
+							LINKS_Name = "Blur",
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+							LBLC_NumInputs = 7,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							INP_Default = 0,
+						},
+						GradientType = {
+							LINKS_Name = "Gradient Type",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "MultiButtonControl",
+							INP_Integer = false,
+							INP_MinScale = 0,
+							INP_MaxScale = 1,
+							INP_MinAllowed = -1000000,
+							INP_MaxAllowed = 1000000,
+							{ MBTNC_AddButton = "Clip" },
+							{ MBTNC_AddButton = "Noise" },
+							MBTNC_ShowBasicButton = true,
+							MBTNC_ShowToolTip = false,
+							MBTNC_ShowName = false,
+							MBTNC_StretchToFit = true,
+							INP_External = false,
+						},
+						DissolveType = {
+							LINKS_Name = "Dissolve Type",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "ComboControl",
+							INP_Integer = false,
+							{ CCS_AddString = "Gradient Wipe" },
+							{ CCS_AddString = "Dissolve" },
+							{ CCS_AddString = "Additive Dissolve" },
+							{ CCS_AddString = "Erode" },
+							{ CCS_AddString = "Random Dissolve" },
+							{ CCS_AddString = "Random Noise Dissolve" },
+							CC_LabelPosition = "Horizontal",
+							INP_External = false,
+						},
+						Hide_ClipName = {
+							LBLC_NumInputs = 1,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						Hide_GradientWipe = {
+							LBLC_NumInputs = 31,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+					}
+				},
+				AnimCurves1 = LUTLookup {
+					CtrlWZoom = false,
+					Inputs = {
+						Lookup = Input {
+							SourceOp = "AnimCurvesonDissolve1Lookup",
+							Source = "Value",
+						},
+					},
+				},
+				AnimCurvesonDissolve1Lookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+				},
+				DirectionalBlur1 = DirectionalBlur {
+					Inputs = {
+						Length = Input { Expression = "2*(AnimCurves1.Value>0.5 and 1-AnimCurves1.Value or AnimCurves1.Value)*BlurStrength", },
+						Angle = Input { Expression = "AnimateAngle==0 and BlurAngle or BlurAngle*Length/BlurStrength", },
+						Glow = Input { Expression = "Length/BlurStrength*GlowValue", },
+						Blend = Input { Expression = "EnableBlur", },
+						Input = Input {
+							SourceOp = "Dissolve1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, -16.5 } },
+					UserControls = ordered() {
+						EnableBlur = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "CheckboxControl",
+							INP_MaxScale = 1,
+							INP_Default = 0,
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							CBC_TriState = false,
+							LINKS_Name = "Enable Blur",
+						},
+						BlurStrength = {
+							INP_MaxAllowed = 10,
+							INP_Integer = false,
+							INPID_InputControl = "SliderControl",
+							INP_MaxScale = 1,
+							INP_Default = 0.1,
+							INP_MinScale = 0,
+							INP_MinAllowed = 0,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							LINKS_Name = "Blur Strength",
+						},
+						BlurAngle = {
+							INPID_InputControl = "ScrewControl",
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INP_MinScale = -360,
+							INP_Default = 0,
+							INP_MaxScale = 360,
+							LINKS_Name = "Blur Angle",
+						},
+						AnimateAngle = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Animate Angle",
+						},
+						GlowValue = {
+							INP_MaxAllowed = 1,
+							INP_Integer = false,
+							INPID_InputControl = "SliderControl",
+							INP_MaxScale = 1,
+							INP_Default = 0,
+							INP_MinScale = 0,
+							INP_MinAllowed = 0,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							LINKS_Name = "Glow Value",
+						}
+					}
+				},
+				MediaIn3 = MediaIn {
+					ExtentSet = true,
+					CustomData = {
+						MediaProps = {
+							MEDIA_AUDIO_TRACKS_DESC = {
+								{
+									MEDIA_AUDIO_BIT_DEPTH = 32,
+									MEDIA_AUDIO_FRAME_RATE = 30,
+									MEDIA_AUDIO_NUM_CHANNELS = 2,
+									MEDIA_AUDIO_SAMPLE_RATE = 48000,
+									MEDIA_AUDIO_START_TIME = 0,
+									MEDIA_AUDIO_TRACK_ID = "Timeline Audio",
+									MEDIA_AUDIO_TRACK_NAME = "Timeline Audio [working]"
+								}
+							},
+							MEDIA_AUDIO_TRACKS_NUM = 1,
+							MEDIA_HAS_AUDIO = true,
+							MEDIA_HEIGHT = 1080,
+							MEDIA_IS_SOURCE_RES = false,
+							MEDIA_LAYERS_IN_OUT_LIST = {
+								{
+									0,
+									30
+								},
+								{
+									0,
+									30
+								}
+							},
+							MEDIA_MARK_IN = 0,
+							MEDIA_MARK_OUT = 29,
+							MEDIA_NAME = "Essential Dissolve and Blur",
+							MEDIA_NUM_FRAMES = 30,
+							MEDIA_NUM_LAYERS = 2,
+							MEDIA_PAR = 1,
+							MEDIA_SRC_FRAME_RATE = 30,
+							MEDIA_START_FRAME = 0,
+							MEDIA_WIDTH = 1920
+						},
+					},
+					Inputs = {
+						GlobalOut = Input { Value = 58, },
+						AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+						Layer = Input {
+							Value = Text {
+							},
+						},
+						ClipTimeEnd = Input { Value = 29, },
+						HoldLastFrame = Input { Value = 29, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LeftAudio = Input {
+							SourceOp = "Left",
+							Source = "Data",
+						},
+						RightAudio = Input {
+							SourceOp = "Right",
+							Source = "Data",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 82.5 } },
+				},
+				Left = AudioDisplay {
+				},
+				Right = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Merge1 = Merge {
+					Inputs = {
+						Blend = Input { Expression = "Dissolve1.Operation.Value=='DFTLumaRamp' and 1 or 0", },
+						Background = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "MediaIn3",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 82.5 } },
+				},
+				Background1 = Background {
+					Inputs = {
+						GlobalOut = Input { Value = 29, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 115.5 } },
+				},
+				FastNoise1 = FastNoise {
+					Inputs = {
+						Type = Input { Value = 1 },
+						GlobalOut = Input { Value = 29, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						YScale = Input { Value = 20, },
+						Gradient = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 0, 0, 0, 0 },
+									[1] = { 1, 1, 1, 1 }
+								}
+							},
+						},
+						Repeat = Input { Value = 0, },
+						LabelNoise = Input { Expression = "Dissolve1.GradientType", }
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 115.5 } },
+					UserControls = ordered() {
+						BtnNoiseType1 = {
+							ICD_Width = 0.2,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							BTNCS_Execute = "n=FastNoise1;n.Detail=2;n.Contrast=1;n.Brightness=0;n.XScale=2;n.LockXY=1;n.GradientType=0;n.Repeat=0;n.Start={0,0.5};n.End={1,0.5};",
+							INPID_InputControl = "ButtonControl",
+							LINKS_Name = "1",
+						},
+						BtnNoiseType2 = {
+							ICD_Width = 0.2,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							BTNCS_Execute = "n=FastNoise1;n.Detail=2;n.Contrast=1;n.Brightness=0;n.XScale=2;n.YScale=100;n.LockXY=0;n.GradientType=0;n.Repeat=0;n.Start={0,0.5};n.End={1,0.5};",
+							INPID_InputControl = "ButtonControl",
+							LINKS_Name = "2",
+						},
+						BtnNoiseType3 = {
+							ICD_Width = 0.2,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							BTNCS_Execute = "n=FastNoise1;n.Detail=2;n.Contrast=1;n.Brightness=0;n.XScale=0;n.YScale=50;n.LockXY=0;n.GradientType=1;n.Repeat=0;n.Start={0,0.5};n.End={1,0.5};",
+							INPID_InputControl = "ButtonControl",
+							LINKS_Name = "3",
+						},
+						BtnNoiseType4 = {
+							ICD_Width = 0.2,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							BTNCS_Execute = "n=FastNoise1;n.Detail=0;n.Contrast=1;n.Brightness=0;n.XScale=2;n.YScale=20;n.LockXY=1;n.GradientType=1;n.Repeat=1;n.Start={0.5,0.5};n.End={0.525,0.5};",
+							INPID_InputControl = "ButtonControl",
+							LINKS_Name = "4",
+						},
+						BtnNoiseType5 = {
+							ICD_Width = 0.2,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							BTNCS_Execute = "n=FastNoise1;n.Detail=2;n.Contrast=1;n.Brightness=0;n.XScale=2;n.YScale=20;n.LockXY=1;n.GradientType=5;n.Repeat=0;n.Start={0.5,0.5};n.End={1,0.5};",
+							INPID_InputControl = "ButtonControl",
+							LINKS_Name = "5",
+						},
+						LabelNoise = {
+							LINKS_Name = "Noise",
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+							LBLC_NumInputs = 19,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							INP_Default = 0,
+						},
+					}
+				},
+				ChannelBooleans1 = ChannelBoolean {
+					Inputs = {
+						Operation = Input { Value = 10, },
+						Background = Input {
+							SourceOp = "Dissolve2",
+							Source = "Output",
+						},
+						Blend = Input { Expression = "InvertWipe", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 49.5 } },
+					UserControls = ordered() {
+						InvertWipe = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "CheckboxControl",
+							INP_MaxScale = 1,
+							INP_Default = 0,
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							CBC_TriState = false,
+							LINKS_Name = "Invert Wipe",
+						}
+					}
+				},
+				Dissolve2 = Dissolve {
+					Transitions = {
+						[0] = "DFTDissolve"
+					},
+					Inputs = {
+						Mix = Input {
+							Value = 0,
+							Expression = "1-Dissolve1.GradientType",
+						},
+						Background = Input {
+							SourceOp = "FastNoise1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Merge1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 82.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialDissolve"
+}

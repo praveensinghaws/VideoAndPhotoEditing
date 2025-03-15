@@ -1,0 +1,870 @@
+{
+	Tools = ordered() {
+		EssentialShockwave = GroupOperator {
+			Inputs = ordered() {
+				Input0 = InstanceInput {
+					SourceOp = "KeyframeStretcher1",
+					Source = "StretchEdges",
+					Name = "Lock Animation",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "WheelHue1",
+					ControlGroup = 1,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "WheelSaturation1",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "WheelTintAngle1",
+					ControlGroup = 1,
+					Default = 1.096951,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "WheelTintLength1",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "Hue1",
+					Name = "Hue",
+				},
+				Input6 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "Saturation1",
+					Name = "Saturation",
+					Default = 1,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "MasterRGBContrast",
+					Name = "Contrast",
+					Default = 1,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "MasterRGBGain",
+					Name = "Gain",
+					Default = 1,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "MasterRGBLift",
+					Name = "Lift",
+					Default = 0,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "MasterRGBGamma",
+					Name = "Gamma",
+					Default = 1,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "MasterRGBBrightness",
+					Name = "Brightness",
+					Default = 0,
+				},
+				Input12 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "RedGain",
+					Name = "Sub Wave Red Gain",
+					Default = 1,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "GreenGain",
+					Name = "Sub Wave Green Gain",
+					Default = 1,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "BlueGain",
+					Name = "Sub Wave Blue Gain",
+					Default = 1,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "AlphaGain",
+					Name = "Sub Wave Alpha Gain",
+					Default = 1,
+				},
+			},
+			Outputs = {
+				Output1 = InstanceOutput {
+					SourceOp = "Path2",
+					Source = "Heading",
+				},
+				Output2 = InstanceOutput {
+					SourceOp = "Path1",
+					Source = "Heading",
+				},
+				Output3 = InstanceOutput {
+					SourceOp = "Path2_2",
+					Source = "Heading",
+				},
+				Output4 = InstanceOutput {
+					SourceOp = "Path1_2",
+					Source = "Heading",
+				},
+				Output5 = InstanceOutput {
+					SourceOp = "Path2_2_1",
+					Source = "Heading",
+				},
+				Output6 = InstanceOutput {
+					SourceOp = "Path1_2_1",
+					Source = "Heading",
+				},
+				MainOutput1 = InstanceOutput {
+					SourceOp = "KeyframeStretcher1",
+					Source = "Result",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Background1 = Background {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1920, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -1210, 49.5 } },
+				},
+				FastNoise1 = FastNoise {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Rectangle1",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1920, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input {
+							SourceOp = "Path2",
+							Source = "Position",
+						},
+						Detail = Input { Value = 10, },
+						Contrast = Input { Value = 2.72, },
+						Brightness = Input { Value = 0.32, },
+						LockXY = Input { Value = 0, },
+						XScale = Input { Value = 9.41, },
+						YScale = Input { Value = 5.56, },
+						SeetheRate = Input { Value = 0.15, },
+						Discontinuous = Input { Value = 1, },
+						Inverted = Input { Value = 1, },
+						Type = Input { Value = 1, },
+						Gradient = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 0, 0, 0, 0 },
+									[1] = { 1, 1, 1, 1 }
+								}
+							},
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -1045, -16.5 } },
+				},
+				Path2 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path2Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0, Y = 0, RX = 0, RY = 0.0833333333333333 },
+									{ Linear = true, LockY = true, X = 0, Y = 0.25, LX = 0, LY = -0.0833333333333333 }
+								}
+							},
+						},
+					},
+				},
+				Path2Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 8.33333333333333, 0 }, Flags = { LockedY = true } },
+						[25] = { 1, LH = { 16.6666666666667, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				Transform1 = Transform {
+					Inputs = {
+						Pivot = Input { Value = { 0.5, 0 }, },
+						Aspect = Input {
+							SourceOp = "Transform1Aspect",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "FastNoise1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -1045, 16.5 } },
+				},
+				Transform1Aspect = BezierSpline {
+					SplineColor = { Red = 210, Green = 105, Blue = 30 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 1, RH = { 8.33333333333333, 1 } },
+						[25] = { 1.52, LH = { 16.6666666666667, 1.52 } }
+					}
+				},
+				Merge1 = Merge {
+					Inputs = {
+						Blend = Input {
+							SourceOp = "Merge1Blend",
+							Source = "Value",
+						},
+						Background = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -1045, 49.5 } },
+				},
+				Merge1Blend = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 1.66666666666667, 0 } },
+						[5] = { 1, LH = { 3.33350002765656, 1 }, RH = { 11.6659998893738, 1 } },
+						[25] = { 0, LH = { 18.3333333333333, 0.333333333333333 } }
+					}
+				},
+				Rectangle1 = RectangleMask {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						SoftEdge = Input {
+							SourceOp = "Rectangle1SoftEdge",
+							Source = "Value",
+						},
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							SourceOp = "Path1",
+							Source = "Position",
+						},
+						Width = Input { Value = 0.9401689354276, },
+						Height = Input {
+							SourceOp = "Rectangle1Height",
+							Source = "Value",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -1045, -49.5 } },
+				},
+				Rectangle1SoftEdge = BezierSpline {
+					SplineColor = { Red = 234, Green = 243, Blue = 3 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0.015, RH = { 8.33333333333333, 0.015 } },
+						[25] = { 0.15, LH = { 16.6666666666667, 0.15 } }
+					}
+				},
+				Path1 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path1Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0, Y = -0.445, RX = 0, RY = 0.0816666666666667 },
+									{ Linear = true, LockY = true, X = 0, Y = -0.2, LX = 0, LY = -0.0816666666666667 }
+								}
+							},
+						},
+					},
+				},
+				Path1Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 8.33333333333333, 0 }, Flags = { LockedY = true } },
+						[25] = { 1, LH = { 16.6666666666667, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				Rectangle1Height = BezierSpline {
+					SplineColor = { Red = 0, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0.06, RH = { 8.33333333333333, 0.06 } },
+						[25] = { 0.1, LH = { 16.6666666666667, 0.1 } }
+					}
+				},
+				Wave1 = Underlay {
+					NameSet = true,
+					ViewInfo = UnderlayInfo {
+						Pos = { -1041.93, -76.5442 },
+						Size = { 179.512, 156.742 }
+					},
+				},
+				Merge1_3 = Merge {
+					Inputs = {
+						Blend = Input {
+							SourceOp = "Merge1_3Blend",
+							Source = "Value",
+						},
+						Background = Input {
+							SourceOp = "Merge1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform1_2",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -825, 49.5 } },
+				},
+				Merge1_3Blend = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 1.66666666666667, 0 } },
+						[5] = { 1, LH = { 3.33350002765656, 1 }, RH = { 9.99949991703033, 1 } },
+						[20] = { 0, LH = { 15, 0.333333333333333 } }
+					}
+				},
+				FastNoise1_2 = FastNoise {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Rectangle1_2",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1920, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input {
+							SourceOp = "Path2_2",
+							Source = "Position",
+						},
+						Detail = Input { Value = 10, },
+						Contrast = Input { Value = 1.57, },
+						Brightness = Input { Value = -0.36, },
+						LockXY = Input { Value = 0, },
+						XScale = Input { Value = 8.77, },
+						YScale = Input { Value = 3.1, },
+						Seethe = Input { Value = 0.254, },
+						SeetheRate = Input { Value = 0.18, },
+						Discontinuous = Input { Value = 1, },
+						Inverted = Input { Value = 1, },
+						Type = Input { Value = 1, },
+						Gradient = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 0, 0, 0, 0 },
+									[1] = { 1, 1, 1, 1 }
+								}
+							},
+						},
+						Offset = Input { Value = -0.2, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -825, -16.5 } },
+				},
+				Path2_2 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path2_2Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0, Y = 0, RX = 0, RY = 0.0833333333333333 },
+									{ Linear = true, LockY = true, X = 0, Y = 0.25, LX = 0, LY = -0.0833333333333333 }
+								}
+							},
+						},
+					},
+				},
+				Path2_2Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 6.66666666666667, 0 }, Flags = { LockedY = true } },
+						[20] = { 1, LH = { 13.3333333333333, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				Transform1_2 = Transform {
+					Inputs = {
+						Pivot = Input { Value = { 0.5, 0 }, },
+						Aspect = Input {
+							SourceOp = "Transform1_2Aspect",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "FastNoise1_2",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -825, 16.5 } },
+				},
+				Transform1_2Aspect = BezierSpline {
+					SplineColor = { Red = 210, Green = 105, Blue = 30 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 1, RH = { 6.66666666666667, 1 } },
+						[20] = { 1.52, LH = { 13.3333333333333, 1.52 } }
+					}
+				},
+				Rectangle1_2 = RectangleMask {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						SoftEdge = Input {
+							SourceOp = "Rectangle1_2SoftEdge",
+							Source = "Value",
+						},
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							SourceOp = "Path1_2",
+							Source = "Position",
+						},
+						Width = Input { Value = 0.9238556392169, },
+						Height = Input {
+							SourceOp = "Rectangle1_2Height",
+							Source = "Value",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -825, -49.5 } },
+				},
+				Rectangle1_2SoftEdge = BezierSpline {
+					SplineColor = { Red = 234, Green = 243, Blue = 3 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0.015, RH = { 6.66666666666667, 0.015 } },
+						[20] = { 0.15, LH = { 13.3333333333333, 0.15 } }
+					}
+				},
+				Path1_2 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path1_2Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0, Y = -0.445, RX = 0, RY = 0.117666666666667 },
+									{ Linear = true, LockY = true, X = 0, Y = -0.092, LX = 0, LY = -0.117666666666667 }
+								}
+							},
+						},
+					},
+				},
+				Path1_2Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 6.66666666666667, 0 }, Flags = { LockedY = true } },
+						[20] = { 1, LH = { 13.3333333333333, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				Rectangle1_2Height = BezierSpline {
+					SplineColor = { Red = 0, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0.06, RH = { 6.66666666666667, 0.06 } },
+						[20] = { 0.1, LH = { 13.3333333333333, 0.1 } }
+					}
+				},
+				Wave2 = Underlay {
+					NameSet = true,
+					ViewInfo = UnderlayInfo {
+						Pos = { -825, -75.8456 },
+						Size = { 185.66, 156.044 }
+					},
+				},
+				FastNoise1_2_1 = FastNoise {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Rectangle1_2_1",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1920, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input {
+							SourceOp = "Path2_2_1",
+							Source = "Position",
+						},
+						Detail = Input { Value = 10, },
+						Contrast = Input { Value = 1.95, },
+						Brightness = Input { Value = -0.32, },
+						LockXY = Input { Value = 0, },
+						XScale = Input { Value = 11.98, },
+						YScale = Input { Value = 4.92, },
+						Seethe = Input { Value = 1.222, },
+						SeetheRate = Input { Value = 0.134, },
+						Discontinuous = Input { Value = 1, },
+						Inverted = Input { Value = 1, },
+						Type = Input { Value = 1, },
+						Gradient = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 0, 0, 0, 0 },
+									[1] = { 1, 1, 1, 1 }
+								}
+							},
+						},
+						Offset = Input { Value = -0.2, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -605, -115.5 } },
+				},
+				Path2_2_1 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path2_2_1Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0, Y = 0, RX = 0, RY = 0.0833333333333333 },
+									{ Linear = true, LockY = true, X = 0, Y = 0.25, LX = 0, LY = -0.0833333333333333 }
+								}
+							},
+						},
+					},
+				},
+				Path2_2_1Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 10, 0 }, Flags = { LockedY = true } },
+						[30] = { 1, LH = { 20, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				Displace2 = Displace {
+					Inputs = {
+						RefractionStrength = Input { Value = -0.64, },
+						Input = Input {
+							SourceOp = "FastNoise1_2_1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Blur2",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -605, -49.5 } },
+				},
+				BrightnessContrast1 = BrightnessContrast {
+					Inputs = {
+						Gain = Input { Value = 2, },
+						Input = Input {
+							SourceOp = "Displace2",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -605, -16.5 } },
+				},
+				Rectangle1_2_1 = RectangleMask {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						SoftEdge = Input {
+							SourceOp = "Rectangle1_2_1SoftEdge",
+							Source = "Value",
+						},
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							SourceOp = "Path1_2_1",
+							Source = "Position",
+						},
+						Width = Input { Value = 0.8830477852195, },
+						Height = Input {
+							SourceOp = "Rectangle1_2_1Height",
+							Source = "Value",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -605, -148.5 } },
+				},
+				Rectangle1_2_1SoftEdge = BezierSpline {
+					SplineColor = { Red = 234, Green = 243, Blue = 3 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0.015, RH = { 10, 0.015 } },
+						[30] = { 0.15, LH = { 20, 0.15 } }
+					}
+				},
+				Path1_2_1 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path1_2_1Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0, Y = -0.445, RX = 0, RY = 0.117666666666667 },
+									{ Linear = true, LockY = true, X = 0, Y = -0.092, LX = 0, LY = -0.117666666666667 }
+								}
+							},
+						},
+					},
+				},
+				Path1_2_1Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 10, 0 }, Flags = { LockedY = true } },
+						[30] = { 1, LH = { 20, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				Rectangle1_2_1Height = BezierSpline {
+					SplineColor = { Red = 0, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0.06, RH = { 10, 0.06 } },
+						[30] = { 0.1, LH = { 20, 0.1 } }
+					}
+				},
+				Transform1_2_2 = Transform {
+					Inputs = {
+						Pivot = Input { Value = { 0.5, 0 }, },
+						Aspect = Input {
+							SourceOp = "Transform1_2_2Aspect",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "BrightnessContrast1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -605, 16.5 } },
+				},
+				Transform1_2_2Aspect = BezierSpline {
+					SplineColor = { Red = 210, Green = 105, Blue = 30 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 1, RH = { 10, 1 } },
+						[30] = { 1.52, LH = { 20, 1.52 } }
+					}
+				},
+				Merge1_3_1 = Merge {
+					Inputs = {
+						Blend = Input {
+							SourceOp = "Merge1_3_1Blend",
+							Source = "Value",
+						},
+						Background = Input {
+							SourceOp = "Merge1_3",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform1_2_2",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -605, 49.5 } },
+				},
+				Merge1_3_1Blend = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 1.66666666666667, 0 } },
+						[5] = { 1, LH = { 3.33350002765656, 1 }, RH = { 13.3324998617172, 1 } },
+						[30] = { 0, LH = { 21.6666666666667, 0.333333333333333 } }
+					}
+				},
+				Blur2 = Blur {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						XBlurSize = Input { Value = 2, },
+						Input = Input {
+							SourceOp = "FastNoise1_2_1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -495, -49.5 } },
+				},
+				Wave3 = Underlay {
+					NameSet = true,
+					ViewInfo = UnderlayInfo {
+						Pos = { -556.151, -173.283 },
+						Size = { 274.799, 254.545 }
+					},
+				},
+				CoordinateSpace1 = CoordSpace {
+					Inputs = {
+						Shape = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "Merge1_3_1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -330, 49.5 } },
+				},
+				Merge2 = Merge {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Triangle1",
+							Source = "Mask",
+						},
+						Background = Input {
+							SourceOp = "CoordinateSpace1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "CoordinateSpace1",
+							Source = "Output",
+						},
+						Angle = Input { Value = 90, },
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, -16.5 } },
+				},
+				ColorCorrector1 = ColorCorrector {
+					CtrlWZoom = false,
+					Inputs = {
+						WheelTintAngle1 = Input { Value = 1.096951, },
+						WheelTintLength1 = Input { Value = 1, },
+						MasterRGBGain = Input { Value = 2, },
+						ColorRanges = Input {
+							Value = ColorCurves {
+								Curves = {
+									{
+										Points = {
+											{ 0, 1 },
+											{ 0.4, 0.2 },
+											{ 0.6, 0 },
+											{ 1, 0 }
+										}
+									},
+									{
+										Points = {
+											{ 0, 0 },
+											{ 0.4, 0 },
+											{ 0.6, 0.2 },
+											{ 1, 1 }
+										}
+									}
+								}
+							},
+						},
+						HistogramIgnoreTransparent = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "Merge2",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 49.5 } },
+				},
+				Triangle1 = TriangleMask {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						SoftEdge = Input { Value = 0.0661, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Point1 = Input { Value = { -0.0208799978200531, 0.344963738920226 }, },
+						Point2 = Input { Value = { 0.505157131345689, 0.50290088638195 }, },
+						Point3 = Input { Value = { -0.0197693927680264, 0.70983078162772 }, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, -49.5 } },
+				},
+				Duplicate1 = Fuse.Duplicate {
+					Inputs = {
+						TimeOffset = Input { Value = 10, },
+						GainNest = Input { Value = 1, },
+						GreenGain = Input { Value = 0.5, },
+						BlueGain = Input { Value = 0.5, },
+						Background = Input {
+							SourceOp = "ColorCorrector1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 49.5 } },
+				},
+				Merge3 = Merge {
+					Inputs = {
+						Blend = Input {
+							SourceOp = "Merge3Blend",
+							Source = "Value",
+						},
+						Background = Input {
+							SourceOp = "Background2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Duplicate1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 49.5 } },
+				},
+				Merge3Blend = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 1.66666666666667, 0 } },
+						[5] = { 1, LH = { 3.33333333333333, 1 } }
+					}
+				},
+				Background2 = Background {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1920, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 115.5 } },
+				},
+				KeyframeStretcher1 = KeyStretcher {
+					Inputs = {
+						Keyframes = Input {
+							SourceOp = "Merge3",
+							Source = "Output",
+						},
+						SourceEnd = Input { Value = 30, },
+						StretchStart = Input { Value = 0, },
+						StretchEnd = Input { Value = 30, },
+						StretchEdges = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 49.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialShockwave"
+}

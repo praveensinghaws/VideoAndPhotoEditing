@@ -1,0 +1,1866 @@
+{
+	Tools = ordered() {
+		EssentialArrowLine = GroupOperator {
+			Inputs = ordered() {
+				Comments = Input { Value = "Please note that this effect requires the text fonts Wingdings 2 and Wingdings 3 installed in order to work properly.\n", },
+				Input1 = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "Polyline",
+					Name = "Right-click here for shape animation",
+					Default = 0,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "LineType",
+				},
+				Input2_1 = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "LineThickness",
+					Default = 0.005,
+				},
+				Input_CapStyle = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "CapStyle",
+				},
+				Input_Show_DotDashSpace = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "Show_DotDashSpace",
+				},
+				Input3 = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "DotDashSpace",
+				},
+				Input_BlankLineStartArrowShape = InstanceInput {
+					SourceOp = "Merge7",
+					Source = "ApplyBlank2",
+				},
+				Input4 = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "BeginArrow",
+					Name = "Start Arrow Type",
+					Default = 1,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "ArrowSize",
+					Name = "Size",
+					Default = 0,
+				},
+				InputBeginArrowOffset = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "BeginArrowOffsetX",
+					Name = "Offset X",
+					Default = 0,
+				},
+				InputBeginArrowOffsetX = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "BeginArrowOffsetY",
+					Name = "Offset Y",
+					Default = 0,
+				},
+
+				Input_BlankLineEndArrowShape = InstanceInput {
+					SourceOp = "Merge7",
+					Source = "ApplyBlank2",
+				},
+				Input5 = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "EndArrow",
+					Name = "End Arrow Type",
+					Default = 3,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "EndArrowSize",
+					Name = "Size",
+				},
+				InputEndArrowOffsetX = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "EndArrowOffsetX",
+					Name = "Offset X",
+					Default = 0,
+				},
+				InputEndArrowOffsetY = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "EndArrowOffsetY",
+					Name = "Offset Y",
+					Default = 0,
+				},
+
+				Input_BlankLineAnimation = InstanceInput {
+					SourceOp = "Merge7",
+					Source = "ApplyBlank2",
+				},
+				Input7 = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "Animation",
+					Default = 1,
+				},
+				Input_HideAnimationControls = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "Hide_AnimationControls",
+					Default = 0,
+				},
+				InputAnimationOut = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "AnimationOut",
+					Default = 0,
+				},
+				Input7_0 = InstanceInput {
+					SourceOp = "Polygon2",
+					Source = "WriteLength",
+					Name = "Length Visible",
+					Default = 1,
+				},
+				Input7_1 = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "Curve",
+					Name = "Animation Curve",
+				},
+				Input7_2 = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "EaseIn",
+					Width = 0.5,
+				},
+				Input7_3 = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "EaseOut",
+					Width = 0.5,
+				},
+				Input7_4 = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "Lookup",
+					ControlGroup = 4,
+				},
+				Input7_7 = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "AnimationTime",
+					Default = 15,
+				},
+				Input_BlankLineDonate = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "ApplyBlank2",
+				},
+				Input_SeparatorLineDonate = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "Blank6",
+				},
+				Input_DonateButton = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "DonateButton",
+					Width = 0.5,
+				},
+				Input_SubscribeButton = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "SubscribeButton",
+					Width = 0.5,
+				},
+				InputLineColor = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "LineColor",
+					Page = "Colors",
+				},
+				Input11 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Type",
+					Name = "Line Color Type",
+				},
+				Input12 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftRed",
+					Name = "Top Left",
+					ControlGroup = 12,
+					Default = 1,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftGreen",
+					ControlGroup = 12,
+					Default = 1,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftBlue",
+					ControlGroup = 12,
+					Default = 1,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftAlpha",
+					ControlGroup = 12,
+					Default = 1,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopRightSep",
+				},
+				Input17 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopRightRed",
+					Name = "Top Right",
+					ControlGroup = 14,
+					Default = 0,
+				},
+				Input18 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopRightGreen",
+					ControlGroup = 14,
+					Default = 0,
+				},
+				Input19 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopRightBlue",
+					ControlGroup = 14,
+					Default = 0,
+				},
+				Input20 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopRightAlpha",
+					ControlGroup = 14,
+					Default = 1,
+				},
+				Input21 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomLeftSep",
+				},
+				Input22 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomLeftRed",
+					Name = "Bottom Left",
+					ControlGroup = 16,
+					Default = 0,
+				},
+				Input23 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomLeftGreen",
+					ControlGroup = 16,
+					Default = 0,
+				},
+				Input24 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomLeftBlue",
+					ControlGroup = 16,
+					Default = 0,
+				},
+				Input25 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomLeftAlpha",
+					ControlGroup = 16,
+					Default = 1,
+				},
+				Input26 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomRightSep",
+				},
+				Input27 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomRightRed",
+					Name = "Bottom Right",
+					ControlGroup = 18,
+					Default = 0,
+				},
+				Input28 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomRightGreen",
+					ControlGroup = 18,
+					Default = 0,
+				},
+				Input29 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomRightBlue",
+					ControlGroup = 18,
+					Default = 0,
+				},
+				Input30 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomRightAlpha",
+					ControlGroup = 18,
+					Default = 1,
+				},
+				Input31 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "GradientType",
+				},
+				Input32 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Start",
+					DefaultX = 0,
+					DefaultY = 0.5,
+				},
+				Input33 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "End",
+					DefaultX = 1,
+					DefaultY = 0.5,
+				},
+				Input34 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Gradient",
+				},
+				Input35 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "GradientInterpolationMethod",
+				},
+				Input36 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Offset",
+					Default = 0,
+				},
+				Input37 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Repeat",
+				},
+				Input38 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "SubPixel",
+				},
+				Input_BlankLine = InstanceInput {
+					SourceOp = "Merge7",
+					Source = "ApplyBlank2",
+				},
+				Input6 = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "SeparateArrowColors",
+				},
+				Input_ShowArrowColors = InstanceInput {
+					SourceOp = "Polygon1",
+					Source = "Show_ArrowColors",
+				},
+				Input39 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "Type",
+					Name = "Start Arrow Color Type",
+				},
+				Input40 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "TopLeftRed",
+					Name = "Color",
+					ControlGroup = 28,
+					Default = 1,
+				},
+				Input41 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "TopLeftGreen",
+					ControlGroup = 28,
+					Default = 1,
+				},
+				Input42 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "TopLeftBlue",
+					ControlGroup = 28,
+					Default = 1,
+				},
+				Input43 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "TopLeftAlpha",
+					ControlGroup = 28,
+					Default = 1,
+				},
+				Input44 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "TopRightSep",
+				},
+				Input45 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "TopRightRed",
+					Name = "Top Right",
+					ControlGroup = 30,
+					Default = 0,
+				},
+				Input46 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "TopRightGreen",
+					ControlGroup = 30,
+					Default = 0,
+				},
+				Input47 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "TopRightBlue",
+					ControlGroup = 30,
+					Default = 0,
+				},
+				Input48 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "TopRightAlpha",
+					ControlGroup = 30,
+					Default = 1,
+				},
+				Input49 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "BottomLeftSep",
+				},
+				Input50 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "BottomLeftRed",
+					Name = "Bottom Left",
+					ControlGroup = 32,
+					Default = 0,
+				},
+				Input51 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "BottomLeftGreen",
+					ControlGroup = 32,
+					Default = 0,
+				},
+				Input52 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "BottomLeftBlue",
+					ControlGroup = 32,
+					Default = 0,
+				},
+				Input53 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "BottomLeftAlpha",
+					ControlGroup = 32,
+					Default = 1,
+				},
+				Input54 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "BottomRightSep",
+				},
+				Input55 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "BottomRightRed",
+					Name = "Bottom Right",
+					ControlGroup = 34,
+					Default = 0,
+				},
+				Input56 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "BottomRightGreen",
+					ControlGroup = 34,
+					Default = 0,
+				},
+				Input57 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "BottomRightBlue",
+					ControlGroup = 34,
+					Default = 0,
+				},
+				Input58 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "BottomRightAlpha",
+					ControlGroup = 34,
+					Default = 1,
+				},
+				Input59 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "GradientType",
+				},
+				Input60 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "Start",
+					DefaultX = 0,
+					DefaultY = 0.5,
+				},
+				Input61 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "End",
+					DefaultX = 1,
+					DefaultY = 0.5,
+				},
+				Input62 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "Gradient",
+				},
+				Input63 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "GradientInterpolationMethod",
+				},
+				Input64 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "Offset",
+					Default = 0,
+				},
+				Input65 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "Repeat",
+				},
+				Input66 = InstanceInput {
+					SourceOp = "BeginArrow",
+					Source = "SubPixel",
+				},
+				Input_BlankLineEndArrow = InstanceInput {
+					SourceOp = "Merge7",
+					Source = "ApplyBlank2",
+				},
+				Input67 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "Type",
+					Name = "End Arrow Color Type",
+				},
+				Input68 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "TopLeftRed",
+					Name = "Color",
+					ControlGroup = 44,
+					Default = 1,
+				},
+				Input69 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "TopLeftGreen",
+					ControlGroup = 44,
+					Default = 0.5764705882353,
+				},
+				Input70 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "TopLeftBlue",
+					ControlGroup = 44,
+					Default = 0,
+				},
+				Input71 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "TopLeftAlpha",
+					ControlGroup = 44,
+					Default = 1,
+				},
+				Input72 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "TopRightSep",
+				},
+				Input73 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "TopRightRed",
+					Name = "Top Right",
+					ControlGroup = 46,
+					Default = 0,
+				},
+				Input74 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "TopRightGreen",
+					ControlGroup = 46,
+					Default = 0,
+				},
+				Input75 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "TopRightBlue",
+					ControlGroup = 46,
+					Default = 0,
+				},
+				Input76 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "TopRightAlpha",
+					ControlGroup = 46,
+					Default = 1,
+				},
+				Input77 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "BottomLeftSep",
+				},
+				Input78 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "BottomLeftRed",
+					Name = "Bottom Left",
+					ControlGroup = 48,
+					Default = 0,
+				},
+				Input79 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "BottomLeftGreen",
+					ControlGroup = 48,
+					Default = 0,
+				},
+				Input80 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "BottomLeftBlue",
+					ControlGroup = 48,
+					Default = 0,
+				},
+				Input81 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "BottomLeftAlpha",
+					ControlGroup = 48,
+					Default = 1,
+				},
+				Input82 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "BottomRightSep",
+				},
+				Input83 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "BottomRightRed",
+					Name = "Bottom Right",
+					ControlGroup = 50,
+					Default = 0,
+				},
+				Input84 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "BottomRightGreen",
+					ControlGroup = 50,
+					Default = 0,
+				},
+				Input85 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "BottomRightBlue",
+					ControlGroup = 50,
+					Default = 0,
+				},
+				Input86 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "BottomRightAlpha",
+					ControlGroup = 50,
+					Default = 1,
+				},
+				Input87 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "GradientType",
+				},
+				Input88 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "Start",
+					DefaultX = 0,
+					DefaultY = 0.5,
+				},
+				Input89 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "End",
+					DefaultX = 1,
+					DefaultY = 0.5,
+				},
+				Input90 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "Gradient",
+				},
+				Input91 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "GradientInterpolationMethod",
+				},
+				Input92 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "Offset",
+					Default = 0,
+				},
+				Input93 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "Repeat",
+				},
+				Input94 = InstanceInput {
+					SourceOp = "EndArrow",
+					Source = "SubPixel",
+				},
+				Input95 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Filter",
+					Page = "SoftGlow",
+				},
+				Input96 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Red",
+					Name = " ",
+					ControlGroup = 60,
+					Default = 1,
+				},
+				Input97 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Green",
+					ControlGroup = 60,
+					Default = 1,
+				},
+				Input98 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Blue",
+					ControlGroup = 60,
+					Default = 1,
+				},
+				Input99 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Alpha",
+					ControlGroup = 60,
+					Default = 1,
+				},
+				Input100 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Threshold",
+					Default = 0,
+				},
+				Input101 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Gain",
+					Default = 0,
+				},
+				Input102 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "LockXY",
+					Default = 1,
+				},
+				Input103 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "XGlowSize",
+					Default = 10,
+				},
+				Input104 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "YGlowSize",
+					Default = 10,
+				},
+				Input105 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Passes",
+					Default = 4,
+				},
+				Input106 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "ClippingMode",
+				},
+				Input107 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "BlendClone",
+					Default = 1,
+				},
+				Input108 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "RedScale",
+					Default = 1,
+				},
+				Input109 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "GreenScale",
+					Default = 1,
+				},
+				Input110 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "BlueScale",
+					Default = 1,
+				},
+				Input111 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "AlphaScale",
+					Default = 1,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "SoftGlow1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { -220, 49.5 },
+				Flags = {
+					AllowPan = false,
+					GridSnap = true,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 1028.09, 332.047, 613.075, 51.5151 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				Polygon1 = PolylineMask {
+					DrawMode = "ModifyOnly",
+					DrawMode2 = "InsertAndModify",
+					Inputs = {
+						Level = Input { Expression = "iif(Polygon2.WriteLength==1, 1, 0)", },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						BorderWidth = Input {
+							Value = 0.005,
+							Expression = "LineThickness",
+						},
+						Solid = Input { Value = 0, },
+						CapStyle = Input { Value = 2, },
+						WriteLength = Input {
+							SourceOp = "ExpressionLineLength",
+							Source = "NumberResult",
+						},
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Polyline = Input {
+							SourceOp = "Publish1",
+							Source = "Value",
+						},
+						Polyline2 = Input {
+							Value = Polyline {
+							},
+							Disabled = true,
+						},
+						BeginArrow = Input { Value = 1, },
+						EndArrow = Input { Value = 16, },
+						Animation = Input { Value = 1, },
+						LineThickness = Input { Value = 0.005, },
+						Show_DotDashSpace = Input { Expression = "LineType>1 and 1 or 0", },
+						Show_ArrowColors = Input { Expression = "SeparateArrowColors", },
+						Hide_AnimationControls = Input { Expression = "Animation", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 16.5 } },
+					UserControls = ordered() {
+						LineType = {
+							{ CCS_AddString = "Solid Line" },
+							{ CCS_AddString = "Double Solid Line" },
+							{ CCS_AddString = "Dotted  Line" },
+							{ CCS_AddString = "Dashed  Line" },
+							{ CCS_AddString = "Double Dashed  Line" },
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							CC_LabelPosition = "Horizontal",
+							INPID_InputControl = "ComboControl",
+							LINKS_Name = "Line Type",
+						},
+						DotDashSpace = {
+							INP_MaxAllowed = 2,
+							INP_Integer = false,
+							INPID_InputControl = "SliderControl",
+							INP_MaxScale = 2,
+							INP_MinScale = -1,
+							INP_MinAllowed = -1,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							LINKS_Name = "Dot Dash Space",
+						},
+						BeginArrow = {
+							{ CCS_AddString = "None" },
+							{ CCS_AddString = "Circle 1" },
+							{ CCS_AddString = "Circle 2" },
+							{ CCS_AddString = "Circle 3" },
+							{ CCS_AddString = "Square 1" },
+							{ CCS_AddString = "Square 2" },
+							{ CCS_AddString = "Square 3" },
+							{ CCS_AddString = "Diamond 1" },
+							{ CCS_AddString = "Diamond 2" },
+							{ CCS_AddString = "Diamond 3" },
+							{ CCS_AddString = "Polygon 1" },
+							{ CCS_AddString = "Polygon 2" },
+							{ CCS_AddString = "Polygon 3" },
+							{ CCS_AddString = "Left Arrow 1" },
+							{ CCS_AddString = "Left Arrow 2" },
+							{ CCS_AddString = "Left Arrow 3" },
+							{ CCS_AddString = "Right Arrow 1" },
+							{ CCS_AddString = "Right Arrow 2" },
+							{ CCS_AddString = "Right Arrow 3" },
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							CC_LabelPosition = "Horizontal",
+							INPID_InputControl = "ComboControl",
+							LINKS_Name = "Begin Arrow",
+						},
+						EndArrow = {
+							{ CCS_AddString = "None" },
+							{ CCS_AddString = "Circle 1" },
+							{ CCS_AddString = "Circle 2" },
+							{ CCS_AddString = "Circle 3" },
+							{ CCS_AddString = "Square 1" },
+							{ CCS_AddString = "Square 2" },
+							{ CCS_AddString = "Square 3" },
+							{ CCS_AddString = "Diamond 1" },
+							{ CCS_AddString = "Diamond 2" },
+							{ CCS_AddString = "Diamond 3" },
+							{ CCS_AddString = "Polygon 1" },
+							{ CCS_AddString = "Polygon 2" },
+							{ CCS_AddString = "Polygon 3" },
+							{ CCS_AddString = "Left Arrow 1" },
+							{ CCS_AddString = "Left Arrow 2" },
+							{ CCS_AddString = "Left Arrow 3" },
+							{ CCS_AddString = "Right Arrow 1" },
+							{ CCS_AddString = "Right Arrow 2" },
+							{ CCS_AddString = "Right Arrow 3" },
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							CC_LabelPosition = "Horizontal",
+							INPID_InputControl = "ComboControl",
+							LINKS_Name = "End Arrow",
+						},
+						SeparateArrowColors = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Separate Arrow Colors",
+						},
+						Animation = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Animation",
+						},
+						AnimationOut = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Animation Out",
+						},
+						ArrowSize = {
+							INP_MaxAllowed = 20,
+							INP_Integer = true,
+							INPID_InputControl = "SliderControl",
+							INP_MaxScale = 10,
+							INP_MinScale = -5,
+							INP_MinAllowed = -5,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							LINKS_Name = "Arrow Size",
+						},
+						EndArrowSize = {
+							INP_MaxAllowed = 20,
+							INP_Integer = true,
+							INPID_InputControl = "SliderControl",
+							INP_MaxScale = 10,
+							INP_MinScale = -5,
+							INP_MinAllowed = -5,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							LINKS_Name = "End Arrow Size",
+						},
+						LineColor = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+							LBLC_NumInputs = 28,
+							INP_Default = 1,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							LBLC_NestLevel = 1,
+							LINKS_Name = "Line Color",
+						},
+						LineThickness = {
+							INP_MaxAllowed = 0.100000001490116,
+							INP_Integer = false,
+							INP_MinAllowed = 0,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0,
+							INP_MaxScale = 0.100000001490116,
+							LINKS_Name = "Line Thickness",
+						},
+						AnimationTime = {
+							INP_Integer = false,
+							INP_Default = 15,
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 1,
+							LINKID_DataType = "Number",
+							INP_MaxScale = 200,
+							LINKS_Name = "Animation Time",
+						},
+						Show_DotDashSpace = {
+							LBLC_NumInputs = 1,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						Show_ArrowColors = {
+							LBLC_NumInputs = 57,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						BeginArrowOffsetX = {
+							LINKS_Name = "Begin Arrow Offset X",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_Default = 0,
+							INP_Integer = false,
+							INP_MinScale = -0.02,
+							INP_MaxScale = 0.02,
+							INP_MinAllowed = -0.1,
+							INP_MaxAllowed = 0.1,
+						},
+						BeginArrowOffsetY = {
+							LINKS_Name = "Begin Arrow Offset Y",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_Default = 0,
+							INP_Integer = false,
+							INP_MinScale = -0.02,
+							INP_MaxScale = 0.02,
+							INP_MinAllowed = -0.1,
+							INP_MaxAllowed = 0.1,
+						},
+
+						EndArrowOffsetX = {
+							LINKS_Name = "End Arrow Offset X",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_Default = 0,
+							INP_Integer = false,
+							INP_MinScale = -0.02,
+							INP_MaxScale = 0.02,
+							INP_MinAllowed = -0.1,
+							INP_MaxAllowed = 0.1,
+						},
+						EndArrowOffsetY = {
+							LINKS_Name = "End Arrow Offset Y",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_Default = 0,
+							INP_Integer = false,
+							INP_MinScale = -0.02,
+							INP_MaxScale = 0.02,
+							INP_MinAllowed = -0.1,
+							INP_MaxAllowed = 0.1,
+						},
+						Hide_AnimationControls = {
+							LBLC_NumInputs = 7,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						}
+					}
+				},
+				ExpressionLineLength = Expression {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						n1 = Input {
+							SourceOp = "AnimCurves1",
+							Source = "Value",
+						},
+						n2 = Input {
+							SourceOp = "AnimCurvesOut",
+							Source = "Value",
+						},
+						n3 = Input {
+							Value = 1,
+							Expression = "Polygon1.Animation==1 and n1*iif(Polygon1.AnimationOut==1,n2,1) or 1",
+						},
+						NumberExpression = Input { Value = "n3", },
+					},
+				},
+				AnimCurvesOut = LUTLookup {
+					CtrlWZoom = false,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurvesOutLookup",
+							Source = "Value",
+						},
+						Invert = Input { Value = 1, },
+						ClipLow = Input { Value = 1, },
+						ClipHigh = Input { Value = 1, },
+						TimeScale = Input {
+							Value = 10,
+							Expression = "(comp.RenderEnd-comp.RenderStart+1)/Polygon1.AnimationTime",
+						},
+						TimeOffset = Input {
+							Value = 0.9,
+							Expression = "1-(Polygon1.AnimationTime+1)/(comp.RenderEnd-comp.RenderStart+1)",
+						},
+					},
+				},
+				AnimCurvesOutLookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+				},
+				AnimCurves1 = LUTLookup {
+					CtrlWZoom = false,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurvesonPolygon1Lookup",
+							Source = "Value",
+						},
+						Scale = Input { Expression = "Polygon1.Animation", },
+						Offset = Input { Expression = "1-Polygon1.Animation", },
+						ClipLow = Input { Value = 1, },
+						ClipHigh = Input { Value = 1, },
+						TimeScale = Input {
+							Value = 10,
+							Expression = "Polygon1.Animation*(comp.RenderEnd-comp.RenderStart+1)/Polygon1.AnimationTime",
+						},
+					},
+				},
+				AnimCurvesonPolygon1Lookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+				},
+				Publish1 = PublishPolyLine {
+					Inputs = {
+						Value = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, X = -0.197446722575681, Y = -0.00120585717326293, RX = 0.139087750401758, RY = 2.23345647532014e-17 },
+									{ Linear = true, X = 0.219816528629594, Y = -0.00120585717326287, LX = -0.139087750401758, LY = -2.23345647532014e-17 }
+								}
+							},
+						},
+					},
+				},
+				Background1 = Background {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Polygon2",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 1, },
+						TopLeftBlue = Input { Value = 1, },
+						Gradient = Input {
+							Value = Gradient {
+								Colors = {
+									[0.233830845771144] = { 1, 0.149019607843137, 0, 1 },
+									[0.616915422885572] = { 0, 0.992156862745098, 1, 1 },
+									[1] = { 1, 0.984313725490196, 0, 1 }
+								}
+							},
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 148.5 } },
+				},
+				BeginArrow = Background {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Merge4",
+							Source = "Output",
+						},
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 1, },
+						TopLeftBlue = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 181.5 } },
+				},
+				EndArrow = Background {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Merge2",
+							Source = "Output",
+						},
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 0.5764705882353, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 214.5 } },
+				},
+				SoftGlow1 = SoftGlow {
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						Gain = Input { Value = 0, },
+						ColorScale = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "Merge7",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, 247.5 } },
+				},
+				Instance_Polygon1 = PolylineMask {
+					DrawMode = "ModifyOnly",
+					DrawMode2 = "InsertAndModify",
+					SourceOp = "Polygon1",
+					Inputs = {
+						EffectMask = Input { },
+						SettingsNest = Input { },
+						Level = Input { Expression = "iif(Polygon2.WriteLength==1, 1, 0)" },
+						BorderWidth = Input {
+							Value = 0.002,
+							Expression = "Polygon1.BorderWidth/2.5"
+						},
+						Invert = Input { Value = 1, },
+						Polyline2 = Input {
+							Value = Polyline {
+							},
+							Disabled = true,
+						},
+						["ShapeRasterizer.Nest"] = Input { },
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 16.5 } },
+					UserControls = ordered() { LineType = { { CCS_AddString = "Solid Line" }, { CCS_AddString = "Double Solid Line" }, { CCS_AddString = "Dotted  Line" }, { CCS_AddString = "Dashed  Line" }, { CCS_AddString = "Double Dashed  Line" }, INP_Integer = false, INP_External = false, LINKID_DataType = "Number", CC_LabelPosition = "Horizontal", INPID_InputControl = "ComboControl", LINKS_Name = "Line Type", } }
+				},
+				TextDots = TextPlus {
+					NameSet = true,
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LayoutType = Input { Value = 3, },
+						Path = Input {
+							SourceOp = "Publish1",
+							Source = "Value",
+						},
+						CharacterSpacing = Input { Expression = "1+Polygon1.DotDashSpace/10", },
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						SoftnessX1 = Input { Value = 0.2, },
+						SoftnessY1 = Input { Value = 0.2, },
+						StyledText = Input { Expression = "string.rep(\".\", 500)", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						Size = Input {
+							Value = 0.232,
+							Expression = "Polygon1.BorderWidth*8",
+						},
+						VerticalTopCenterBottom = Input { Value = 0.821, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 82.4996 } },
+				},
+				TextDashes = TextPlus {
+					NameSet = true,
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LayoutType = Input { Value = 3, },
+						Path = Input {
+							SourceOp = "Publish1",
+							Source = "Value",
+						},
+						CharacterSpacing = Input { Expression = "1+Polygon1.DotDashSpace/10", },
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						SoftnessX1 = Input { Value = 0.2, },
+						SoftnessY1 = Input { Value = 0.2, },
+						StyledText = Input { Expression = "string.rep(\"-\", 500)", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						Size = Input {
+							Value = 0.725,
+							Expression = "Polygon1.BorderWidth*25",
+						},
+						VerticalTopCenterBottom = Input { Value = 0.24, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 115.5 } },
+				},
+				TextEquals = TextPlus {
+					NameSet = true,
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LayoutType = Input { Value = 3, },
+						Path = Input {
+							SourceOp = "Publish1",
+							Source = "Value",
+						},
+						CharacterSpacing = Input { Expression = "1+Polygon1.DotDashSpace/10", },
+						TransformRotation = Input { Value = 1, },
+						TransformSize = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						SoftnessX1 = Input { Value = 0.2, },
+						SoftnessY1 = Input { Value = 0.2, },
+						Size1 = Input { Value = 1, },
+						StyledText = Input { Expression = "string.rep(\"=\", 500)", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						Size = Input {
+							Value = 0.0584,
+							Expression = "Polygon1.BorderWidth*8",
+						},
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 148.5 } },
+				},
+				BeginArrowDefinition = GroupOperator {
+					NameSet = true,
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "Merge4",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo {
+						Pos = { -440, 16.5 },
+						Flags = {
+							Expanded = true,
+							AllowPan = false,
+							GridSnap = true,
+							AutoSnap = true,
+							RemoveRouters = true
+						},
+						Size = { 252.691, 128.314, 118.602, 24.2424 },
+						Direction = "Horizontal",
+						PipeStyle = "Direct",
+						Scale = 1,
+						Offset = { 0, 0 }
+					},
+					Tools = ordered() {
+						BeginArrow_2 = TextPlus {
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								LayoutType = Input { Value = 3, },
+								PositionOnPath = Input {
+									Value = 0,
+									Expression = "BeginArrow_1.PositionOnPath",
+								},
+								Path = Input {
+									SourceOp = "Publish1",
+									Source = "Value",
+								},
+								StyledText = Input {
+									Value = "",
+									Expression = ":t={\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"}; i=Polygon1.BeginArrow+1; return t[i];",
+								},
+								Font = Input { Value = "Wingdings 2", },
+								Style = Input { Value = "Regular", },
+								Size = Input {
+									Value = 0.03,
+									Expression = "Polygon1.BorderWidth*(6+Polygon1.ArrowSize)",
+								},
+								VerticalTopCenterBottom = Input { Value = 0.05, },
+								VerticalJustificationNew = Input { Value = 3, },
+								HorizontalJustificationNew = Input { Value = 3, },
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 82.5 } },
+						},
+						Merge4 = Merge {
+							Inputs = {
+								Blend = Input { Expression = "Polygon1.BeginArrow>0 and Polygon1.BeginArrow<13 and 1 or 0", },
+								Background = Input {
+									SourceOp = "Merge3",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "BeginArrow_2",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 82.5 } },
+						},
+						Background4 = Background {
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								TopLeftAlpha = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 54.1849, 11.6573 } },
+						},
+						Merge3 = Merge {
+							Inputs = {
+								Blend = Input { Expression = "iif(Polygon1.BeginArrow>=13,1,0)", },
+								Background = Input {
+									SourceOp = "Background4",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "BeginArrow_1",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 49.4996 } },
+						},
+						BeginArrow_1 = TextPlus {
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								LayoutType = Input { Value = 3, },
+								PositionOnPath = Input {
+									Value = 0,
+									Expression = "iif(Polygon2.WriteLength==1, 0,Polygon2.WritePosition)",
+								},
+								Path = Input {
+									SourceOp = "Publish1",
+									Source = "Value",
+								},
+								StyledText = Input {
+									Value = "",
+									Expression = ":t={\"\",\"\",\"\",\"\",\"\",\"\"}; i=Polygon1.BeginArrow; return iif(i>12, t[i-12], \"\");",
+								},
+								Font = Input { Value = "Wingdings 3", },
+								Style = Input { Value = "Regular", },
+								Size = Input {
+									Value = 0.0378,
+									Expression = "Polygon1.BorderWidth*(8+Polygon1.ArrowSize)",
+								},
+								VerticalTopCenterBottom = Input { Value = 0.088, },
+								VerticalJustificationNew = Input { Value = 3, },
+								HorizontalJustificationNew = Input { Value = 3, },
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 49.4996 } },
+						}
+					},
+				},
+				Background2 = Background {
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, -17.1058 } },
+				},
+				DoubleDashed = Merge {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "TextEquals",
+							Source = "Output",
+						},
+						Blend = Input {
+							Value = 0,
+							Expression = "iif(Polygon1.LineType==4,1,0)",
+						},
+						Background = Input {
+							SourceOp = "DashedLine",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 148.5 } },
+				},
+				Merge5 = Merge {
+					Inputs = {
+						Center = Input { Expression = "Point(0.5+Polygon1.BeginArrowOffsetX, 0.5+Polygon1.BeginArrowOffsetY)", },
+						Background = Input {
+							SourceOp = "DoubleDashed",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "BeginArrow",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 181.5 } },
+				},
+				Merge6 = Merge {
+					Inputs = {
+						Center = Input { Expression = "Point(0.5+Polygon1.EndArrowOffsetX, 0.5+Polygon1.EndArrowOffsetY)", },
+						Background = Input {
+							SourceOp = "Merge5",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "EndArrow",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 214.5 } },
+				},
+				DashedLine = Merge {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "TextDashes",
+							Source = "Output",
+						},
+						Blend = Input {
+							Value = 0,
+							Expression = "iif(Polygon1.LineType==3,1,0)",
+						},
+						Background = Input {
+							SourceOp = "DottedLine",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 115.5 } },
+				},
+				DottedLine = Merge {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "TextDots",
+							Source = "Output",
+						},
+						Blend = Input {
+							Value = 0,
+							Expression = "iif(Polygon1.LineType==2,1,0)",
+						},
+						Background = Input {
+							SourceOp = "DoubleSolidLine2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 82.5002 } },
+				},
+				DoubleSolidLine = Merge {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Instance_Polygon1",
+							Source = "Mask",
+						},
+						Blend = Input { Expression = "iif(Polygon1.LineType==1,1,0)", },
+						Background = Input {
+							SourceOp = "SolidLine",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 16.5002 } },
+				},
+				SolidLine = Merge {
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 0,
+							Expression = "iif(Polygon1.LineType==0,1,0)",
+						},
+						Background = Input {
+							SourceOp = "Background2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, -17.1058 } },
+				},
+				EndArrowDefinition = GroupOperator {
+					NameSet = true,
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "Merge2",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo {
+						Pos = { -440, 148.5 },
+						Flags = {
+							Expanded = true,
+							AllowPan = false,
+							GridSnap = true,
+							AutoSnap = true,
+							RemoveRouters = true
+						},
+						Size = { 254.321, 127.918, 119.417, 21.2784 },
+						Direction = "Horizontal",
+						PipeStyle = "Direct",
+						Scale = 1,
+						Offset = { 0, 0 }
+					},
+					Tools = ordered() {
+						EndArrow_2 = TextPlus {
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								LayoutType = Input { Value = 3, },
+								PositionOnPath = Input {
+									Value = 1,
+									Expression = "EndArrow_1.PositionOnPath",
+								},
+								Path = Input {
+									SourceOp = "Publish1",
+									Source = "Value",
+								},
+								StyledText = Input {
+									Value = "",
+									Expression = ":t={\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"}; i=Polygon1.EndArrow+1; return t[i];",
+								},
+								Font = Input { Value = "Wingdings 2", },
+								Style = Input { Value = "Regular", },
+								Size = Input {
+									Value = 0.03,
+									Expression = "Polygon1.BorderWidth*(6+Polygon1.EndArrowSize)",
+								},
+								VerticalTopCenterBottom = Input { Value = 0.05, },
+								VerticalJustificationNew = Input { Value = 3, },
+								HorizontalJustificationNew = Input { Value = 3, },
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 82.5 } },
+						},
+						Merge2 = Merge {
+							Inputs = {
+								Blend = Input {
+									Value = 0,
+									Expression = "Polygon1.EndArrow>0 and Polygon1.EndArrow<13 and 1 or 0",
+								},
+								Background = Input {
+									SourceOp = "Merge1",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "EndArrow_2",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 82.5 } },
+						},
+						Merge1 = Merge {
+							Inputs = {
+								Blend = Input { Expression = "iif(Polygon1.EndArrow>=13,1,0)", },
+								Background = Input {
+									SourceOp = "Background3",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "EndArrow_1",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 49.5 } },
+							UserControls = ordered() { DonateButton = { ICD_Width = 0.5, INPID_InputControl = "ButtonControl", BTNCS_Execute = "os.execute('open https://www.buymeacoffee.com/essentialvideo'); os.execute('start https://www.buymeacoffee.com/essentialvideo');", LINKID_DataType = "Number", LINKS_Name = "Donate!", }, SubscribeButton = { ICD_Width = 0.5, INPID_InputControl = "ButtonControl", BTNCS_Execute = "os.execute('open https://www.youtube.com/@EssentialVideoEditing/videos?sub_confirmation=1'); os.execute('start https://www.youtube.com/@EssentialVideoEditing/videos?sub_confirmation=1');", LINKID_DataType = "Number", LINKS_Name = "Subscribe!", } }
+						},
+						Background3 = Background {
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								TopLeftAlpha = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 16.5 } },
+						},
+						EndArrow_1 = TextPlus {
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								LayoutType = Input { Value = 3, },
+								PositionOnPath = Input {
+									Value = 1,
+									Expression = "\niif(Polygon2.WriteLength==1,Polygon1.WriteLength, Polygon2.WritePosition+Polygon2.WriteLength)\n",
+								},
+								Path = Input {
+									SourceOp = "Publish1",
+									Source = "Value",
+								},
+								StyledText = Input {
+									Value = "",
+									Expression = ":t={\"\",\"\",\"\",\"\",\"\",\"\"}; i=Polygon1.EndArrow; return iif(i>12, t[i-12], \"\");",
+								},
+								Font = Input { Value = "Wingdings 3", },
+								Style = Input { Value = "Regular", },
+								Size = Input {
+									Value = 0.04,
+									Expression = "Polygon1.BorderWidth*(8+Polygon1.EndArrowSize)",
+								},
+								VerticalTopCenterBottom = Input { Value = 0.088, },
+								VerticalJustificationNew = Input { Value = 3, },
+								HorizontalJustificationNew = Input { Value = 3, },
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 49.5 } },
+						}
+					},
+				},
+				Merge8 = Merge {
+					Inputs = {
+						Blend = Input { Expression = "Polygon1.SeparateArrowColors", },
+						Background = Input {
+							SourceOp = "Background5",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Merge6",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 247.5 } },
+				},
+				Background5 = Background {
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 247.5 } },
+				},
+				Instance_Background1 = Background {
+					SourceOp = "Background1",
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Merge6",
+							Source = "Output",
+						},
+						SettingsNest = Input { },
+						ImageNest = Input { },
+						["Gamut.ColorSpaceNest"] = Input { },
+						["Gamut.GammaSpaceNest"] = Input { },
+						BackgroundNest = Input { },
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 214.5 } },
+				},
+				Merge7 = Merge {
+					Inputs = {
+						Blend = Input { Expression = "1-Polygon1.SeparateArrowColors", },
+						Background = Input {
+							SourceOp = "Merge8",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Instance_Background1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 247.5 } },
+				},
+				Polygon2 = PolylineMask {
+					DrawMode = "ClickAppend",
+					DrawMode2 = "InsertAndModify",
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Polygon1",
+							Source = "Mask",
+						},
+						Level = Input {
+							Value = 0,
+							Expression = "iif(WriteLength==1,0,1)",
+						},
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						BorderWidth = Input {
+							Value = 0.005,
+							Expression = "Polygon1.BorderWidth",
+						},
+						PaintMode = Input { Value = FuID { "Add" }, },
+						Solid = Input { Value = 0, },
+						CapStyle = Input {
+							Value = 2,
+							Expression = "Polygon1.CapStyle",
+						},
+						WritePosition = Input { Expression = "Polygon1.WriteLength * (1-WriteLength)", },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Polyline = Input {
+							SourceOp = "Publish1",
+							Source = "Value",
+						},
+						Polyline2 = Input {
+							Value = Polyline {
+							},
+							Disabled = true,
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 49.5 } },
+				},
+				Instance_Polygon2 = PolylineMask {
+					DrawMode = "ClickAppend",
+					DrawMode2 = "InsertAndModify",
+					SourceOp = "Polygon2",
+					Inputs = {
+						EffectMask = Input { },
+						SettingsNest = Input { },
+						Level = Input { Expression = "iif(WriteLength==1,0,1)" },
+						BorderWidth = Input {
+							Value = 0.002,
+							Expression = "Polygon1.BorderWidth/2.5"
+						},
+						Invert = Input { Value = 1, },
+						CapStyle = Input { Expression = "Polygon1.CapStyle" },
+						WritePosition = Input { Expression = "Polygon1.WriteLength * (1-WriteLength)" },
+						Polyline2 = Input {
+							Value = Polyline {
+							},
+							Disabled = true,
+						},
+						["ShapeRasterizer.Nest"] = Input { },
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 49.5 } },
+				},
+				DoubleSolidLine2 = Merge {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Instance_Polygon2",
+							Source = "Mask",
+						},
+						Blend = Input { Expression = "iif(Polygon1.LineType==1,1,0)", },
+						Background = Input {
+							SourceOp = "DoubleSolidLine",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 49.5002 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialArrowLine"
+}

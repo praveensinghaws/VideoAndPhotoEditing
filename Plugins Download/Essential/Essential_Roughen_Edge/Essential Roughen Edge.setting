@@ -1,0 +1,401 @@
+{
+	Tools = ordered() {
+		EssentialRoughenEdge = GroupOperator {
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "Bitmap1",
+					Source = "SoftEdge",
+					Name = "Edge Size",
+					MinScale = 0.01,
+					Default = 0.02,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "EdgeSoftness",
+					Default = 0,
+				},
+				MainInput1 = InstanceInput {
+					SourceOp = "PipeRouter1",
+					Source = "Input",
+				},
+				Input3 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Center",
+					Name = "Noise Center",
+				},
+				Input4 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Detail",
+					MaxScale = 5,
+					Default = 5,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Contrast",
+					MaxScale = 100,
+					Default = 10,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "LockXY",
+					Default = 1,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "XScale",
+					MaxScale = 200,
+					Default = 20,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "YScale",
+					MaxScale = 200,
+					Default = 20,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Angle",
+					Default = 0,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Seethe",
+					Default = 0,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "SeetheRate",
+					Default = 0,
+				},
+				InputEnableBorder = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "EnableBorder",
+				},
+				InputHideBorder = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "Hide_Border",
+				},
+				InputBorderOnly = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "BorderOnly",
+				},
+				InputBorderWidth = InstanceInput {
+					SourceOp = "ErodeDilate2",
+					Source = "XAmount",
+					Name = "Border Width",
+					MinScale = 0,
+					Default = 0.005,
+				},
+				InputBorderRed = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftRed",
+					Name = "Color",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				InputBorderGreen = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftGreen",
+					ControlGroup = 2,
+					Default = 0,
+				},
+				InputBorderBlue = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftBlue",
+					ControlGroup = 2,
+					Default = 0,
+				},
+				InputBorderAlpha = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftAlpha",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input37 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "EnableGlow",
+					Name = "Border Glow",
+					Default = 0,
+				},
+				Input31 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Gain",
+					Default = 2,
+				},
+				Input32 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "XGlowSize",
+					Default = 10,
+				},
+				Input33 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "RedScale",
+					Default = 1,
+				},
+				Input34 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "GreenScale",
+					Default = 1,
+				},
+				Input35 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "BlueScale",
+					Default = 1,
+				},
+				Input36 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "AlphaScale",
+					Default = 1,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "ChannelBooleans1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 165, 115.5 },
+				Flags = {
+					AllowPan = false,
+					GridSnap = true,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 1006.92, 172.601, 478.253, 45.1497 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				Bitmap1 = BitmapMask {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						SoftEdge = Input { Value = 0.02, },
+						Invert = Input { Value = 1, },
+						MaskWidth = Input { Value = 3840, },
+						MaskHeight = Input { Value = 2160, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Image = Input {
+							SourceOp = "Merge1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 16.5 } },
+				},
+				ErodeDilate1 = ErodeDilate {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = 3, },
+						XAmount = Input { Expression = "-Merge1.EdgeSoftness/200", },
+						Input = Input {
+							SourceOp = "Displace1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, 16.5 } },
+				},
+				PipeRouter1 = PipeRouter {
+					CtrlWShown = false,
+					ViewInfo = PipeRouterInfo { Pos = { -385, 16.5 } },
+				},
+				FastNoise1 = FastNoise {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Bitmap1",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 3840, },
+						Height = Input { Value = 2160, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Detail = Input { Value = 5, },
+						Contrast = Input { Value = 10, },
+						Brightness = Input { Value = 1, },
+						XScale = Input { Value = 20, },
+						YScale = Input { Value = 20 },
+						GradientType = Input { Value = 5, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 16.5 } },
+				},
+				Displace1 = Displace {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						MaskHigh = Input { Value = 0, },
+						Type = Input { Value = 1, },
+						Center = Input { Value = { 0.5, 0.5 }, },
+						Channel = Input { Value = 3, },
+						XChannel = Input { Value = 3, },
+						XOffset = Input { Value = -1, },
+						XRefraction = Input { Value = 0.002, },
+						YChannel = Input { Value = 3, },
+						YOffset = Input { Value = -1, },
+						YRefraction = Input {
+							Value = 0.002,
+							Expression = "XRefraction",
+						},
+						RefractionStrength = Input { Value = 0.02, },
+						LightChannel = Input { Value = 4, },
+						Input = Input {
+							SourceOp = "Merge1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "FastNoise1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 82.5 } },
+				},
+				ChannelBooleans1 = ChannelBoolean {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Bitmap2",
+							Source = "Mask",
+						},
+						MultiplyByMask = Input { Value = 1, },
+						Background = Input {
+							SourceOp = "Displace1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 385, 82.5 } },
+				},
+				ErodeDilate2 = ErodeDilate {
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input {
+							Value = 0,
+							Expression = "Merge1.EnableBorder",
+						},
+						Filter = Input { Value = 3, },
+						XAmount = Input { Value = 0.005, },
+						Input = Input {
+							SourceOp = "PipeRouter1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -275, 16.5 } },
+				},
+				Merge1 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "PipeRouter1",
+							Source = "Output",
+						},
+						ApplyMaskInverted = Input { Value = 1, },
+						MultiplyByMask = Input { Expression = "BorderOnly", },
+						Background = Input {
+							SourceOp = "PipeRouter1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "SoftGlow1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+						Hide_Border = Input { Expression = "EnableBorder", }
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 82.5 } },
+					UserControls = ordered() {
+						EnableBorder = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							LINKS_Name = "Enable Border",
+							INPID_InputControl = "CheckboxControl",
+							INP_Default = 0,
+						},
+						BorderOnly = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							LINKS_Name = "Border Only",
+							INPID_InputControl = "CheckboxControl",
+							INP_Default = 0,
+						},
+						EdgeSoftness = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0,
+							INP_MaxScale = 1,
+							LINKS_Name = "Edge Softness",
+						},
+						Hide_Border = {
+							LBLC_NumInputs = 13,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						}
+					}
+				},
+				Background1 = Background {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "ErodeDilate2",
+							Source = "Output",
+						},
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 3840, },
+						Height = Input { Value = 2160, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 16.5 } },
+				},
+				Bitmap2 = BitmapMask {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						SoftEdge = Input { Expression = "Merge1.EdgeSoftness/500", },
+						MaskWidth = Input { Value = 3840, },
+						MaskHeight = Input { Value = 2160, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Image = Input {
+							SourceOp = "ErodeDilate1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, 49.5 } },
+				},
+				SoftGlow1 = SoftGlow {
+					Inputs = {
+						Blend = Input { Expression = "EnableGlow*Merge1.EnableBorder", },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						ColorScale = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 49.5 } },
+					UserControls = ordered() {
+						EnableGlow = {
+							LINKS_Name = "Enable Glow",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							INP_Default = 0,
+							INP_Integer = false,
+							CBC_TriState = false,
+						}
+					}
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialRoughenEdge"
+}

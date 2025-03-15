@@ -1,0 +1,192 @@
+{
+	Tools = ordered() {
+		EssentialBackground = GroupOperator {
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Type",
+				},
+				Input2 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftRed",
+					Name = "Color",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftGreen",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftBlue",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftAlpha",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopRightSep",
+				},
+				Input7 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopRightRed",
+					Name = "Top Right",
+					ControlGroup = 4,
+					Default = 0,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopRightGreen",
+					ControlGroup = 4,
+					Default = 0,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopRightBlue",
+					ControlGroup = 4,
+					Default = 0,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopRightAlpha",
+					ControlGroup = 4,
+					Default = 1,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomLeftSep",
+				},
+				Input12 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomLeftRed",
+					Name = "Bottom Left",
+					ControlGroup = 6,
+					Default = 0,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomLeftGreen",
+					ControlGroup = 6,
+					Default = 0,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomLeftBlue",
+					ControlGroup = 6,
+					Default = 0,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomLeftAlpha",
+					ControlGroup = 6,
+					Default = 1,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomRightSep",
+				},
+				Input17 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomRightRed",
+					Name = "Bottom Right",
+					ControlGroup = 8,
+					Default = 0,
+				},
+				Input18 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomRightGreen",
+					ControlGroup = 8,
+					Default = 0,
+				},
+				Input19 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomRightBlue",
+					ControlGroup = 8,
+					Default = 0,
+				},
+				Input20 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomRightAlpha",
+					ControlGroup = 8,
+					Default = 1,
+				},
+				Input21 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "GradientType",
+				},
+				Input22 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Start",
+					DefaultX = 0,
+					DefaultY = 0.5,
+				},
+				Input23 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "End",
+					DefaultX = 1,
+					DefaultY = 0.5,
+				},
+				Input24 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Gradient",
+				},
+				Input25 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "GradientInterpolationMethod",
+				},
+				Input26 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Offset",
+					Default = 0,
+				},
+				Input27 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Repeat",
+				},
+				Input28 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "SubPixel",
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Background1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Background1 = Background {
+					CtrlWZoom = false,
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 1, },
+						TopLeftBlue = Input { Value = 1, },
+						TopRightRed = Input { Value = 1, },
+						TopRightGreen = Input { Value = 1, },
+						BottomLeftRed = Input { Value = 0, },
+						BottomLeftGreen = Input { Value = 1, },
+						BottomLeftBlue = Input { Value = 1, },
+						BottomRightRed = Input { Value = 0, },
+						BottomRightGreen = Input { Value = 0, },
+						BottomRightBlue = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 49.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialBackground"
+}

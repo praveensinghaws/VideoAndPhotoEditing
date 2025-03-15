@@ -1,0 +1,293 @@
+{
+	Tools = ordered() {
+		EssentialPageTurnTransition = GroupOperator {
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "ImagePlane3D1",
+					Source = "MaterialInput",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "ImagePlane3D1",
+					Source = "Transform3DOp.Rotate.Z",
+					Name = "Direction",
+					Default = 30,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "DropShadow1",
+					Source = "shadowStrength",
+					Default = 1,
+				},
+				Input_ShowBack = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "ShowBack",
+				},
+				Input_ShowBackColor = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "Show_BackColors",
+					Expression = "ShowBack",
+				},
+				Input_BackColor = InstanceInput {
+					SourceOp = "ImagePlane3D2",
+					Source = "MtlStdInputs.Diffuse.Color.Red",
+					Name = "Color",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input_BackColor_Green = InstanceInput {
+					SourceOp = "ImagePlane3D2",
+					Source = "MtlStdInputs.Diffuse.Color.Green",
+					ControlGroup = 2,
+					Default = 0.8,
+				},
+				Input_BackColor_Blue = InstanceInput {
+					SourceOp = "ImagePlane3D2",
+					Source = "MtlStdInputs.Diffuse.Color.Blue",
+					ControlGroup = 2,
+					Default = 0.4,
+				},
+				Input_BackColor_Alpha = InstanceInput {
+					SourceOp = "ImagePlane3D2",
+					Source = "MtlStdInputs.Diffuse.Color.Alpha",
+					Default = 1,
+				},
+				Input_BackColor_Opacity = InstanceInput {
+					SourceOp = "ImagePlane3D2",
+					Source = "MtlStdInputs.Diffuse.Opacity",
+					Default = 1,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "Renderer3D1",
+					Source = "MotionBlur",
+					Default = 0,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "Renderer3D1",
+					Source = "Quality",
+					Default = 6,
+				},
+				MainInput2 = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "Background",
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Merge1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 220, 148.5 },
+				Flags = {
+					AllowPan = false,
+					GridSnap = true,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 718.286, 136.239, 456, 50.7785 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				ImagePlane3D1 = ImagePlane3D {
+					Inputs = {
+						["Transform3DOp.Rotate.Z"] = Input { Value = 30, },
+						["Transform3DOp.Scale.X"] = Input { Value = 2.946, },
+						["SurfacePlaneInputs.SubdivisionWidth"] = Input { Value = 80, },
+						["SurfacePlaneInputs.Visibility.CullBackFace"] = Input { Expression = "Merge1.ShowBack", },
+						["SurfacePlaneInputs.ObjectID.ObjectID"] = Input { Value = 1, },
+						["MtlStdInputs.MaterialID"] = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -275, 16.5 } },
+				},
+				DropShadow1 = ofx.com.blackmagicdesign.resolvefx.DropShadow {
+					Inputs = {
+						Source = Input {
+							SourceOp = "Renderer3D1",
+							Source = "Output",
+						},
+						shadowStrength = Input { Value = 1, },
+						shadowAngle = Input { Value = 0, },
+						ShadowDistance = Input { Value = 0, },
+						shadowBlur = Input { Value = 0.550000011920929, },
+						shadowColorRed = Input { Value = 0, },
+						shadowColorGreen = Input { Value = 0, },
+						shadowColorBlue = Input { Value = 0, },
+						isLegacyComp = Input { Value = 1, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						resolvefxVersion = Input { Value = "1.1", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 49.5 } },
+				},
+				Renderer3D1 = Renderer3D {
+					CustomData = {
+						ToolVersion = 2
+					},
+					Inputs = {
+						Quality = Input { Value = 6, },
+						GlobalOut = Input { Value = 29, },
+						Width = Input { Value = 3840, },
+						Height = Input { Value = 2160, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						SceneInput = Input {
+							SourceOp = "Merge3D1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 49.5 } },
+				},
+				Bender3D1 = Bender3D {
+					Inputs = {
+						SceneInput = Input {
+							SourceOp = "Merge3D2",
+							Source = "Output",
+						},
+						Amount = Input { Value = 1, },
+						Axis = Input { Value = 0, },
+						Angle = Input { Value = 90, },
+						Center = Input {
+							SourceOp = "KeyframeStretcher2",
+							Source = "Result",
+						},
+						RangeMin = Input {
+							SourceOp = "KeyframeStretcher1",
+							Source = "Result",
+						},
+						RangeMax = Input {
+							SourceOp = "Bender3D1RangeMax",
+							Source = "Value",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 49.5 } },
+				},
+				KeyframeStretcher2 = KeyStretcherMod {
+					Inputs = {
+						Keyframes = Input {
+							SourceOp = "KeyStretcheronBender3D1Keyframes1",
+							Source = "Value",
+						},
+						SourceEnd = Input { Value = 29, },
+						StretchStart = Input { Value = 0, },
+						StretchEnd = Input { Value = 25, },
+					},
+				},
+				KeyStretcheronBender3D1Keyframes1 = BezierSpline {
+					SplineColor = { Red = 37, Green = 233, Blue = 78 },
+					NameSet = true,
+					KeyFrames = {
+						[25] = { 0, RH = { 26.3333333333333, -0.0333333333333333 }, Flags = { Linear = true } },
+						[29] = { -0.1, LH = { 27.6666666666667, -0.0666666666666667 }, Flags = { Linear = true } }
+					}
+				},
+				KeyframeStretcher1 = KeyStretcherMod {
+					Inputs = {
+						Keyframes = Input {
+							SourceOp = "KeyStretcheronBender3D1Keyframes",
+							Source = "Value",
+						},
+						SourceEnd = Input { Value = 29, },
+						StretchStart = Input { Value = 0, },
+						StretchEnd = Input { Value = 25, },
+					},
+				},
+				KeyStretcheronBender3D1Keyframes = BezierSpline {
+					SplineColor = { Red = 239, Green = 87, Blue = 4 },
+					KeyFrames = {
+						[0] = { 0.7, RH = { 8.33333333333333, 0.466666666666667 }, Flags = { Linear = true } },
+						[25] = { 0, LH = { 16.6666666666667, 0.233333333333333 }, Flags = { Linear = true } }
+					}
+				},
+				Bender3D1RangeMax = BezierSpline {
+					SplineColor = { Red = 239, Green = 153, Blue = 0 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 1, RH = { 8.33333333333333, 1 }, Flags = { Linear = true } },
+						[25] = { 1, LH = { 16.6666666666667, 1 }, Flags = { Linear = true } }
+					}
+				},
+				Merge3D1 = Merge3D {
+					Inputs = {
+						["Transform3DOp.Rotate.Z"] = Input {
+							Value = -30,
+							Expression = "-ImagePlane3D1.Transform3DOp.Rotate.Z",
+						},
+						SceneInput1 = Input {
+							SourceOp = "Bender3D1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 49.5 } },
+				},
+				ImagePlane3D2 = ImagePlane3D {
+					Inputs = {
+						["Transform3DOp.Rotate.Z"] = Input {
+							Value = 30,
+							Expression = "ImagePlane3D1.Transform3DOp.Rotate.Z",
+						},
+						["Transform3DOp.Scale.X"] = Input { Value = 2.946, },
+						["SurfacePlaneInputs.SubdivisionWidth"] = Input { Value = 80, },
+						["SurfacePlaneInputs.Visibility.Nest"] = Input { Value = 1, },
+						["SurfacePlaneInputs.Visibility.IsVisible"] = Input {
+							Value = 0,
+							Expression = "Merge1.ShowBack",
+						},
+						["SurfacePlaneInputs.Visibility.CullFrontFace"] = Input { Value = 1, },
+						["SurfacePlaneInputs.ObjectID.ObjectID"] = Input { Value = 2, },
+						["MtlStdInputs.Diffuse.Color.Green"] = Input { Value = 0.8, },
+						["MtlStdInputs.Diffuse.Color.Blue"] = Input { Value = 0.4, },
+						["MtlStdInputs.MaterialID"] = Input { Value = 2, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -385, 49.5 } },
+				},
+				Merge3D2 = Merge3D {
+					Inputs = {
+						SceneInput1 = Input {
+							SourceOp = "ImagePlane3D1",
+							Source = "Output",
+						},
+						SceneInput2 = Input {
+							SourceOp = "ImagePlane3D2",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -275, 49.5 } },
+				},
+				Merge1 = Merge {
+					Inputs = {
+						Foreground = Input {
+							SourceOp = "DropShadow1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+						Show_BackColors = Input { Expression = "ShowBack", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 16.5 } },
+					UserControls = ordered() {
+						ShowBack = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Show Back",
+						},
+						Show_BackColors = {
+							LBLC_NumInputs = 5,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						}
+					}
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialPageTurnTransition"
+}

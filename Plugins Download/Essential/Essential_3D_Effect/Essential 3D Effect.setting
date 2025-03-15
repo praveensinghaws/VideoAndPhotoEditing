@@ -1,0 +1,1347 @@
+{
+	Tools = ordered() {
+		Essential3DEffect = GroupOperator {
+			Inputs = ordered() {
+				Input2 = InstanceInput {
+					SourceOp = "Blur1",
+					Source = "XBlurSize",
+					Name = "3D Effect",
+					Default = 6,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "ErodeDilate1",
+					Source = "XAmount",
+					Name = "Chisel Effect",
+					MinScale = -0.05,
+					MaxScale = 0,
+					Default = 0,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "Displace3D1",
+					Source = "Scale",
+					Name = "3D Scale",
+					Default = 0.01,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "Displace3D1",
+					Source = "Bias",
+					Name = "3D Bias",
+					Default = 0,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "AmbientLight1",
+					Source = "Intensity",
+					Name = "Brightness",
+					Default = 0,
+				},
+				Input1 = InstanceInput {
+					SourceOp = "ImagePlane3D1",
+					Source = "SurfacePlaneInputs.SubdivisionWidth",
+					Name = "3D Quality",
+					Default = 500,
+				},
+				InputBlank1 = InstanceInput {
+					SourceOp = "Renderer3D1",
+					Source = "RendererType",
+				},
+
+				Input3DRendererType = InstanceInput {
+					SourceOp = "Renderer3D1",
+					Source = "Blank5",
+				},
+
+				Input17 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D1",
+					Source = "Material",
+					Name = "3D Material",
+					Default = 0,
+				},
+				Input18 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D1",
+					Source = "Emboss",
+				},
+				Input7 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D1",
+					Source = "MtlStdInputs.Diffuse.Color.Red",
+					Name = "Diffuse Color",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D1",
+					Source = "MtlStdInputs.Diffuse.Color.Green",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D1",
+					Source = "MtlStdInputs.Diffuse.Color.Blue",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D1",
+					Source = "MtlStdInputs.Diffuse.Color.Alpha",
+					Default = 1,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D1",
+					Source = "MtlStdInputs.Diffuse.Opacity",
+					Default = 1,
+				},
+				Input12 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D1",
+					Source = "MtlStdInputs.Specular.Color.Red",
+					Name = "Specular Color",
+					ControlGroup = 10,
+					Default = 1,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D1",
+					Source = "MtlStdInputs.Specular.Color.Green",
+					ControlGroup = 10,
+					Default = 1,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D1",
+					Source = "MtlStdInputs.Specular.Color.Blue",
+					ControlGroup = 10,
+					Default = 1,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D1",
+					Source = "MtlStdInputs.Specular.Intensity",
+					Default = 1,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D1",
+					Source = "MtlStdInputs.Specular.Exponent",
+					Default = 50,
+				},
+				Input19 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D2",
+					Source = "Enable",
+					Page = "Cool Metal",
+					Default = 0,
+				},
+				Input20 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D2",
+					Source = "ReplaceMode.RedMode",
+					Default = 1,
+				},
+				Input21 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D2",
+					Source = "ReplaceMode.GreenMode",
+					Default = 1,
+				},
+				Input22 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D2",
+					Source = "ReplaceMode.BlueMode",
+					Default = 1,
+				},
+				Input23 = InstanceInput {
+					SourceOp = "ReplaceMaterial3D2",
+					Source = "ReplaceMode.AlphaMode",
+					Default = 1,
+				},
+				Input24 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input1",
+					ControlGroup = 20,
+				},
+				Input25 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input2",
+					ControlGroup = 20,
+					Default = 1,
+				},
+				Input26 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input3",
+					ControlGroup = 20,
+					Default = -0.4064164790945,
+				},
+				Input27 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input4",
+					ControlGroup = 20,
+					Default = 0.0577777777778,
+				},
+				Input28 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input5",
+					ControlGroup = 21,
+					Default = 0.56,
+				},
+				Input29 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input6",
+					ControlGroup = 21,
+					Default = 0.56,
+				},
+				Input30 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input7",
+					ControlGroup = 21,
+					Default = 0.56,
+				},
+				Input31 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input8",
+					Default = 1,
+				},
+				Input32 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input9",
+					Default = 1,
+				},
+				Input33 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input10",
+					ControlGroup = 24,
+					Default = 1,
+				},
+				Input34 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input11",
+					ControlGroup = 24,
+					Default = 1,
+				},
+				Input35 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input12",
+					ControlGroup = 24,
+					Default = 1,
+				},
+				Input36 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input13",
+					Default = 3,
+				},
+				Input37 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input14",
+					Default = 0.6249171,
+				},
+				Input38 = InstanceInput {
+					SourceOp = "CoolMetal",
+					Source = "Input15",
+					Default = 0.2,
+				},
+				MainInput1 = InstanceInput {
+					SourceOp = "PipeRouter2",
+					Source = "Input",
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Renderer3D1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				ImagePlane3D1 = ImagePlane3D {
+					Inputs = {
+						["SurfacePlaneInputs.SubdivisionWidth"] = Input { Value = 500, },
+						["SurfacePlaneInputs.ObjectID.ObjectID"] = Input { Value = 1, },
+						MaterialInput = Input {
+							SourceOp = "PipeRouter2",
+							Source = "Output",
+						},
+						["MtlStdInputs.MaterialID"] = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 880, 148.5 } },
+				},
+				Blur1 = Blur {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						XBlurSize = Input { Value = 6, },
+						Input = Input {
+							SourceOp = "ErodeDilate1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 990, 82.5 } },
+				},
+				ErodeDilate1 = ErodeDilate {
+					Inputs = {
+						Filter = Input { Value = 2, },
+						Input = Input {
+							SourceOp = "PipeRouter2",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 880, 82.5 } },
+				},
+				Displace3D1 = Displace3D {
+					Inputs = {
+						SceneInput = Input {
+							SourceOp = "ImagePlane3D1",
+							Source = "Output",
+						},
+						Channel = Input { Value = 4, },
+						Scale = Input { Value = 0.01, },
+						Input = Input {
+							SourceOp = "Blur1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 990, 148.5 } },
+				},
+				AmbientLight1 = LightAmbient {
+					Inputs = {
+						Intensity = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 1320, 214.5 } },
+				},
+				ReplaceMaterial3D1 = ReplaceMaterial3D {
+					NameSet = true,
+					Inputs = {
+						SceneInput = Input {
+							SourceOp = "Displace3D1",
+							Source = "Output",
+						},
+						["ReplaceMode.Nest"] = Input { Value = 1, },
+						MaterialInput = Input {
+							SourceOp = "Merge13",
+							Source = "Output",
+						},
+						["MtlStdInputs.Specular.Nest"] = Input { Value = 1, },
+						["MtlStdInputs.MaterialID"] = Input { Value = 2, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 1100, 148.5 } },
+					UserControls = ordered() { Material = { { CCS_AddString = "None" }, { CCS_AddString = "Walnut Wood" }, { CCS_AddString = "Pinewood" }, { CCS_AddString = "Plywood" }, { CCS_AddString = "Black Marble" }, { CCS_AddString = "White Marble" }, { CCS_AddString = "Quartz Stone" }, { CCS_AddString = "Brown Stone" }, { CCS_AddString = "Brown Stone 2" }, { CCS_AddString = "Striped Black Stone" }, { CCS_AddString = "Striped White Stone" }, { CCS_AddString = "Spotted White Stone" }, { CCS_AddString = "Spotted White Metal" }, INP_MaxAllowed = 1000000, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 1, INP_MinScale = 0, INP_MinAllowed = -1000000, LINKID_DataType = "Number", LINKS_Name = "Material", }, Emboss = { INP_MaxAllowed = 1000000, INP_Integer = false, INPID_InputControl = "CheckboxControl", INP_MaxScale = 1, INP_MinScale = 0, INP_MinAllowed = -1000000, LINKID_DataType = "Number", CBC_TriState = true, LINKS_Name = "Emboss", } }
+				},
+				ReplaceMaterial3D2 = ReplaceMaterial3D {
+					NameSet = true,
+					Inputs = {
+						SceneInput = Input {
+							SourceOp = "ReplaceMaterial3D1",
+							Source = "Output",
+						},
+						Enable = Input { Value = 0, },
+						["ReplaceMode.Nest"] = Input { Value = 1, },
+						MaterialInput = Input {
+							SourceOp = "Ward2",
+							Source = "MaterialOutput",
+						},
+						["MtlStdInputs.MaterialID"] = Input { Value = 2, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 1210, 148.5 } },
+				},
+				CoolMetal = GroupOperator {
+					CustomData = { Path = { Map = { ["Setting:"] = "Templates:\\Templates.drfx\\Fusion\\Shaders\\" } }, },
+					Inputs = ordered() {
+						Input1 = InstanceInput {
+							SourceOp = "ColorCorrector1",
+							Source = "WheelHue1",
+							ControlGroup = 1,
+						},
+						Input2 = InstanceInput {
+							SourceOp = "ColorCorrector1",
+							Source = "WheelSaturation1",
+							ControlGroup = 1,
+							Default = 1,
+						},
+						Input3 = InstanceInput {
+							SourceOp = "ColorCorrector1",
+							Source = "WheelTintAngle1",
+							ControlGroup = 1,
+						},
+						Input4 = InstanceInput {
+							SourceOp = "ColorCorrector1",
+							Source = "WheelTintLength1",
+							ControlGroup = 1,
+						},
+						Input5 = InstanceInput {
+							SourceOp = "Ward2",
+							Source = "Diffuse.Color.Red",
+							Name = "Diffuse Color",
+							ControlGroup = 2,
+							Default = 0.56,
+						},
+						Input6 = InstanceInput {
+							SourceOp = "Ward2",
+							Source = "Diffuse.Color.Green",
+							ControlGroup = 2,
+							Default = 0.56,
+						},
+						Input7 = InstanceInput {
+							SourceOp = "Ward2",
+							Source = "Diffuse.Color.Blue",
+							ControlGroup = 2,
+							Default = 0.56,
+						},
+						Input8 = InstanceInput {
+							SourceOp = "Ward2",
+							Source = "Diffuse.Color.Alpha",
+							Default = 1,
+						},
+						Input9 = InstanceInput {
+							SourceOp = "Ward2",
+							Source = "Diffuse.Opacity",
+							Default = 1,
+						},
+						Input10 = InstanceInput {
+							SourceOp = "Ward2",
+							Source = "Specular.Color.Red",
+							Name = "Specular Color",
+							ControlGroup = 5,
+							Default = 1,
+						},
+						Input11 = InstanceInput {
+							SourceOp = "Ward2",
+							Source = "Specular.Color.Green",
+							ControlGroup = 5,
+							Default = 1,
+						},
+						Input12 = InstanceInput {
+							SourceOp = "Ward2",
+							Source = "Specular.Color.Blue",
+							ControlGroup = 5,
+							Default = 1,
+						},
+						Input13 = InstanceInput {
+							SourceOp = "Ward2",
+							Source = "Specular.Intensity",
+							Default = 3,
+						},
+						Input14 = InstanceInput {
+							SourceOp = "Ward2",
+							Source = "Specular.SpreadU",
+							Default = 0.6249171,
+						},
+						Input15 = InstanceInput {
+							SourceOp = "Ward2",
+							Source = "Specular.SpreadV",
+							Default = 0.2,
+						}
+					},
+					Outputs = {
+						MainOutput1 = InstanceOutput {
+							SourceOp = "Ward2",
+							Source = "MaterialOutput",
+						}
+					},
+					ViewInfo = GroupInfo { Pos = { 1210, 214.5 } },
+					Tools = ordered() {
+						FastNoise2_4 = FastNoise {
+							CtrlWShown = false,
+							Inputs = {
+								Width = Input { Value = 1024, },
+								Height = Input { Value = 512, },
+								Detail = Input { Value = 4, },
+								Contrast = Input { Value = 0.5789474, },
+								XScale = Input { Value = 3.664922, },
+								Type = Input { Value = 1, },
+								GradientType = Input { Value = 1, },
+								Start = Input { Value = { 0.5, 0 }, },
+								End = Input { Value = { 0.5, 1 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0] = { 0.1263814718521, 0.1258334814815, 0.1266666666667, 1 },
+											[0.32156862745098] = { 0.396785622481392, 0.395065159053243, 0.3976810164056, 1 },
+											[0.4274509803922] = { 0.12, 0.1058057094744, 0.1024404478945, 1 },
+											[0.4901960784314] = { 0.772685279413675, 0.772645925925926, 0.773333333333333, 1 },
+											[0.564705882352941] = { 0.428758861340679, 0.428819944552128, 0.429752066115702, 1 },
+											[1] = { 0.824888888888889, 0.910545457962379, 1, 1 }
+										}
+									},
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { -330, 8.25756 } },
+						},
+						ColorCorrector1 = ColorCorrector {
+							CtrlWShown = false,
+							Inputs = {
+								WheelTintAngle1 = Input { Value = -0.4064164790945, },
+								WheelTintLength1 = Input { Value = 0.0577777777778, },
+								ColorRanges = Input {
+									Value = ColorCurves {
+										Curves = {
+											{
+												Points = {
+													{ 0, 1 },
+													{ 0.4, 0.2 },
+													{ 0.6, 0 },
+													{ 1, 0 }
+												}
+											},
+											{
+												Points = {
+													{ 0, 0 },
+													{ 0.4, 0 },
+													{ 0.6, 0.2 },
+													{ 1, 1 }
+												}
+											}
+										}
+									},
+								},
+								Input = Input {
+									SourceOp = "FastNoise2_4",
+									Source = "Output",
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { -220, 8.25756 } },
+						},
+						Transform1 = Transform {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle1",
+									Source = "Mask",
+								},
+								FlipHoriz = Input { Value = 1, },
+								Input = Input {
+									SourceOp = "ColorCorrector1",
+									Source = "Output",
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { -110, 8.25756 } },
+						},
+						Rectangle1 = RectangleMask {
+							CtrlWShown = false,
+							Inputs = {
+								MaskWidth = Input { Value = 1280, },
+								MaskHeight = Input { Value = 720, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								ClippingMode = Input { Value = FuID { "None" }, },
+								Center = Input { Value = { 0.75, 0.5 }, },
+								Height = Input { Value = 1, },
+							},
+							ViewInfo = OperatorInfo { Pos = { -110, 41.2576 } },
+						},
+						Blur3 = Blur {
+							CtrlWShown = false,
+							Inputs = {
+								Filter = Input { Value = FuID { "Gaussian" }, },
+								XBlurSize = Input { Value = 15, },
+								YBlurSize = Input { Value = 0, },
+								Input = Input {
+									SourceOp = "Transform1",
+									Source = "Output",
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { 0, 8.25756 } },
+						},
+						spheremap_clearcoat_2 = SphereMap {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								Rotation = Input { Value = 1, },
+								Image = Input {
+									SourceOp = "Blur3",
+									Source = "Output",
+								},
+								MaterialID = Input { Value = 12, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 110, 8.25756 } },
+						},
+						reflect_base_2 = MtlReflect {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								["Reflection.GlancingStrength"] = Input { Value = 0.4475138, },
+								["Reflection.FaceOnStrength"] = Input { Value = 0.4751381, },
+								["Reflection.Color.Material"] = Input {
+									SourceOp = "spheremap_clearcoat_2",
+									Source = "MaterialOutput",
+								},
+								["Refraction.Nest"] = Input { Value = 0, },
+								MaterialID = Input { Value = 3, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 220, 41.2576 } },
+						},
+						Ward2 = MtlWard {
+							CtrlWZoom = false,
+							CtrlWShown = false,
+							Inputs = {
+								["Diffuse.Color.Red"] = Input { Value = 0.56, },
+								["Diffuse.Color.Green"] = Input { Value = 0.56, },
+								["Diffuse.Color.Blue"] = Input { Value = 0.56, },
+								["Diffuse.Color.Material"] = Input {
+									SourceOp = "reflect_base_2",
+									Source = "MaterialOutput",
+								},
+								["Specular.Nest"] = Input { Value = 1, },
+								["Specular.Color.Material"] = Input {
+									SourceOp = "spheremap_clearcoat_2",
+									Source = "MaterialOutput",
+								},
+								["Specular.Intensity"] = Input { Value = 3, },
+								["Specular.Intensity.Material"] = Input {
+									SourceOp = "spheremap_clearcoat_2",
+									Source = "MaterialOutput",
+								},
+								["Specular.SpreadU"] = Input { Value = 0.6249171, },
+								["Specular.SpreadV"] = Input { Value = 0.2, },
+								MaterialID = Input { Value = 15, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 330, 8.25756 } },
+						}
+					},
+				},
+				PipeRouter2 = PipeRouter {
+					ViewInfo = PipeRouterInfo { Pos = { 715, 148.5 } },
+				},
+				Textures = GroupOperator {
+					NameSet = true,
+					Inputs = ordered() {
+						Input1 = InstanceInput {
+							SourceOp = "PipeRouter1",
+							Source = "Input",
+						}
+					},
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "Merge13",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo { Pos = { 1100, 214.5 } },
+					Tools = ordered() {
+						Rectangle3 = RectangleMask {
+							CtrlWShown = false,
+							Inputs = {
+								Level = Input {
+									Value = 0,
+									Expression = "iif(ReplaceMaterial3D1.Emboss~=0,1,0)",
+								},
+								Filter = Input { Value = FuID { "Fast Gaussian" }, },
+								MaskWidth = Input { Value = 1920, },
+								MaskHeight = Input { Value = 1080, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								ClippingMode = Input { Value = FuID { "None" }, },
+								Width = Input { Value = 1, },
+								Height = Input { Value = 1, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 715.006, 647.917 } },
+						},
+						Background2 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle3",
+									Source = "Mask",
+								},
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								TopLeftRed = Input { Value = 1, },
+								TopLeftGreen = Input { Value = 1, },
+								TopLeftBlue = Input { Value = 1, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 880.006, 647.917 } },
+						},
+						BrownStone2 = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle2",
+									Source = "Mask",
+								},
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Detail = Input { Value = 10, },
+								Contrast = Input { Value = 30, },
+								Brightness = Input { Value = 1, },
+								XScale = Input { Value = 12, },
+								Type = Input { Value = 1, },
+								GradientType = Input { Value = 5, },
+								Start = Input { Value = { 0.5, 0.5 }, },
+								End = Input { Value = { 0.520675105485232, 0.503003003003003 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0] = { 0.250980392156863, 0.0980392156862745, 0.00784313725490196, 1 },
+											[0.164179104477612] = { 0.454901960784314, 0.258823529411765, 0.141176470588235, 1 },
+											[0.348258706467662] = { 0.4, 0.207843137254902, 0.0901960784313725, 1 },
+											[0.557213930348259] = { 0.490196078431373, 0.286274509803922, 0.16078431372549, 1 },
+											[0.771144278606965] = { 0.27843137254902, 0.117647058823529, 0.00784313725490196, 1 },
+											[0.885572139303483] = { 0.349019607843137, 0.164705882352941, 0.0588235294117647, 1 },
+											[1] = { 0.262745098039216, 0.109803921568627, 0.0156862745098039, 1 }
+										}
+									},
+								},
+								Offset = Input { Value = 0.101, },
+								Repeat = Input { Value = 2, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 715, 615.19 } },
+						},
+						Merge1_1 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(ReplaceMaterial3D1.Material==8,1,0)", },
+								Background = Input {
+									SourceOp = "Background2",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "BrownStone2",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 880.006, 614.917 } },
+						},
+						PineWood = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle2",
+									Source = "Mask",
+								},
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								Detail = Input { Value = 0.76, },
+								Contrast = Input { Value = 0.85, },
+								LockXY = Input { Value = 0, },
+								XScale = Input { Value = 1, },
+								YScale = Input { Value = 30, },
+								Discontinuous = Input { Value = 1, },
+								Type = Input { Value = 1, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0] = { 0.5933333333333, 0.4199659599248, 0.2687668148148, 1 },
+											[0.197530864197531] = { 0.732654320987654, 0.55685985479623, 0.380849997256516, 1 },
+											[0.29320987654321] = { 0.64, 0.46991217360346, 0.275456, 1 },
+											[0.37962962962963] = { 0.802942386831276, 0.629690601314954, 0.442510470964792, 1 },
+											[0.521604938271605] = { 0.79042835765058, 0.605506142551234, 0.395706000914495, 1 },
+											[0.5956790123457] = { 0.5933333333333, 0.405202363569877, 0.206743703703692, 1 },
+											[0.712962962963] = { 0.78, 0.541259436975241, 0.339594666666667, 1 },
+											[1] = { 1, 0.731057980190514, 0.440888888888889, 1 }
+										}
+									},
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { 715, 582.19 } },
+						},
+						Merge12 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(ReplaceMaterial3D1.Material==2,1,0)", },
+								Background = Input {
+									SourceOp = "Merge1_1",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "PineWood",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 880, 582.19 } },
+						},
+						Merge11 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(ReplaceMaterial3D1.Material==3,1,0)", },
+								Background = Input {
+									SourceOp = "Merge12",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Plywood",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 880, 549.19 } },
+						},
+						Plywood = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle2",
+									Source = "Mask",
+								},
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								Contrast = Input { Value = 4.6, },
+								Brightness = Input { Value = -1, },
+								LockXY = Input { Value = 0, },
+								XScale = Input { Value = 1.04, },
+								YScale = Input { Value = 20, },
+								Discontinuous = Input { Value = 1, },
+								Type = Input { Value = 1, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0] = { 1, 0.818650438331476, 0.578, 1 },
+											[0.197530864197531] = { 0.646, 0.470272274743199, 0.237082, 1 },
+											[0.29320987654321] = { 0.811, 0.607465628446224, 0.337376, 1 },
+											[0.37962962962963] = { 0.748, 0.552561897976639, 0.293216, 1 },
+											[0.521604938271605] = { 0.89, 0.701061259992456, 0.45034, 1 },
+											[0.5956790123457] = { 0.606, 0.453913897458013, 0.252096, 1 },
+											[0.712962962963] = { 0.937, 0.75257952845542, 0.507854, 1 },
+											[1] = { 1, 0.813493578757948, 0.566, 1 }
+										}
+									},
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { 715, 549.19 } },
+						},
+						SpottedWhiteStone = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle2",
+									Source = "Mask",
+								},
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Contrast = Input { Value = 1.5, },
+								Brightness = Input { Value = -1, },
+								XScale = Input { Value = 100, },
+								YScale = Input { Value = 100, },
+								SeetheRate = Input { Value = 0.02, },
+								Type = Input { Value = 1, },
+								Start = Input { Value = { 0.5, 0.5 }, },
+								End = Input { Value = { 0.5206751054852, 0.503003003003 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0.134328358208955] = { 1, 1, 1, 1 },
+											[0.238805970149254] = { 0, 0, 0.0078431372549, 1 }
+										}
+									},
+								},
+								Offset = Input { Value = 0.101, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 715, 516.19 } },
+						},
+						Merge10 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(ReplaceMaterial3D1.Material==11,1,0)", },
+								Background = Input {
+									SourceOp = "Merge11",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "SpottedWhiteStone",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 880, 516.19 } },
+						},
+						Merge9 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input {
+									Value = 0.998,
+									Expression = "iif(ReplaceMaterial3D1.Material==10,1,0)",
+								},
+								Background = Input {
+									SourceOp = "Merge10",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "StripedWhiteStone",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 880, 483.19 } },
+						},
+						StripedWhiteStone = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle2",
+									Source = "Mask",
+								},
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Contrast = Input { Value = 5, },
+								Brightness = Input { Value = -1, },
+								LockXY = Input { Value = 0, },
+								XScale = Input { Value = 0, },
+								YScale = Input { Value = 100, },
+								Seethe = Input { Value = -0.029, },
+								SeetheRate = Input { Value = 0.02, },
+								Type = Input { Value = 1, },
+								Start = Input { Value = { 0.5, 0.5 }, },
+								End = Input { Value = { 0.5206751054852, 0.503003003003 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0.134328358208955] = { 1, 1, 1, 1 },
+											[0.238805970149254] = { 0, 0, 0.0078431372549, 1 }
+										}
+									},
+								},
+								Offset = Input { Value = 0.101, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 715.394, 480.267 } },
+						},
+						StripedBlackStone = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle2",
+									Source = "Mask",
+								},
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Contrast = Input { Value = 5, },
+								Brightness = Input { Value = 1, },
+								LockXY = Input { Value = 0, },
+								XScale = Input { Value = 0, },
+								YScale = Input { Value = 100, },
+								SeetheRate = Input { Value = 0.02, },
+								Type = Input { Value = 1, },
+								Start = Input { Value = { 0.5, 0.5 }, },
+								End = Input { Value = { 0.5206751054852, 0.503003003003 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0.134328358208955] = { 1, 1, 1, 1 },
+											[0.238805970149254] = { 0, 0, 0.0078431372549, 1 }
+										}
+									},
+								},
+								Offset = Input { Value = 0.101, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 715, 450.19 } },
+						},
+						Merge8 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(ReplaceMaterial3D1.Material==9,1,0)", },
+								Background = Input {
+									SourceOp = "Merge9",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "StripedBlackStone",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 880, 450.19 } },
+						},
+						Rectangle2 = RectangleMask {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Bitmap1",
+									Source = "Mask",
+								},
+								Filter = Input { Value = FuID { "Fast Gaussian" }, },
+								PaintMode = Input {
+									Value = FuID { "Ignore" },
+									Expression = "iif(ReplaceMaterial3D1.Emboss==1,\"Merge\",\"Ignore\")",
+								},
+								MaskWidth = Input { Value = 1920, },
+								MaskHeight = Input { Value = 1080, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								ClippingMode = Input { Value = FuID { "None" }, },
+								Width = Input { Value = 1, },
+								Height = Input { Value = 1, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 550, 445.5 } },
+						},
+						WalnutWood = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle2",
+									Source = "Mask",
+								},
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Detail = Input { Value = 10, },
+								Contrast = Input { Value = 20, },
+								Brightness = Input { Value = 1, },
+								Type = Input { Value = 1, },
+								GradientType = Input { Value = 5, },
+								Start = Input { Value = { 0.5, 0.5 }, },
+								End = Input { Value = { 0.520675105485232, 0.503003003003003 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0] = { 0.250980392156863, 0.0980392156862745, 0.00784313725490196, 1 },
+											[0.164179104477612] = { 0.454901960784314, 0.258823529411765, 0.141176470588235, 1 },
+											[0.348258706467662] = { 0.4, 0.207843137254902, 0.0901960784313725, 1 },
+											[0.557213930348259] = { 0.490196078431373, 0.286274509803922, 0.16078431372549, 1 },
+											[0.771144278606965] = { 0.27843137254902, 0.117647058823529, 0.00784313725490196, 1 },
+											[0.885572139303483] = { 0.349019607843137, 0.164705882352941, 0.0588235294117647, 1 },
+											[1] = { 0.262745098039216, 0.109803921568627, 0.0156862745098039, 1 }
+										}
+									},
+								},
+								Offset = Input { Value = 0.101, },
+								Repeat = Input { Value = 2, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 715, 417.19 } },
+						},
+						Merge7 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(ReplaceMaterial3D1.Material==1,1,0)", },
+								Background = Input {
+									SourceOp = "Merge8",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "WalnutWood",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 880, 417.19 } },
+						},
+						BrownStone = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle2",
+									Source = "Mask",
+								},
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Detail = Input { Value = 10, },
+								Contrast = Input { Value = 50, },
+								Brightness = Input { Value = 1, },
+								XScale = Input { Value = 20, },
+								Type = Input { Value = 1, },
+								GradientType = Input { Value = 5, },
+								Start = Input { Value = { 0.5, 0.5 }, },
+								End = Input { Value = { 0.520675105485232, 0.503003003003003 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0] = { 0.250980392156863, 0.0980392156862745, 0.00784313725490196, 1 },
+											[0.164179104477612] = { 0.454901960784314, 0.258823529411765, 0.141176470588235, 1 },
+											[0.348258706467662] = { 0.4, 0.207843137254902, 0.0901960784313725, 1 },
+											[0.557213930348259] = { 0.490196078431373, 0.286274509803922, 0.16078431372549, 1 },
+											[0.771144278606965] = { 0.27843137254902, 0.117647058823529, 0.00784313725490196, 1 },
+											[0.885572139303483] = { 0.349019607843137, 0.164705882352941, 0.0588235294117647, 1 },
+											[1] = { 0.262745098039216, 0.109803921568627, 0.0156862745098039, 1 }
+										}
+									},
+								},
+								Offset = Input { Value = 0.101, },
+								Repeat = Input { Value = 2, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 715, 384.19 } },
+						},
+						Merge6 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(ReplaceMaterial3D1.Material==7,1,0)", },
+								Background = Input {
+									SourceOp = "Merge7",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "BrownStone",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 880, 384.19 } },
+						},
+						WhiteMarble = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle2",
+									Source = "Mask",
+								},
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								Detail = Input { Value = 3, },
+								Brightness = Input { Value = 1, },
+								XScale = Input { Value = 15, },
+								YScale = Input { Value = 20, },
+								Discontinuous = Input { Value = 1, },
+								Type = Input { Value = 1, },
+								Start = Input { Value = { 0.5, 0.495081967213115 }, },
+								End = Input { Value = { 0.89386054477784, 0.49109054378973 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0] = { 0.226666666666667, 0.226666666666667, 0.226666666666667, 1 },
+											[0.125490196078431] = { 1, 1, 1, 1 },
+											[0.231372549019608] = { 0.546666666666667, 0.546666666666667, 0.546666666666667, 1 },
+											[0.268691588785047] = { 0.819, 0.819, 0.819, 1 },
+											[0.3200934579439] = { 0.677, 0.677, 0.677, 1 },
+											[0.41358024691358] = { 0.5697435897436, 0.5697435897436, 0.5697435897436, 1 },
+											[0.441358024691358] = { 0.58, 0.58, 0.58, 1 },
+											[0.498039215686275] = { 1, 1, 1, 1 },
+											[0.725490196078431] = { 0.528, 0.528, 0.528, 1 },
+											[1] = { 1, 1, 1, 1 }
+										}
+									},
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { 715, 351.19 } },
+						},
+						Merge5 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(ReplaceMaterial3D1.Material==5,1,0)", },
+								Background = Input {
+									SourceOp = "Merge6",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "WhiteMarble",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 880, 351.19 } },
+						},
+						Bitmap1 = BitmapMask {
+							CtrlWShown = false,
+							Inputs = {
+								Filter = Input { Value = FuID { "Fast Gaussian" }, },
+								MaskWidth = Input { Value = 1920, },
+								MaskHeight = Input { Value = 1080, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								ClippingMode = Input { Value = FuID { "None" }, },
+								Image = Input {
+									SourceOp = "PipeRouter1",
+									Source = "Output",
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { 550, 346.5 } },
+						},
+						QuartzStone = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle2",
+									Source = "Mask",
+								},
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Detail = Input { Value = 10, },
+								Contrast = Input { Value = 2, },
+								XScale = Input { Value = 500, },
+								Color1Red = Input { Value = 0.992, },
+								Color1Green = Input { Value = 0.992, },
+								Color1Blue = Input { Value = 0.992, },
+								Color1Alpha = Input { Value = 1, },
+								Color2Red = Input { Value = 0.929, },
+								Color2Green = Input { Value = 0.81280068, },
+								Color2Blue = Input { Value = 0.654945, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 715, 318.19 } },
+						},
+						Merge2 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input {
+									Value = 0,
+									Expression = "iif(ReplaceMaterial3D1.Material==6,1,0)",
+								},
+								Background = Input {
+									SourceOp = "Merge5",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "QuartzStone",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 880, 318.19 } },
+						},
+						SpottedWhiteMetal = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle2",
+									Source = "Mask",
+								},
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Detail = Input { Value = 10, },
+								Contrast = Input { Value = 15, },
+								Brightness = Input { Value = 4, },
+								XScale = Input { Value = 20, },
+								Type = Input { Value = 1, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 715, 285.19 } },
+						},
+						Merge3 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input {
+									Value = 0,
+									Expression = "iif(ReplaceMaterial3D1.Material==12,1,0)",
+								},
+								Background = Input {
+									SourceOp = "Merge2",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "SpottedWhiteMetal",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 878.45, 280.5 } },
+						},
+						BlackMarble = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "Rectangle2",
+									Source = "Mask",
+								},
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Detail = Input { Value = 10, },
+								Contrast = Input { Value = 5, },
+								Brightness = Input { Value = -1, },
+								XScale = Input { Value = 15, },
+								Type = Input { Value = 1, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 715, 252.19 } },
+						},
+						Merge13 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(ReplaceMaterial3D1.Material==0,1,0)", },
+								Background = Input {
+									SourceOp = "Merge4",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "PipeRouter1",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 880, 214.5 } },
+						},
+						Merge4 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input {
+									Value = 0,
+									Expression = "iif(ReplaceMaterial3D1.Material==4,1,0)",
+								},
+								Background = Input {
+									SourceOp = "Merge3",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "BlackMarble",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 880, 247.5 } },
+						},
+						PipeRouter1 = PipeRouter {
+							CtrlWShown = false,
+							Inputs = {
+								Input = Input {
+									SourceOp = "PipeRouter2",
+									Source = "Output",
+								},
+							},
+							ViewInfo = PipeRouterInfo { Pos = { 495, 214.5 } },
+						}
+					},
+				},
+				Merge3D1 = Merge3D {
+					CtrlWZoom = false,
+					Inputs = {
+						["Transform3DOp.Scale.X"] = Input { Value = 2.946, },
+						SceneInput1 = Input {
+							SourceOp = "ReplaceMaterial3D2",
+							Source = "Output",
+						},
+						SceneInput2 = Input {
+							SourceOp = "SpotLight1",
+							Source = "Output",
+						},
+						SceneInput3 = Input {
+							SourceOp = "AmbientLight1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 1375, 148.5 } },
+				},
+				SpotLight1 = LightSpot {
+					Inputs = {
+						["Transform3DOp.Translate.Y"] = Input { Value = 1.345684, },
+						["Transform3DOp.Translate.Z"] = Input { Value = 1.132393, },
+						["Transform3DOp.UseTarget"] = Input { Value = 1, },
+						PenumbraAngle = Input { Value = 0, },
+						["ShadowLightInputs3D.Nest"] = Input { Value = 1, },
+						["ShadowLightInputs3D.ShadowsEnabled"] = Input { Value = 1, },
+						["ShadowLightInputs3D.SoftnessType"] = Input { Value = FuID { "Constant" }, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 1430, 214.5 } },
+				},
+				Renderer3D1 = Renderer3D {
+					CustomData = { ToolVersion = 2, },
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						SceneInput = Input {
+							SourceOp = "Merge3D1",
+							Source = "Output",
+						},
+						["RendererSoftware.LightingEnabled"] = Input { Value = 1, },
+						["RendererSoftware.ShadowsEnabled"] = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 1540, 148.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "Essential3DEffect"
+}

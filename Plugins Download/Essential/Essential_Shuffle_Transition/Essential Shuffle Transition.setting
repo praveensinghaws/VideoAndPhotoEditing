@@ -1,0 +1,290 @@
+{
+	Tools = ordered() {
+		EssentialShuffleTransition = GroupOperator {
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "PipeRouter1",
+					Source = "Input",
+				},
+				MainInput2 = InstanceInput {
+					SourceOp = "PipeRouter2",
+					Source = "Input",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "Fade_Out",
+					Source = "ReverseShuffle",
+				},
+				Input3 = InstanceInput {
+					SourceOp = "Fade_Out",
+					Source = "Fading",
+				},
+				Input4 = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "EaseIn",
+					Name = "Ease In / Out",
+					Width = 0.5,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "EaseOut",
+					Width = 0.5,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "Fade_Out",
+					Source = "ShuffleDistance",
+					Default = 1,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "CenterVector",
+					Source = "Angle",
+					Name = "Shuffle Angle",
+					Default = 0,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "DropShadow1",
+					Source = "shadowStrength",
+					Default = 0.5,
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "DropShadow1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				PipeRouter1 = PipeRouter {
+					ViewInfo = PipeRouterInfo { Pos = { -165, 82.5 } },
+				},
+				PipeRouter2 = PipeRouter {
+					ViewInfo = PipeRouterInfo { Pos = { -165, 148.5 } },
+				},
+				Fade_Out = Merge {
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 0,
+							Expression = "1-AnimateValue",
+						},
+						Background = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "PipeRouter1",
+							Source = "Output",
+						},
+						Size = Input {
+							Value = 0.5,
+							Expression = "1-AnimateValue/2",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+						AnimateValue = Input {
+							SourceOp = "AnimCurves1",
+							Source = "Value",
+						},
+						ShuffleDistance = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 82.5 } },
+					UserControls = ordered() { AnimateValue = { INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_MinScale = 0, INP_MaxScale = 1, LINKS_Name = "Animate Value", }, ReverseShuffle = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Reverse Shuffle", }, ShuffleDistance = { INP_MaxAllowed = 1, INP_Integer = false, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_MinScale = 0, INP_MaxScale = 1, LINKS_Name = "Shuffle Distance", }, Fading = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Fading", } }
+				},
+				AnimCurves1 = LUTLookup {
+					CtrlWZoom = false,
+					Inputs = {
+						Curve = Input { Value = FuID { "Easing" }, },
+						EaseOut = Input { Value = FuID { "Sine" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurvesonFade_OutLookup",
+							Source = "Value",
+						},
+					},
+				},
+				AnimCurvesonFade_OutLookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				Slide_In = Merge {
+					NameSet = true,
+					Inputs = {
+						Blend = Input { Expression = "iif(Fade_Out.Fading==1, Fade_Out.AnimateValue, 1)", },
+						Background = Input {
+							SourceOp = "Fade_Out",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "PipeRouter2",
+							Source = "Output",
+						},
+						Center = Input {
+							SourceOp = "CenterVector",
+							Source = "Position",
+						},
+						Size = Input {
+							Value = 0.5,
+							Expression = "0.5+Fade_Out.AnimateValue/2",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 148.5 } },
+				},
+				CenterVector = Vector {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Distance = Input {
+							Value = 0.945861091616068,
+							Expression = "(1-Fade_Out.AnimateValue)*Fade_Out.ShuffleDistance",
+						},
+						ImageAspect = Input { Value = 1.777778, },
+					},
+				},
+				Fade_In = Merge {
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 0.998456990683358,
+							Expression = "Fade_Out.AnimateValue",
+						},
+						Background = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "PipeRouter2",
+							Source = "Output",
+						},
+						Size = Input {
+							Value = 0.999228495341679,
+							Expression = "0.5+Fade_Out.AnimateValue/2",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 82.5 } },
+				},
+				Background1 = Background {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, -16.5 } },
+				},
+				Slide_Out = Merge {
+					NameSet = true,
+					Inputs = {
+						Blend = Input { Expression = "iif(Fade_Out.Fading==1, 1-Fade_Out.AnimateValue, 1)", },
+						Background = Input {
+							SourceOp = "Fade_In",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "PipeRouter1",
+							Source = "Output",
+						},
+						Center = Input {
+							SourceOp = "Vector1",
+							Source = "Position",
+						},
+						Size = Input {
+							Value = 0.814930925704154,
+							Expression = "1-Fade_Out.AnimateValue/2",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 148.5 } },
+				},
+				Vector1 = Vector {
+					CtrlWZoom = false,
+					Inputs = {
+						Distance = Input {
+							Value = 0.0541389083839316,
+							Expression = "Fade_Out.AnimateValue*Fade_Out.ShuffleDistance",
+						},
+						Angle = Input { Expression = "CenterVector.Angle", },
+						ImageAspect = Input { Value = 1.777778, },
+					},
+				},
+				DropShadow1 = ofx.com.blackmagicdesign.resolvefx.DropShadow {
+					CtrlWZoom = false,
+					Inputs = {
+						Source = Input {
+							SourceOp = "Shuffle_Reverse",
+							Source = "Output",
+						},
+						shadowStrength = Input { Value = 0.5, },
+						shadowAngle = Input { Value = 37.5, },
+						ShadowDistance = Input { Value = 0.0500000007450581, },
+						shadowBlur = Input { Value = 0.550000011920929, },
+						shadowColorRed = Input { Value = 0, },
+						shadowColorGreen = Input { Value = 0, },
+						shadowColorBlue = Input { Value = 0, },
+						isLegacyComp = Input { Value = 0, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						resolvefxVersion = Input { Value = "1.1", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 385, 214.5 } },
+				},
+				Shuffle_Reverse = Merge {
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 0,
+							Expression = "Fade_Out.ReverseShuffle",
+						},
+						Background = Input {
+							SourceOp = "Shuffle",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Slide_Out",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 214.5 } },
+				},
+				Shuffle = Merge {
+					NameSet = true,
+					Inputs = {
+						Blend = Input { Expression = "1-Fade_Out.ReverseShuffle", },
+						Background = Input {
+							SourceOp = "Background2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Slide_In",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 214.5 } },
+				},
+				Background2 = Background {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, 214.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialShuffleTransition"
+}

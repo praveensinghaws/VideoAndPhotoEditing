@@ -1,0 +1,540 @@
+{
+	Tools = ordered() {
+		EssentialCubeTransition = GroupOperator {
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "PipeRouterIn",
+					Source = "Input",
+				},
+				MainInput2 = InstanceInput {
+					SourceOp = "PipeRouterOut",
+					Source = "Input",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "Options",
+					Source = "TransitionMethod",
+				},
+				Input2 = InstanceInput {
+					SourceOp = "Options",
+					Source = "ReverseRotation",
+					Default = 1,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Merge2",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { -110, 82.5 },
+				Flags = {
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 1126.5, 314.407, 485, 41.2853 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				PipeRouterIn = PipeRouter {
+					CtrlWShown = false,
+					ViewInfo = PipeRouterInfo { Pos = { -440, 239.258 } },
+				},
+				PipeRouterOut = PipeRouter {
+					CtrlWShown = false,
+					ViewInfo = PipeRouterInfo { Pos = { -440, 8.25737 } },
+				},
+				Transform2 = Transform {
+					Inputs = {
+						FlipVert = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "PipeRouterOut",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -220, 206.258 } },
+				},
+				Transform1 = Transform {
+					Inputs = {
+						FlipVert = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "PipeRouterIn",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -220, 239.258 } },
+				},
+				Instance_Merge1 = Merge {
+					SourceOp = "Merge1",
+					Inputs = {
+						EffectMask = Input { },
+						SettingsNest = Input { },
+						Background = Input {
+							SourceOp = "PipeRouterOut",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "PipeRouterOut",
+							Source = "Output",
+						},
+						Merge = Input { },
+						Channels = Input { },
+						ReferenceSize = Input { },
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 8.25737 } },
+				},
+				Instance_Cube3D1 = Cube3D {
+					SourceOp = "Cube3D1",
+					Inputs = {
+						SceneInput = Input { },
+						["Transform3DOp.Translation"] = Input { },
+						["Transform3DOp.Translate.Y"] = Input { Value = -1.02, },
+						["Transform3DOp.Rotation"] = Input { },
+						["Transform3DOp.PivotNest"] = Input { Value = 1, },
+						["Transform3DOp.ScaleNest"] = Input { },
+						["Transform3DOp.Scale.Z"] = Input { Expression = "Transform3DOp.Scale.X" },
+						["Transform3DOp.TargetNest"] = Input { },
+						["Transform3DOp.Import"] = Input { },
+						["SurfaceCubeInputs.Visibility.Nest"] = Input { Value = 1, },
+						["SurfaceCubeInputs.Lighting.Nest"] = Input { Value = 1, },
+						["SurfaceCubeInputs.Matte.Nest"] = Input { },
+						["SurfaceCubeInputs.BlendMode.Nest"] = Input { },
+						["SurfaceCubeInputs.Controls.Nest"] = Input { },
+						["SurfaceCubeInputs.ObjectID.Nest"] = Input { },
+						FrontMaterialInput = Input {
+							SourceOp = "Transform1",
+							Source = "Output",
+						},
+						RightMaterialInput = Input {
+							SourceOp = "Transform2",
+							Source = "Output",
+						},
+						LeftMaterialInput = Input {
+							SourceOp = "Transform2",
+							Source = "Output",
+						},
+						BottomMaterialInput = Input { },
+						TopMaterialInput = Input { },
+						BackMaterialInput = Input { },
+						["Front.MtlStdInputs.Diffuse.Nest"] = Input { },
+						["Front.MtlStdInputs.Diffuse.Opacity"] = Input { Value = 0.25, },
+						["Front.MtlStdInputs.Specular.Nest"] = Input { Value = 1, },
+						["Front.MtlStdInputs.Transmittance.Nest"] = Input { },
+						["Front.MtlStdInputs.MaterialIDNest"] = Input { },
+						["Right.MtlStdInputs.Diffuse.Nest"] = Input { },
+						["Right.MtlStdInputs.Diffuse.Opacity"] = Input { Value = 0.25, },
+						["Right.MtlStdInputs.Specular.Nest"] = Input { },
+						["Right.MtlStdInputs.Transmittance.Nest"] = Input { },
+						["Right.MtlStdInputs.MaterialIDNest"] = Input { },
+						["Left.MtlStdInputs.Diffuse.Nest"] = Input { },
+						["Left.MtlStdInputs.Diffuse.Opacity"] = Input { Value = 0.25, },
+						["Left.MtlStdInputs.Specular.Nest"] = Input { },
+						["Left.MtlStdInputs.Transmittance.Nest"] = Input { },
+						["Left.MtlStdInputs.MaterialIDNest"] = Input { },
+						["Bottom.MtlStdInputs.Diffuse.Nest"] = Input { },
+						["Bottom.MtlStdInputs.Specular.Nest"] = Input { },
+						["Bottom.MtlStdInputs.Transmittance.Nest"] = Input { },
+						["Bottom.MtlStdInputs.MaterialIDNest"] = Input { },
+						["Top.MtlStdInputs.Diffuse.Nest"] = Input { },
+						["Top.MtlStdInputs.Specular.Nest"] = Input { },
+						["Top.MtlStdInputs.Transmittance.Nest"] = Input { },
+						["Top.MtlStdInputs.MaterialIDNest"] = Input { },
+						["Back.MtlStdInputs.Diffuse.Nest"] = Input { },
+						["Back.MtlStdInputs.Specular.Nest"] = Input { },
+						["Back.MtlStdInputs.Transmittance.Nest"] = Input { },
+						["Back.MtlStdInputs.MaterialIDNest"] = Input { },
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 239.258 } },
+				},
+				Cube3D1 = Cube3D {
+					Inputs = {
+						["Transform3DOp.Translate.Z"] = Input {
+							SourceOp = "AnimCurve_ZOffset",
+							Source = "Value",
+						},
+						["Transform3DOp.Rotate.Y"] = Input {
+							SourceOp = "AnimCurve_Rotation",
+							Source = "Value",
+						},
+						["Transform3DOp.PivotNest"] = Input { Value = 1, },
+						["Transform3DOp.ScaleLock"] = Input { Value = 0, },
+						["Transform3DOp.Scale.X"] = Input { Value = 1.7778, },
+						["Transform3DOp.Scale.Z"] = Input {
+							Value = 1.7778,
+							Expression = "Transform3DOp.Scale.X",
+						},
+						["SurfaceCubeInputs.SubdivisionWidth"] = Input { Value = 40, },
+						["SurfaceCubeInputs.Visibility.Nest"] = Input { Value = 1, },
+						["SurfaceCubeInputs.Visibility.CullBackFace"] = Input { Value = 1, },
+						["SurfaceCubeInputs.Lighting.Nest"] = Input { Value = 1, },
+						["SurfaceCubeInputs.Lighting.IsAffectedByLights"] = Input { Value = 0, },
+						["SurfaceCubeInputs.ObjectID.ObjectID"] = Input { Value = 1, },
+						FrontMaterialInput = Input {
+							SourceOp = "PipeRouterIn",
+							Source = "Output",
+						},
+						RightMaterialInput = Input {
+							SourceOp = "PipeRouterOut",
+							Source = "Output",
+						},
+						LeftMaterialInput = Input {
+							SourceOp = "PipeRouterOut",
+							Source = "Output",
+						},
+						MtlFace = Input { Value = 4, },
+						["Front.MtlStdInputs.Specular.Nest"] = Input { Value = 1, },
+						["Front.MtlStdInputs.MaterialID"] = Input { Value = 1, },
+						["Right.MtlStdInputs.MaterialID"] = Input { Value = 2, },
+						["Left.MtlStdInputs.Diffuse.Nest"] = Input { Value = 0, },
+						["Left.MtlStdInputs.ReceivesLighting"] = Input { Value = 0, },
+						["Left.MtlStdInputs.ReceivesShadows"] = Input { Value = 0, },
+						["Left.MtlStdInputs.MaterialID"] = Input { Value = 3, },
+						["Bottom.MtlStdInputs.Diffuse.Color.Green"] = Input { Value = 0, },
+						["Bottom.MtlStdInputs.MaterialID"] = Input { Value = 4, },
+						["Top.MtlStdInputs.Diffuse.Opacity"] = Input { Value = 0, },
+						["Top.MtlStdInputs.MaterialID"] = Input { Value = 5, },
+						["Back.MtlStdInputs.MaterialID"] = Input { Value = 6, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 140.258 } },
+				},
+				Merge1 = Merge {
+					Inputs = {
+						Blend = Input { Value = 0.25, },
+						Background = Input {
+							SourceOp = "PipeRouterIn",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "PipeRouterIn",
+							Source = "Output",
+						},
+						Center = Input { Value = { 0.5, -0.515 }, },
+						FlipVert = Input { Value = 1, },
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 74.2574 } },
+				},
+				DVE1 = DVE {
+					Inputs = {
+						ZMove = Input {
+							SourceOp = "Expression1",
+							Source = "NumberResult",
+						},
+						ZPivot = Input { Value = -0.5, },
+						YRotation = Input {
+							SourceOp = "AnimCurve_Rotation",
+							Source = "Value",
+						},
+						AlphaMode = Input { Value = 2, },
+						Input = Input {
+							SourceOp = "Merge1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 74.2574 } },
+				},
+				Expression1 = Expression {
+					Inputs = {
+						n1 = Input {
+							Value = 1.5,
+							Expression = "1-DVE1.ZPivot",
+						},
+						n2 = Input {
+							SourceOp = "AnimCurves1",
+							Source = "Value",
+						},
+						NumberExpression = Input { Value = "n1+n2\n", },
+					},
+				},
+				AnimCurves1 = LUTLookup {
+					CtrlWZoom = false,
+					Inputs = {
+						Curve = Input { Value = FuID { "Custom" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurves1Lookup",
+							Source = "Value",
+						},
+						Scale = Input { Value = 0.7, },
+					},
+				},
+				AnimCurves1Lookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.166666666666667, 0.333333333333333 }, Flags = { Linear = true } },
+							[0.5] = { 1, LH = { 0.333333333333333, 0.666666666666667 }, RH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } },
+							[1] = { 0, LH = { 0.833333333333333, 0.333333333333333 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					NameSet = true,
+				},
+				AnimCurve_Rotation = LUTLookup {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Lookup = Input {
+							SourceOp = "AnimCurves3Lookup",
+							Source = "Value",
+						},
+						Scale = Input {
+							Value = 90,
+							Expression = "iif(Options.ReverseRotation==1, -90, 90)",
+						},
+					},
+				},
+				AnimCurves3Lookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+				},
+				Instance_DVE1 = DVE {
+					SourceOp = "DVE1",
+					Inputs = {
+						EffectMask = Input { },
+						SettingsNest = Input { },
+						Rotation = Input { },
+						YRotation = Input {
+							Value = -49.6551722288132,
+							Expression = "iif(Options.ReverseRotation==1, DVE1.YRotation+90, DVE1.YRotation-90)"
+						},
+						DVEMask = Input { },
+						Input = Input {
+							SourceOp = "Instance_Merge1",
+							Source = "Output",
+						},
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 8.25737 } },
+				},
+				Merge3D1 = Merge3D {
+					Inputs = {
+						SceneInput1 = Input {
+							SourceOp = "Cube3D1",
+							Source = "Output",
+						},
+						SceneInput2 = Input {
+							SourceOp = "Instance_Cube3D1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 140.258 } },
+				},
+				AnimCurve_ZOffset = LUTLookup {
+					NameSet = true,
+					Inputs = {
+						Curve = Input { Value = FuID { "Custom" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurves4Lookup",
+							Source = "Value",
+						},
+						Scale = Input { Value = -0.75, },
+						Offset = Input { Value = -0.0962, },
+					},
+				},
+				AnimCurves4Lookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.166666666666667, 0.333333333333333 }, Flags = { Linear = true } },
+							[0.5] = { 1, LH = { 0.333333333333333, 0.666666666666667 }, RH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } },
+							[1] = { 0, LH = { 0.833333333333333, 0.333333333333333 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+				},
+				Dissolve1 = Dissolve {
+					Transitions = {
+						[0] = "DFTDissolve"
+					},
+					Inputs = {
+						Mix = Input {
+							SourceOp = "AnimCurve_Dissolve",
+							Source = "Value",
+						},
+						Background = Input {
+							SourceOp = "DVE1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Instance_DVE1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 74.2574 } },
+				},
+				AnimCurve_Dissolve = LUTLookup {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Curve = Input { Value = FuID { "Custom" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurve_DissolveLookup",
+							Source = "Value",
+						},
+					},
+				},
+				AnimCurve_DissolveLookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.05, 0 }, Flags = { Linear = true } },
+							[0.15] = { 0, LH = { 0.1, 0 }, RH = { 0.383333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[0.85] = { 1, LH = { 0.616666666666667, 0.666666666666667 }, RH = { 0.9, 1 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.95, 1 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				Renderer3D1 = Renderer3D {
+					CustomData = { ToolVersion = 2 },
+					Inputs = {
+						GlobalOut = Input { Value = 29, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						SceneInput = Input {
+							SourceOp = "Merge3D1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 140.258 } },
+				},
+				Merge3 = Merge {
+					Inputs = {
+						Blend = Input {
+							Value = 0,
+							Expression = "Options.TransitionMethod",
+						},
+						Background = Input {
+							SourceOp = "Options",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Renderer3D1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 440, 140.258 } },
+				},
+				Merge2 = Merge {
+					Inputs = {
+						Blend = Input { Expression = "1-Options.TransitionMethod", },
+						Background = Input {
+							SourceOp = "Merge3",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Merge5",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 533.078, 74.2574 } },
+				},
+				Options = Background {
+					NameSet = true,
+					Inputs = {
+						GlobalOut = Input { Value = 29, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 440, 239.258 } },
+					UserControls = ordered() {
+						TransitionMethod = {
+							{ MBTNC_AddButton = "DVE" },
+							{ MBTNC_AddButton = "Cube3D" },
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "MultiButtonControl",
+							MBTNC_ShowBasicButton = true,
+							INP_MaxScale = 1,
+							INP_MinAllowed = -1000000,
+							INP_MinScale = 0,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							MBTNC_ShowName = false,
+							MBTNC_StretchToFit = true,
+							MBTNC_ShowToolTip = false,
+							LINKS_Name = "Transition Method",
+						},
+						ReverseRotation = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Reverse Rotation",
+						}
+					}
+				},
+				Background1 = Background {
+					Inputs = {
+						GlobalOut = Input { Value = 29, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						EffectMask = Input {
+							SourceOp = "Merge4",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 423.078, 8.93721 } },
+				},
+				Merge4 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "DVE1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Instance_DVE1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 276.362, 8.19622 } },
+				},
+				Merge5 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Dissolve1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						Operator = Input { Value = FuID { "Under" }, },
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 423.078, 73.5164 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialCubeTransition"
+}

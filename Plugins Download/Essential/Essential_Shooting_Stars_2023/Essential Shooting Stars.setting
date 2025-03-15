@@ -1,0 +1,324 @@
+{
+	Tools = ordered() {
+		EssentialShootingStars = GroupOperator {
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "Ellipse1",
+					Source = "Width",
+					Name = "Star Size",
+					Default = 0.001,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "Offset",
+					Default = 0.25,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftRed",
+					Name = "Color",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftGreen",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftBlue",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "LightRays1",
+					Source = "length",
+					Default = 0.968,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "Transform1",
+					Source = "Center",
+				},
+				Input8 = InstanceInput {
+					SourceOp = "Transform1",
+					Source = "Angle",
+					Default = 0,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "Copies",
+					Name = "Number Stars",
+					Page = "Duplicate",
+					Default = 10,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "TimeOffset",
+					Default = 0,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "Center",
+				},
+				Input12 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "XSize",
+					Default = 1,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "Angle",
+					Default = 0,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "JitterCenter",
+					Page = "Jitter",
+					DefaultX = 0,
+					DefaultY = 0,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "JitterAxis",
+					DefaultX = 0,
+					DefaultY = 0,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "JitterLockSize",
+					Default = 1,
+				},
+				Input17 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "JitterXSize",
+					Default = 0,
+				},
+				Input18 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "JitterYSize",
+					Default = 0,
+				},
+				Input19 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "JitterAngle",
+					Default = 0,
+				},
+				Input20 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "JitterRedGain",
+					Default = 0,
+				},
+				Input21 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "JitterGreenGain",
+					Default = 0,
+				},
+				Input22 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "JitterBlueGain",
+					Default = 0,
+				},
+				Input23 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "JitterAlphaGain",
+					Default = 0,
+				},
+				Input24 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "JitterXBlur",
+					Default = 0,
+				},
+				Input25 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "JitterYBlur",
+					Default = 0,
+				},
+				Input26 = InstanceInput {
+					SourceOp = "Duplicate1",
+					Source = "JitterLayerBlend",
+					Default = 0,
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Duplicate1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Ellipse1 = EllipseMask {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							SourceOp = "Vector1",
+							Source = "Position",
+						},
+						Width = Input { Value = 0.001, },
+						Height = Input {
+							Value = 0.001,
+							Expression = "Width",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -440.667, 15.2879 } },
+				},
+				Vector1 = Vector {
+					CtrlWZoom = false,
+					Inputs = {
+						Origin = Input { Value = { 0, 0.5 }, },
+						Distance = Input {
+							SourceOp = "AnimCurves1",
+							Source = "Value",
+						},
+						ImageAspect = Input { Value = 1.777778, },
+					},
+				},
+				AnimCurves1 = LUTLookup {
+					CtrlWZoom = false,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurves1Lookup",
+							Source = "Value",
+						},
+						Scale = Input {
+							Value = 0.75,
+							Expression = "1-Offset",
+						},
+						Offset = Input { Value = 0.25, },
+					},
+				},
+				AnimCurves1Lookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				Background1 = Background {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Ellipse1",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						BackgroundNest = Input { Value = 0, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 1, },
+						TopLeftBlue = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -440, 82.5 } },
+				},
+				LightRays1 = ofx.com.blackmagicdesign.resolvefx.Lightray {
+					Inputs = {
+						Source = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						ProcessAlpha = Input { Value = 0, },
+						outputSelection = Input { Value = FuID { "OUTPUT_SELECTION_FINAL_IMAGE" }, },
+						raysSource = Input { Value = FuID { "RAYS_SOURCE_BRIGHTREGIONS" }, },
+						threshold = Input { Value = 0, },
+						position = Input { Value = 1, },
+						raysDirection = Input { Value = FuID { "RAYS_BEARING_DIRECTIONAL" }, },
+						xPosition = Input {
+							Value = 0.5,
+							Disabled = true,
+						},
+						yPosition = Input {
+							Value = 1.20000004768372,
+							Disabled = true,
+						},
+						xyPosition = Input { Value = { 0.535676675081253, 0.492942810058594 }, },
+						angle = Input { Value = 90, },
+						appearance = Input { Value = 1, },
+						rayDropoff = Input { Value = FuID { "RAY_DROPOFF_LAMBDA_LIMITED_DECAY" }, },
+						length = Input { Value = 0.968, },
+						soften = Input { Value = 0, },
+						brightness = Input { Value = 1, },
+						colorRed = Input { Value = 1, },
+						colorGreen = Input { Value = 1, },
+						colorBlue = Input { Value = 1, },
+						CompositeType = Input { Value = FuID { "COMPOSITE_ADD" }, },
+						isUseLegacyPosition = Input { Value = 0, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						resolvefxVersion = Input { Value = "1.3", },
+					},
+					ViewInfo = OperatorInfo { Pos = { -169.667, 83.4091 } },
+				},
+				SoftGlow1 = SoftGlow {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						Gain = Input { Value = 20, },
+						XGlowSize = Input { Value = 3, },
+						ColorScale = Input { Value = 1, },
+						RedScale = Input { Value = 2, },
+						BlueScale = Input { Value = 0, },
+						Input = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -169, 16.803 } },
+				},
+				Merge2 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "LightRays1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "SoftGlow1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -31.3333, 82.803 } },
+				},
+				Transform1 = Transform {
+					Inputs = {
+						Angle = Input { Value = -30, },
+						Input = Input {
+							SourceOp = "Merge2",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 82.5 } },
+				},
+				Duplicate1 = Fuse.Duplicate {
+					CtrlWZoom = false,
+					Inputs = {
+						Copies = Input { Value = 10, },
+						Center = Input { Value = { 0.5, 0.545 }, },
+						JitterXSize = Input { Value = 0.6, },
+						JitterGainNest = Input { Value = 1, },
+						Background = Input {
+							SourceOp = "Transform1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 82.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialShootingStars"
+}

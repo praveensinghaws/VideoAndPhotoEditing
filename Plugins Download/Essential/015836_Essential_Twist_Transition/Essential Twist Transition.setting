@@ -1,0 +1,174 @@
+{
+	Tools = ordered() {
+		EssentialTwistTransition = GroupOperator {
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "ImagePlane3D2",
+					Source = "MaterialInput",
+				},
+				MainInput2 = InstanceInput {
+					SourceOp = "ImagePlane3D1",
+					Source = "MaterialInput",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "Bender3D1",
+					Source = "ReverseTwist",
+					Name = "Invert Twist",
+					Page = "Controls",
+					Default = 0,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "Transform3D1",
+					Source = "Transform3DOp.InvertTransform",
+					Name = "Invert Rotate",
+					Default = 0,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "EaseIn",
+					Name = "Curve In/Out",
+					Width = 0.5,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "EaseOut",
+					Width = 0.5,
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Renderer3D1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				ImagePlane3D2 = ImagePlane3D {
+					Inputs = {
+						["SurfacePlaneInputs.SubdivisionWidth"] = Input { Value = 100, },
+						["SurfacePlaneInputs.Visibility.Nest"] = Input { Value = 1, },
+						["SurfacePlaneInputs.Visibility.CullBackFace"] = Input { Value = 1, },
+						["SurfacePlaneInputs.ObjectID.ObjectID"] = Input { Value = 2, },
+						["MtlStdInputs.MaterialID"] = Input { Value = 2, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, -16.5 } },
+				},
+				ImagePlane3D1 = ImagePlane3D {
+					Inputs = {
+						["Transform3DOp.Rotate.X"] = Input { Value = 180, },
+						["SurfacePlaneInputs.SubdivisionWidth"] = Input { Value = 100, },
+						["SurfacePlaneInputs.Visibility.Nest"] = Input { Value = 1, },
+						["SurfacePlaneInputs.Visibility.CullBackFace"] = Input { Value = 1, },
+						["SurfacePlaneInputs.ObjectID.ObjectID"] = Input { Value = 1, },
+						["MtlStdInputs.MaterialID"] = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, 49.5 } },
+				},
+				Merge3D1 = Merge3D {
+					Inputs = {
+						["Transform3DOp.Scale.X"] = Input { Value = 2.945, },
+						SceneInput1 = Input {
+							SourceOp = "ImagePlane3D1",
+							Source = "Output",
+						},
+						SceneInput2 = Input {
+							SourceOp = "ImagePlane3D2",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 49.5 } },
+				},
+				Bender3D1 = Bender3D {
+					Inputs = {
+						SceneInput = Input {
+							SourceOp = "Merge3D1",
+							Source = "Output",
+						},
+						Bender = Input { Value = FuID { "Twist" }, },
+						Amount = Input {
+							Value = -0.00636582219759807,
+							Expression = "(AnimateValue>0.5 and 1-AnimateValue or AnimateValue)*(ReverseTwist==1 and -1 or 1)",
+						},
+						Axis = Input { Value = 0, },
+						AnimateValue = Input {
+							SourceOp = "AnimCurves1",
+							Source = "Value",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 49.5 } },
+					UserControls = ordered() {
+						AnimateValue = {
+							LINKS_Name = "Animate Value",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_Integer = false,
+							INP_MinScale = 0,
+							INP_MaxScale = 1,
+							ICS_ControlPage = "Controls",
+						},
+						ReverseTwist = {
+							LINKS_Name = "Reverse Twist",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							INP_Integer = false,
+							CBC_TriState = false,
+							ICS_ControlPage = "Controls",
+							INP_External = false,
+						}
+					}
+				},
+				AnimCurves1 = LUTLookup {
+					CtrlWZoom = false,
+					Inputs = {
+						Curve = Input { Value = FuID { "Easing" }, },
+						EaseIn = Input { Value = FuID { "Sine" }, },
+						EaseOut = Input { Value = FuID { "Sine" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurves1Lookup",
+							Source = "Value",
+						},
+					},
+				},
+				AnimCurves1Lookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				Transform3D1 = Transform3D {
+					CtrlWZoom = false,
+					Inputs = {
+						SceneInput = Input {
+							SourceOp = "Bender3D1",
+							Source = "Output",
+						},
+						["Transform3DOp.Rotate.X"] = Input {
+							Value = 1.14584799556765,
+							Expression = "Bender3D1.AnimateValue*180",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 385, 49.5 } },
+				},
+				Renderer3D1 = Renderer3D {
+					CustomData = { ToolVersion = 2, },
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						SceneInput = Input {
+							SourceOp = "Transform3D1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 550, 49.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialTwistTransition"
+}

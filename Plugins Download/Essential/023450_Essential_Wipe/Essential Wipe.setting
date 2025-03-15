@@ -1,0 +1,490 @@
+{
+	Tools = ordered() {
+		EssentialWipe = GroupOperator {
+			Inputs = ordered() {
+				Input19 = InstanceInput {
+					SourceOp = "ManualWipe",
+					Source = "Center",
+				},
+				Input20 = InstanceInput {
+					SourceOp = "ManualWipe",
+					Source = "Angle",
+					Default = 0,
+				},
+				InputSoftEdge = InstanceInput {
+					SourceOp = "WipeMask",
+					Source = "SoftEdge",
+				},
+				Input14 = InstanceInput {
+					SourceOp = "Instance_WipeMask",
+					Source = "BorderWidth",
+					MinScale = 0,
+					MaxScale = 0.1,
+					Default = 0.01,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "BorderColor",
+					Source = "TopLeftRed",
+					Name = "Color",
+					ControlGroup = 16,
+					Default = 1,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "BorderColor",
+					Source = "TopLeftGreen",
+					ControlGroup = 16,
+					Default = 1,
+				},
+				Input17 = InstanceInput {
+					SourceOp = "BorderColor",
+					Source = "TopLeftBlue",
+					ControlGroup = 16,
+					Default = 1,
+				},
+				Input18 = InstanceInput {
+					SourceOp = "BorderColor",
+					Source = "TopLeftAlpha",
+					ControlGroup = 16,
+					Default = 1,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "Transform1",
+					Source = "WipeAnimation",
+					Default = 0,
+				},
+				InputHideAnimation = InstanceInput {
+					SourceOp = "Transform1",
+					Source = "Hide_Animation",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "Transform1",
+					Source = "StartPoint",
+					DefaultX = -0.1,
+					DefaultY = 0.5,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "Transform1",
+					Source = "EndPoint",
+					DefaultX = 1.1,
+					DefaultY = 0.5,
+				},
+				InputZoomEffect = InstanceInput {
+					SourceOp = "Transform2",
+					Source = "ZoomEffect",
+				},
+				InputRotationEffect = InstanceInput {
+					SourceOp = "Transform2",
+					Source = "RotationEffect",
+				},
+				InputReverseWipe = InstanceInput {
+					SourceOp = "Transform1",
+					Source = "ReverseWipe",
+					Name = "Reverse Wipe",
+				},
+				Input3 = InstanceInput {
+					SourceOp = "Transform1",
+					Source = "AnimationTimeIn",
+					Name = "Animation Time In",
+					Default = 30,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "Transform1",
+					Source = "AnimationTimeOut",
+					Name = "Animation Time Out",
+					Default = 30,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "AnimCurvesIn",
+					Source = "EaseIn",
+					Name = "Animate In Curve",
+					Width = 0.5,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "AnimCurvesIn",
+					Source = "EaseOut",
+					Width = 0.5,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "AnimCurvesOut",
+					Source = "EaseIn",
+					Name = "Animate Out Curve",
+					Width = 0.5,
+				},
+				Input12 = InstanceInput {
+					SourceOp = "AnimCurvesOut",
+					Source = "EaseOut",
+					Width = 0.5,
+				},
+				MainInput1 = InstanceInput {
+					SourceOp = "Transform2",
+					Source = "Input",
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Merge1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 220, 49.5 },
+				Flags = {
+					AllowPan = false,
+					GridSnap = true,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 496.436, 176.464, 292.826, 24.2424 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				Transform1 = Transform {
+					Inputs = {
+						Center = Input {
+							SourceOp = "Expression1",
+							Source = "PointResult",
+						},
+						Angle = Input {
+							Value = -20,
+							Expression = "ManualWipe.Angle",
+						},
+						Input = Input {
+							SourceOp = "WipeMask",
+							Source = "Mask",
+						},
+						AnimateIn = Input {
+							SourceOp = "AnimCurvesIn",
+							Source = "Value",
+							Expression = "AnimationTimeIn==0 and 1 or AnimCurvesIn.Value",
+						},
+						StartPoint = Input { Value = { -0.1, 0.5 }, },
+						EndPoint = Input { Value = { 1.1, 0.5 }, },
+						AnimateOut = Input {
+							SourceOp = "AnimCurvesOut",
+							Source = "Value",
+							Expression = "AnimationTimeOut==0 and 1 or AnimCurvesOut.Value",
+						},
+						Hide_Animation = Input { Expression = "WipeAnimation", },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 49.5 } },
+					UserControls = ordered() {
+						AnimateIn = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0,
+							INP_MaxScale = 1,
+							LINKS_Name = "AnimateIn",
+						},
+						StartPoint = {
+							INP_DefaultX = 0,
+							INPID_PreviewControl = "CrosshairControl",
+							INP_DefaultY = 0.5,
+							LINKID_DataType = "Point",
+							INP_External = false,
+							INPID_InputControl = "OffsetControl",
+							CHC_Style = "NormalCross",
+							LINKS_Name = "Start Point",
+						},
+						EndPoint = {
+							INP_DefaultX = 1,
+							INPID_PreviewControl = "CrosshairControl",
+							INP_DefaultY = 0.5,
+							LINKID_DataType = "Point",
+							INP_External = false,
+							INPID_InputControl = "OffsetControl",
+							CHC_Style = "NormalCross",
+							LINKS_Name = "End Point",
+						},
+						AnimationTimeIn = {
+							INP_Integer = false,
+							LINKS_Name = "AnimationTimeIn",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0,
+							LINKID_DataType = "Number",
+							INP_MaxScale = 100,
+							INP_Default = 30,
+						},
+						AnimateOut = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0,
+							INP_MaxScale = 1,
+							LINKS_Name = "AnimateOut",
+						},
+						AnimationTimeOut = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "SliderControl",
+							INP_MaxScale = 100,
+							INP_Default = 30,
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							LINKS_Name = "AnimationTimeOut",
+						},
+						WipeAnimation = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							LINKS_Name = "Wipe Animation",
+							INPID_InputControl = "CheckboxControl",
+							INP_Default = 1,
+						},
+						ReverseWipe = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "ReverseWipe",
+						},
+						Hide_Animation = {
+							LBLC_NumInputs = 11,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						}
+					}
+				},
+				Expression1 = Expression {
+					CtrlWZoom = false,
+					Inputs = {
+						p1 = Input {
+							Value = { -0.1, 0.5 },
+							Expression = "iif(n4==1,Transform1.EndPoint,Transform1.StartPoint)",
+						},
+						p2 = Input {
+							Value = { 1.1, 0.5 },
+							Expression = "iif(n4==1,Transform1.StartPoint,Transform1.EndPoint)",
+						},
+						p3 = Input { Expression = "ManualWipe.Center", },
+						n1 = Input {
+							Value = 1,
+							Expression = "Transform1.AnimateIn",
+						},
+						n2 = Input {
+							Value = 1.00001171875,
+							Expression = "Transform1.AnimateOut",
+						},
+						n3 = Input {
+							Value = 1,
+							Expression = "Transform1.WipeAnimation",
+						},
+						n4 = Input { Expression = "Transform1.ReverseWipe", },
+						PointExpressionX = Input { Value = "if(n3, p1x+(p2x-p1x)*n1*n2, p3x)", },
+						PointExpressionY = Input { Value = "if(n3, p1y+(p2y-p1y)*n1*n2, p3y)", },
+					},
+				},
+				AnimCurvesIn = LUTLookup {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Curve = Input { Value = FuID { "Easing" }, },
+						EaseIn = Input { Value = FuID { "Expo" }, },
+						EaseOut = Input { Value = FuID { "Expo" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurvesInLookup",
+							Source = "Value",
+						},
+						TimeScale = Input {
+							Value = 0,
+							Expression = "Transform1.AnimationTimeIn==0 and 0 or  (comp.RenderEnd-comp.RenderStart+1)/Transform1.AnimationTimeIn",
+						},
+					},
+				},
+				AnimCurvesInLookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				AnimCurvesOut = LUTLookup {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Curve = Input { Value = FuID { "Easing" }, },
+						EaseIn = Input { Value = FuID { "Expo" }, },
+						EaseOut = Input { Value = FuID { "Expo" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurvesOutLookup",
+							Source = "Value",
+						},
+						Invert = Input { Value = 1, },
+						TimeScale = Input {
+							Value = 0,
+							Expression = "Transform1.AnimationTimeOut==0 and 0 or  (comp.RenderEnd-comp.RenderStart+1)/Transform1.AnimationTimeOut",
+						},
+						TimeOffset = Input {
+							Value = 1,
+							Expression = "1-Transform1.AnimationTimeOut/(comp.RenderEnd-comp.RenderStart+1)",
+						},
+					},
+				},
+				AnimCurvesOutLookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				WipeMask = RectangleMask {
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						PaintMode = Input { Value = FuID { "Invert" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input { Value = { -0.5, 0.5 }, },
+						Width = Input { Value = 2, },
+						Height = Input { Value = 5, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 16.5 } },
+				},
+				Transform2 = Transform {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Transform1",
+							Source = "Output",
+						},
+						ApplyMaskInverted = Input { Expression = "Transform1.ReverseWipe", },
+						MultiplyByMask = Input { Value = 1, },
+						Size = Input {
+							Value = 0.900027587326808,
+							Expression = "Transform1.WipeAnimation==1 and (1-ZoomEffect) + ZoomEffect*Transform1.AnimateIn*Transform1.AnimateOut or 1",
+						},
+						Angle = Input { 
+							Expression = "Transform1.WipeAnimation==1 and RotationEffect - RotationEffect*Transform1.AnimateIn*Transform1.AnimateOut or 0", 
+						},
+						XSize = Input { Value = 0.9000275873268, },
+						YSize = Input { Value = 0.9000275873268, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 115.5 } },
+					UserControls = ordered() {
+						ZoomEffect = {
+							LINKS_Name = "Zoom Effect",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_Integer = false,
+							INP_MinScale = -1,
+							INP_MaxScale = 1,
+							INP_External = false,
+						},
+						RotationEffect = {
+							LINKS_Name = "Rotation Effect",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "ScrewControl",
+							INP_Integer = false,
+							INP_MinScale = -180,
+							INP_MaxScale = 180,
+							INP_External = false,
+						}
+					}
+				},
+				Instance_WipeMask = RectangleMask {
+					NameSet = true,
+					SourceOp = "WipeMask",
+					Inputs = {
+						EffectMask = Input { },
+						SettingsNest = Input { },
+						BorderWidth = Input { Value = 0.005, },
+						Solid = Input { Value = 0, },
+						["ShapeRasterizer.Nest"] = Input { },
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 16.5 } },
+				},
+				Instance_Transform1 = Transform {
+					SourceOp = "Transform1",
+					Inputs = {
+						EffectMask = Input { },
+						SettingsNest = Input { },
+						TransformNest = Input { },
+						Angle = Input {
+							Value = -20,
+							Expression = "ManualWipe.Angle"
+						},
+						ReferenceSize = Input { },
+						Input = Input {
+							SourceOp = "Instance_WipeMask",
+							Source = "Mask",
+						},
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 49.5 } },
+				},
+				BorderColor = Background {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Instance_Transform1",
+							Source = "Output",
+						},
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 1, },
+						TopLeftBlue = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 82.5 } },
+				},
+				ManualWipe = RectangleMask {
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input { Value = 0, },
+						Height = Input { Value = 0, },
+						Angle = Input { Value = -20, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 82.5 } },
+				},
+				Merge1 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Transform2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "BorderColor",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 115.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialWipe"
+}

@@ -1,0 +1,176 @@
+{
+	Tools = ordered() {
+		VEL_3D_TITLE = GroupOperator {
+			CtrlWZoom = false,
+			NameSet = true,
+			Outputs = {
+				Output1 = InstanceOutput {
+					SourceOp = "Renderer3D1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 165, 148.5 },
+				Flags = {
+					AllowPan = false,
+					GridSnap = true,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 346, 198.364, 173, 24.2424 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { -220, -7.86364 }
+			},
+			Tools = ordered() {
+				DirectionalLight1 = LightDirectional {
+					Inputs = {
+						["Transform3DOp.Translate.X"] = Input { Value = 0.429569818577542, },
+						["Transform3DOp.Translate.Y"] = Input { Value = 1.22275076808732, },
+						["Transform3DOp.Translate.Z"] = Input { Value = 1.89453654258795, },
+						["Transform3DOp.UseTarget"] = Input { Value = 1, },
+						["Transform3DOp.Target.Y"] = Input { Value = 0.118610284177274, },
+						Green = Input { Value = 0.693, },
+						Blue = Input { Value = 0.669, },
+						["ShadowLightInputs3D.Nest"] = Input { Value = 1, },
+						["ShadowLightInputs3D.ShadowsEnabled"] = Input { Value = 1, },
+						["ShadowLightInputs3D.ShadowMapSize"] = Input { Value = 2048, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 148.5 } },
+				},
+				Text3D1 = Text3D {
+					Inputs = {
+						LayoutRotation = Input { Value = 1, },
+						LineSpacing = Input { Value = 0.709, },
+						TransformRotation = Input { Value = 1, },
+						Type1 = Input { Value = 1, },
+						ColorImage1 = Input {
+							SourceOp = "Texture",
+							Source = "Output",
+						},
+						StyledText = Input { Value = "Video Editor\nLucknow", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						Size = Input { Value = 0.5, },
+						VerticalTopCenterBottom = Input { Value = 1, },
+						VerticalJustification = Input { Value = 3, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, },
+						Extrusion = Input { Value = 1, },
+						ExtrusionProfile = Input {
+							SourceOp = "Text3D2ExtrusionProfile",
+							Source = "Value",
+						},
+						ExtrusionDepth = Input { Value = 0.1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 82.5 } },
+				},
+				Merge3D1 = Merge3D {
+					Inputs = {
+						["Transform3DOp.Translate.X"] = Input { Value = 0.067, },
+						["Transform3DOp.Translate.Y"] = Input { Value = -0.155, },
+						["Transform3DOp.Translate.Z"] = Input {
+							SourceOp = "Merge3D1ZOffset",
+							Source = "Value",
+						},
+						["Transform3DOp.Rotate.Y"] = Input {
+							SourceOp = "Merge3D1YRotation",
+							Source = "Value",
+						},
+						SceneInput1 = Input {
+							SourceOp = "Text3D1",
+							Source = "Output",
+						},
+						SceneInput2 = Input {
+							SourceOp = "DirectionalLight1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 82.5 } },
+				},
+				Renderer3D1 = Renderer3D {
+					CustomData = { ToolVersion = 2, },
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						SceneInput = Input {
+							SourceOp = "Merge3D1",
+							Source = "Output",
+						},
+						["RendererSoftware.LightingEnabled"] = Input { Value = 1, },
+						["RendererSoftware.ShadowsEnabled"] = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, 82.5 } },
+				},
+				Texture = MediaIn {
+					NameSet = true,
+					CustomData = { MEDIA_ID = "dee9b209-af74-4068-8bc4-6b7de69ad947", MediaProps = { MEDIA_NUM_LAYERS = 0, MEDIA_FORMAT_TYPE = "JPEG", MEDIA_PATH = "/Users/praveenkumarsingh/Developer/Resources For DaVinci/Essential Video Editing/Textures/360_F_288846120_h8yk5XdYtZ0vPgNmEQZM7dzXBvwd9Xch.jpg", MEDIA_LAYER_DESC = {
+							}, MEDIA_NAME = "360_F_288846120_h8yk5XdYtZ0vPgNmEQZM7dzXBvwd9Xch.jpg", MEDIA_HEIGHT = 360, MEDIA_START_FRAME = 0, MEDIA_IS_SOURCE_RES = true, MEDIA_SRC_FRAME_RATE = 29.97002997003, MEDIA_MARK_OUT = 0, MEDIA_WIDTH = 720, MEDIA_NUM_FRAMES = 1, MEDIA_MARK_IN = 0, MEDIA_PAR = 1 }, },
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						MediaSource = Input { Value = FuID { "MediaPool" }, },
+						MediaID = Input { Value = "dee9b209-af74-4068-8bc4-6b7de69ad947", },
+						AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+						Layer = Input {
+							Value = Text {
+							},
+						},
+						ClipTimeEnd = Input { Value = 0, },
+						Loop = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LeftAudio = Input {
+							SourceOp = "Left",
+							Source = "Data",
+						},
+						RightAudio = Input {
+							SourceOp = "Right",
+							Source = "Data",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 16.5 } },
+					Version = 1
+				}
+			},
+		},
+		Text3D2ExtrusionProfile = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.0196116135138184, 0.098058067569092 }, Flags = { Linear = true } },
+					[0.2] = { 1, LH = { 0.180388386486182, 0.901941932430908 }, RH = { 0.3, 1 }, Flags = { Linear = true } },
+					[0.8] = { 1, LH = { 0.7, 1 }, RH = { 0.819611613513818, 0.901941932430908 }, Flags = { Linear = true } },
+					[1] = { 0, LH = { 0.980388386486182, 0.098058067569092 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+			NameSet = true,
+		},
+		Merge3D1ZOffset = BezierSpline {
+			SplineColor = { Red = 254, Green = 56, Blue = 46 },
+			NameSet = true,
+			KeyFrames = {
+				[0] = { -1.02, RH = { 3.33333333333333, -0.646666666666667 }, Flags = { Linear = true } },
+				[10] = { 0.1, LH = { 6.66666666666667, -0.273333333333333 }, RH = { 26.6666666666667, 0.213333333333333 }, Flags = { Linear = true } },
+				[60] = { 0.44, LH = { 43.3333333333333, 0.326666666666667 }, Flags = { Linear = true } }
+			}
+		},
+		Merge3D1YRotation = BezierSpline {
+			SplineColor = { Red = 128, Green = 255, Blue = 128 },
+			CtrlWZoom = false,
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 22.2, RH = { 49.6666666666667, 134.8 }, Flags = { Linear = true } },
+				[149] = { 360, LH = { 99.3333333333333, 247.4 }, Flags = { Linear = true } }
+			}
+		},
+		Left = AudioDisplay {
+		},
+		Right = AudioDisplay {
+			CtrlWZoom = false,
+		}
+	}
+}

@@ -1,0 +1,1072 @@
+{
+	Tools = ordered() {
+		EssentialShowcaseZoom = GroupOperator {
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "PipeRouter1",
+					Source = "Input",
+				},
+				Input15_a = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "FullScreen",
+				},
+				InputHideSourceOriginal = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "Hide_SourceOriginal",
+				},
+				InputShowOriginal = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "ShowOriginal",
+				},
+				InputUseSource = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "UseSource",
+					Name = "Use Source Size",
+				},
+				Input2 = InstanceInput {
+					SourceOp = "ShowcaseSource",
+					Source = "Center",
+					Name = "Source Center",
+				},
+				Input15 = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "ShowcaseSize",
+					Name = "Zoom Size",
+					Default = 2,
+					MinScale = 0.1,
+				},
+				Hide_Showcase = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "Hide_Showcase",
+					Expression = "1-FullScreen",
+				},
+				InputHideSourceSize = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "Hide_SourceSize",
+				},
+				InputSourceWidth = InstanceInput {
+					SourceOp = "SourceSize",
+					Source = "Width",
+					Name = "Width",
+					Default = 0.25,
+				},
+				InputSourceHeight = InstanceInput {
+					SourceOp = "SourceSize",
+					Source = "Height",
+					Name = "Height",
+					Default = 0.25,
+				},
+				InputSourceAngle = InstanceInput {
+					SourceOp = "ShowcaseSource",
+					Source = "Angle",
+				},
+				Input_LabelShowcase = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "LabelShowcase",
+				},
+				Input17_1 = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "FadeEffect",
+					Default = 1,
+				},
+				InputEllipse_0 = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "ShowcaseType",
+					Name = "Type",
+					Width = 0.72,
+				},
+				InputCircle_Btn = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "QuickCircle",
+					Width = 0.28,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "ShowcaseWindow",
+					Source = "Center",
+				},
+				Input15_b = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "Link2Source",
+				},
+				InputHide_Offset = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "Hide_Offset",
+					Expression = "Link2Source",
+				},
+				Input15_b1 = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "ShowcaseOffset",
+					Name = "Offset",
+					DefaultX = 0,
+					DefaultY = 0,
+				},
+				InputHideShowcaseSize = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "Hide_ShowcaseSize",
+				},
+				Input3 = InstanceInput {
+					SourceOp = "ShowcaseWindowSize",
+					Source = "Width",
+					Default = 0.5,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "ShowcaseWindowSize",
+					Source = "Height",
+					Default = 0.5,
+				},
+				InputShowcaseAngle = InstanceInput {
+					SourceOp = "ShowcaseWindow",
+					Source = "Angle",
+					Default = 0,
+				},
+				Input12 = InstanceInput {
+					SourceOp = "ShowcaseWindow",
+					Source = "CornerRadius",
+					Default = 0,
+				},
+				Input11_0 = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "SoftEdge",
+				},
+				Input6 = InstanceInput {
+					SourceOp = "ShowcaseShadow",
+					Source = "shadowStrength",
+					Default = 0.5,
+				},
+				Input1 = InstanceInput {
+					SourceOp = "SourceBrightness",
+					Source = "Gain",
+					Name = "Source Brightness",
+					Default = 1,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "ShowcaseBrightness",
+					Source = "MasterRGBGain",
+					Name = "Showcase Brightness",
+					Default = 1,
+				},
+				InputColor_1 = InstanceInput {
+					SourceOp = "ShowcaseBrightness",
+					Source = "WheelHue1",
+					ControlGroup = 2,
+				},
+				InputColor_2 = InstanceInput {
+					SourceOp = "ShowcaseBrightness",
+					Source = "WheelSaturation1",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				InputColor_3 = InstanceInput {
+					SourceOp = "ShowcaseBrightness",
+					Source = "WheelTintAngle1",
+					ControlGroup = 2,
+				},
+				InputColor_4 = InstanceInput {
+					SourceOp = "ShowcaseBrightness",
+					Source = "WheelTintLength1",
+					ControlGroup = 2,
+				},
+				Input_LabelShowcaseBorder = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "LabelShowcaseBorder",
+				},
+				Input11 = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "BorderWidth",
+					MinScale = 0,
+					Default = 0.005,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "BorderColor",
+					Source = "TopLeftRed",
+					Name = "Border Color",
+					ControlGroup = 8,
+					Default = 1,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "BorderColor",
+					Source = "TopLeftGreen",
+					ControlGroup = 8,
+					Default = 1,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "BorderColor",
+					Source = "TopLeftBlue",
+					ControlGroup = 8,
+					Default = 1,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "BorderColor",
+					Source = "TopLeftAlpha",
+					ControlGroup = 8,
+					Default = 1,
+				},
+				Input_LabelAnimation = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "LabelAnimation",
+				},
+				EnableAnimation = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "EnableAnimation",
+					Default = 1,
+				},
+				Hide_Animation = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "Hide_Animation",
+					Expression = "EnableAnimation",
+				},
+				Input18 = InstanceInput {
+					SourceOp = "Perturb1",
+					Source = "Strength",
+					Name = "Shake Strength",
+					Default = 0,
+				},
+				PerturbSpeed = InstanceInput {
+					SourceOp = "Perturb1",
+					Source = "Speed",
+					Name = "Shake Speed",
+					Default = 0,
+				},
+				Input19 = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "EaseIn",
+					Name = "In Curve Ease In/Out",
+					Width = 0.5,
+				},
+				Input19_1 = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "EaseOut",
+					Name = "In Curve Ease In/Out",
+					Width = 0.5,
+				},
+				Input20 = InstanceInput {
+					SourceOp = "AnimCurves2",
+					Source = "EaseIn",
+					Name = "Out Curve Ease In/Out",
+					Width = 0.5,
+				},
+				Input20_1 = InstanceInput {
+					SourceOp = "AnimCurves2",
+					Source = "EaseOut",
+					Name = "Out Curve Ease In/Out",
+					Width = 0.5,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "AnimationInTime",
+					Default = 15,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "AnimationOutTime",
+					Default = 15,
+				},
+				BlankLine3 = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "BlankLine3",
+				},
+				InputDonate = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "DonateButton",
+					Width = 0.5,
+				},
+				InputSubscribe = InstanceInput {
+					SourceOp = "Showcase",
+					Source = "SubscribeButton",
+					Width = 0.5,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Merge3",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 220, 49.5 },
+				Flags = {
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 812.86, 238.574, 347.5, 34.3778 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				PipeRouter1 = PipeRouter {
+					CtrlWShown = false,
+					ViewInfo = PipeRouterInfo { Pos = { -303, 73.2581 } },
+				},
+				MatteControl1 = MatteControl {
+					CtrlWShown = false,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						["Garbage.Matte"] = Input {
+							SourceOp = "ShowcaseSource",
+							Source = "Mask",
+						},
+						["Garbage.MaskNest"] = Input { Value = 1, },
+						["Garbage.MaskInverted"] = Input { Value = 1, },
+						Background = Input {
+							SourceOp = "PipeRouter1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -138, 73.2571 } },
+				},
+				ShowcaseSource = RectangleMask {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "SourceEllipse",
+							Source = "Mask",
+						},
+						Level = Input { Expression = "1-Showcase.ShowcaseType", },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						SoftEdge = Input { Expression = "Showcase.SoftEdge", },
+						PaintMode = Input { Value = FuID { "Add" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input { Value = { 0.2, 0.2 }, },
+						Width = Input {
+							Value = 0.25,
+							Expression = "Showcase.UseSource==1 and SourceSize.Width or ShowcaseWindowSize.Width/Showcase.ShowcaseSize",
+						},
+						Height = Input {
+							Value = 0.25,
+							Expression = "Showcase.UseSource==1 and SourceSize.Height or ShowcaseWindowSize.Height/Showcase.ShowcaseSize",
+						},
+						CornerRadius = Input { Expression = "ShowcaseWindow.CornerRadius", },
+					},
+					ViewInfo = OperatorInfo { Pos = { -138, 40.2581 } },
+				},
+				SourceEllipse = EllipseMask {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Level = Input {
+							Value = 0,
+							Expression = "Showcase.ShowcaseType",
+						},
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						SoftEdge = Input { Expression = "ShowcaseSource.SoftEdge", },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							Value = { 0.2, 0.2 },
+							Expression = "ShowcaseSource.Center",
+						},
+						Width = Input {
+							Value = 0.25,
+							Expression = "ShowcaseSource.Width",
+						},
+						Height = Input {
+							Value = 0.140624999998242,
+							Expression = "ShowcaseSource.Height/1.7777777778",
+						},
+						Angle = Input { Expression = "ShowcaseSource.Angle", },
+					},
+					ViewInfo = OperatorInfo { Pos = { -138, 7.25807 } },
+				},
+				ShowcaseEllipse = EllipseMask {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Level = Input {
+							Value = 0,
+							Expression = "Showcase.ShowcaseType",
+						},
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						SoftEdge = Input { Expression = "Showcase.SoftEdge", },
+						BorderWidth = Input {
+							Value = 0.005,
+							Expression = "Showcase.BorderWidth",
+						},
+						Solid = Input { Value = 0, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							Value = { 0.499841503409686, 0.499841503409686 },
+							Expression = "Showcase.Center",
+						},
+						Width = Input {
+							Value = 0.499867919508072,
+							Expression = "Showcase.Width",
+						},
+						Height = Input {
+							Value = 0.281175704719776,
+							Expression = "Showcase.Height/1.7777777778",
+						},
+						Angle = Input {
+							SourceOp = "Perturb1",
+							Source = "Value",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -28, 7.25807 } },
+				},
+				ShowcaseTransform = Transform {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Center = Input {
+							Value = { 0.750005859375, 0.808235072191456 },
+							Expression = "Point(0.5,0.5) + Showcase.Center-Pivot",
+						},
+						Pivot = Input {
+							Value = { 0.25, 0.25 },
+							Expression = "ShowcaseSource.Center",
+						},
+						Size = Input {
+							Value = 2.0000234375,
+							Expression = "Showcase.AnimationSize",
+						},
+						XSize = Input { Value = 2.000023, },
+						YSize = Input { Value = 2.000023, },
+						Angle = Input { Expression = "Showcase.Angle-ShowcaseSource.Angle", },
+						ReferenceSize = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "MatteControl1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -28, 73.2571 } },
+				},
+				SourceBrightness = BrightnessContrast {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "PipeRouter1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -28, 106.257 } },
+				},
+				ShowcaseBrightness = ColorCorrector {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						ColorRanges = Input {
+							Value = ColorCurves {
+								Curves = {
+									{
+										Points = {
+											{ 0, 1 },
+											{ 0.4, 0.2 },
+											{ 0.6, 0 },
+											{ 1, 0 }
+										}
+									},
+									{
+										Points = {
+											{ 0, 0 },
+											{ 0.4, 0 },
+											{ 0.6, 0.2 },
+											{ 1, 1 }
+										}
+									}
+								}
+							},
+						},
+						HistogramIgnoreTransparent = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "ShowcaseTransform",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 82, 73.2571 } },
+				},
+				Merge4 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input { Expression = "iif(Showcase.EditMode==1, 1, 1-Showcase.FullScreen)*Showcase.ShowOriginal", },
+						Background = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "SourceBrightness",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 192, 106.258 } },
+				},
+				BorderColor = Background {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Showcase",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 1, },
+						TopLeftBlue = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 192, 40.2571 } },
+				},
+				Merge2 = Merge {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 0.999471678032288,
+							Expression = "iif(Showcase.EnableAnimation==1, Showcase.AnimationIn*Showcase.AnimationOut*(1-Showcase.EditMode)*(1-Showcase.FullScreen), 1)",
+						},
+						Background = Input {
+							SourceOp = "ShowcaseBrightness",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "BorderColor",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 192, 73.2571 } },
+				},
+				Background1 = Background {
+					CtrlWShown = false,
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 192, 139.258 } },
+				},
+				Showcase = RectangleMask {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "ShowcaseEllipse",
+							Source = "Mask",
+						},
+						Level = Input { Expression = "1-ShowcaseType", },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						BorderWidth = Input { Value = 0.005, },
+						PaintMode = Input { Value = FuID { "Add" }, },
+						Solid = Input { Value = 0, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							Value = { 0.499841503409686, 0.499841503409686 },
+							Expression = "ShowcaseSource.Center + iif(Link2Source==1, ShowcaseOffset, (ShowcaseWindow.Center-ShowcaseSource.Center)*iif(EnableAnimation==1,AnimationIn*AnimationOut,1))",
+						},
+						Width = Input {
+							Value = 0.499867919508072,
+							Expression = "ShowcaseSource.Width*AnimationSize",
+						},
+						Height = Input {
+							Value = 0.499867919508072,
+							Expression = "ShowcaseSource.Height*AnimationSize",
+						},
+						CornerRadius = Input { Expression = "ShowcaseWindow.CornerRadius", },
+						Angle = Input {
+							SourceOp = "Perturb1",
+							Source = "Value",
+						},
+						AnimationIn = Input {
+							SourceOp = "AnimCurves1",
+							Source = "Value",
+							Expression = "AnimationInTime==0 and 1 or AnimCurves1.Value",
+						},
+						AnimationInTime = Input { Value = 15, },
+						AnimationOut = Input {
+							SourceOp = "AnimCurves2",
+							Source = "Value",
+							Expression = "AnimationOutTime==0 and 1 or AnimCurves2.Value",
+						},
+						AnimationOutTime = Input { Value = 15, },
+						ShowcaseSize = Input { Value = 2, },
+						AnimationSize = Input {
+							Value = 1.99947167803229,
+							Expression = "iif(EnableAnimation==1, 1+AnimationIn*AnimationOut *(ShowcaseSize-1), ShowcaseSize)",
+						},
+						EnableAnimation = Input { Value = 1, },
+						FadeEffect = Input { Value = 1, },
+						Hide_Animation = Input {
+							Value = 1,
+							Expression = "EnableAnimation",
+						},
+						Hide_Showcase = Input {
+							Value = 1,
+							Expression = "1-FullScreen",
+						},
+						Hide_Offset = Input { Expression = "Link2Source", },
+						FullScreen = Input { Value = 0, },
+						UseSource = Input { Value = 0, },
+						Hide_ShowcaseSize = Input  { Expression = "1-UseSource", },
+						Hide_SourceSize = Input  { Expression = "UseSource", },
+						Hide_SourceOriginal = Input  { Expression = "1-FullScreen", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 192, 7.25707 } },
+					UserControls = ordered() {
+						AnimationIn = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0,
+							INP_MaxScale = 1,
+							LINKS_Name = "Animation In",
+						},
+						AnimationInTime = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = true,
+							INP_MinAllowed = 0,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0,
+							INP_MaxScale = 100,
+							LINKS_Name = "Animation In Time",
+						},
+						AnimationOut = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0,
+							INP_MaxScale = 1,
+							LINKS_Name = "Animation Out",
+						},
+						AnimationOutTime = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = true,
+							INP_MinAllowed = 0,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0,
+							INP_MaxScale = 100,
+							LINKS_Name = "Animation Out Time",
+						},
+						ShowcaseSize = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0,
+							INP_MaxScale = 10,
+							LINKS_Name = "Showcase Size",
+						},
+						AnimationSize = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0,
+							INP_MaxScale = 10,
+							LINKS_Name = "Animation Size",
+						},
+						EnableAnimation = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Enable Animation",
+						},
+						LabelShowcase = {
+							INP_Default = 1,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+							LBLC_NumInputs = 19,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							LINKS_Name = "Showcase",
+						},
+						LabelAnimation = {
+							INP_Default = 1,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+							LBLC_NumInputs = 10,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							LINKS_Name = "Animation",
+						},
+						BlankLine3 = {
+							LBLC_DropDownButton = false,
+							INPID_InputControl = "LabelControl",
+							LINKID_DataType = "Number",
+							INP_External = false,
+							LINKS_Name = "",
+						},
+						LabelShowcaseBorder = {
+							INP_Default = 1,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+							LBLC_NumInputs = 5,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							LINKS_Name = "Showcase Border",
+						},
+						FullScreen = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Full Screen Zoom",
+						},
+						EditMode = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Edit Mode",
+						},
+						FadeEffect = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Fade Effect",
+						},
+						Link2Source = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Link Source",
+						},
+						ShowcaseOffset = {
+							INP_DefaultX = 0,
+							INP_DefaultY = 0,
+							LINKID_DataType = "Point",
+							INPID_InputControl = "OffsetControl",
+							CHC_Style = "NormalCross",
+							LINKS_Name = "Showcase Offset",
+						},
+						DonateButton = {
+							ICD_Width = 0.5,
+							INPID_InputControl = "ButtonControl",
+							BTNCS_Execute = "os.execute('open https://www.buymeacoffee.com/essentialvideo'); os.execute('start https://www.buymeacoffee.com/essentialvideo');",
+							LINKID_DataType = "Number",
+							LINKS_Name = "Donate!",
+						},
+						SubscribeButton = {
+							ICD_Width = 0.5,
+							INPID_InputControl = "ButtonControl",
+							BTNCS_Execute = "os.execute('open https://www.youtube.com/@EssentialVideoEditing/videos?sub_confirmation=1'); os.execute('start https://www.youtube.com/@EssentialVideoEditing/videos?sub_confirmation=1');",
+							LINKID_DataType = "Number",
+							LINKS_Name = "Subscribe!",
+						},
+						QuickCircle = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "ButtonControl",
+							BTNCS_Execute = "if (Showcase.ShowcaseType[TIME_UNDEFINED]==0) then ShowcaseWindow.CornerRadius=1 end; s={ShowcaseWindowSize, SourceSize}; i=Showcase.UseSource[TIME_UNDEFINED]+1; h=s[i].Height[TIME_UNDEFINED]; w=s[i].Width[TIME_UNDEFINED]; if (h<w*1.7778) then s[i].Width=h/1.7778 else s[i].Height=w*1.7778 end",
+							INP_MaxScale = 1,
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							ICD_Width = 0.4,
+							LINKS_Name = "Circle",
+						},
+						ShowcaseType = {
+							{ MBTNC_AddButton = "Rectangle" },
+							{ MBTNC_AddButton = "Ellipse" },
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "MultiButtonControl",
+							MBTNC_ShowBasicButton = true,
+							INP_MaxScale = 1,
+							INP_MinAllowed = -1000000,
+							INP_MinScale = 0,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							MBTNC_ShowName = false,
+							MBTNC_StretchToFit = true,
+							MBTNC_ShowToolTip = false,
+							LINKS_Name = "Showcase Type",
+						},
+						UseSource = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Use Source",
+							INP_Default = 0,
+						},
+						Hide_Animation = {
+							LBLC_NumInputs = 8,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						Hide_Showcase = {
+							LBLC_NumInputs = 28,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						Hide_Offset = {
+							LBLC_NumInputs = 1,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						ShowOriginal = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INP_Default = 1,
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Show Original",
+						},
+						Hide_ShowcaseSize = {
+							LBLC_NumInputs = 2,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						Hide_SourceSize = {
+							LBLC_NumInputs = 2,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+						Hide_SourceOriginal = {
+							LBLC_NumInputs = 2,
+							IC_Visible = false,
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+						},
+					}
+				},
+				Perturb1 = PerturbNumber {
+					CtrlWZoom = false,
+					Inputs = {
+						Value = Input { Expression = "ShowcaseWindow.Angle", },
+						Strength = Input { Value = 0, },
+						Wobble = Input { Expression = "Showcase.EnableAnimation*(1-Showcase.FullScreen)", },
+						Speed = Input { Value = 0, },
+					},
+				},
+				AnimCurves1 = LUTLookup {
+					CtrlWZoom = false,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Curve = Input { Value = FuID { "Easing" }, },
+						EaseOut = Input { Value = FuID { "Expo" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurvesonShowcaseLookup",
+							Source = "Value",
+						},
+						TimeScale = Input {
+							Value = 10,
+							Expression = "Showcase.AnimationInTime==0 and 0 or (1+comp.RenderEnd-comp.RenderStart)/Showcase.AnimationInTime",
+						},
+					},
+				},
+				AnimCurvesonShowcaseLookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				AnimCurves2 = LUTLookup {
+					CtrlWZoom = false,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Curve = Input { Value = FuID { "Easing" }, },
+						EaseIn = Input { Value = FuID { "Expo" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurvesonShowcaseLookup1",
+							Source = "Value",
+						},
+						Invert = Input { Value = 1, },
+						TimeScale = Input {
+							Value = 10,
+							Expression = "Showcase.AnimationOutTime==0 and 0 or (1+comp.RenderEnd-comp.RenderStart)/Showcase.AnimationOutTime",
+						},
+						TimeOffset = Input {
+							Value = 0.9,
+							Expression = "1-(Showcase.AnimationOutTime+1)/(1+comp.RenderEnd-comp.RenderStart)",
+						},
+					},
+				},
+				AnimCurvesonShowcaseLookup1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				ShowcaseFullScreen = Transform {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Center = Input {
+							Value = { 0.750005859375, 0.750005859375 },
+							Expression = "Point(1-Pivot.X, 1-Pivot.Y)",
+						},
+						Pivot = Input {
+							Value = { 0.25, 0.25 },
+							Expression = ":t=iif(Showcase.EnableAnimation==1, Showcase.AnimationIn*Showcase.AnimationOut, 1); return Point(t*(ShowcaseSource.Center.X-0.5)+0.5, t*(ShowcaseSource.Center.Y-0.5)+0.5);",
+						},
+						Size = Input {
+							Value = 2.0000234375,
+							Expression = "Showcase.AnimationSize",
+						},
+						XSize = Input { Value = 2.000023, },
+						YSize = Input { Value = 2.000023, },
+						Input = Input {
+							SourceOp = "PipeRouter1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -18, 172.258 } },
+				},
+				Merge1 = Merge {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 1.0000234375,
+							Expression = "iif(Showcase.FadeEffect==1, Showcase.AnimationIn*Showcase.AnimationOut*(1-Showcase.FullScreen), 1)*(1-Showcase.EditMode)",
+						},
+						Background = Input {
+							SourceOp = "Merge4",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "ShowcaseShadow",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 302, 106.258 } },
+				},
+				Merge3 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input {
+							Value = 0,
+							Expression = "Showcase.FullScreen*(1-Showcase.EditMode)",
+						},
+						Background = Input {
+							SourceOp = "Merge1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "ShowcaseFullScreen",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 302, 172.258 } },
+				},
+				ShowcaseShadow = ofx.com.blackmagicdesign.resolvefx.DropShadow {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 0.999471678032288,
+							Expression = "iif(Showcase.EnableAnimation==1, Showcase.AnimationIn*Showcase.AnimationOut*(1-Showcase.EditMode)*(1-Showcase.FullScreen), 1)",
+						},
+						Source = Input {
+							SourceOp = "Merge2",
+							Source = "Output",
+						},
+						shadowStrength = Input { Value = 0.5, },
+						shadowAngle = Input { Value = 37.5, },
+						ShadowDistance = Input { Value = 0.0500000007450581, },
+						shadowBlur = Input { Value = 0.550000011920929, },
+						shadowColorRed = Input { Value = 0, },
+						shadowColorGreen = Input { Value = 0, },
+						shadowColorBlue = Input { Value = 0, },
+						isLegacyComp = Input { Value = 0, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						resolvefxVersion = Input { Value = "1.1", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 302, 73.2575 } },
+				},
+				ShowcaseWindow = RectangleMask {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						ShowViewControls = Input { Expression = "(1-Showcase.FullScreen)*(1-Showcase.Link2Source)", },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input { Expression = "Showcase.UseSource==1 and SourceSize.Width*Showcase.ShowcaseSize or ShowcaseWindowSize.Width", },
+						Height = Input { Expression = "Showcase.UseSource==1 and SourceSize.Height*Showcase.ShowcaseSize or ShowcaseWindowSize.Height", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 302.687, 7.65087 } },
+				},
+				ShowcaseWindowSize = RectangleMask {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						ShowViewControls = Input { Expression = "(1-Showcase.FullScreen)*(1-Showcase.UseSource)", },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input { Expression = "Showcase.Link2Source==1 and ShowcaseSource.Center + Showcase.ShowcaseOffset or ShowcaseWindow.Center", },
+						Angle = Input { Expression = "ShowcaseWindow.Angle", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 302.687, 39.6871 } },
+				},
+				SourceSize = RectangleMask {
+					NameSet = true,
+					Inputs = {
+						ShowViewControls = Input { Expression = "(1-Showcase.FullScreen)*Showcase.UseSource", },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input { Expression = "ShowcaseSource.Center", },
+						Width = Input { Value = 0.25, },
+						Height = Input { Value = 0.25, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -244, 41.2879 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialShowcaseZoom"
+}

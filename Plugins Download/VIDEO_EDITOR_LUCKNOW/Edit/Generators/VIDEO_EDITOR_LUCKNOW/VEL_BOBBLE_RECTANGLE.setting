@@ -1,0 +1,275 @@
+{
+	Tools = ordered() {
+		VEL_BOBBLE_RECTANGLE = GroupOperator {
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "sRectangle1",
+					Source = "Red",
+					Name = "Color",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "sRectangle1",
+					Source = "Green",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "sRectangle1",
+					Source = "Blue",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "sRectangle1",
+					Source = "Alpha",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "sBoolean2",
+					Source = "Red",
+					Name = "Border Color",
+					ControlGroup = 2,
+					Default = 0.956862745098,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "sBoolean2",
+					Source = "Green",
+					ControlGroup = 2,
+					Default = 0.9254901960784,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "sBoolean2",
+					Source = "Blue",
+					ControlGroup = 2,
+					Default = 0.6705882352941,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "sBoolean2",
+					Source = "Alpha",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "sBoolean1",
+					Source = "Red",
+					Name = "Background Color",
+					ControlGroup = 3,
+					Default = 0.8,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "sBoolean1",
+					Source = "Green",
+					ControlGroup = 3,
+					Default = 0.3372549019608,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "sBoolean1",
+					Source = "Blue",
+					ControlGroup = 3,
+					Default = 0,
+				},
+				Input12 = InstanceInput {
+					SourceOp = "sBoolean1",
+					Source = "Alpha",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "StyledText",
+				},
+				Input14 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Font",
+					ControlGroup = 5,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Style",
+					ControlGroup = 5,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Red1Clone",
+					Name = "Color",
+					ControlGroup = 6,
+					Default = 0.9529411764706,
+				},
+				Input17 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Green1Clone",
+					Name = "Green",
+					ControlGroup = 6,
+					Default = 0.678431372549,
+				},
+				Input18 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Blue1Clone",
+					Name = "Blue",
+					ControlGroup = 6,
+					Default = 0.0078431372549,
+				},
+				Input19 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Alpha1Clone",
+					Name = "Alpha",
+					ControlGroup = 6,
+					Default = 1,
+				},
+				Input20 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Size",
+					Default = 0.204,
+				},
+				Input21 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "CharacterSpacingClone",
+					Name = "Tracking",
+					Default = 1,
+				},
+				Input22 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "LineSpacingClone",
+					Default = 1,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Merge1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				sRectangle1 = sRectangle {
+					Inputs = {
+						Height = Input { Value = 0.233, },
+						CornerRadius = Input { Value = 0.15, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, -16.5 } },
+				},
+				sBoolean2 = sBoolean {
+					Inputs = {
+						Operation = Input { Value = FuID { "Union" }, },
+						Input1 = Input {
+							SourceOp = "sRectangle1",
+							Source = "Output",
+						},
+						Input2 = Input {
+							SourceOp = "sNGon1",
+							Source = "Output",
+						},
+						Red = Input { Value = 0.956862745098, },
+						Green = Input { Value = 0.9254901960784, },
+						Blue = Input { Value = 0.6705882352941, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 49.5 } },
+				},
+				sBoolean1 = sBoolean {
+					Inputs = {
+						Operation = Input { Value = FuID { "Union" }, },
+						Input1 = Input {
+							SourceOp = "sRectangle1",
+							Source = "Output",
+						},
+						Input2 = Input {
+							SourceOp = "sNGon1",
+							Source = "Output",
+						},
+						Red = Input { Value = 0.8, },
+						Green = Input { Value = 0.3372549019608, },
+						Blue = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 49.5 } },
+				},
+				sMerge1 = sMerge {
+					Inputs = {
+						Input1 = Input {
+							SourceOp = "sOutline1",
+							Source = "Output",
+						},
+						Input2 = Input {
+							SourceOp = "sBoolean2",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 385, 49.5 } },
+				},
+				sOutline1 = sOutline {
+					Inputs = {
+						Thickness = Input { Value = 0.0152, },
+						Input = Input {
+							SourceOp = "sBoolean1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 495, 49.5 } },
+				},
+				sRender1 = sRender {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Input = Input {
+							SourceOp = "sMerge1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 605, 49.5 } },
+				},
+				sNGon1 = sNGon {
+					Inputs = {
+						Sides = Input { Value = 3, },
+						["Translate.X"] = Input { Value = 0.1109409249973, },
+						["Translate.Y"] = Input { Value = -0.11788, },
+						Width = Input { Value = 0.132, },
+						Height = Input { Value = 0.279, },
+						Angle = Input { Value = 59.20732, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 82.5 } },
+				},
+				Text1 = TextPlus {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Red1 = Input { Value = 0.9529411764706, },
+						Green1 = Input { Value = 0.678431372549, },
+						Blue1 = Input { Value = 0.0078431372549, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input { Value = "Hello!", },
+						Font = Input { Value = "Bradley Hand", },
+						Style = Input { Value = "Bold", },
+						Size = Input { Value = 0.204, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 660, 16.5 } },
+				},
+				Merge1 = Merge {
+					CtrlWZoom = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "sRender1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Text1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 715, 49.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "VEL_BOBBLE_RECTANGLE"
+}

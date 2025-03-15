@@ -1,0 +1,4546 @@
+{
+	Tools = ordered() {
+		EssentialTitle3D = GroupOperator {
+			Inputs = ordered() {
+				Input_Is3DTitle = InstanceInput {
+					SourceOp = "Options",
+					Source = "Is3DTitle",
+					Page = "Text",
+				},
+				Hide_3DTextureList = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_3DTextureList",
+					Expression = "Is3DTitle",
+				},
+				TextureMaterial = InstanceInput {
+					SourceOp = "Options",
+					Source = "TextureMaterial",
+					Name = "3D Material",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "Options",
+					Source = "MainTextInput",
+					Name = "Text Input",
+				},
+				Input2 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Font",
+					ControlGroup = 2,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Style",
+					ControlGroup = 2,
+				},
+				Input0_1 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Red1Clone",
+					Name = "Color",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input0_2 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Green1Clone",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input0_3 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Blue1Clone",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input0_4 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Alpha1Clone",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Size",
+					Default = 0.1,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "CharacterSpacingClone",
+					Name = "Tracking",
+					Default = 1,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LineSpacingClone",
+					Default = 1,
+				},
+				InputText_LayoutLabel = InstanceInput {
+					SourceOp = "Options",
+					Source = "LabelTextLayout",
+				},
+				InputText_1 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Center",
+					Name = "Center",
+				},
+				InputText_CenterZ = InstanceInput {
+					SourceOp = "MainText",
+					Source = "CenterZ",
+					Name = "Z",
+				},
+				InputLayoutType = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LayoutType",
+					Name = "Type",
+					Default = 0,
+				},
+				InputLayoutWidth = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LayoutWidth",
+					Name = "Width",
+					Default = 0.5,
+				},
+				InputPositionOnPath = InstanceInput {
+					SourceOp = "MainText",
+					Source = "PositionOnPath",
+					Default = 0.5,
+				},
+				Input_MainTextPerspective = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Perspective",
+					Name = "Perspective",
+				},
+				Input_MainTextAngleX = InstanceInput {
+					SourceOp = "MainText",
+					Source = "AngleX",
+					Name = "Rotation X",
+				},
+				Input_MainTextAngleY = InstanceInput {
+					SourceOp = "MainText",
+					Source = "AngleY",
+					Name = "Y",
+				},
+				Input_MainTextAngleZ = InstanceInput {
+					SourceOp = "MainText",
+					Source = "AngleZ",
+					Name = "Z",
+				},
+				Input_BlankBeforeStyles = InstanceInput {
+					SourceOp = "MainStyle",
+					Source = "ApplyBlank2",
+				},
+				Input44 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Style0",
+					Width = 0.2,
+				},
+				Input45 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Style1",
+					Width = 0.16,
+				},
+				Input46 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Style2",
+					Width = 0.16,
+				},
+				Input47 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Style3",
+					Width = 0.16,
+				},
+				Input48 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Style4",
+					Width = 0.16,
+				},
+				Input49 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Style5",
+					Width = 0.16,
+				},
+				Input_Style01 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Style01",
+					Width = 0.2,
+				},
+				Input_Style11 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Style11",
+					Width = 0.16,
+				},
+				Input_Style21 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Style21",
+					Width = 0.16,
+				},
+				Input_Style31 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Style31",
+					Width = 0.16,
+				},
+				Input_Style41 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Style41",
+					Width = 0.16,
+				},
+				Input_Style51 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Style51",
+					Width = 0.16,
+				},
+				Input68 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "SelectElement",
+				},
+				Input7 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Enabled1",
+					Name = "Main Text",
+					Default = 1,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Enabled2",
+					Name = "Stroke",
+					Default = 0,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Enabled3",
+					Name = "Shadow",
+					Default = 1,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Enabled4",
+					Name = "Border",
+					Default = 0,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Enabled5",
+					Name = "Background",
+					Default = 0,
+				},
+				Input12 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Type1",
+					Name = "Type",
+					Default = 0,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ElementSpacer1",
+				},
+				Input14 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Red1",
+					Name = "Color",
+					ControlGroup = 13,
+					Default = 1,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Green1",
+					ControlGroup = 13,
+					Default = 1,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Blue1",
+					ControlGroup = 13,
+					Default = 1,
+				},
+				Input17 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Alpha1",
+					ControlGroup = 13,
+					Default = 1,
+				},
+				Input18 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ImageSource1",
+					Name = "Image Source",
+					Default = 0,
+				},
+				Input20 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ColorFile1",
+					Name = "Color File",
+					DefaultText = "",
+				},
+				Input21 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ColorBrush1",
+					Name = "Color Brush",
+					Default = 0,
+				},
+				Input22 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ShadingGradient1",
+					Name = "Shading Gradient",
+				},
+				Input23 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ImageShadingSampling1",
+					Name = "Image Sampling",
+					Default = 1,
+				},
+				Input24 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ImageShadingEdges1",
+					Name = "Image Edges",
+					Default = 1,
+				},
+				Input25 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ShadingMappingSpacer1",
+				},
+				Input26 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ShadingMapping1",
+					Name = "Shading Mapping",
+					Default = 1,
+				},
+				Input27 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ShadingMappingAngle1",
+					Name = "Mapping Angle",
+					Default = 0,
+				},
+				Input28 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ShadingMappingSize1",
+					Name = "Mapping Size",
+					Default = 1,
+				},
+				Input29 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ShadingMappingAspect1",
+					Name = "Mapping Aspect",
+					Default = 1,
+				},
+				Input30 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ShadingMappingLevel1",
+					Name = "Mapping Level",
+					Default = 4,
+				},
+
+				Input_TextImageInput = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_ImageInput",
+				},
+				Input_TextImage = InstanceInput {
+					SourceOp = "MediaIn1",
+					Source = "ClipName",
+					Name = "Text Image",
+				},
+
+				Input31_1 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Red2",
+					Name = "Color",
+					ControlGroup = 127,
+					Default = 0,
+				},
+				Input31_2 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Green2",
+					Name = "Color",
+					ControlGroup = 127,
+					Default = 0,
+				},
+				Input31_3 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Blue2",
+					Name = "Color",
+					ControlGroup = 127,
+					Default = 0,
+				},
+				Input31_4 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Alpha2",
+					Name = "Alpha",
+					ControlGroup = 127,
+					Default = 1,
+				},
+				InputSpacer2 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ElementSpacer2",
+				},
+				Input31_0 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Thickness2",
+					Name = "Thickness",
+					MaxScale = 0.5,
+					Default = 0.02,
+				},
+				Input31_5 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "JoinStyle2",
+					Name = "Join Style",
+				},
+				Input31_6 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LineStyle2",
+					Name = "Line Style",
+				},
+				Input31_7 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "SoftnessX2",
+					Name = "Softness",
+					Default = 0,
+				},
+				Input31 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Red3",
+					Name = "Color",
+					ControlGroup = 27,
+					Default = 0,
+				},
+				Input32 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Green3",
+					ControlGroup = 27,
+					Default = 0,
+				},
+				Input33 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Blue3",
+					ControlGroup = 27,
+					Default = 0,
+				},
+				Input34 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Alpha3",
+					ControlGroup = 27,
+					Default = 1,
+				},
+				InputSpacer3 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ElementSpacer3",
+				},
+				Input35 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "SoftnessX3",
+					Name = "Softness",
+					Default = 5,
+				},
+				Input36 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "AngleX3",
+					Name = "Rotate",
+					Default = 0,
+				},
+				Input39 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ShearX3",
+					Name = "Shear",
+					Default = 0,
+				},
+				InputShadow_1 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "SizeX3",
+					Name = "Size X",
+					Default = 1,
+				},
+				InputShadow_2 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "SizeY3",
+					Name = "Size Y",
+					Default = 1,
+				},
+				InputShadow_3 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Offset3",
+					Name = "Offset",
+					DefaultX = 0.05,
+					DefaultY = -0.05,
+				},
+				InputBorder_6 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Red4",
+					Name = "Color",
+					ControlGroup = 6,
+					Default = 1,
+				},
+				InputBorder_7 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Green4",
+					ControlGroup = 6,
+					Default = 1,
+				},
+				InputBorder_8 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Blue4",
+					ControlGroup = 6,
+					Default = 1,
+				},
+				InputBorder_9 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Alpha4",
+					ControlGroup = 6,
+					Default = 1,
+				},
+				InputSpacer4 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ElementSpacer4",
+				},
+				InputBg_Level4 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Level4",
+					Name = "Level",
+				},
+				InputBorder_1 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Thickness4",
+					Name = "Thickness",
+					MaxScale = 0.5,
+					Default = 0.02,
+				},
+				InputBorder_2 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "JoinStyle4",
+					Name = "Join Style",
+					Default = 1,
+				},
+				InputBorderLine_6 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LineStyle4",
+					Name = "Line Style",
+				},
+				InputBorder_10 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "SoftnessX4",
+					Name = "Softness",
+					Default = 0,
+				},
+				InputBorder_3 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ExtendHorizontal4",
+					Name = "Extend Horizontal",
+					Default = 0,
+				},
+				InputBorder_4 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ExtendVertical4",
+					Name = "Extend Vertical",
+					Default = 0,
+				},
+				InputBorder_5 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Round4",
+					Name = "Round",
+					Default = 0,
+				},
+				
+				InputBgColor_12 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Type5",
+					Name = "Type",
+					Default = 0,
+				},
+				InputBgColor_14 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Red5",
+					Name = "Color",
+					ControlGroup = 4,
+					Default = 1,
+				},
+				InputBgColor_15 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Green5",
+					ControlGroup = 4,
+					Default = 1,
+				},
+				InputBgColor_16 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Blue5",
+					ControlGroup = 4,
+					Default = 1,
+				},
+				InputBgColor_17 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Alpha5",
+					ControlGroup = 4,
+					Default = 1,
+				},
+				InputBgColor_22 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ShadingGradient5",
+					Name = "Shading Gradient",
+				},
+				InputBgColor_13 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ElementSpacer5",
+				},
+
+				InputBg_Level5 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Level5",
+					Name = "Level",
+				},
+				InputBg_1 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ExtendHorizontal5",
+					Name = "Extend Horizontal",
+					MinScale = -3,
+					Default = 0,
+				},
+				InputBg_2 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "ExtendVertical5",
+					Name = "Extend Vertical",
+					Default = 0,
+				},
+				InputBg_3 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Round5",
+					Name = "Round",
+					Default = 0,
+				},
+				InputBg_8 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "SoftnessX5",
+					Name = "Softness X",
+					MaxScale = 100,
+					Default = 0,
+				},
+				InputBg_9 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "SoftnessY5",
+					Name = "Softness Y",
+					MaxScale = 100,
+					Default = 0,
+				},
+				InputBg_91 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "SoftnessGlow5",
+					Name = "Glow",
+					Default = 0,
+				},
+				InputBg_10 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "Offset5",
+					Name = "Offset",
+					DefaultX = 0,
+					DefaultY = 0,
+				},
+				InputBlankLine_1 = InstanceInput {
+					SourceOp = "Options",
+					Source = "BlankLine",
+				},
+				Input_Separator4Buttons = InstanceInput {
+					SourceOp = "MainStyle",
+					Source = "Blank6",
+				},
+				InputDonate = InstanceInput {
+					SourceOp = "Options",
+					Source = "DonateButton",
+					Width = 0.5,
+				},
+				InputSubscribe = InstanceInput {
+					SourceOp = "Options",
+					Source = "SubscribeButton",
+					Width = 0.5,
+				},
+
+				InputTransform_1 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "SelectTransform",
+					Name = "Transform",
+					Page = "Transform",
+					Default = 0,
+				},
+				InputTransform_2 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LineSpacing",
+					Name = "Spacing",
+					Default = 1,
+				},
+				InputTransform_3 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LinePivot",
+					Name = "Pivot",
+					DefaultX = 0.25,
+					DefaultY = 0,
+				},
+				InputTransform_4 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LinePivotZ",
+					Name = "Pivot Z",
+					Default = 0,
+				},
+				InputTransform_5 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "WordSpacing",
+					Name = "Spacing",
+					Default = 1,
+				},
+				InputTransform_6 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "WordPivot",
+					Name = "Pivot",
+					DefaultX = 0,
+					DefaultY = 0,
+				},
+				InputTransform_7 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "WordPivotZ",
+					Name = "Pivot Z",
+					Default = 0,
+				},
+				InputTransform_8 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "CharacterSpacing",
+					Name = "Spacing",
+					Default = 1,
+				},
+				InputTransform_9 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "CharacterPivot",
+					Name = "Pivot",
+					DefaultX = 0,
+					DefaultY = 0,
+				},
+				InputTransform_10 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "CharacterPivotZ",
+					Name = "Pivot Z",
+					Default = 0,
+				},
+				InputTransformBlankLine_1 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Transform_Blankline1",
+				},
+				InputTransform_11 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LineAngleX",
+					Name = "X",
+					Default = 0,
+				},
+				InputTransform_12 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LineAngleY",
+					Name = "Y",
+					Default = 0,
+				},
+				InputTransform_13 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LineAngleZ",
+					Name = "Z",
+					Default = 0,
+				},
+				InputTransform_14 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "WordAngleX",
+					Name = "X",
+					Default = 0,
+				},
+				InputTransform_15 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "WordAngleY",
+					Name = "Y",
+					Default = 0,
+				},
+				InputTransform_16 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "WordAngleZ",
+					Name = "Z",
+					Default = 0,
+				},
+				InputTransform_17 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "AdaptWordWidthToAngle",
+					Name = "Adapt Width to Angle",
+					Default = 0,
+				},
+				InputTransform_18 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "CharacterAngleX",
+					Name = "X",
+					Default = 0,
+				},
+				InputTransform_19 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "CharacterAngleY",
+					Name = "Y",
+					Default = 0,
+				},
+				InputTransform_20 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "CharacterAngleZ",
+					Name = "Z",
+					Default = 0,
+				},
+				InputTransform_21 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "AdaptCharacterWidthToAngle",
+					Name = "Adapt Width to Angle",
+					Default = 0,
+				},
+				InputTransformBlankLine_2 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Transform_Blankline2",
+				},
+				InputTransform_22 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LineShearX",
+					Name = "X",
+					Default = 0,
+				},
+				InputTransform_23 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LineShearY",
+					Name = "Y",
+					Default = 0,
+				},
+				InputTransform_24 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "WordShearX",
+					Name = "X",
+					Default = 0,
+				},
+				InputTransform_25 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "WordShearY",
+					Name = "Y",
+					Default = 0,
+				},
+				InputTransform_26 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "CharacterShearX",
+					Name = "X",
+					Default = 0,
+				},
+				InputTransform_27 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "CharacterShearY",
+					Name = "Y",
+					Default = 0,
+				},
+				InputTransformBlankLine_3 = InstanceInput {
+					SourceOp = "Options",
+					Source = "Transform_Blankline3",
+				},
+				InputTransform_28 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LineSizeX",
+					Name = "X",
+					Default = 1,
+				},
+				InputTransform_29 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "LineSizeY",
+					Name = "Y",
+					Default = 1,
+				},
+				InputTransform_30 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "WordSizeX",
+					Name = "X",
+					Default = 1,
+				},
+				InputTransform_31 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "WordSizeY",
+					Name = "Y",
+					Default = 1,
+				},
+				InputTransform_32 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "CharacterSizeX",
+					Name = "X",
+					Default = 1,
+				},
+				InputTransform_33 = InstanceInput {
+					SourceOp = "MainText",
+					Source = "CharacterSizeY",
+					Name = "Y",
+					Default = 1,
+				},
+
+				Input_Hide3DSetupPage = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_3DSetupPage",
+					Expression = "Is3DTitle",
+					Page = "3D Setup",
+				},
+				Input3D_Label3DSpotlight = InstanceInput {
+					SourceOp = "Options",
+					Source = "Label3DSpotlight",
+				},
+				Input3D_EnableSpotlight1 = InstanceInput {
+					SourceOp = "SpotLight1",
+					Source = "Enabled",
+				},
+				Input3D_6 = InstanceInput {
+					SourceOp = "SpotLight1",
+					Source = "Transform3DOp.Translate.X",
+					Name = "X",
+					Default = 0,
+				},
+				Input3D_7 = InstanceInput {
+					SourceOp = "SpotLight1",
+					Source = "Transform3DOp.Translate.Y",
+					Name = "Y",
+					Default = 0.75,
+				},
+				Input3D_8 = InstanceInput {
+					SourceOp = "SpotLight1",
+					Source = "Transform3DOp.Translate.Z",
+					Name = "Z",
+					Default = 0.5,
+				},
+				Input3D_9 = InstanceInput {
+					SourceOp = "SpotLight1",
+					Source = "Red",
+					Name = "Color",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input3D_10 = InstanceInput {
+					SourceOp = "SpotLight1",
+					Source = "Green",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input3D_11 = InstanceInput {
+					SourceOp = "SpotLight1",
+					Source = "Blue",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input3D_12 = InstanceInput {
+					SourceOp = "SpotLight1",
+					Source = "Intensity",
+					Default = 1,
+				},
+				Input3D_Label3DSpotlightBack = InstanceInput {
+					SourceOp = "Options",
+					Source = "Label3DSpotlightBack",
+				},
+				Input3D_EnableSpotlightBack = InstanceInput {
+					SourceOp = "SpotLight_Back",
+					Source = "Enabled",
+				},
+				Input3D_BackLight6 = InstanceInput {
+					SourceOp = "SpotLight_Back",
+					Source = "Transform3DOp.Translate.X",
+					Name = "X",
+					Default = 0,
+				},
+				Input3D_BackLight7 = InstanceInput {
+					SourceOp = "SpotLight_Back",
+					Source = "Transform3DOp.Translate.Y",
+					Name = "Y",
+					Default = 0.75,
+				},
+				Input3D_BackLight8 = InstanceInput {
+					SourceOp = "SpotLight_Back",
+					Source = "Transform3DOp.Translate.Z",
+					Name = "Z",
+					Default = 0.5,
+				},
+				Input3D_BackLight9 = InstanceInput {
+					SourceOp = "SpotLight_Back",
+					Source = "Red",
+					Name = "Color",
+					ControlGroup = 8,
+					Default = 1,
+				},
+				Input3D_BackLight10 = InstanceInput {
+					SourceOp = "SpotLight_Back",
+					Source = "Green",
+					ControlGroup = 8,
+					Default = 1,
+				},
+				Input3D_BackLight11 = InstanceInput {
+					SourceOp = "SpotLight_Back",
+					Source = "Blue",
+					ControlGroup = 8,
+					Default = 1,
+				},
+				Input3D_BackLight12 = InstanceInput {
+					SourceOp = "SpotLight_Back",
+					Source = "Intensity",
+					Default = 0.6,
+				},
+				Input_Label3DAmbientLight = InstanceInput {
+					SourceOp = "Options",
+					Source = "Label3DAmbientLight",
+				},
+				Input3D_1 = InstanceInput {
+					SourceOp = "AmbientLight1",
+					Source = "Enabled",
+					Name = "Enable",
+					Default = 1,
+				},
+				Input3D_2 = InstanceInput {
+					SourceOp = "AmbientLight1",
+					Source = "Red",
+					Name = "Color",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input3D_3 = InstanceInput {
+					SourceOp = "AmbientLight1",
+					Source = "Green",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input3D_4 = InstanceInput {
+					SourceOp = "AmbientLight1",
+					Source = "Blue",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input3D_5 = InstanceInput {
+					SourceOp = "AmbientLight1",
+					Source = "Intensity",
+					Default = 0.15,
+				},
+				Input_Label3DTextExtrusion = InstanceInput {
+					SourceOp = "Options",
+					Source = "Label3DTextExtrusion",
+				},
+				Input3D_13 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "ExtrusionStyle",
+					Default = 0,
+				},
+				Input3D_14 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "ExtrusionProfile",
+				},
+				Input3D_15 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "ExtrusionDepth",
+					Default = 0.1,
+				},
+				Input3D_16 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "ExtrusionSubdivisions",
+					Default = 10,
+				},
+				Input3D_17 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "BevelDepth",
+					Default = 0.0129,
+				},
+				Input3D_18 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "BevelWidth",
+					Default = 0.0084,
+				},
+				Input3D_19 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "CustomExtrusionSubdivisions",
+					Default = 40,
+				},
+				Input3D_20 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "SmoothingAngle",
+					Default = 10,
+				},
+				Input3D_21 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "FrontBevel",
+					Name = "Front",
+					Width = 0.5,
+					Default = 1,
+				},
+				Input3D_22 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "BackBevel",
+					Name = "Back",
+					Width = 0.5,
+					Default = 1,
+				},
+				Input_Label3DTextSpecularColor = InstanceInput {
+					SourceOp = "Options",
+					Source = "Label3DTextSpecularColor",
+				},
+				Input3D_24 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "SpecularRed",
+					Name = "Color",
+					ControlGroup = 20,
+					Default = 1,
+				},
+				Input3D_25 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "SpecularGreen",
+					ControlGroup = 20,
+					Default = 1,
+				},
+				Input3D_26 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "SpecularBlue",
+					ControlGroup = 20,
+					Default = 1,
+				},
+				Input3D_27 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "SpecularIntensity",
+					Name = "Intensity",
+					Default = 1,
+				},
+
+				InputBevel1 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "UseOneMaterial",
+					Name = "Use Main Material on Bevel",
+					Default = 1,
+				},
+				InputBevel2 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "TypeBevel",
+					Default = 0,
+				},
+				InputBevel3 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "BevelSpacer",
+				},
+				InputBevel4 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "RedBevel",
+					Name = "Color",
+					ControlGroup = 4,
+					Default = 1,
+				},
+				InputBevel5 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "GreenBevel",
+					ControlGroup = 4,
+					Default = 1,
+				},
+				InputBevel6 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "BlueBevel",
+					ControlGroup = 4,
+					Default = 1,
+				},
+				InputBevel7 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "AlphaBevel",
+					ControlGroup = 4,
+					Default = 1,
+				},
+				InputBevel8 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "SpecularBevelSeparator",
+				},
+				InputBevel9 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "SpecularRedBevel",
+					Name = "Specular Color",
+					ControlGroup = 6,
+					Default = 1,
+				},
+				InputBevel10 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "SpecularGreenBevel",
+					ControlGroup = 6,
+					Default = 1,
+				},
+				InputBevel11 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "SpecularBlueBevel",
+					ControlGroup = 6,
+					Default = 1,
+				},
+				InputBevel12 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "SpecularIntensityBevel",
+					Default = 1,
+				},
+				InputBevel13 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "SpecularExponentBevel",
+					Default = 50,
+				},
+				InputBevel14 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "SpecularBevelSeparator2",
+				},
+				InputBevel15 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "ImageSourceBevel",
+					Default = 0,
+				},
+				InputBevel16 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "BevelTexture",
+				},
+				InputBevel17 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "ColorFileBevel",
+					DefaultText = "",
+				},
+				InputBevel18 = InstanceInput {
+					SourceOp = "MainText3D",
+					Source = "ColorBrushBevel",
+					Default = 0,
+				},
+
+				Input_EnableTextMask = InstanceInput {
+					SourceOp = "Options",
+					Source = "EnableTextMask",
+					Page = "Animation",
+				},
+				Input_Hide_TextMaskSize = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_TextMaskSize",
+					Expression = "EnableTextMask",
+				},
+				Input_TextMaskOffset = InstanceInput {
+					SourceOp = "Options",
+					Source = "TextMaskOffset",
+					DefaultX = 0,
+					DefaultY = 0,
+				},
+				Input_TextMaskSizeX = InstanceInput {
+					SourceOp = "TextMask",
+					Source = "Width",
+					Default = 0.5,
+				},
+				Input_TextMaskSizeY = InstanceInput {
+					SourceOp = "TextMask",
+					Source = "Height",
+					Default = 0.25,
+				},
+				InputAnim_1 = InstanceInput {
+					SourceOp = "Options",
+					Source = "LabelAnimationIn",
+					Default = 1,
+				},
+				Input41 = InstanceInput {
+					SourceOp = "Options",
+					Source = "AnimateInTime",
+					Default = 15,
+				},
+				InputCurve_1 = InstanceInput {
+					SourceOp = "AnimCurveIn",
+					Source = "EaseIn",
+					Name = "Ease In/Out",
+					Width = 0.5,
+				},
+				InputCurve_2 = InstanceInput {
+					SourceOp = "AnimCurveIn",
+					Source = "EaseOut",
+					Width = 0.5,
+				},
+				Input63 = InstanceInput {
+					SourceOp = "Options",
+					Source = "FadeIn",
+				},
+				Input56 = InstanceInput {
+					SourceOp = "Options",
+					Source = "TypeIn",
+					Width = 1,
+				},
+				CheckRotateIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "CheckRotateIn",
+					Name = "Spin",
+				},
+				Hide_RotateIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_RotateIn",
+					Expression = "CheckRotateIn",
+				},
+				RotateIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "RotateIn",
+					Name = "Angle",
+					Default = 360,
+				},
+				InputRotate_43 = InstanceInput {
+					SourceOp = "Transform_In",
+					Source = "Pivot",
+				},
+				CheckSlideIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "CheckSlideIn",
+					Default = 1,
+				},
+				Hide_Slidein = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_SlideIn",
+					Expression = "CheckSlideIn",
+					Default = 1,
+				},
+				SlideIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "SlideIn",
+					Name = "Slide In Distance",
+					Default = -1,
+				},
+				InputSlideIn55 = InstanceInput {
+					SourceOp = "Vector1",
+					Source = "Angle",
+					Name = "Slide In Angle",
+				},
+				CheckZoomSizeIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "CheckZoomSizeIn",
+					Default = 1,
+				},
+				Hide_ZoomSizeIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_ZoomSizeIn",
+					Expression = "CheckZoomSizeIn",
+					Default = 1,
+				},
+				Input61 = InstanceInput {
+					SourceOp = "Options",
+					Source = "ZoomSizeIn",
+					Name = "Zoom Size",
+					Default = 0,
+				},
+				Input_SwingIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "SwingIn",
+					Name = "Swing",
+				},
+				Input_HideSwingIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_SwingIn",
+					Expression = "SwingIn",
+				},
+				Input_SwingAxis = InstanceInput {
+					SourceOp = "Options",
+					Source = "SwingAxis",
+					Name = "Axis",
+				},
+				Input_SwingAngle = InstanceInput {
+					SourceOp = "Options",
+					Source = "SwingAngle",
+					Name = "Angle",
+					Default = -82.5,
+				},
+				Input_SwingPivot = InstanceInput {
+					SourceOp = "Transform_In",
+					Source = "Pivot",
+				},
+				Input_SwingZPivot = InstanceInput {
+					SourceOp = "Transform_In",
+					Source = "ZPivot",
+					MinScale = -1,
+				},
+				Input_SwingQuality = InstanceInput {
+					SourceOp = "Transform_In",
+					Source = "Quality",
+					Name = "Motion Blur",
+				},
+				DropIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "DropIn",
+					Name = "Character Drop*",
+					Default = 1,
+				},
+				Hide_CharDropIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_CharDropIn",
+					Expression = "DropIn",
+				},
+				InputDrop_0 = InstanceInput {
+					SourceOp = "Options",
+					Source = "DropInDistance",
+					Default = 1,
+				},
+				InputDrop_1 = InstanceInput {
+					SourceOp = "Follower_DropIn",
+					Source = "Order",
+					Name = "Drop Order",
+					Default = 7,
+				},
+				InputDrop_3 = InstanceInput {
+					SourceOp = "Follower_DropIn",
+					Source = "Delay",
+					Name = "Drop Delay",
+					Default = 2,
+				},
+				InputDrop_4 = InstanceInput {
+					SourceOp = "Follower_DropIn_Offset1_Vector",
+					Source = "Angle",
+					Name = "Drop Angle",
+					Default = 90,
+				},
+				Input_CharFadeIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "CharFadeIn",
+					Name = "Character Fade In*",
+				},
+				Input_HideCharFadeIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_CharFadeIn",
+					Expression = "CharFadeIn",
+				},
+				Input_CharFadeInOrder = InstanceInput {
+					SourceOp = "Follower_FadeIn",
+					Source = "Order",
+					Name = "Fade Order",
+					Default = 4,
+				},
+				Input_CharFadeInDelay = InstanceInput {
+					SourceOp = "Follower_FadeIn",
+					Source = "Delay",
+					Name = "Fade Delay",
+					Default = 2,
+				},
+				Input_RotateIn = InstanceInput {
+					SourceOp = "Options",
+					Source = "CharRotateIn",
+				},
+				InputAnim_2 = InstanceInput {
+					SourceOp = "Options",
+					Source = "LabelAnimationOut",
+					Default = 1,
+				},
+				Input42 = InstanceInput {
+					SourceOp = "Options",
+					Source = "AnimateOutTime",
+					Default = 15,
+				},
+				InputCurve_3 = InstanceInput {
+					SourceOp = "AnimCurveOut",
+					Source = "EaseIn",
+					Name = "Ease In / Out",
+					Width = 0.5,
+				},
+				InputCurve_4 = InstanceInput {
+					SourceOp = "AnimCurveOut",
+					Source = "EaseOut",
+					Width = 0.5,
+				},
+				Input64 = InstanceInput {
+					SourceOp = "Options",
+					Source = "FadeOut",
+				},
+				Input57 = InstanceInput {
+					SourceOp = "Options",
+					Source = "TypeOut",
+				},
+				CheckRotateOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "CheckRotateOut",
+					Name = "Spin",
+				},
+				Hide_RotateOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_RotateOut",
+					Expression = "CheckRotateOut",
+				},
+				RotateOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "RotateOut",
+					Name = "Angle",
+					Default = 360,
+				},
+				InputRotateOut_54 = InstanceInput {
+					SourceOp = "Transform_Out",
+					Source = "Pivot",
+				},
+				CheckSlideOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "CheckSlideOut",
+				},
+				Hide_SlideOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_SlideOut",
+					Expression = "CheckSlideOut",
+				},
+				SlideOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "SlideOut",
+					Default = 1,
+				},
+				InputSlideOut60 = InstanceInput {
+					SourceOp = "Vector2",
+					Source = "Angle",
+					Name = "Slide Out Angle",
+				},
+				CheckZoomSizeOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "CheckZoomSizeOut",
+				},
+				Hide_ZoomSizeOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_ZoomSizeOut",
+					Expression = "CheckZoomSizeOut",
+				},
+				Input62 = InstanceInput {
+					SourceOp = "Options",
+					Source = "ZoomSizeOut",
+					Default = 0,
+				},
+				Input_SwingOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "SwingOut",
+					Name = "Swing",
+				},
+				Input_HideSwingOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_SwingOut",
+					Expression = "SwingOut",
+				},
+				Input_SwingOutAxis = InstanceInput {
+					SourceOp = "Options",
+					Source = "SwingOutAxis",
+					Name = "Axis",
+				},
+				Input_SwingOutAngle = InstanceInput {
+					SourceOp = "Options",
+					Source = "SwingOutAngle",
+					Name = "Angle",
+					Default = 88.5,
+				},
+				Input_SwingOutPivot = InstanceInput {
+					SourceOp = "Transform_Out",
+					Source = "Pivot",
+				},
+				Input_SwingOutZPivot = InstanceInput {
+					SourceOp = "Transform_Out",
+					Source = "ZPivot",
+					MinScale = -1,
+				},
+				Input_SwingOutQuality = InstanceInput {
+					SourceOp = "Transform_Out",
+					Source = "Quality",
+					Name = "Motion Blur",
+				},
+				DropOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "DropOut",
+					Name = "Character Drop*",
+					Default = 1,
+				},
+				Hide_CharDropOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_CharDropOut",
+					Expression = "DropOut",
+				},
+				InputDropOut_0 = InstanceInput {
+					SourceOp = "Options",
+					Source = "DropOutDistance",
+					Default = 1,
+				},
+				InputDropOut_1 = InstanceInput {
+					SourceOp = "Follower_DropOut",
+					Source = "Order",
+					Name = "Drop Order",
+					Default = 7,
+				},
+				InputDropOut_3 = InstanceInput {
+					SourceOp = "Follower_DropOut",
+					Source = "Delay",
+					Name = "Drop Delay",
+					Default = 2,
+				},
+				InputDropOut_4 = InstanceInput {
+					SourceOp = "Vector_DropOut_Offset",
+					Source = "Angle",
+					Name = "Drop Angle",
+					Default = 90,
+				},
+				Input_CharFadeOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "CharFadeOut",
+					Name = "Character Fade Out*",
+				},
+				Input_HideCharFadeOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_CharFadeOut",
+					Expression = "CharFadeOut",
+				},
+				Input_CharFadeOutOrder = InstanceInput {
+					SourceOp = "Follower_FadeOut",
+					Source = "Order",
+					Name = "Fade Order",
+					Default = 4,
+				},
+				Input_CharFadeOutDelay = InstanceInput {
+					SourceOp = "Follower_FadeOut",
+					Source = "Delay",
+					Name = "Fade Delay",
+					Default = -2,
+				},
+				Input_CharRotateOut = InstanceInput {
+					SourceOp = "Options",
+					Source = "CharRotateOut",
+				},
+				InputAnim_3 = InstanceInput {
+					SourceOp = "Options",
+					Source = "LabelAnimationLoop",
+					Default = 1,
+				},
+				ShakeLoop = InstanceInput {
+					SourceOp = "Options",
+					Source = "ShakeLoop",
+					Name = "Character Shake",
+				},
+				Hide_CharShake = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_CharShake",
+					Expression = "ShakeLoop",
+				},
+				InputShake_1 = InstanceInput {
+					SourceOp = "AnimCurve_Shake",
+					Source = "TimeScale",
+					Name = "Shake Speed",
+					Default = 1,
+				},
+				InputShake_2 = InstanceInput {
+					SourceOp = "Options",
+					Source = "ShakeLoopStrength",
+					Default = 1,
+				},
+				RotationLoop = InstanceInput {
+					SourceOp = "Options",
+					Source = "RotationLoop",
+					Name = "Character Rotation",
+				},
+				Hide_CharRotate = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_CharRotate",
+					Expression = "RotationLoop",
+				},
+				InputRotation_1 = InstanceInput {
+					SourceOp = "AnimCurve_Rotate",
+					Source = "TimeScale",
+					Name = "Rotate Speed",
+					Default = 1,
+				},
+				CharWaveLoop = InstanceInput {
+					SourceOp = "Options",
+					Source = "CharWaveLoop",
+					Name = "Character Wave**",
+				},
+				Hide_CharWave = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_CharWave",
+					Expression = "CharWaveLoop",
+				},
+				InputWave_1 = InstanceInput {
+					SourceOp = "Perturb_Wave",
+					Source = "XScale",
+					Name = "Wave Scale X",
+					Default = 0.25,
+				},
+				InputWave_2 = InstanceInput {
+					SourceOp = "Perturb_Wave",
+					Source = "YScale",
+					Name = "Wave Scale Y",
+					Default = 1,
+				},
+				InputWave_4 = InstanceInput {
+					SourceOp = "Perturb_Wave",
+					Source = "Speed",
+					Name = "Wave Speed",
+					Default = 1,
+				},
+				InputWave_11 = InstanceInput {
+					SourceOp = "Follower_Wave",
+					Source = "Order",
+					Name = "Character Order",
+					Default = 7,
+				},
+				InputWave_12 = InstanceInput {
+					SourceOp = "Follower_Wave",
+					Source = "Delay",
+					Name = "Character Delay",
+					Default = 2,
+				},
+				RandomSizeLoop = InstanceInput {
+					SourceOp = "Options",
+					Source = "RandomSizeLoop",
+					Name = "Character Random Size**",
+				},
+				Hide_CharRandomSize = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_CharRandomSize",
+					Expression = "RandomSizeLoop",
+				},
+				InputSize_1 = InstanceInput {
+					SourceOp = "Perturb_SizeX",
+					Source = "Strength",
+					Name = "Random Size X",
+					Default = 1,
+				},
+				InputSize_3 = InstanceInput {
+					SourceOp = "Perturb_SizeY",
+					Source = "Strength",
+					Name = "Random Size Y",
+					Default = 1,
+				},
+				InputSize_2 = InstanceInput {
+					SourceOp = "Perturb_SizeX",
+					Source = "Speed",
+					Name = "Random Size Speed",
+					Default = 1,
+				},
+				InputSize_11 = InstanceInput {
+					SourceOp = "Follower_Size",
+					Source = "Order",
+					Name = "Character Order",
+					Default = 7,
+				},
+				InputSize_13 = InstanceInput {
+					SourceOp = "Follower_Size",
+					Source = "Delay",
+					Name = "Character Delay",
+					Default = 2,
+				},
+				RandomTextPosition = InstanceInput {
+					SourceOp = "Options",
+					Source = "RandomTextPosition",
+					Name = "Camera Shake",
+				},
+				Hide_TextRandomPosition = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_TextRandomPosition",
+					Expression = "RandomTextPosition",
+				},
+				InputTextPosition_1 = InstanceInput {
+					SourceOp = "Perturb_RandomPosition",
+					Source = "XScale",
+					Name = "Strength X",
+					Default = 0.2,
+				},
+				InputTextPosition_2 = InstanceInput {
+					SourceOp = "Perturb_RandomPosition",
+					Source = "YScale",
+					Name = "Strength Y",
+					Default = 0.2,
+				},
+				InputTextPosition_3 = InstanceInput {
+					SourceOp = "Perturb_RandomPosition",
+					Source = "Speed",
+					Name = "Shake Speed",
+					Default = 1,
+				},
+				SwingLoop = InstanceInput {
+					SourceOp = "Options",
+					Source = "SwingLoop",
+					Name = "Text Swing",
+				},
+				Hide_TextSwing = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_TextSwing",
+					Expression = "SwingLoop",
+				},
+				InputSwing_65 = InstanceInput {
+					SourceOp = "Options",
+					Source = "SwingStrength",
+					Default = 1,
+				},
+				InputSwing_66 = InstanceInput {
+					SourceOp = "Loop_Swing",
+					Source = "Pivot",
+				},
+				InputSwing_ZPivot = InstanceInput {
+					SourceOp = "Loop_Swing",
+					Source = "ZPivot",
+					MinScale = -1,
+				},
+				InputSwing_SpeedX = InstanceInput {
+					SourceOp = "AnimCurves2",
+					Source = "TimeScale",
+					Name = "Swing Speed X",
+					Default = 0,
+				},
+				InputSwing_SpeedY = InstanceInput {
+					SourceOp = "AnimCurves3",
+					Source = "TimeScale",
+					Name = "Swing Speed Y",
+					Default = 0,
+				},
+				InputSwing_SpeedZ = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "TimeScale",
+					Name = "Swing Speed Z",
+					Default = 0,
+				},
+				TextRotation3D = InstanceInput {
+					SourceOp = "Options",
+					Source = "TextRotation3D",
+					Name = "Text Rotation",
+				},
+				Hide_TextRotationX = InstanceInput {
+					SourceOp = "Options",
+					Source = "Hide_TextRotationX",
+					Expression = "TextRotation3D",
+				},
+				Loop_Rotation3D_Pivot = InstanceInput {
+					SourceOp = "Loop_Rotation3D",
+					Source = "Pivot",
+				},
+				Loop_Rotation3D_ZPivot = InstanceInput {
+					SourceOp = "Loop_Rotation3D",
+					Source = "ZPivot",
+					MinScale = -1,
+				},
+				InputTextRotationX_1 = InstanceInput {
+					SourceOp = "AnimCurve_RotationX",
+					Source = "TimeScale",
+					Name = "Rotate Speed X",
+					Default = 0,
+				},
+				InputTextRotationY_1 = InstanceInput {
+					SourceOp = "AnimCurve_RotationY",
+					Source = "TimeScale",
+					Name = "Rotate Speed Y",
+					Default = 0,
+				},
+				InputTextRotationZ_1 = InstanceInput {
+					SourceOp = "AnimCurve_RotationZ",
+					Source = "TimeScale",
+					Name = "Rotate Speed Z",
+					Default = 0,
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Merge2",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { -495, 49.5 },
+				Flags = {
+					AllowPan = false,
+					GridSnap = true,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 923.059, 343.943, 633.923, 27.9474 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				Background1 = Background {
+					CtrlWShown = false,
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -550, 214.5 } },
+				},
+				MainStyle = Merge {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Blend = Input { Expression = "(1-Merge_3DText.Blend)", },
+						Background = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform_Out",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -440, 214.5 } },
+				},
+				MainTextCharacterStyles = StyledTextCLS {
+					Inputs = {
+						TransformRotation = Input { Value = 1, },
+						Softness = Input { Value = 1, },
+						Text = Input { Expression = ":if (Options.DropIn==1) then return Follower_DropIn.StyledText end if (Options.CharFadeIn==1) then return Follower_FadeIn.StyledText end if (Options.DropOut==1) then return Follower_DropOut.StyledText end if (Options.CharFadeOut==1) then return Follower_FadeOut.StyledText end if (Options.CharWaveLoop==1 or Options.RandomSizeLoop==1) then return Follower_Size.StyledText else return Options.MainTextInput end", },
+					},
+				},
+				MainText = TextPlus {
+					NameSet = true,
+					Inputs = {
+						Red6 = Input { Value = 0.00392156862745098, },
+						Blue6 = Input { Value = 0.576470588235294, },
+						Green6 = Input { Value = 0.0980392156862745, },
+						Softness6 = Input { Value = 1, },
+						ElementShape8 = Input { Value = 2, },
+						Position6 = Input { Value = 1, },
+						Softness8 = Input { Value = 1, },
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LayoutSize = Input { Expression = "iif(Options.CheckZoomSizeIn==0, 1, (Options.ZoomSizeIn+(1-Options.ZoomSizeIn)*Options.AnimCurveIn)) * iif(Options.CheckZoomSizeOut==0, 1, (1+(Options.ZoomSizeOut-1)*Options.AnimCurveOut))", },
+						LayoutRotation = Input { Value = 1, },
+						CharacterSpacing = Input { Value = 1.12, },
+						TransformRotation = Input { Value = 1, },
+						Name1 = Input { Value = "Main Text", },
+						Name2 = Input { Value = "Stroke", },
+						Name3 = Input { Value = "Shadow", },
+						Name4 = Input { Value = "Border", },
+						Name5 = Input { Value = "Background", },
+						ColorImage1 = Input {
+							SourceOp = "MediaIn1",
+							Source = "Output",
+						},
+						Softness1 = Input { Value = 1, },
+						Position1 = Input { Value = 1, },
+						StyledText = Input {
+							SourceOp = "MainTextCharacterStyles",
+							Source = "StyledText",
+						},
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						Size = Input { Value = 0.2, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, },
+						Start = Input { Expression = "Options.AnimCurveOut*Options.TypeOut", },
+						End = Input { Expression = "iif(Options.TypeIn==0, 1, Options.AnimCurveIn)", },
+						FrameRenderScript = Input { Value = "if (Options.RotationLoop==1) then\n	 CharacterAngleY = AnimCurve_Rotate.Value;\nend\nif (Options.ShakeLoop==1) then\n	 CharacterAngleZ = AnimCurve_Shake.Value;\nend\n\nif (Options.CharRotateIn==1 or Options.CharRotateOut==1) then CharacterAngleY=360*(Options.CharRotateIn==1 and Options.AnimCurveIn or 1)*(Options.CharRotateOut==1 and (1-Options.AnimCurveOut) or 1) end", },
+						Thickness2 = Input { Value = 0.1, },
+						Softness2 = Input { Value = 1, },
+						SoftnessY2 = Input { Expression = "SoftnessX2", },
+						Position2 = Input { Value = 1, },
+						Softness3 = Input { Value = 1, },
+						SoftnessY3 = Input { Expression = "SoftnessX3", },
+						Position3 = Input { Value = 1, },
+						Rotation3 = Input { Value = 1, },
+						ElementShape4 = Input { Value = 3, },
+						Level4 = Input { Value = 0, },
+						Red4 = Input { Value = 1, },
+						Green4 = Input { Value = 0.8, },
+						Blue4 = Input { Value = 0, },
+						Softness4 = Input { Value = 1, },
+						SoftnessY4 = Input { Expression = "SoftnessX4", },
+						Position4 = Input { Value = 1, },
+						ElementShape5 = Input { Value = 2, },
+						Level5 = Input { Value = 0, },
+						Green5 = Input { Value = 0.4, },
+						Blue5 = Input { Value = 0, },
+						Softness5 = Input { Value = 1, },
+						Position5 = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -440, 16.5 } },
+					UserControls = ordered() {
+						SelectElement = {
+							{ MBTNC_AddButton = "1" },
+							{ MBTNC_AddButton = "2" },
+							{ MBTNC_AddButton = "3" },
+							{ MBTNC_AddButton = "4" },
+							{ MBTNC_AddButton = "5" },
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "MultiButtonControl",
+							MBTNC_ShowBasicButton = true,
+							INP_MaxScale = 1,
+							INP_MinAllowed = -1000000,
+							MBTNC_StretchToFit = true,
+							INP_MinScale = 0,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							MBTNC_ShowName = false,
+							INP_Passive = true,
+							MBTNC_ShowToolTip = true,
+							LINKS_Name = "Select Element",
+						}
+					}
+				},
+				AnimCurve_RotationX = LUTLookup {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurves2Lookup1",
+							Source = "Value",
+						},
+						Scale = Input {
+							Value = 0,
+							Expression = "360*Options.TextRotation3D",
+						},
+						TimeScale = Input { Value = 0, },
+					},
+				},
+				AnimCurves2Lookup1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				AnimCurve_RotationY = LUTLookup {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurves3Lookup",
+							Source = "Value",
+						},
+						Scale = Input {
+							Value = 0,
+							Expression = "360*Options.TextRotation3D",
+						},
+					},
+				},
+				AnimCurves3Lookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				AnimCurve_RotationZ = LUTLookup {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurves4Lookup",
+							Source = "Value",
+						},
+						Scale = Input {
+							Value = 0,
+							Expression = "360*Options.TextRotation3D",
+						},
+						TimeScale = Input { Value = 0, },
+					},
+				},
+				AnimCurves4Lookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				AnimCurve_Rotate = LUTLookup {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Source = Input { Value = FuID { "Custom" }, },
+						Input = Input {
+							SourceOp = "AnimCurve_RotateInput",
+							Source = "Value",
+						},
+						Lookup = Input {
+							SourceOp = "AnimCurves2Lookup",
+							Source = "Value",
+						},
+						Scale = Input {
+							Value = 0,
+							Expression = "Options.RotationLoop",
+						},
+					},
+				},
+				AnimCurve_RotateInput = BezierSpline {
+					SplineColor = { Red = 104, Green = 195, Blue = 244 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 20, 120 }, Flags = { Loop = true, LoopRel = true } },
+						[60] = { 360, LH = { 40, 240 }, Flags = { Linear = true, Loop = true, LoopRel = true } }
+					}
+				},
+				AnimCurves2Lookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				AnimCurve_Shake = LUTLookup {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Source = Input { Value = FuID { "Custom" }, },
+						Input = Input {
+							SourceOp = "AnimCurve_ShakeInput",
+							Source = "Value",
+						},
+						Lookup = Input {
+							SourceOp = "AnimCurve_ShakeLookup",
+							Source = "Value",
+						},
+						Scale = Input {
+							Value = 0,
+							Expression = "Options.ShakeLoop*Options.ShakeLoopStrength",
+						},
+					},
+				},
+				AnimCurve_ShakeInput = BezierSpline {
+					SplineColor = { Red = 28, Green = 216, Blue = 243 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 2.048, 12 }, Flags = { Loop = true } },
+						[8] = { 20, LH = { 5.3336000442505, 20 }, RH = { 12.6661999225616, 20 } },
+						[22] = { -20, LH = { 17.3338000774385, -20 }, RH = { 24.6663999557494, -20 } },
+						[30] = { 0, LH = { 28.368, -9.6 }, Flags = { Loop = true } }
+					}
+				},
+				AnimCurve_ShakeLookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				Follower_Size = StyledTextFollower {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Order = Input { Value = 4, },
+						Delay = Input { Value = 2, },
+						Text = Input {
+							SourceOp = "Follower_Wave",
+							Source = "StyledText",
+						},
+						TransformRotation = Input { Value = 1, },
+						TransformSize = Input { Value = 1, },
+						CharacterSizeX = Input {
+							SourceOp = "Perturb_SizeX",
+							Source = "Value",
+						},
+						CharacterSizeY = Input {
+							SourceOp = "Perturb_SizeY",
+							Source = "Value",
+						},
+						Softness1 = Input { Value = 1, },
+						Softness2 = Input { Value = 1, },
+						Softness3 = Input { Value = 1, },
+						Softness4 = Input { Value = 1, },
+						Softness5 = Input { Value = 1, },
+						Softness6 = Input { Value = 1, },
+						Softness7 = Input { Value = 1, },
+						Softness8 = Input { Value = 1, },
+					},
+				},
+				Follower_Wave = StyledTextFollower {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Order = Input { Value = 7, },
+						Delay = Input { Value = 2, },
+						Text = Input { Expression = "Options.MainTextInput", },
+						TransformRotation = Input { Value = 1, },
+						SelectElement = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						Position1 = Input { Value = 1, },
+						Offset1 = Input {
+							SourceOp = "Perturb_Wave",
+							Source = "Value",
+						},
+						Softness2 = Input { Value = 1, },
+						Position2 = Input { Value = 1, },
+						Offset2 = Input {
+							SourceOp = "Perturb_Wave",
+							Source = "Value",
+						},
+						Softness3 = Input { Value = 1, },
+						Position3 = Input { Value = 1, },
+						Offset3 = Input {
+							SourceOp = "Expression1",
+							Source = "PointResult",
+						},
+						Softness4 = Input { Value = 1, },
+						Softness5 = Input { Value = 1, },
+						Softness6 = Input { Value = 1, },
+						Softness7 = Input { Value = 1, },
+						Softness8 = Input { Value = 1, },
+						FrameRenderScript = Input { Value = "\n", },
+						StartRenderScripts = Input { Value = 1, },
+					},
+				},
+				Perturb_Wave = PerturbPoint {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Value = Input { Value = { 0, 0 }, },
+						XScale = Input { Value = 0, },
+						YScale = Input { Value = 0.69, },
+						Wobble = Input {
+							Value = 0,
+							Expression = "Options.CharWaveLoop",
+						},
+						Speed = Input { Value = 3.86, },
+					},
+				},
+				Expression1 = Expression {
+					CtrlWZoom = false,
+					Inputs = {
+						p1 = Input {
+							SourceOp = "Perturb_Wave",
+							Source = "Value",
+						},
+						p2 = Input {
+							Value = { 0.05, -0.05 },
+							Expression = "MainText.Offset3",
+						},
+						PointExpressionX = Input { Value = "p1x+p2x", },
+						PointExpressionY = Input { Value = "p1y+p2y", },
+						ShowPoint1 = Input { Value = 0, },
+						ShowPoint2 = Input { Value = 0, },
+						ShowPoint3 = Input { Value = 0, },
+						ShowPoint4 = Input { Value = 0, },
+						ShowPoint5 = Input { Value = 0, },
+						ShowPoint6 = Input { Value = 0, },
+						ShowPoint7 = Input { Value = 0, },
+						ShowPoint8 = Input { Value = 0, },
+						ShowPoint9 = Input { Value = 0, },
+					},
+				},
+				Perturb_SizeX = PerturbNumber {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Value = Input { Value = 1, },
+						Wobble = Input {
+							Value = 0,
+							Expression = "Options.RandomSizeLoop",
+						},
+						Speed = Input { Value = 3.78, },
+					},
+				},
+				Perturb_SizeY = PerturbNumber {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Value = Input { Value = 1, },
+						Wobble = Input {
+							Value = 0,
+							Expression = "Options.RandomSizeLoop",
+						},
+						Speed = Input { Expression = "Perturb_SizeX.Speed", },
+					},
+				},
+				Transform_In = DVE {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 0,
+							Expression = "iif(Options.AnimateInTime>0,1,0)*bit.bor(Options.SwingIn,Options.CheckSlideIn,Options.CheckRotateIn)*(1-Options.Is3DTitle)",
+						},
+						MotionBlur = Input { Value = 1, },
+						Quality = Input { Value = 0, },
+						Center = Input {
+							SourceOp = "Vector1",
+							Source = "Position",
+						},
+						ZMove = Input {
+							Value = 1.425,
+							Expression = "1-ZPivot",
+						},
+						ZPivot = Input { Value = -0.425, },
+						XRotation = Input { Expression = "(1-Options.AnimCurveIn)*Options.SwingAngle*(1-Options.SwingAxis)*Options.SwingIn", },
+						YRotation = Input { Expression = "(1-Options.AnimCurveIn)*Options.SwingAngle*Options.SwingAxis*Options.SwingIn", },
+						ZRotation = Input { Expression = "Options.CheckRotateIn * Options.RotateIn * (1-Options.AnimCurveIn)", },
+						AlphaMode = Input { Value = 2, },
+						Input = Input {
+							SourceOp = "MainText",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -440, 82.5 } },
+				},
+				Vector1 = Vector {
+					CtrlWZoom = false,
+					Inputs = {
+						Distance = Input { Expression = "(1-Options.AnimCurveIn)*Options.SlideIn*Options.CheckSlideIn", },
+						ImageAspect = Input { Value = 1.777778, },
+					},
+				},
+				Follower_FadeIn_Dummy = StyledTextFollower {
+					CtrlWZoom = false,
+					Inputs = {
+						Order = Input { Value = 4, },
+						Text = Input {
+							SourceOp = "Follower_FadeIn",
+							Source = "StyledText",
+						},
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						Softness2 = Input { Value = 1, },
+						Softness3 = Input { Value = 1, },
+						Softness4 = Input { Value = 1, },
+						Softness5 = Input { Value = 1, },
+						Softness6 = Input { Value = 1, },
+						Softness7 = Input { Value = 1, },
+						Softness8 = Input { Value = 1, },
+					},
+				},
+				Follower_FadeOut_Dummy = StyledTextFollower {
+					CtrlWZoom = false,
+					Inputs = {
+						Order = Input { Value = 4, },
+						Text = Input {
+							SourceOp = "Follower_FadeOut",
+							Source = "StyledText",
+						},
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						Softness2 = Input { Value = 1, },
+						Softness3 = Input { Value = 1, },
+						Softness4 = Input { Value = 1, },
+						Softness5 = Input { Value = 1, },
+						Softness6 = Input { Value = 1, },
+						Softness7 = Input { Value = 1, },
+						Softness8 = Input { Value = 1, },
+					},
+				},
+				Follower_DropIn_Dummy = StyledTextFollower {
+					CtrlWZoom = false,
+					Inputs = {
+						Order = Input { Value = 4, },
+						Text = Input {
+							SourceOp = "Follower_DropIn",
+							Source = "StyledText",
+						},
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						Softness2 = Input { Value = 1, },
+						Softness3 = Input { Value = 1, },
+						Softness4 = Input { Value = 1, },
+						Softness5 = Input { Value = 1, },
+						Softness6 = Input { Value = 1, },
+						Softness7 = Input { Value = 1, },
+						Softness8 = Input { Value = 1, },
+					},
+				},
+				Follower_DropIn = StyledTextFollower {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Order = Input { Value = 4, },
+						Delay = Input { Value = 2, },
+						Text = Input {
+							Value = StyledText {
+								Value = "ESSENTIAL TITLE"
+							},
+							Expression = "Options.MainTextInput",
+						},
+						TransformRotation = Input { Value = 1, },
+						SelectElement = Input { Value = 2, },
+						Opacity1 = Input {
+							SourceOp = "AnimCurveIn",
+							Source = "Value",
+						},
+						Softness1 = Input { Value = 1, },
+						Position1 = Input { Value = 1, },
+						Offset1 = Input {
+							SourceOp = "Follower_DropIn_Offset1_Vector",
+							Source = "Position",
+						},
+						Opacity2 = Input {
+							SourceOp = "AnimCurveIn",
+							Source = "Value",
+						},
+						Softness2 = Input { Value = 1, },
+						Position2 = Input { Value = 1, },
+						Offset2 = Input {
+							SourceOp = "Follower_DropIn_Offset1_Vector",
+							Source = "Position",
+						},
+						Opacity3 = Input {
+							SourceOp = "AnimCurveIn",
+							Source = "Value",
+						},
+						Softness3 = Input { Value = 1, },
+						Position3 = Input { Value = 1, },
+						Offset3 = Input {
+							SourceOp = "Follower_DropIn_Offset3_Expression",
+							Source = "PointResult",
+						},
+						Opacity4 = Input {
+							SourceOp = "AnimCurveIn",
+							Source = "Value",
+						},
+						Softness4 = Input { Value = 1, },
+						Offset4 = Input {
+							SourceOp = "Follower_DropIn_Offset1_Vector",
+							Source = "Position",
+						},
+						Opacity5 = Input {
+							SourceOp = "AnimCurveIn",
+							Source = "Value",
+						},
+						Softness5 = Input { Value = 1, },
+						Offset5 = Input {
+							SourceOp = "Follower_DropIn_Offset1_Vector",
+							Source = "Position",
+						},
+						Softness6 = Input { Value = 1, },
+						Softness7 = Input { Value = 1, },
+						Softness8 = Input { Value = 1, },
+					},
+				},
+				Follower_DropOut_Dummy = StyledTextFollower {
+					CtrlWZoom = false,
+					Inputs = {
+						Order = Input { Value = 4, },
+						Text = Input {
+							SourceOp = "Follower_DropOut",
+							Source = "StyledText",
+						},
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						Softness2 = Input { Value = 1, },
+						Softness3 = Input { Value = 1, },
+						Softness4 = Input { Value = 1, },
+						Softness5 = Input { Value = 1, },
+						Softness6 = Input { Value = 1, },
+						Softness7 = Input { Value = 1, },
+						Softness8 = Input { Value = 1, },
+					},
+				},
+				Follower_DropOut = StyledTextFollower {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Order = Input { Value = 4, },
+						Delay = Input { Value = -2, },
+						Text = Input {
+							Value = StyledText {
+								Value = "ESSENTIAL TITLE"
+							},
+							Expression = "Options.MainTextInput",
+						},
+						TransformRotation = Input { Value = 1, },
+						SelectElement = Input { Value = 2, },
+						Opacity1 = Input {
+							SourceOp = "Expression_DropOut_Opacity",
+							Source = "NumberResult",
+						},
+						Softness1 = Input { Value = 1, },
+						Position1 = Input { Value = 1, },
+						Offset1 = Input {
+							SourceOp = "Vector_DropOut_Offset",
+							Source = "Position",
+						},
+						Opacity2 = Input {
+							SourceOp = "Expression_DropOut_Opacity",
+							Source = "NumberResult",
+						},
+						Softness2 = Input { Value = 1, },
+						Offset2 = Input {
+							SourceOp = "Vector_DropOut_Offset",
+							Source = "Position",
+						},
+						Opacity3 = Input {
+							SourceOp = "Expression_DropOut_Opacity",
+							Source = "NumberResult",
+						},
+						Softness3 = Input { Value = 1, },
+						Position3 = Input { Value = 1, },
+						Offset3 = Input {
+							SourceOp = "Follower_DropOut_Offset3_Expression",
+							Source = "PointResult",
+						},
+						Opacity4 = Input {
+							SourceOp = "Expression_DropOut_Opacity",
+							Source = "NumberResult",
+						},
+						Softness4 = Input { Value = 1, },
+						Offset4 = Input {
+							SourceOp = "Vector_DropOut_Offset",
+							Source = "Position",
+						},
+						Opacity5 = Input {
+							SourceOp = "Expression_DropOut_Opacity",
+							Source = "NumberResult",
+						},
+						Softness5 = Input { Value = 1, },
+						Offset5 = Input {
+							SourceOp = "Vector_DropOut_Offset",
+							Source = "Position",
+						},
+						Softness6 = Input { Value = 1, },
+						Softness7 = Input { Value = 1, },
+						Softness8 = Input { Value = 1, },
+					},
+				},
+				Expression_DropOut_Opacity = Expression {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						n1 = Input {
+							SourceOp = "AnimCurveOut",
+							Source = "Value",
+						},
+						NumberExpression = Input { Value = "1-n1", },
+					},
+				},
+				Vector_DropOut_Offset = Vector {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Origin = Input { Value = { 0, 0 }, },
+						Distance = Input {
+							Value = 1.33333333333333,
+							Expression = "Options.DropOutDistance*AnimCurveOut.Value",
+						},
+						Angle = Input { Value = -90, },
+					},
+				},
+				Follower_DropOut_Offset3_Expression = Expression {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						p1 = Input {
+							SourceOp = "Vector_DropOut_Offset",
+							Source = "Position",
+						},
+						p2 = Input {
+							Value = { 0.05, -0.05 },
+							Expression = "MainText.Offset3",
+						},
+						PointExpressionX = Input { Value = "p1x+p2x", },
+						PointExpressionY = Input { Value = "p1y+p2y", },
+						PointControls = Input { Value = 1, },
+					},
+				},
+				Follower_FadeIn = StyledTextFollower {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Order = Input { Value = 4, },
+						Delay = Input { Value = 2, },
+						Text = Input {
+							Value = "Essential Title",
+							Expression = "Options.MainTextInput",
+						},
+						TransformRotation = Input { Value = 1, },
+						Opacity1 = Input {
+							SourceOp = "Expression_FadeIn",
+							Source = "NumberResult",
+						},
+						Softness1 = Input { Value = 1, },
+						Opacity2 = Input {
+							SourceOp = "Expression_FadeIn",
+							Source = "NumberResult",
+						},
+						Softness2 = Input { Value = 1, },
+						Opacity3 = Input {
+							SourceOp = "Expression_FadeIn",
+							Source = "NumberResult",
+						},
+						Softness3 = Input { Value = 1, },
+						Opacity4 = Input {
+							SourceOp = "Expression_FadeIn",
+							Source = "NumberResult",
+						},
+						Softness4 = Input { Value = 1, },
+						Opacity5 = Input {
+							SourceOp = "Expression_FadeIn",
+							Source = "NumberResult",
+						},
+						Softness5 = Input { Value = 1, },
+						Softness6 = Input { Value = 1, },
+						Softness7 = Input { Value = 1, },
+						Softness8 = Input { Value = 1, },
+					},
+				},
+				Follower_FadeOut = StyledTextFollower {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Order = Input { Value = 4, },
+						Delay = Input { Value = -2, },
+						Text = Input { Expression = "Options.MainTextInput", },
+						TransformRotation = Input { Value = 1, },
+						Opacity1 = Input {
+							SourceOp = "Expression_FadeOut",
+							Source = "NumberResult",
+						},
+						Softness1 = Input { Value = 1, },
+						Opacity2 = Input {
+							SourceOp = "Expression_FadeOut",
+							Source = "NumberResult",
+						},
+						Softness2 = Input { Value = 1, },
+						Opacity3 = Input {
+							SourceOp = "Expression_FadeOut",
+							Source = "NumberResult",
+						},
+						Softness3 = Input { Value = 1, },
+						Opacity4 = Input {
+							SourceOp = "Expression_FadeOut",
+							Source = "NumberResult",
+						},
+						Softness4 = Input { Value = 1, },
+						Opacity5 = Input {
+							SourceOp = "Expression_FadeOut",
+							Source = "NumberResult",
+						},
+						Softness5 = Input { Value = 1, },
+						Softness6 = Input { Value = 1, },
+						Softness7 = Input { Value = 1, },
+						Softness8 = Input { Value = 1, },
+					},
+				},
+				Expression_FadeIn = Expression {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						n1 = Input {
+							SourceOp = "AnimCurveIn",
+							Source = "Value",
+						},
+						n2 = Input { Expression = "Options.CharFadeIn", },
+						NumberExpression = Input { Value = "if(n2,n1,1)", },
+					},
+				},
+				Expression_FadeOut = Expression {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						n1 = Input {
+							SourceOp = "AnimCurveOut",
+							Source = "Value",
+						},
+						n2 = Input { Expression = "Options.CharFadeOut", },
+						NumberExpression = Input { Value = "if(n2,1-n1,1)", },
+					},
+				},
+				AnimCurveIn = LUTLookup {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Curve = Input { Value = FuID { "Easing" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurveInLookup",
+							Source = "Value",
+						},
+						Scale = Input { Expression = "iif(Options.AnimateInTime==0, 0, 1)", },
+						Offset = Input { Expression = "iif(Options.AnimateInTime==0, 1, 0)", },
+						TimeScale = Input {
+							Value = 10,
+							Expression = "iif(Options.AnimateInTime==0, 1, (comp.RenderEnd-comp.RenderStart+1)/Options.AnimateInTime)",
+						},
+						StartRenderScripts = Input { Value = 1, },
+					},
+				},
+				AnimCurveInLookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				Follower_DropIn_Offset1_Vector = Vector {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Origin = Input { Value = { 0, 0 }, },
+						Distance = Input {
+							Value = 0.8,
+							Expression = "Options.DropInDistance*(1-Options.AnimCurveIn)",
+						},
+						Angle = Input { Value = 90, },
+					},
+				},
+				Follower_DropIn_Offset3_Expression = Expression {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						p1 = Input {
+							SourceOp = "Follower_DropIn_Offset1_Vector",
+							Source = "Position",
+						},
+						p2 = Input {
+							Value = { 0.05, -0.05 },
+							Expression = "MainText.Offset3",
+						},
+						PointExpressionX = Input { Value = "p1x+p2x", },
+						PointExpressionY = Input { Value = "p1y+p2y", },
+						PointControls = Input { Value = 1, },
+						ShowPoint2 = Input { Value = 0, },
+						ShowPoint3 = Input { Value = 0, },
+						ShowPoint4 = Input { Value = 0, },
+						ShowPoint5 = Input { Value = 0, },
+						ShowPoint6 = Input { Value = 0, },
+						ShowPoint7 = Input { Value = 0, },
+						ShowPoint8 = Input { Value = 0, },
+						ShowPoint9 = Input { Value = 0, },
+					},
+				},
+				Options = Background {
+					NameSet = true,
+					Inputs = {
+						RepeatAnimation = Input { Value = 1, },
+						RotateLoop = Input { Value = 20, },
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, },
+						StartRenderScripts = Input { Value = 1, },
+						AnimateInTime = Input { Value = 15, },
+						AnimateOutTime = Input { Value = 15, },
+						Hide_RotateIn = Input { Expression = "CheckRotateIn", },
+						AnimCurveIn = Input {
+							SourceOp = "AnimCurveIn",
+							Source = "Value",
+						},
+						AnimCurveOut = Input {
+							SourceOp = "AnimCurveOut",
+							Source = "Value",
+						},
+						SlideIn = Input { Value = 1, },
+						Hide_CharDropIn = Input { Expression = "DropIn", },
+						Hide_CharDropOut = Input { Expression = "DropOut", },
+						Hide_SlideIn = Input { Expression = "CheckSlideIn", },
+						Hide_ZoomSizeIn = Input { Expression = "CheckZoomSizeIn", },
+						Hide_ZoomSizeOut = Input { Expression = "CheckZoomSizeOut", },
+						Hide_SlideOut = Input { Expression = "CheckSlideOut", },
+						Hide_RotateOut = Input { Expression = "CheckRotateOut", },
+						Hide_CharShake = Input { Expression = "ShakeLoop", },
+						Hide_CharRotate = Input { Expression = "RotationLoop", },
+						Hide_CharWave = Input { Expression = "CharWaveLoop", },
+						Hide_CharRandomSize = Input { Expression = "RandomSizeLoop", },
+						Hide_TextSwing = Input { Expression = "SwingLoop", },
+						Hide_TextRotationX = Input { Expression = "TextRotation3D", },
+						Hide_TextRotationY = Input { Expression = "TextRotationY", },
+						Hide_TextRotationZ = Input { Expression = "TextRotationZ", },
+						Hide_TextRandomPosition = Input { Expression = "RandomTextPosition", },
+						SwingAngle = Input { Value = -82.5, },
+						Hide_SwingIn = Input { Expression = "SwingIn", },
+						SwingOutAngle = Input { Value = 90, },
+						Hide_SwingOut = Input { Expression = "SwingOut", },
+						Hide_CharFadeIn = Input { Expression = "CharFadeIn", },
+						Hide_CharFadeOut = Input { Expression = "CharFadeOut", },
+						Hide_TextMaskSize = Input { Expression = "EnableTextMask", },
+						MainTextInput = Input { Value = "3D TITLE", },
+						Hide_3DTextureList = Input {
+							Value = 1,
+							Expression = "Is3DTitle",
+						},
+						Hide_3DSetupPage = Input {
+							Value = 1,
+							Expression = "Is3DTitle",
+						},
+						Hide_ImageInput = Input { Expression = "MainText.Type1==1 and MainText.ImageSource1==0 and MainText.SelectElement==0 and 1 or 0", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 280.5 } },
+					UserControls = ordered() {
+						AnimateInTime = { INP_Integer = true, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_MinScale = 0, INP_MaxScale = 100, LINKS_Name = "Animate In Time", },
+						AnimateOutTime = { INP_MaxAllowed = 1000000, INP_Integer = true, INP_MinAllowed = -1000000, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_MinScale = 0, INP_MaxScale = 100, LINKS_Name = "Animate Out Time", },
+						CheckRotateIn = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Rotate", },
+						Hide_RotateIn = {
+							LBLC_NumInputs = 2,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						RotateIn = { INP_MaxAllowed = 1000000, INP_Integer = false, INPID_InputControl = "ScrewControl", INP_MaxScale = 360, INP_Default = "360", INP_MinScale = 0, INP_MinAllowed = -1000000, LINKID_DataType = "Number", LINKS_Name = "Rotate Angle", },
+						Style0 = { BTNCS_Execute = "MainText.Enabled1=1;MainText.Enabled2=0;MainText.Enabled3=0;MainText.Enabled4=0;MainText.Enabled5=0;MainText.SelectElement=0;MainText.Select=0;MainText.Red1=1;MainText.Green1=1;MainText.Blue1=1;MainText.Alpha1=1;MainText.Type1=0;", INPID_InputControl = "ButtonControl", ICD_Width = 0.2, LINKS_Name = "S0", },
+						Style1 = { BTNCS_Execute = "MainText.Enabled1=1;MainText.Enabled2=1;MainText.Enabled3=0;MainText.Enabled4=0;MainText.Enabled5=0;MainText.SelectElement=1;MainText.Select=1;MainText.Red1=1;MainText.Green1=1;MainText.Blue1=1;MainText.Alpha1=1;MainText.Red2=1;MainText.Green2=0;MainText.Blue2=0;MainText.Alpha2=1;MainText.Thickness2=0.1;MainText.JoinStyle2=1;MainText.LineStyle2=0;MainText.SoftnessX2=0;", INPID_InputControl = "ButtonControl", ICD_Width = 0.16, LINKS_Name = "S1", },
+						Style2 = { BTNCS_Execute = "MainText.Enabled1=0;MainText.Enabled2=1;MainText.Enabled3=0;MainText.Enabled4=0;MainText.Enabled5=0;MainText.SelectElement=1;MainText.Select=1;MainText.SoftnessX2=0;MainText.Red2=1;MainText.Green2=0;MainText.Blue2=0;MainText.Alpha2=1;MainText.Thickness2=0.02;MainText.JoinStyle2=1;MainText.LineStyle2=0;", INPID_InputControl = "ButtonControl", ICD_Width = 0.16, LINKS_Name = "S2", },
+						Style3 = { BTNCS_Execute = "MainText.Enabled1=1;MainText.Enabled2=0;MainText.Enabled3=1;MainText.Enabled4=0;MainText.Enabled5=0;MainText.Red1=1;MainText.Green1=1;MainText.Blue1=1;MainText.Red3=0;MainText.Green3=0;MainText.Blue3=0;MainText.Alpha3=1;MainText.SoftnessX3=5;MainText.SelectElement=2;MainText.Select=2;MainText.Offset3={0.05,-0.05};MainText.ShearX3=0;MainText.AngleX3=0;MainText.SizeX3=1;MainText.SizeY3=1;", INPID_InputControl = "ButtonControl", ICD_Width = 0.16, LINKS_Name = "S3", },
+						Style4 = { BTNCS_Execute = "MainText.Enabled1=1;MainText.Enabled2=0;MainText.Enabled3=0;MainText.Enabled4=1;MainText.Enabled5=0;MainText.Red1=1;MainText.Green1=1;MainText.Blue1=1;MainText.SelectElement=3;MainText.Select=3;MainText.SoftnessX4=0;MainText.Red4=1;MainText.Green4=0.8;MainText.Blue4=0;MainText.Alpha4=1;MainText.Round4=0;MainText.Thickness4=0.02;MainText.JoinStyle4=1;MainText.LineStyle4=0;MainText.ExtendHorizontal4=0;MainText.ExtendVertical4=0;", INPID_InputControl = "ButtonControl", ICD_Width = 0.16, LINKS_Name = "S4", },
+						Style5 = { BTNCS_Execute = "MainText.Enabled1=1;MainText.Enabled2=0;MainText.Enabled3=0;MainText.Enabled4=0;MainText.Enabled5=1;MainText.Red5=1;MainText.Green5=0.4;MainText.Blue5=0;MainText.Alpha5=1;MainText.Red1=1;MainText.Green1=1;MainText.Blue1=1;MainText.Alpha1=1;MainText.SelectElement=4;MainText.Select=4;MainText.SoftnessX5=0;MainText.SoftnessY5=0;MainText.SoftnessGlow5=0;MainText.Offset5={0.0,0.0};MainText.Round5=0;MainText.ExtendHorizontal5=0;MainText.ExtendVertical5=0;", INPID_InputControl = "ButtonControl", ICD_Width = 0.16, LINKS_Name = "S5", },
+						Style01 = { BTNCS_Execute = "MainText.Enabled1=1;MainText.Enabled2=0;MainText.Enabled3=0;MainText.Enabled4=0;MainText.Enabled5=0;MainText.SelectElement=0;MainText.Select=0;MainText.Red1=1;MainText.Green1=0;MainText.Blue1=0;MainText.Alpha1=1;MainText.Type1=0;", INPID_InputControl = "ButtonControl", ICD_Width = 0.2, LINKS_Name = "S01", },
+						Style11 = { BTNCS_Execute = "MainText.Enabled1=1;MainText.Enabled2=1;MainText.Enabled3=0;MainText.Enabled4=0;MainText.Enabled5=0;MainText.SelectElement=1;MainText.Select=1;MainText.Red1=1;MainText.Green1=0;MainText.Blue1=0;MainText.Alpha1=1;MainText.Red2=1;MainText.Green2=1;MainText.Blue2=1;MainText.Alpha2=1;MainText.Thickness2=0.1;MainText.JoinStyle2=1;MainText.LineStyle2=0;MainText.SoftnessX2=0;", INPID_InputControl = "ButtonControl", ICD_Width = 0.16, LINKS_Name = "S11", },
+						Style21 = { BTNCS_Execute = "MainText.Enabled1=0;MainText.Enabled2=1;MainText.Enabled3=0;MainText.Enabled4=0;MainText.Enabled5=0;MainText.SelectElement=1;MainText.Select=1;MainText.SoftnessX2=0;MainText.Red2=1;MainText.Green2=1;MainText.Blue2=1;MainText.Alpha2=1;MainText.Thickness2=0.02;MainText.JoinStyle2=1;MainText.LineStyle2=0;", INPID_InputControl = "ButtonControl", ICD_Width = 0.16, LINKS_Name = "S21", },
+						Style31 = { BTNCS_Execute = "MainText.Enabled1=1;MainText.Enabled2=0;MainText.Enabled3=1;MainText.Enabled4=0;MainText.Enabled5=0;MainText.Red1=1;MainText.Green1=1;MainText.Blue1=1;MainText.Red3=1;MainText.Green3=0;MainText.Blue3=0;MainText.Alpha3=1;MainText.SoftnessX3=0;MainText.SelectElement=2;MainText.Select=2;MainText.Offset3={0.015,-0.015};MainText.ShearX3=0;MainText.AngleX3=0;MainText.SizeX3=1;MainText.SizeY3=1;", INPID_InputControl = "ButtonControl", ICD_Width = 0.16, LINKS_Name = "S31", },
+						Style41 = { BTNCS_Execute = "MainText.Enabled1=1;MainText.Enabled2=0;MainText.Enabled3=0;MainText.Enabled4=1;MainText.Enabled5=0;MainText.Red1=1;MainText.Green1=0.8;MainText.Blue1=0.4;MainText.SelectElement=3;MainText.Select=3;MainText.SoftnessX4=0;MainText.Red4=1;MainText.Green4=1;MainText.Blue4=1;MainText.Alpha4=1;MainText.Round4=0;MainText.Thickness4=0.02;MainText.JoinStyle4=1;MainText.LineStyle4=0;MainText.ExtendHorizontal4=0;MainText.ExtendVertical4=0;", INPID_InputControl = "ButtonControl", ICD_Width = 0.16, LINKS_Name = "S41", },
+						Style51 = { BTNCS_Execute = "MainText.Enabled1=1;MainText.Enabled2=0;MainText.Enabled3=1;MainText.Enabled4=1;MainText.Enabled5=1;MainText.Red5=1;MainText.Green5=0.4;MainText.Blue5=0;MainText.Alpha5=1;MainText.Red1=1;MainText.Green1=1;MainText.Blue1=1;MainText.Alpha1=1;MainText.SelectElement=4;MainText.Select=4;MainText.SoftnessX5=0;MainText.SoftnessY5=0;MainText.SoftnessGlow5=0;MainText.Offset5={0.0,0.0};MainText.Round5=0;MainText.ExtendHorizontal5=0;MainText.ExtendVertical5=0;", INPID_InputControl = "ButtonControl", ICD_Width = 0.16, LINKS_Name = "S51", },
+						AnimCurveIn = { INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_MinScale = 0, INP_MaxScale = 1, LINKS_Name = "AnimCurveIn", },
+						AnimCurveOut = { INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_MinScale = 0, INP_MaxScale = 1, LINKS_Name = "AnimCurveOut", },
+						CheckRotateOut = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Rotate", },
+						RotateOut = { INP_MaxAllowed = 1000000, INP_Integer = false, INPID_InputControl = "ScrewControl", INP_MaxScale = 360, INP_Default = "360", INP_MinScale = 0, INP_MinAllowed = -1000000, LINKID_DataType = "Number", LINKS_Name = "Rotate Out", },
+						CheckSlideIn = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Slide", },
+						SlideIn = { INP_MaxAllowed = 1000000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = -1, INP_MinScale = -1, INP_MinAllowed = -1000000, LINKID_DataType = "Number", LINKS_Name = "Slide In", },
+						TypeIn = { ICD_Width = 1, INP_Integer = false, LINKID_DataType = "Number", CBC_TriState = false, INPID_InputControl = "CheckboxControl", LINKS_Name = "Type In", },
+						TypeOut = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Type Out", },
+						ShakeLoop = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Shake Loop", },
+						CharWaveLoop = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Wave Loop", },
+						CheckSlideOut = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Slide", },
+						SlideOut = { INP_MaxAllowed = 1000000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 1, INP_MinScale = -1, INP_MinAllowed = -1000000, LINKID_DataType = "Number", LINKS_Name = "Slide Out Distance", },
+						CheckZoomSizeIn = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Zoom", },
+						ZoomSizeIn = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "SliderControl",
+							INP_MaxScale = 10,
+							INP_Default = 0,
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							LINKS_Name = "Zoom Size In",
+						},
+						CheckZoomSizeOut = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Zoom", },
+						ZoomSizeOut = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "SliderControl",
+							INP_MaxScale = 10,
+							INP_Default = 0,
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							LINKS_Name = "Zoom Size Out",
+						},
+						FadeIn = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Fade In", },
+						FadeOut = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Fade Out", },
+						SwingLoop = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Swing Loop", },
+						RandomSizeLoop = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Random Size Loop", },
+						LabelAnimationIn = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 34,
+							LINKS_Name = "In",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						LabelAnimationOut = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 34,
+							LINKS_Name = "Out",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						LabelAnimationLoop = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 41,
+							LINKS_Name = "Loop",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						LabelTextLayout = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 9,
+							LINKS_Name = "Layout",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						SwingStrength = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "SliderControl",
+							INP_MaxScale = 10,
+							INP_Default = 1,
+							INP_MinScale = 0.1,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							LINKS_Name = "Swing Strength",
+						},
+						RotationLoop = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Rotation Loop", },
+						ShakeLoopStrength = {
+							INP_Integer = false,
+							LINKS_Name = "Shake Strength",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0.1,
+							LINKID_DataType = "Number",
+							INP_MaxScale = 10,
+							INP_Default = 1,
+						},
+						DropIn = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Character Drop",
+						},
+						DropInDistance = {
+							INP_Integer = false,
+							LINKS_Name = "Drop In Distance",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = -5,
+							LINKID_DataType = "Number",
+							INP_MaxScale = 5,
+							INP_Default = 1,
+						},
+						DropOut = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Character Drop",
+						},
+						DropOutDistance = {
+							INP_Integer = false,
+							LINKS_Name = "Drop Out Distance",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = -5,
+							LINKID_DataType = "Number",
+							INP_MaxScale = 5,
+							INP_Default = 1,
+						},
+						TextRotation3D = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Text Rotation 3D",
+						},
+						TextRotationY = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Text Rotation Y",
+						},
+						TextRotationZ = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Text Rotation Z",
+						},
+						RandomTextPosition = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Random Text Position",
+						},
+						BlankLine = {
+							INP_Integer = false,
+							LBLC_DropDownButton = false,
+							INPID_InputControl = "LabelControl",
+							LINKID_DataType = "Number",
+							INP_External = false,
+							LINKS_Name = "",
+						},
+						DonateButton = {
+							ICD_Width = 0.5,
+							INPID_InputControl = "ButtonControl",
+							BTNCS_Execute = "os.execute('open https://www.buymeacoffee.com/essentialvideo'); os.execute('start https://www.buymeacoffee.com/essentialvideo');",
+							LINKID_DataType = "Number",
+							LINKS_Name = "Donate!",
+						},
+						SubscribeButton = {
+							ICD_Width = 0.5,
+							INPID_InputControl = "ButtonControl",
+							BTNCS_Execute = "os.execute('open https://www.youtube.com/@EssentialVideoEditing/videos?sub_confirmation=1'); os.execute('start https://www.youtube.com/@EssentialVideoEditing/videos?sub_confirmation=1');",
+							LINKID_DataType = "Number",
+							LINKS_Name = "Subscribe!",
+						},
+						Hide_CharDropIn = {
+							LBLC_NumInputs = 4,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_CharDropOut = {
+							LBLC_NumInputs = 4,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_SlideIn = {
+							LBLC_NumInputs = 2,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_ZoomSizeIn = {
+							LBLC_NumInputs = 1,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_ZoomSizeOut = {
+							LBLC_NumInputs = 1,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_SlideOut = {
+							LBLC_NumInputs = 2,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_RotateOut = {
+							LBLC_NumInputs = 2,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_CharShake = {
+							LBLC_NumInputs = 2,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_CharRotate = {
+							LBLC_NumInputs = 1,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_CharWave = {
+							LBLC_NumInputs = 5,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_CharRandomSize = {
+							LBLC_DropDownButton = true,
+							INPID_InputControl = "LabelControl",
+							LBLC_NumInputs = 5,
+							LBLC_NestLevel = 1,
+							IC_Visible = false,
+						},
+						Hide_TextSwing = {
+							LBLC_NumInputs = 6,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_TextRotationX = {
+							LBLC_NumInputs = 5,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_TextRotationY = {
+							LBLC_NumInputs = 1,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_TextRotationZ = {
+							LBLC_NumInputs = 1,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_TextRandomPosition = {
+							LBLC_NumInputs = 3,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Transform_Blankline1 = {
+							INP_Default = 1,
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 11,
+							INP_External = false,
+							INPID_InputControl = "LabelControl",
+							LINKS_Name = "Rotation",
+						},
+						Transform_Blankline2 = {
+							INP_Default = 1,
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 6,
+							INP_External = false,
+							INPID_InputControl = "LabelControl",
+							LINKS_Name = "Shear",
+						},
+						Transform_Blankline3 = {
+							INP_Default = 1,
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 6,
+							INPID_InputControl = "LabelControl",
+							INP_External = false,
+							LINKS_Name = "Size",
+						},
+						SwingIn = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Swing In",
+						},
+						SwingAxis = {
+							{ MBTNC_AddButton = "X" },
+							{ MBTNC_AddButton = "Y" },
+							INP_Integer = false,
+							INPID_InputControl = "MultiButtonControl",
+							MBTNC_ShowBasicButton = true,
+							LINKID_DataType = "Number",
+							MBTNC_ForceButtons = false,
+							MBTNC_ShowName = false,
+							MBTNC_StretchToFit = false,
+							MBTNC_ShowToolTip = false,
+							LINKS_Name = "Swing Axis",
+						},
+						SwingAngle = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							LINKS_Name = "Swing Angle",
+							INPID_InputControl = "ScrewControl",
+							INP_Default = -90,
+						},
+						Hide_SwingIn = {
+							LBLC_NumInputs = 5,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						SwingOut = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Swing Out", },
+						SwingOutAxis = {
+							{ MBTNC_AddButton = "X" },
+							{ MBTNC_AddButton = "Y" },
+							INP_Integer = false,
+							INPID_InputControl = "MultiButtonControl",
+							MBTNC_ShowBasicButton = true,
+							LINKID_DataType = "Number",
+							MBTNC_ForceButtons = false,
+							MBTNC_ShowName = false,
+							MBTNC_StretchToFit = false,
+							MBTNC_ShowToolTip = false,
+							LINKS_Name = "Swing Axis",
+						},
+						SwingOutAngle = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							LINKS_Name = "Swing Angle",
+							INPID_InputControl = "ScrewControl",
+							INP_Default = -90,
+						},
+						Hide_SwingOut = {
+							LBLC_NumInputs = 5,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_CharFadeIn = {
+							LBLC_NumInputs = 2,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_CharFadeOut = {
+							LBLC_NumInputs = 2,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Is3DTitle = { CBC_TriState = false, INP_Integer = false, INP_External = false, LINKID_DataType = "Number", LINKS_Name = "3D Title", INPID_InputControl = "CheckboxControl", INP_Default = 1, },
+						CharRotateIn = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Character Rotate", },
+						CharFadeIn = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Character Fade In", },
+						CharRotateOut = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Character Rotate", },
+						CharFadeOut = { CBC_TriState = false, INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Character Fade Out", },
+						EnableTextMask = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Enable Text Mask",
+						},
+						Hide_TextMaskSize = {
+							LBLC_NumInputs = 3,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						TextMaskOffset = {
+							INP_DefaultX = 0,
+							INP_DefaultY = 0,
+							LINKID_DataType = "Point",
+							INPID_InputControl = "OffsetControl",
+							LINKS_Name = "Text Mask Offset",
+						},
+						MainTextInput = {
+							TEC_ReadOnly = false,
+							INP_External = false,
+							LINKID_DataType = "Text",
+							LINKS_Name = "Main Text Input",
+							INPID_InputControl = "TextEditControl",
+							TEC_Wrap = false,
+						},
+						Label3DAmbientLight = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 5,
+							LINKS_Name = "Ambient Light",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						Label3DSpotlight = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 8,
+							LINKS_Name = "Spotlight",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						Label3DSpotlightBack = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 8,
+							LINKS_Name = "Spotlight Back",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						Label3DTextExtrusion = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 10,
+							LINKS_Name = "Text Extrusion",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						Label3DTextSpecularColor = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 4,
+							LINKS_Name = "Specular",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						TextureMaterial = { { CCS_AddString = "None" }, { CCS_AddString = "Walnut Wood" }, { CCS_AddString = "Pinewood" }, { CCS_AddString = "Plywood" }, { CCS_AddString = "Black Marble" }, { CCS_AddString = "White Marble" }, { CCS_AddString = "Quartz Stone" }, { CCS_AddString = "Brown Stone" }, { CCS_AddString = "Brown Stone 2" }, { CCS_AddString = "Striped Black Stone" }, { CCS_AddString = "Striped White Stone" }, { CCS_AddString = "Spotted White Stone" }, { CCS_AddString = "Spotted White Metal" }, INP_MaxAllowed = 1000000, INP_Integer = false, INPID_InputControl = "ComboControl", CC_LabelPosition = "Horizontal", INP_MaxScale = 1, INP_MinScale = 0, INP_MinAllowed = -1000000, LINKID_DataType = "Number", LINKS_Name = "Material", },
+						Hide_3DTextureList = {
+							LBLC_NumInputs = 1,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_3DSetupPage = {
+							LBLC_NumInputs = 58,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_ImageInput = {
+							LBLC_NumInputs = 1,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+					}
+				},
+				AnimCurveOut = LUTLookup {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Curve = Input { Value = FuID { "Easing" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurveOutLookup",
+							Source = "Value",
+						},
+						Scale = Input { Expression = "iif(Options.AnimateOutTime==0, 0, 1)", },
+						TimeScale = Input {
+							Value = 10,
+							Expression = "iif(Options.AnimateOutTime==0, 1, (comp.RenderEnd-comp.RenderStart+1)/Options.AnimateOutTime)",
+						},
+						TimeOffset = Input {
+							Value = 0.9,
+							Expression = ":totalFrames=comp.RenderEnd-comp.RenderStart+1;\nreturn (totalFrames-Options.AnimateOutTime)/totalFrames",
+						},
+						StartRenderScripts = Input { Value = 1, },
+					},
+				},
+				AnimCurveOutLookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				Loop_Swing = DVE {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 0,
+							Expression = "bit.bor(Options.SwingLoop,Options.RandomTextPosition)*(1-Options.Is3DTitle)",
+						},
+						Center = Input {
+							SourceOp = "Perturb_RandomPosition",
+							Source = "Value",
+						},
+						ZMove = Input {
+							Value = 2,
+							Expression = "1-ZPivot",
+						},
+						Pivot = Input { Value = { 0.5, 1 }, },
+						ZPivot = Input { Value = -1, },
+						XRotation = Input {
+							SourceOp = "AnimCurves2",
+							Source = "Value",
+						},
+						YRotation = Input {
+							SourceOp = "AnimCurves3",
+							Source = "Value",
+						},
+						ZRotation = Input {
+							SourceOp = "AnimCurves1",
+							Source = "Value",
+						},
+						AlphaMode = Input { Value = 2, },
+						Input = Input {
+							SourceOp = "Transform_In",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -440, 115.5 } },
+				},
+				Perturb_RandomPosition = PerturbPoint {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						XScale = Input { Value = 0.2, },
+						YScale = Input { Value = 0.2, },
+						Wobble = Input {
+							Value = 0,
+							Expression = "Options.RandomTextPosition",
+						},
+					},
+				},
+				AnimCurves2 = LUTLookup {
+					Inputs = {
+						Source = Input { Value = FuID { "Custom" }, },
+						Input = Input {
+							Value = -2.24774468400735,
+							Expression = "AnimCurves1.Input",
+						},
+						Lookup = Input {
+							SourceOp = "AnimCurves2Lookup2",
+							Source = "Value",
+						},
+						Scale = Input {
+							Value = 0,
+							Expression = "AnimCurves1.Scale",
+						},
+						TimeScale = Input { Value = 0, },
+					},
+				},
+				AnimCurves2Lookup2 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+				},
+				AnimCurves3 = LUTLookup {
+					Inputs = {
+						Source = Input { Value = FuID { "Custom" }, },
+						Input = Input {
+							Value = -2.24774468400735,
+							Expression = "AnimCurves1.Input",
+						},
+						Lookup = Input {
+							SourceOp = "AnimCurves3Lookup1",
+							Source = "Value",
+						},
+						Scale = Input {
+							Value = 0,
+							Expression = "AnimCurves1.Scale",
+						},
+						TimeScale = Input { Value = 0, },
+					},
+				},
+				AnimCurves3Lookup1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+				},
+				AnimCurves1 = LUTLookup {
+					CtrlWZoom = false,
+					Inputs = {
+						Source = Input { Value = FuID { "Custom" }, },
+						Input = Input {
+							SourceOp = "AnimCurvesonLoop_SwingInput",
+							Source = "Value",
+						},
+						Lookup = Input {
+							SourceOp = "AnimCurves1Lookup",
+							Source = "Value",
+						},
+						Scale = Input {
+							Value = 0,
+							Expression = "Options.SwingLoop*Options.SwingStrength",
+						},
+					},
+				},
+				AnimCurvesonLoop_SwingInput = BezierSpline {
+					SplineColor = { Red = 14, Green = 221, Blue = 144 },
+					KeyFrames = {
+						[0] = { 0, RH = { 1.35, 1.66 }, Flags = { Loop = true } },
+						[8] = { 5, LH = { 4.20017688857665, 5.01215943395652 }, RH = { 14.25, 4.98 } },
+						[22] = { -5, LH = { 16.15, -5.02 }, RH = { 25.5998087230203, -4.98769296163075 } },
+						[30] = { 0, LH = { 28.8, -1.52 }, Flags = { Loop = true } }
+					}
+				},
+				AnimCurves1Lookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+				},
+				Merge2 = Merge {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "DefaultMask",
+							Source = "Mask",
+						},
+						Blend = Input { Expression = "iif(Options.FadeIn==0,1,Options.AnimCurveIn)*iif(Options.FadeOut==0,1,(1-Options.AnimCurveOut))", },
+						Background = Input {
+							SourceOp = "Options",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Merge_3DText",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 214.5 } },
+				},
+				Loop_Rotation3D = DVE {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 0,
+							Expression = "Options.TextRotation3D*(1-Options.Is3DTitle)",
+						},
+						ZMove = Input { Expression = "1-ZPivot", },
+						XRotation = Input {
+							SourceOp = "AnimCurve_RotationX",
+							Source = "Value",
+						},
+						YRotation = Input {
+							SourceOp = "AnimCurve_RotationY",
+							Source = "Value",
+						},
+						ZRotation = Input {
+							SourceOp = "AnimCurve_RotationZ",
+							Source = "Value",
+						},
+						AlphaMode = Input { Value = 2, },
+						Input = Input {
+							SourceOp = "Loop_Swing",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -440, 148.5 } },
+				},
+				Transform_Out = DVE {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 0,
+							Expression = "iif(Options.AnimateOutTime>0,1,0)*bit.bor(Options.CheckSlideOut,Options.CheckRotateOut,Options.SwingOut)*(1-Options.Is3DTitle)",
+						},
+						MotionBlur = Input { Value = 1, },
+						Quality = Input { Value = 0, },
+						Center = Input {
+							SourceOp = "Vector2",
+							Source = "Position",
+						},
+						ZMove = Input {
+							Value = 1.3,
+							Expression = "1-ZPivot",
+						},
+						ZPivot = Input { Value = -0.3, },
+						XRotation = Input { Expression = "Options.AnimCurveOut*Options.SwingOutAngle*(1-Options.SwingOutAxis)*Options.SwingOut", },
+						YRotation = Input { Expression = "Options.AnimCurveOut*Options.SwingOutAngle*Options.SwingOutAxis*Options.SwingOut", },
+						ZRotation = Input { Expression = "Options.CheckRotateOut * Options.RotateOut * Options.AnimCurveOut", },
+						AlphaMode = Input { Value = 2, },
+						Input = Input {
+							SourceOp = "Loop_Rotation3D",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -440, 181.5 } },
+				},
+				Vector2 = Vector {
+					CtrlWZoom = false,
+					Inputs = {
+						Distance = Input { Expression = "Options.CheckSlideOut*Options.SlideOut*Options.AnimCurveOut", },
+						ImageAspect = Input { Value = 1.777778, },
+					},
+				},
+				TextMask = RectangleMask {
+					NameSet = true,
+					Inputs = {
+						ShowViewControls = Input {
+							Value = 0,
+							Expression = "Options.EnableTextMask",
+						},
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input { Expression = "MainText.Center + Options.TextMaskOffset", },
+						Height = Input { Value = 0.25, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 115.5 } },
+				},
+				DefaultMask = RectangleMask {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "TextMask",
+							Source = "Mask",
+						},
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						PaintMode = Input {
+							Value = FuID { "Maximum" },
+							Expression = "Options.EnableTextMask==1 and \"Minimum\" or \"Maximum\"",
+						},
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input { Value = 1, },
+						Height = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 148.5 } },
+				},
+				MainText3DExtrusionProfile = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.0666666666666667, 0.333333333333333 }, Flags = { Linear = true } },
+							[0.2] = { 1, LH = { 0.133333333333333, 0.666666666666667 }, RH = { 0.4, 1 }, Flags = { Linear = true } },
+							[0.8] = { 1, LH = { 0.6, 1 }, RH = { 0.866666666666667, 0.666666666666667 }, Flags = { Linear = true } },
+							[1] = { 0, LH = { 0.933333333333333, 0.333333333333333 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 192, Green = 128, Blue = 64 },
+					CtrlWZoom = false,
+				},
+				Merge_3DText = Merge {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Blend = Input { Expression = "Options.Is3DTitle", },
+						Background = Input {
+							SourceOp = "MainStyle",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Renderer3D1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, 214.5 } },
+				},
+				MediaIn1 = MediaIn {
+					ExtentSet = true,
+					CustomData = {
+						MediaProps = {
+							MEDIA_AUDIO_TRACKS_DESC = {
+								{
+									MEDIA_AUDIO_BIT_DEPTH = 32,
+									MEDIA_AUDIO_FRAME_RATE = 30,
+									MEDIA_AUDIO_NUM_CHANNELS = 2,
+									MEDIA_AUDIO_SAMPLE_RATE = 48000,
+									MEDIA_AUDIO_START_TIME = 0,
+									MEDIA_AUDIO_TRACK_ID = "Timeline Audio",
+									MEDIA_AUDIO_TRACK_NAME = "Timeline Audio [Scripting]"
+								}
+							},
+							MEDIA_AUDIO_TRACKS_NUM = 1,
+							MEDIA_HAS_AUDIO = true,
+							MEDIA_HEIGHT = 1080,
+							MEDIA_IS_SOURCE_RES = false,
+							MEDIA_MARK_IN = 0,
+							MEDIA_MARK_OUT = 149,
+							MEDIA_NAME = "Background",
+							MEDIA_NUM_FRAMES = 150,
+							MEDIA_SRC_FRAME_RATE = 30,
+							MEDIA_START_FRAME = 0,
+							MEDIA_WIDTH = 1920
+						},
+						MEDIA_ID = "398a8cef-f559-41bb-936b-de8a16b49a35"
+					},
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						MediaSource = Input { Value = FuID { "Background" }, },
+						MediaID = Input { Value = "BACKGROUND", },
+						AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+						Layer = Input {
+							Value = Text {
+							},
+						},
+						ClipTimeEnd = Input { Value = 149, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LeftAudio = Input {
+							SourceOp = "Left_1",
+							Source = "Data",
+						},
+						RightAudio = Input {
+							SourceOp = "Right_1",
+							Source = "Data",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 16.5 } },
+				},
+				Renderer3D1 = Renderer3D {
+					CustomData = { ToolVersion = 2 },
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						SceneInput = Input {
+							SourceOp = "Merge3D1",
+							Source = "Output",
+						},
+						["RendererSoftware.LightingEnabled"] = Input { Value = 1, },
+						["RendererSoftware.ShadowsEnabled"] = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, 181.5 } },
+				},
+				AmbientLight1 = LightAmbient {
+					Inputs = {
+						["Transform3DOp.Translate.Z"] = Input { Value = 0.111162352086537, },
+						Intensity = Input { Value = 0.15, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 115.5 } },
+				},
+				SpotLight1 = LightSpot {
+					Inputs = {
+						["Transform3DOp.Translate.Y"] = Input { Value = 0.75, },
+						["Transform3DOp.Translate.Z"] = Input { Value = 0.5, },
+						["Transform3DOp.UseTarget"] = Input { Value = 1, },
+						ConeAngle = Input { Value = 90, },
+						["ShadowLightInputs3D.Nest"] = Input { Value = 1, },
+						["ShadowLightInputs3D.ShadowsEnabled"] = Input { Value = 1, },
+						["ShadowLightInputs3D.SoftnessType"] = Input { Value = FuID { "Constant" }, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 82.5 } },
+				},
+				SpotLight_Back = LightSpot {
+					NameSet = true,
+					Inputs = {
+						["Transform3DOp.Translate.Y"] = Input { Value = 0.2, },
+						["Transform3DOp.Translate.Z"] = Input { Value = -0.5, },
+						["Transform3DOp.UseTarget"] = Input { Value = 1, },
+						Intensity = Input { Value = 0.6, },
+						ConeAngle = Input { Value = 90, },
+						["ShadowLightInputs3D.Nest"] = Input { Value = 1, },
+						["ShadowLightInputs3D.ShadowsEnabled"] = Input { Value = 1, },
+						["ShadowLightInputs3D.SoftnessType"] = Input { Value = FuID { "Constant" }, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 148.5 } },
+				},
+				Merge3D1 = Merge3D {
+					Inputs = {
+						["Transform3DOp.Translate.Y"] = Input { Value = -0.125, },
+						["Transform3DOp.PivotNest"] = Input { Value = 1, },
+						["Transform3DOp.Scale.X"] = Input { Value = 2.946, },
+						SceneInput1 = Input {
+							SourceOp = "ReplaceTextMaterial",
+							Source = "Output",
+						},
+						SceneInput2 = Input {
+							SourceOp = "SpotLight1",
+							Source = "Output",
+						},
+						SceneInput3 = Input {
+							SourceOp = "AmbientLight1",
+							Source = "Output",
+						},
+						SceneInput4 = Input {
+							SourceOp = "SpotLight_Back",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, 148.5 } },
+				},
+				Textures = GroupOperator {
+					NameSet = true,
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "Merge4",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo {
+						Pos = { -275, 181.5 },
+						Flags = {
+							AllowPan = false,
+							GridSnap = true,
+							AutoSnap = true,
+							RemoveRouters = true
+						},
+						Size = { 291.006, 466.781, 145.503, 24.2424 },
+						Direction = "Horizontal",
+						PipeStyle = "Direct",
+						Scale = 1,
+						Offset = { -1265, 175.845 }
+					},
+					Tools = ordered() {
+						Background2 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								TopLeftRed = Input { Value = 1, },
+								TopLeftGreen = Input { Value = 1, },
+								TopLeftBlue = Input { Value = 1, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1347.5, 233.208 } },
+						},
+						Merge1_1 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(Options.TextureMaterial==8,1,0)", },
+								Background = Input {
+									SourceOp = "Background2",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "BrownStone2",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1347.5, 200.208 } },
+						},
+						BrownStone2 = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Detail = Input { Value = 10, },
+								Contrast = Input { Value = 30, },
+								Brightness = Input { Value = 1, },
+								XScale = Input { Value = 12, },
+								Type = Input { Value = 1, },
+								GradientType = Input { Value = 5, },
+								Start = Input { Value = { 0.5, 0.5 }, },
+								End = Input { Value = { 0.520675105485232, 0.503003003003003 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0] = { 0.250980392156863, 0.0980392156862745, 0.00784313725490196, 1 },
+											[0.164179104477612] = { 0.454901960784314, 0.258823529411765, 0.141176470588235, 1 },
+											[0.348258706467662] = { 0.4, 0.207843137254902, 0.0901960784313725, 1 },
+											[0.557213930348259] = { 0.490196078431373, 0.286274509803922, 0.16078431372549, 1 },
+											[0.771144278606965] = { 0.27843137254902, 0.117647058823529, 0.00784313725490196, 1 },
+											[0.885572139303483] = { 0.349019607843137, 0.164705882352941, 0.0588235294117647, 1 },
+											[1] = { 0.262745098039216, 0.109803921568627, 0.0156862745098039, 1 }
+										}
+									},
+								},
+								Offset = Input { Value = 0.101, },
+								Repeat = Input { Value = 2, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1182.5, 200.481 } },
+						},
+						Merge12 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(Options.TextureMaterial==2,1,0)", },
+								Background = Input {
+									SourceOp = "Merge1_1",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "PineWood",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1347.5, 167.481 } },
+						},
+						PineWood = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								Detail = Input { Value = 0.76, },
+								Contrast = Input { Value = 0.85, },
+								LockXY = Input { Value = 0, },
+								XScale = Input { Value = 1, },
+								YScale = Input { Value = 30, },
+								Discontinuous = Input { Value = 1, },
+								Type = Input { Value = 1, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0] = { 0.5933333333333, 0.4199659599248, 0.2687668148148, 1 },
+											[0.197530864197531] = { 0.732654320987654, 0.55685985479623, 0.380849997256516, 1 },
+											[0.29320987654321] = { 0.64, 0.46991217360346, 0.275456, 1 },
+											[0.37962962962963] = { 0.802942386831276, 0.629690601314954, 0.442510470964792, 1 },
+											[0.521604938271605] = { 0.79042835765058, 0.605506142551234, 0.395706000914495, 1 },
+											[0.5956790123457] = { 0.5933333333333, 0.405202363569877, 0.206743703703692, 1 },
+											[0.712962962963] = { 0.78, 0.541259436975241, 0.339594666666667, 1 },
+											[1] = { 1, 0.731057980190514, 0.440888888888889, 1 }
+										}
+									},
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { 1182.5, 167.481 } },
+						},
+						Merge11 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(Options.TextureMaterial==3,1,0)", },
+								Background = Input {
+									SourceOp = "Merge12",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Plywood",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1347.5, 134.481 } },
+						},
+						Plywood = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								Contrast = Input { Value = 4.6, },
+								Brightness = Input { Value = -1, },
+								LockXY = Input { Value = 0, },
+								XScale = Input { Value = 1.04, },
+								YScale = Input { Value = 20, },
+								Discontinuous = Input { Value = 1, },
+								Type = Input { Value = 1, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0] = { 1, 0.818650438331476, 0.578, 1 },
+											[0.197530864197531] = { 0.646, 0.470272274743199, 0.237082, 1 },
+											[0.29320987654321] = { 0.811, 0.607465628446224, 0.337376, 1 },
+											[0.37962962962963] = { 0.748, 0.552561897976639, 0.293216, 1 },
+											[0.521604938271605] = { 0.89, 0.701061259992456, 0.45034, 1 },
+											[0.5956790123457] = { 0.606, 0.453913897458013, 0.252096, 1 },
+											[0.712962962963] = { 0.937, 0.75257952845542, 0.507854, 1 },
+											[1] = { 1, 0.813493578757948, 0.566, 1 }
+										}
+									},
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { 1182.5, 134.481 } },
+						},
+						Merge4 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input {
+									Value = 0,
+									Expression = "iif(Options.TextureMaterial==4,1,0)",
+								},
+								Background = Input {
+									SourceOp = "Merge3",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "BlackMarble",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1347.5, -167.208 } },
+						},
+						Merge10 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(Options.TextureMaterial==11,1,0)", },
+								Background = Input {
+									SourceOp = "Merge11",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "SpottedWhiteStone",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1347.5, 101.481 } },
+						},
+						Merge7 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(Options.TextureMaterial==1,1,0)", },
+								Background = Input {
+									SourceOp = "Merge8",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "WalnutWood",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1347.5, 2.48146 } },
+						},
+						Merge6 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(Options.TextureMaterial==7,1,0)", },
+								Background = Input {
+									SourceOp = "Merge7",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "BrownStone",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1347.5, -30.5185 } },
+						},
+						Merge5 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(Options.TextureMaterial==5,1,0)", },
+								Background = Input {
+									SourceOp = "Merge6",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "WhiteMarble",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1347.5, -63.5185 } },
+						},
+						Merge9 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input {
+									Value = 0.998,
+									Expression = "iif(Options.TextureMaterial==10,1,0)",
+								},
+								Background = Input {
+									SourceOp = "Merge10",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "StripedWhiteStone",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1347.5, 68.4815 } },
+						},
+						Merge8 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input { Expression = "iif(Options.TextureMaterial==9,1,0)", },
+								Background = Input {
+									SourceOp = "Merge9",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "StripedBlackStone",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1347.5, 35.4815 } },
+						},
+						Merge2_1 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input {
+									Value = 0,
+									Expression = "iif(Options.TextureMaterial==6,1,0)",
+								},
+								Background = Input {
+									SourceOp = "Merge5",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "QuartzStone",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1347.5, -96.5185 } },
+						},
+						Merge3 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Blend = Input {
+									Value = 0,
+									Expression = "iif(Options.TextureMaterial==12,1,0)",
+								},
+								Background = Input {
+									SourceOp = "Merge2_1",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "SpottedWhiteMetal",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1345.95, -134.208 } },
+						},
+						SpottedWhiteStone = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Contrast = Input { Value = 1.5, },
+								Brightness = Input { Value = -1, },
+								XScale = Input { Value = 100, },
+								YScale = Input { Value = 100, },
+								SeetheRate = Input { Value = 0.02, },
+								Type = Input { Value = 1, },
+								Start = Input { Value = { 0.5, 0.5 }, },
+								End = Input { Value = { 0.5206751054852, 0.503003003003 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0.134328358208955] = { 1, 1, 1, 1 },
+											[0.238805970149254] = { 0, 0, 0.0078431372549, 1 }
+										}
+									},
+								},
+								Offset = Input { Value = 0.101, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1182.5, 101.481 } },
+						},
+						StripedWhiteStone = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Contrast = Input { Value = 5, },
+								Brightness = Input { Value = -1, },
+								LockXY = Input { Value = 0, },
+								XScale = Input { Value = 0, },
+								YScale = Input { Value = 100, },
+								Seethe = Input { Value = -0.029, },
+								SeetheRate = Input { Value = 0.02, },
+								Type = Input { Value = 1, },
+								Start = Input { Value = { 0.5, 0.5 }, },
+								End = Input { Value = { 0.5206751054852, 0.503003003003 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0.134328358208955] = { 1, 1, 1, 1 },
+											[0.238805970149254] = { 0, 0, 0.0078431372549, 1 }
+										}
+									},
+								},
+								Offset = Input { Value = 0.101, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1182.89, 65.5585 } },
+						},
+						StripedBlackStone = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Contrast = Input { Value = 5, },
+								Brightness = Input { Value = 1, },
+								LockXY = Input { Value = 0, },
+								XScale = Input { Value = 0, },
+								YScale = Input { Value = 100, },
+								SeetheRate = Input { Value = 0.02, },
+								Type = Input { Value = 1, },
+								Start = Input { Value = { 0.5, 0.5 }, },
+								End = Input { Value = { 0.5206751054852, 0.503003003003 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0.134328358208955] = { 1, 1, 1, 1 },
+											[0.238805970149254] = { 0, 0, 0.0078431372549, 1 }
+										}
+									},
+								},
+								Offset = Input { Value = 0.101, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1182.5, 35.4815 } },
+						},
+						WalnutWood = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Detail = Input { Value = 10, },
+								Contrast = Input { Value = 20, },
+								Brightness = Input { Value = 1, },
+								Type = Input { Value = 1, },
+								GradientType = Input { Value = 5, },
+								Start = Input { Value = { 0.5, 0.5 }, },
+								End = Input { Value = { 0.520675105485232, 0.503003003003003 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0] = { 0.250980392156863, 0.0980392156862745, 0.00784313725490196, 1 },
+											[0.164179104477612] = { 0.454901960784314, 0.258823529411765, 0.141176470588235, 1 },
+											[0.348258706467662] = { 0.4, 0.207843137254902, 0.0901960784313725, 1 },
+											[0.557213930348259] = { 0.490196078431373, 0.286274509803922, 0.16078431372549, 1 },
+											[0.771144278606965] = { 0.27843137254902, 0.117647058823529, 0.00784313725490196, 1 },
+											[0.885572139303483] = { 0.349019607843137, 0.164705882352941, 0.0588235294117647, 1 },
+											[1] = { 0.262745098039216, 0.109803921568627, 0.0156862745098039, 1 }
+										}
+									},
+								},
+								Offset = Input { Value = 0.101, },
+								Repeat = Input { Value = 2, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1182.5, 2.48146 } },
+						},
+						BlackMarble = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Detail = Input { Value = 10, },
+								Contrast = Input { Value = 5, },
+								Brightness = Input { Value = -1, },
+								XScale = Input { Value = 15, },
+								Type = Input { Value = 1, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1182.5, -162.518 } },
+						},
+						BrownStone = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Detail = Input { Value = 10, },
+								Contrast = Input { Value = 50, },
+								Brightness = Input { Value = 1, },
+								XScale = Input { Value = 20, },
+								Type = Input { Value = 1, },
+								GradientType = Input { Value = 5, },
+								Start = Input { Value = { 0.5, 0.5 }, },
+								End = Input { Value = { 0.520675105485232, 0.503003003003003 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0] = { 0.250980392156863, 0.0980392156862745, 0.00784313725490196, 1 },
+											[0.164179104477612] = { 0.454901960784314, 0.258823529411765, 0.141176470588235, 1 },
+											[0.348258706467662] = { 0.4, 0.207843137254902, 0.0901960784313725, 1 },
+											[0.557213930348259] = { 0.490196078431373, 0.286274509803922, 0.16078431372549, 1 },
+											[0.771144278606965] = { 0.27843137254902, 0.117647058823529, 0.00784313725490196, 1 },
+											[0.885572139303483] = { 0.349019607843137, 0.164705882352941, 0.0588235294117647, 1 },
+											[1] = { 0.262745098039216, 0.109803921568627, 0.0156862745098039, 1 }
+										}
+									},
+								},
+								Offset = Input { Value = 0.101, },
+								Repeat = Input { Value = 2, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1182.5, -30.5185 } },
+						},
+						WhiteMarble = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								Detail = Input { Value = 3, },
+								Brightness = Input { Value = 1, },
+								XScale = Input { Value = 15, },
+								YScale = Input { Value = 20, },
+								Discontinuous = Input { Value = 1, },
+								Type = Input { Value = 1, },
+								Start = Input { Value = { 0.5, 0.495081967213115 }, },
+								End = Input { Value = { 0.89386054477784, 0.49109054378973 }, },
+								Gradient = Input {
+									Value = Gradient {
+										Colors = {
+											[0] = { 0.226666666666667, 0.226666666666667, 0.226666666666667, 1 },
+											[0.125490196078431] = { 1, 1, 1, 1 },
+											[0.231372549019608] = { 0.546666666666667, 0.546666666666667, 0.546666666666667, 1 },
+											[0.268691588785047] = { 0.819, 0.819, 0.819, 1 },
+											[0.3200934579439] = { 0.677, 0.677, 0.677, 1 },
+											[0.41358024691358] = { 0.5697435897436, 0.5697435897436, 0.5697435897436, 1 },
+											[0.441358024691358] = { 0.58, 0.58, 0.58, 1 },
+											[0.498039215686275] = { 1, 1, 1, 1 },
+											[0.725490196078431] = { 0.528, 0.528, 0.528, 1 },
+											[1] = { 1, 1, 1, 1 }
+										}
+									},
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { 1182.5, -63.5185 } },
+						},
+						SpottedWhiteMetal = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Detail = Input { Value = 10, },
+								Contrast = Input { Value = 15, },
+								Brightness = Input { Value = 4, },
+								XScale = Input { Value = 20, },
+								Type = Input { Value = 1, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1182.5, -129.518 } },
+						},
+						QuartzStone = FastNoise {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								GlobalOut = Input { Value = 149, },
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Detail = Input { Value = 10, },
+								Contrast = Input { Value = 2, },
+								XScale = Input { Value = 500, },
+								Color1Red = Input { Value = 0.992, },
+								Color1Green = Input { Value = 0.992, },
+								Color1Blue = Input { Value = 0.992, },
+								Color1Alpha = Input { Value = 1, },
+								Color2Red = Input { Value = 0.929, },
+								Color2Green = Input { Value = 0.81280068, },
+								Color2Blue = Input { Value = 0.654945, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 1182.5, -96.5185 } },
+						}
+					},
+				},
+				ReplaceTextMaterial = ReplaceMaterial3D {
+					NameSet = true,
+					Inputs = {
+						SceneInput = Input {
+							SourceOp = "SwingOut3D",
+							Source = "Output",
+						},
+						Enable = Input {
+							Value = 0,
+							Expression = "Options.TextureMaterial>0 and 1 or 0",
+						},
+						MaterialInput = Input {
+							SourceOp = "Merge4",
+							Source = "Output",
+						},
+						["MtlStdInputs.MaterialID"] = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -275, 148.5 } },
+				},
+				MainText3D = Text3D {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						["Transform3DOp.Rotate.X"] = Input {
+							SourceOp = "AnimCurve_RotationX",
+							Source = "Value",
+						},
+						["Transform3DOp.Rotate.Y"] = Input {
+							SourceOp = "AnimCurve_RotationY",
+							Source = "Value",
+						},
+						["Transform3DOp.Rotate.Z"] = Input {
+							SourceOp = "AnimCurve_RotationZ",
+							Source = "Value",
+						},
+						["Transform3DOp.PivotNest"] = Input { Value = 1, },
+						["Transform3DOp.Pivot.X"] = Input { Expression = "Loop_Rotation3D.Pivot.X-0.5", },
+						["Transform3DOp.Pivot.Y"] = Input { Expression = "Loop_Rotation3D.Pivot.Y-0.5", },
+						["Transform3DOp.Pivot.Z"] = Input { Expression = "Loop_Rotation3D.ZPivot", },
+						LayoutType = Input { Expression = "MainText.LayoutType", },
+						Center = Input { Expression = "MainText.Center", },
+						CenterZ = Input { Expression = "MainText.CenterZ", },
+						LayoutSize = Input { Expression = "MainText.LayoutSize", },
+						LayoutWidth = Input { Expression = "MainText.LayoutWidth", },
+						FitCharacters = Input { Expression = "MainText.FitCharacters", },
+						LayoutRotation = Input { Value = 1, },
+						AngleX = Input { Expression = "MainText.AngleX", },
+						AngleY = Input { Expression = "MainText.AngleY", },
+						AngleZ = Input { Expression = "MainText.AngleZ", },
+						SelectTransform = Input { Expression = "MainText.SelectTransform", },
+						LineSpacing = Input { Expression = "MainText.LineSpacing", },
+						LinePivot = Input { Expression = "MainText.LinePivot", },
+						LinePivotZ = Input { Expression = "MainText.LinePivotZ", },
+						WordSpacing = Input { Expression = "MainText.WordSpacing", },
+						WordPivot = Input { Expression = "MainText.WordPivot", },
+						WordPivotZ = Input { Expression = "MainText.WordPivotZ", },
+						CharacterSpacing = Input {
+							Value = 1.12,
+							Expression = "MainText.CharacterSpacing",
+						},
+						CharacterPivot = Input { Expression = "MainText.CharacterPivot", },
+						CharacterPivotZ = Input { Expression = "MainText.CharacterPivotZ", },
+						TransformRotation = Input { Value = 1, },
+						LineAngleX = Input { Expression = "MainText.LineAngleX", },
+						LineAngleY = Input { Expression = "MainText.LineAngleY", },
+						LineAngleZ = Input { Expression = "MainText.LineAngleZ", },
+						WordAngleX = Input { Expression = "MainText.WordAngleX", },
+						WordAngleY = Input { Expression = "MainText.WordAngleY", },
+						WordAngleZ = Input { Expression = "MainText.WordAngleZ", },
+						AdaptWordWidthToAngle = Input { Expression = "MainText.AdaptWordWidthToAngle", },
+						CharacterAngleX = Input { Expression = "MainText.CharacterAngleX", },
+						CharacterAngleY = Input { Expression = "MainText.CharacterAngleY", },
+						CharacterAngleZ = Input { Expression = "MainText.CharacterAngleZ", },
+						AdaptCharacterWidthToAngle = Input { Expression = "MainText.AdaptCharacterWidthToAngle", },
+						TransformShear = Input { Value = 1, },
+						LineShearX = Input { Expression = "MainText.LineShearX", },
+						LineShearY = Input { Expression = "MainText.LineShearY", },
+						WordShearX = Input { Expression = "MainText.WordShearX", },
+						WordShearY = Input { Expression = "MainText.WordShearY", },
+						CharacterShearX = Input { Expression = "MainText.CharacterShearX", },
+						CharacterShearY = Input { Expression = "MainText.CharacterShearY", },
+						TransformSize = Input { Value = 1, },
+						LineSizeX = Input { Expression = "MainText.LineSizeX", },
+						LineSizeY = Input { Expression = "MainText.LineSizeY", },
+						WordSizeX = Input { Expression = "MainText.WordSizeX", },
+						WordSizeY = Input { Expression = "MainText.WordSizeY", },
+						CharacterSizeX = Input { Expression = "MainText.CharacterSizeX", },
+						CharacterSizeY = Input { Expression = "MainText.CharacterSizeY", },
+						Type1 = Input { Expression = "MainText.Type1", },
+						Red1 = Input { Expression = "MainText.Red1", },
+						Green1 = Input { Expression = "MainText.Green1", },
+						Blue1 = Input { Expression = "MainText.Blue1", },
+						Alpha1 = Input { Expression = "MainText.Alpha1", },
+						ImageSource1 = Input { Expression = "MainText.ImageSource1", },
+						ColorImage1 = Input {
+							SourceOp = "MediaIn1",
+							Source = "Output",
+						},
+						ColorFile1 = Input { Expression = "MainText.ColorFile1", },
+						ColorBrush1 = Input {
+							UserString1 = "fish_3",
+							Expression = "MainText.ColorBrush1",
+						},
+						ShadingMappingLevel1 = Input { Expression = ":t=MainText.ShadingMappingLevel1; return iif(t==3, 0, iif(t==4, 1, 0));", },
+						StyledText = Input {
+							SourceOp = "MainTextCharacterStyles",
+							Source = "StyledText",
+						},
+						Font = Input {
+							Value = "Open Sans",
+							Expression = "MainText.Font",
+						},
+						Style = Input {
+							Value = "Bold",
+							Expression = "MainText.Style",
+						},
+						Size = Input {
+							Value = 0.2,
+							Expression = "MainText.Size",
+						},
+						VerticalTopCenterBottom = Input { Value = 1, },
+						VerticalJustification = Input { Value = 3, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, },
+						Start = Input { Expression = "MainText.Start", },
+						End = Input { Expression = "MainText.End", },
+						Extrusion = Input { Value = 1, },
+						ExtrusionProfile = Input {
+							SourceOp = "MainText3DExtrusionProfile",
+							Source = "Value",
+						},
+						ExtrusionDepth = Input { Value = 0.1, },
+						ExtrusionSubdivisions = Input { Value = 10, },
+						BevelDepth = Input { Value = 0.008, },
+						BevelWidth = Input { Value = 0.008, },
+						FrameRenderScript = Input { Value = "if (Options.RotationLoop==1) then\n	 CharacterAngleY = AnimCurve_Rotate.Value;\nend\nif (Options.ShakeLoop==1) then\n	 CharacterAngleZ = AnimCurve_Shake.Value;\nend\n\nif (Options.CharRotateIn==1 or Options.CharRotateOut==1) then CharacterAngleY=360*(Options.CharRotateIn==1 and Options.AnimCurveIn or 1)*(Options.CharRotateOut==1 and (1-Options.AnimCurveOut) or 1) end", },
+					},
+					ViewInfo = OperatorInfo { Pos = { -275, 16.5 } },
+				},
+				LoopSwing3D = Transform3D {
+					NameSet = true,
+					Inputs = {
+						SceneInput = Input {
+							SourceOp = "MainText3D",
+							Source = "Output",
+						},
+						["Transform3DOp.Translate.X"] = Input { Expression = "Loop_Swing.Center.X-0.5", },
+						["Transform3DOp.Translate.Y"] = Input { Expression = "Loop_Swing.Center.Y-0.5", },
+						["Transform3DOp.Rotate.X"] = Input {
+							SourceOp = "AnimCurves2",
+							Source = "Value",
+						},
+						["Transform3DOp.Rotate.Y"] = Input {
+							SourceOp = "AnimCurves3",
+							Source = "Value",
+						},
+						["Transform3DOp.Rotate.Z"] = Input {
+							SourceOp = "AnimCurves1",
+							Source = "Value",
+						},
+						["Transform3DOp.PivotNest"] = Input { Value = 1, },
+						["Transform3DOp.Pivot.X"] = Input { Expression = "Loop_Swing.Pivot.X-0.5", },
+						["Transform3DOp.Pivot.Y"] = Input {
+							Value = 0.5,
+							Expression = "Loop_Swing.Pivot.Y-0.5",
+						},
+						["Transform3DOp.Pivot.Z"] = Input {
+							Value = -1,
+							Expression = "Loop_Swing.ZPivot",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -275, 49.5 } },
+				},
+				SwingIn3D = Transform3D {
+					NameSet = true,
+					Inputs = {
+						SceneInput = Input {
+							SourceOp = "LoopSwing3D",
+							Source = "Output",
+						},
+						["Transform3DOp.Translate.X"] = Input { Expression = "Transform_In.Center.X-0.5", },
+						["Transform3DOp.Translate.Y"] = Input { Expression = "Transform_In.Center.Y-0.5", },
+						["Transform3DOp.Rotate.X"] = Input { Expression = "Transform_In.XRotation", },
+						["Transform3DOp.Rotate.Y"] = Input { Expression = "Transform_In.YRotation", },
+						["Transform3DOp.Rotate.Z"] = Input { Expression = "Transform_In.ZRotation", },
+						["Transform3DOp.PivotNest"] = Input { Value = 1, },
+						["Transform3DOp.Pivot.X"] = Input { Expression = "Transform_In.Pivot.X-0.5", },
+						["Transform3DOp.Pivot.Y"] = Input { Expression = "Transform_In.Pivot.Y-0.5", },
+						["Transform3DOp.Pivot.Z"] = Input {
+							Value = -0.425,
+							Expression = "Transform_In.ZPivot",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -275, 82.5 } },
+				},
+				SwingOut3D = Transform3D {
+					NameSet = true,
+					Inputs = {
+						SceneInput = Input {
+							SourceOp = "SwingIn3D",
+							Source = "Output",
+						},
+						["Transform3DOp.Translate.X"] = Input { Expression = "Transform_Out.Center.X-0.5", },
+						["Transform3DOp.Translate.Y"] = Input { Expression = "Transform_Out.Center.Y-0.5", },
+						["Transform3DOp.Rotate.X"] = Input { Expression = "Transform_Out.XRotation", },
+						["Transform3DOp.Rotate.Y"] = Input { Expression = "Transform_Out.YRotation", },
+						["Transform3DOp.Rotate.Z"] = Input { Expression = "Transform_Out.ZRotation", },
+						["Transform3DOp.PivotNest"] = Input { Value = 1, },
+						["Transform3DOp.Pivot.X"] = Input { Expression = "Transform_Out.Pivot.X-0.5", },
+						["Transform3DOp.Pivot.Y"] = Input { Expression = "Transform_Out.Pivot.Y-0.5", },
+						["Transform3DOp.Pivot.Z"] = Input {
+							Value = -0.3,
+							Expression = "Transform_Out.ZPivot",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -275, 115.5 } },
+				}
+			},
+			UserControls = ordered() {
+				Text = ControlPage {
+					CT_Priority = 4,
+					CTID_DIB_ID = "Icons.Tools.Tabs.Layout",
+					CTS_FullName = "Text Style"
+				},
+				Transform = ControlPage {
+					CT_Priority = 3,
+					CTID_DIB_ID = "Icons.Tools.Tabs.Layout",
+					CTS_FullName = "Text Transform"
+				},
+				["3D Setup"] = ControlPage {
+					CT_Priority = 2,
+					CTS_FullName = "3D Text Setup",
+					CT_Visible = true,
+					CTID_DIB_ID = "Icons.Tools.Tabs.Custom"
+				},
+				Animation = ControlPage {
+					CT_Priority = 1,
+					CTS_FullName = "Text Animations",
+					CT_Visible = true,
+					CTID_DIB_ID = "Icons.Tools.Tabs.Custom"
+				},
+				Controls = ControlPage {
+					CT_Visible = false,
+					CT_Priority = 0,
+					CTID_DIB_ID = "Icons.Tools.Tabs.Solve"
+				},
+				Common = ControlPage {
+					CT_Visible = true,
+					CT_Priority = 0,
+					CTID_DIB_ID = "Icons.Tools.Tabs.Solve"
+				}
+			}
+		}
+	},
+	ActiveTool = "EssentialTitle3D"
+}

@@ -1,0 +1,488 @@
+{
+	Tools = ordered() {
+		EssentialAnimatedBackground = GroupOperator {
+			Inputs = ordered() {
+				Comments = Input { Value = "Last update: 2023.04.02\n\nhttps://www.youtube.com/@EssentialVideoEditing\nhttps://www.buymeacoffee.com/essentialvideo\nhttps://paypal.me/essentialvideo", },
+				Input1 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Type",
+				},
+				Input2 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "GradientType",
+				},
+				Input3 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Start",
+					DefaultX = 0,
+					DefaultY = 0.5,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "End",
+					DefaultX = 1,
+					DefaultY = 0.5,
+				},
+				InputHideColor1 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Hide_Color1",
+				},
+				InputOffset1 = InstanceInput {
+					SourceOp = "GradientColor1",
+					Source = "Offset",
+					Name = "Color 1",
+				},
+				InputHideColor2 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Hide_Color2",
+				},
+				InputOffset2 = InstanceInput {
+					SourceOp = "GradientColor2",
+					Source = "Offset",
+					Name = "Color 2",
+					Default = 0.25,
+				},
+				InputHideColor3 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Hide_Color3",
+				},
+				InputOffset3 = InstanceInput {
+					SourceOp = "GradientColor3",
+					Source = "Offset",
+					Name = "Color 3",
+					Default = 0.75,
+				},
+				InputHideColor4 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Hide_Color4",
+				},
+				InputOffset4 = InstanceInput {
+					SourceOp = "GradientColor4",
+					Source = "Offset",
+					Name = "Color 4",
+					Default = 0.5,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "GradientColor1",
+					Source = "Gradient",
+					Name = "Colors",
+				},
+				Input12 = InstanceInput {
+					SourceOp = "GradientColor1",
+					Source = "GradientInterpolationMethod",
+				},
+				InputHideGradientOffset = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Hide_GradientOffset",
+				},
+				Input5 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "GradientOffset",
+					Name = "Offset",
+					Default = 0,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Repeat",
+				},
+				Input7 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "SubPixel",
+				},
+
+				Input_LabelAnimation = InstanceInput {
+					SourceOp = "Background1",
+					Source = "LabelAnimation",
+				},
+				Input8 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "EnableAnimation",
+				},
+				Input10 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "ReverseDirection",
+				},
+				Input9 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "AnimationSpeed",
+					Default = 1,
+					MaxScale = 10,
+				},
+				InputHideGradientEaseCurve = InstanceInput {
+					SourceOp = "Background1",
+					Source = "Hide_GradientEaseCurve",
+				},
+				InputAnimCurves = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "Curve",
+				},
+				InputAnimCurveIn = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "EaseIn",
+					Name = "Ease In/Out",
+					Width = 0.5,
+				},
+				InputAnimCurveOut = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "EaseOut",
+					Width = 0.5,
+				},
+				InputAnimcurveLookup = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "Lookup",
+				},
+
+				Input_LabelGlow = InstanceInput {
+					SourceOp = "Background1",
+					Source = "LabelGlow",
+				},
+				Input37 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Blend",
+					Default = 0,
+				},
+				Input31 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Gain",
+					Default = 2,
+				},
+				Input32 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "XGlowSize",
+					Default = 10,
+				},
+				Input33 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "RedScale",
+					Default = 1,
+				},
+				Input34 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "GreenScale",
+					Default = 1,
+				},
+				Input35 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "BlueScale",
+					Default = 1,
+				},
+				Input36 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "AlphaScale",
+					Default = 1,
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "SoftGlow1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Background1 = Background {
+					CtrlWZoom = false,
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Type = Input { Value = FuID { "Corner" }, },
+						TopLeftRed = Input {
+							SourceOp = "GradientColor1",
+							Source = "Color1",
+						},
+						TopLeftGreen = Input {
+							SourceOp = "GradientColor1",
+							Source = "Color2",
+						},
+						TopLeftBlue = Input {
+							SourceOp = "GradientColor1",
+							Source = "Color3",
+						},
+						TopLeftAlpha = Input {
+							SourceOp = "GradientColor1",
+							Source = "Color4",
+						},
+						TopRightRed = Input {
+							SourceOp = "GradientColor2",
+							Source = "Color1",
+						},
+						TopRightGreen = Input {
+							SourceOp = "GradientColor2",
+							Source = "Color2",
+						},
+						TopRightBlue = Input {
+							SourceOp = "GradientColor2",
+							Source = "Color3",
+						},
+						TopRightAlpha = Input {
+							SourceOp = "GradientColor2",
+							Source = "Color4",
+						},
+						BottomLeftRed = Input {
+							SourceOp = "GradientColor3",
+							Source = "Color1",
+						},
+						BottomLeftGreen = Input {
+							SourceOp = "GradientColor3",
+							Source = "Color2",
+						},
+						BottomLeftBlue = Input {
+							SourceOp = "GradientColor3",
+							Source = "Color3",
+						},
+						BottomLeftAlpha = Input {
+							SourceOp = "GradientColor3",
+							Source = "Color4",
+						},
+						BottomRightRed = Input {
+							SourceOp = "GradientColor4",
+							Source = "Color1",
+						},
+						BottomRightGreen = Input {
+							SourceOp = "GradientColor4",
+							Source = "Color2",
+						},
+						BottomRightBlue = Input {
+							SourceOp = "GradientColor4",
+							Source = "Color3",
+						},
+						BottomRightAlpha = Input {
+							SourceOp = "GradientColor4",
+							Source = "Color4",
+						},
+						Gradient = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 1, 1, 1, 1 },
+									[0.25] = { 1, 0.2, 0, 1 },
+									[0.5] = { 0.5, 1.0, 0, 1 },
+									[0.75] = { 0, 0.6, 1, 1 },
+									[1] = { 1, 1, 1, 1 }
+								}
+							},
+							Expression = "GradientColor1.Gradient",
+						},
+						GradientInterpolationMethod = Input { Expression = "GradientColor1.GradientInterpolationMethod", },
+						SubPixel = Input { Value = FuID { "5x5" }, },
+						Offset = Input { Expression = "GradientOffset+(EnableAnimation*iif(Background1.ReverseDirection==1,-1,1)*AnimationValue*AnimationSpeed)", },
+						AnimationValue = Input {
+							SourceOp = "AnimCurves1",
+							Source = "Value",
+						},
+						Hide_Color1 = Input { Expression = "iif(Type.Value~='Gradient',1,0)", },
+						Hide_Color2 = Input { Expression = "iif(Type.Value=='Horizontal' or Type.Value=='Corner',1,0)", },
+						Hide_Color4 = Input { Expression = "iif(Type.Value=='Corner',1,0)", },
+						Hide_Color3 = Input { Expression = "iif(Type.Value=='Vertical' or Type.Value=='Corner',1,0)", },
+						Hide_GradientOffset = Input { Expression = "iif(Type.Value=='Gradient',1,0)", },
+						Hide_GradientEaseCurve = Input { Expression = "iif(Type.Value=='Gradient',1,0)", },
+					},
+					ViewInfo = OperatorInfo { Pos = { -220, 49.5 } },
+					UserControls = ordered() { 
+						EnableAnimation = { CBC_TriState = false, INP_Integer = false, INP_External = false, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", LINKS_Name = "Enable Animation", }, 
+						AnimationSpeed = { INP_MaxAllowed = 100, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 5, INP_Default = 1, INP_MinScale = 0.1, INP_MinAllowed = 0.1, LINKID_DataType = "Number", INP_External = false, LINKS_Name = "Animation Speed", }, 
+						ReverseDirection = {
+							LINKS_Name = "Reverse Direction",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							INP_Integer = false,
+							CBC_TriState = false,
+							INP_External = false,
+						},
+						LabelGlow = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 7,
+							INP_Default = 1,
+							INPID_InputControl = "LabelControl",
+							LINKS_Name = "Soft Glow",
+						},
+						LabelAnimation = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 8,
+							INP_Default = 1,
+							INPID_InputControl = "LabelControl",
+							LINKS_Name = "Animation",
+						},
+						GradientOffset = {
+							LINKS_Name = "Gradient Offset",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "ScrewControl",
+							INP_Default = 0,
+							INP_Integer = false,
+							INP_MinScale = -1,
+							INP_MaxScale = 1,
+						},
+						AnimationValue = {
+							LINKS_Name = "Animation Value",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_Integer = false,
+							INP_MinScale = 0,
+							INP_MaxScale = 1,
+						},
+						Hide_Color1 = {
+							LBLC_NumInputs = 1,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_Color2 = {
+							LBLC_NumInputs = 1,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_Color3 = {
+							LBLC_NumInputs = 1,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_Color4 = {
+							LBLC_NumInputs = 1,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_GradientOffset = {
+							LBLC_NumInputs = 1,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_GradientEaseCurve = {
+							LBLC_NumInputs = 4,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						}
+					}
+				},
+				GradientColor1 = GradientColorModifier {
+					CtrlWZoom = false,
+					Inputs = {
+						Gradient = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 1, 1, 1, 1 },
+									[0.25] = { 1, 0.2, 0, 1 },
+									[0.5] = { 0.5, 1.0, 0, 1 },
+									[0.75] = { 0, 0.6, 1, 1 },
+									[1] = { 1, 1, 1, 1 }
+								}
+							},
+						},
+						Repeat = Input { Value = FuID { "Repeat" }, },
+						TimeNest = Input { Value = 1, },
+						EndTime = Input { Expression = "iif(Background1.ReverseDirection==1,-1,1)*(Background1.EnableAnimation==0 and 0 or (comp.RenderEnd-comp.RenderStart+1)/Background1.AnimationSpeed)", },
+					},
+				},
+				GradientColor2 = GradientColorModifier {
+					CtrlWZoom = false,
+					Inputs = {
+						Gradient = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 1, 1, 1, 1 },
+									[0.25] = { 1, 0.2, 0, 1 },
+									[0.5] = { 0.5, 1.0, 0, 1 },
+									[0.75] = { 0, 0.6, 1, 1 },
+									[1] = { 1, 1, 1, 1 }
+								}
+							},
+							Expression = "GradientColor1.Gradient",
+						},
+						GradientInterpolationMethod = Input { Expression = "GradientColor1.GradientInterpolationMethod", },
+						Repeat = Input { Value = FuID { "Repeat" }, },
+						Offset = Input { Value = 0.25, },
+						TimeNest = Input { Value = 1, },
+						EndTime = Input { Expression = "GradientColor1.EndTime", },
+					},
+				},
+				GradientColor3 = GradientColorModifier {
+					CtrlWZoom = false,
+					Inputs = {
+						Gradient = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 1, 1, 1, 1 },
+									[0.25] = { 1, 0.2, 0, 1 },
+									[0.5] = { 0.5, 1.0, 0, 1 },
+									[0.75] = { 0, 0.6, 1, 1 },
+									[1] = { 1, 1, 1, 1 }
+								}
+							},
+							Expression = "GradientColor1.Gradient",
+						},
+						GradientInterpolationMethod = Input { Expression = "GradientColor1.GradientInterpolationMethod", },
+						Repeat = Input { Value = FuID { "Repeat" }, },
+						Offset = Input { Value = 0.75, },
+						TimeNest = Input { Value = 1, },
+						EndTime = Input { Expression = "GradientColor1.EndTime", },
+					},
+				},
+				GradientColor4 = GradientColorModifier {
+					CtrlWZoom = false,
+					Inputs = {
+						Gradient = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 1, 1, 1, 1 },
+									[0.25] = { 1, 0.2, 0, 1 },
+									[0.5] = { 0.5, 1.0, 0, 1 },
+									[0.75] = { 0, 0.6, 1, 1 },
+									[1] = { 1, 1, 1, 1 }
+								}
+							},
+							Expression = "GradientColor1.Gradient",
+						},
+						GradientInterpolationMethod = Input { Expression = "GradientColor1.GradientInterpolationMethod", },
+						Repeat = Input { Value = FuID { "Repeat" }, },
+						Offset = Input { Value = 0.5, },
+						TimeNest = Input { Value = 1, },
+						EndTime = Input { Expression = "GradientColor1.EndTime", },
+					},
+				},
+				AnimCurves1 = LUTLookup {
+					CtrlWZoom = false,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Curve = Input { Value = FuID { "Easing" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurves1Lookup",
+							Source = "Value",
+						},
+					},
+				},
+				AnimCurves1Lookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					NameSet = true,
+				},
+				SoftGlow1 = SoftGlow {
+					Inputs = {
+						Blend = Input { Value = 0, },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						ColorScale = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 49.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialAnimatedBackground"
+}

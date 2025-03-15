@@ -1,0 +1,636 @@
+{
+	Tools = ordered() {
+		EssentialNoiseMask = GroupOperator {
+			Inputs = ordered() {
+				Comments = Input { Value = "Last updated: 2023.04.15\n\nhttps://www.youtube.com/@EssentialVideoEditing\nhttps://www.buymeacoffee.com/essentialvideo\nhttps://paypal.me/essentialvideo", },
+				MainInput1 = InstanceInput {
+					SourceOp = "PipeRouter1",
+					Source = "Input",
+				},
+				InputLabelMask = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "LabelMask",
+				},
+				Input11 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "MaskType",
+					Name = "Shape",
+				},
+				InputSoftEdge = InstanceInput {
+					SourceOp = "BgMask",
+					Source = "SoftEdge",
+					MaxScale = 0.2,
+					Default = 0,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Start",
+					DefaultX = 0.5,
+					DefaultY = 0.5,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "End",
+					DefaultX = 1,
+					DefaultY = 0.5,
+				},
+				InputMaskInverted = InstanceInput {
+					SourceOp = "ChannelBooleans1",
+					Source = "ApplyMaskInverted",
+					Name = "Invert Mask",
+				},
+				InputNoiseBlank = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "ApplyBlank1",
+				},
+				InputAnimateOffset = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "AnimateOffset",
+					Name = "Animate Size",
+				},
+				InputHideOffset = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Hide_Offset",
+				},
+				Input10 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "NoiseOffset",
+					Name = "Size",
+					Default = 0,
+				},
+				InputHideAnimation = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Hide_Animation",
+				},
+				InputSetTime = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "BtnSetTime",
+					Name = "Set Time",
+					Width = 0.32,
+				},
+				InputAnimationTime = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "AnimationTime",
+					Default = 30,
+					Width = 0.68,
+				},
+				InputStartOffset = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "StartOffset",
+					Name = "Start Size",
+					Default = 0,
+				},
+				InputEndOffset = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "EndOffset",
+					Name = "End Size",
+					Default = 1,
+				},
+				InputAnimCurves = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "Curve",
+				},
+				InputAnimcurveLookup = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "Lookup",
+				},
+				InputAnimEaseCurveIn = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "EaseIn",
+					Width = 0.5,
+					Name = "Ease In/Out",
+				},
+				InputAnimEaseCurveOut = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "EaseOut",
+					Width = 0.5,
+				},
+				InputAnimInvert = InstanceInput {
+					SourceOp = "AnimCurves1",
+					Source = "Invert",
+					Name = "Invert Animation",
+					Width = 1,
+				},
+
+				InputLabelNoise = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "LabelNoise",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Detail",
+					Default = 2,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Contrast",
+					Default = 1,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "LockXY",
+					Default = 1,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "XScale",
+					Default = 2,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "YScale",
+					Default = 2,
+				},
+				InputNoiseAngle = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Angle",
+					Default = 0,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "Seethe",
+					Default = 0,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "FastNoise1",
+					Source = "SeetheRate",
+					Default = 0,
+				},
+
+				InputEnableBorder = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "EnableBorder",
+					Name = "Border",
+					Default = 0,
+				},
+				InputHideBorder = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "Hide_Border",
+				},
+				Input12 = InstanceInput {
+					SourceOp = "BorderWidth",
+					Source = "BorderWidth",
+					Default = 0.002,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "BorderColor",
+					Source = "TopLeftRed",
+					Name = "Border Color",
+					ControlGroup = 14,
+					Default = 1,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "BorderColor",
+					Source = "TopLeftGreen",
+					ControlGroup = 14,
+					Default = 1,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "BorderColor",
+					Source = "TopLeftBlue",
+					ControlGroup = 14,
+					Default = 1,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "BorderColor",
+					Source = "TopLeftAlpha",
+					ControlGroup = 14,
+					Default = 1,
+				},
+				InputGlowSeparator = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "Blank6",
+				},
+				Input25 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Blend",
+					Name = "Enable Glow",
+					Default = 0,
+				},
+				InputHideGlow = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Hide_Glow",
+					Expression = "Blend",
+				},
+				Input17 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Gain",
+					Default = 2,
+				},
+				Input18 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "LockXY",
+					Default = 1,
+				},
+				Input19 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "XGlowSize",
+					Default = 10,
+				},
+				Input20 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "YGlowSize",
+					Default = 10,
+				},
+				Input21 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "RedScale",
+					Default = 1,
+				},
+				Input22 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "GreenScale",
+					Default = 1,
+				},
+				Input23 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "BlueScale",
+					Default = 1,
+				},
+				Input24 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "AlphaScale",
+					Default = 1,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Merge1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 165, 82.5 },
+				Flags = {
+					AllowPan = false,
+					GridSnap = true,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 587, 141.727, 255.5, 28.4848 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				PipeRouter1 = PipeRouter {
+					CtrlWZoom = false,
+					ViewInfo = PipeRouterInfo { Pos = { -165, 115.5 } },
+				},
+				FastNoise1 = FastNoise {
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Detail = Input { Value = 0.1, },
+						Contrast = Input { Value = 0.5, },
+						XScale = Input { Value = 20, },
+						YScale = Input { Value = 20, },
+						Type = Input { Value = 1, },
+						GradientType = Input {
+							Value = 3,
+							Expression = "MaskType+1",
+						},
+						Start = Input { Value = { 0.5, 0.5 }, },
+						Gradient = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 1, 1, 1, 1 },
+									[1] = { 0, 0, 0, 0 }
+								}
+							},
+						},
+						Offset = Input {
+							Value = 0.2,
+							Expression = "iif(AnimateOffset==0, NoiseOffset,  StartOffset + (EndOffset-StartOffset)*AnimationValue)",
+						},
+						SubPixel = Input { Value = 4, },
+						NoiseOffset = Input { Value = 0.2, },
+						AnimationValue = Input {
+							SourceOp = "AnimCurves1",
+							Source = "Value",
+						},
+						Hide_Animation = Input { Expression = "AnimateOffset", },
+						Hide_Offset = Input {
+							Value = 1,
+							Expression = "1-AnimateOffset",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 16.5 } },
+					UserControls = ordered() {
+						MaskType = {
+							{ MBTNC_AddButton = "Linear" },
+							{ MBTNC_AddButton = "Reflect" },
+							{ MBTNC_AddButton = "Square" },
+							{ MBTNC_AddButton = "Cross" },
+							{ MBTNC_AddButton = "Radial" },
+							{ MBTNC_AddButton = "Angle" },
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "MultiButtonControl",
+							MBTNC_ShowBasicButton = true,
+							INP_MaxScale = 1,
+							INP_Default = 2,
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							MBTNC_ShowName = false,
+							MBTNC_StretchToFit = true,
+							MBTNC_ShowToolTip = false,
+							LINKS_Name = "Mask Type",
+						},
+						LabelMask = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 19,
+							LINKS_Name = "Mask",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						LabelNoise = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 8,
+							LINKS_Name = "Noise",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						NoiseOffset = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							INPID_InputControl = "ScrewControl",
+							INP_MaxScale = 1,
+							INP_Default = 0,
+							INP_MinScale = -1,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							LINKS_Name = "Noise Offset",
+						},
+						AnimateOffset = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INP_Default = 0,
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Animate Offset",
+						},
+						StartOffset = {
+							INPID_InputControl = "ScrewControl",
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INP_MinScale = -1,
+							INP_Default = 0,
+							INP_MaxScale = 1,
+							LINKS_Name = "Start Offset",
+						},
+						EndOffset = {
+							INPID_InputControl = "ScrewControl",
+							INP_Integer = false,
+							INP_External = false,
+							LINKID_DataType = "Number",
+							INP_MinScale = -1,
+							INP_Default = 1,
+							INP_MaxScale = 1,
+							LINKS_Name = "End Offset",
+						},
+						AnimationValue = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0,
+							INP_MaxScale = 1,
+							LINKS_Name = "Animation Value",
+						},
+						AnimationTime = {
+							INP_MaxAllowed = 1500,
+							INP_Integer = true,
+							INPID_InputControl = "SliderControl",
+							INP_MaxScale = 150,
+							INP_Default = 30,
+							INP_MinScale = 1,
+							INP_MinAllowed = 1,
+							LINKID_DataType = "Number",
+							INP_External = false,
+							LINKS_Name = "Animation Time",
+						},
+						BtnSetTime = {
+							LINKS_Name = "Set",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "ButtonControl",
+							INP_Integer = false,
+							ICD_Width = 0.25,
+							BTNCS_Execute = "FastNoise1.AnimationTime=comp.CurrentTime-comp:GetAttrs('COMPN_RenderStart');",
+							INP_External = false,
+						},
+						Hide_Animation = {
+							LBLC_NumInputs = 9,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						},
+						Hide_Offset = {
+							LBLC_NumInputs = 1,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						}
+					}
+				},
+				AnimCurves1 = LUTLookup {
+					CtrlWZoom = false,
+					Inputs = {
+						Source = Input { Value = FuID { "Duration" }, },
+						Curve = Input { Value = FuID { "Easing" }, },
+						Lookup = Input {
+							SourceOp = "AnimCurvesonFastNoise1Lookup",
+							Source = "Value",
+						},
+						TimeScale = Input {
+							Value = 5,
+							Expression = "(comp.RenderEnd-comp.RenderStart+1)/FastNoise1.AnimationTime",
+						},
+					},
+				},
+				AnimCurvesonFastNoise1Lookup = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 255 },
+					NameSet = true,
+				},
+				BgMask = Background {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "FastNoise1",
+							Source = "Output",
+						},
+						MaskLow = Input {
+							Value = 0.999,
+							Expression = "max(0,0.999-SoftEdge)",
+						},
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 1, },
+						TopLeftBlue = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 49.5 } },
+					UserControls = ordered() {
+						SoftEdge = {
+							INP_Integer = false,
+							INPID_InputControl = "SliderControl",
+							LINKID_DataType = "Number",
+							INP_MinScale = 0,
+							INP_Default = 0,
+							INP_MaxScale = 1,
+							LINKS_Name = "Soft Edge",
+						}
+					}
+				},
+				ChannelBooleans1 = ChannelBoolean {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "BgMask",
+							Source = "Output",
+						},
+						Background = Input {
+							SourceOp = "PipeRouter1",
+							Source = "Output",
+						},
+						MultiplyByMask = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 82.5 } },
+				},
+				Merge1 = Merge {
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "ChannelBooleans1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "SoftGlow1",
+							Source = "Output",
+						},
+						EffectMask = Input {
+							SourceOp = "PipeRouter1",
+							Source = "Output",
+						},
+						Operator = Input { Value = FuID { "Under" }, },
+						PerformDepthMerge = Input { Value = 0, },
+						Hide_Border = Input { Expression = "EnableBorder", },
+						Blend = Input { Expression = "EnableBorder", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 82.5 } },
+					UserControls = ordered() {
+						EnableBorder = {
+							LINKS_Name = "Enable Border",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							INP_Integer = false,
+							INP_Default = 0,
+							CBC_TriState = false,
+							INP_External = false,
+						},
+						Hide_Border = {
+							LBLC_NumInputs = 16,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						}
+					}
+				},
+				BorderWidth = ErodeDilate {
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = 3, },
+						XAmount = Input { Expression = "BorderWidth*(ChannelBooleans1.ApplyMaskInverted==1 and -1 or 1)", },
+						Input = Input {
+							SourceOp = "BgMask",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 49.5 } },
+					UserControls = ordered() {
+						BorderWidth = {
+							INP_MaxAllowed = 1,
+							INP_Integer = false,
+							INPID_InputControl = "SliderControl",
+							INP_MaxScale = 0.02,
+							INP_Default = 0.002,
+							INP_MinScale = 0,
+							INP_MinAllowed = 0,
+							LINKID_DataType = "Number",
+							LINKS_Name = "Border Width",
+						}
+					}
+				},
+				BorderColor = Background {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "BorderWidth",
+							Source = "Output",
+						},
+						ApplyMaskInverted = Input {
+							Value = 1,
+							Expression = "ChannelBooleans1.ApplyMaskInverted",
+						},
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 1, },
+						TopLeftBlue = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 49.5 } },
+				},
+				SoftGlow1 = SoftGlow {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						Input = Input {
+							SourceOp = "BorderColor",
+							Source = "Output",
+						},
+						Blend = Input { Value = 0, },
+						Hide_Glow = Input { Expression = "Blend", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 49.5 } },
+					UserControls = ordered() {
+						Blend = {
+							CBC_TriState = false,
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INP_Default = 1,
+							INPID_InputControl = "CheckboxControl",
+							LINKS_Name = "Blend",
+						},
+						Hide_Glow = {
+							LBLC_NumInputs = 8,
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							IC_Visible = false,
+						}
+					}
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialNoiseMask"
+}

@@ -1,0 +1,590 @@
+{
+	Tools = ordered() {
+		EssentialSpeechBubble = GroupOperator {
+			Inputs = ordered() {
+				InputText_1 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "StyledText",
+					Page = "Controls",
+				},
+				InputText_2 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Font",
+					ControlGroup = 2,
+				},
+				InputText_3 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Style",
+					ControlGroup = 2,
+				},
+				InputText_4 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Red1Clone",
+					Name = "Color",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				InputText_5 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Green1Clone",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				InputText_6 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Blue1Clone",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				InputText_7 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Alpha1Clone",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				InputText_8 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Size",
+					Default = 0.08,
+				},
+				InputText_9 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "CharacterSpacingClone",
+					Name = "Tracking",
+					Default = 1,
+				},
+				Input_SeparatorLine = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "Blank6",
+				},
+				BubbleShape = InstanceInput {
+					SourceOp = "_BubbleShape",
+					Source = "BubbleShape",
+				},
+				Show_CornerRadius = InstanceInput {
+					SourceOp = "_BubbleShape",
+					Source = "Show_CornerRadius",
+				},
+				Input2 = InstanceInput {
+					SourceOp = "_RectangleCorner",
+					Source = "CornerRadius",
+					Default = 0,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "_SizeControls",
+					Source = "XSize",
+					Name = "Width",
+					Default = 0.25,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "_SizeControls",
+					Source = "YSize",
+					Name = "Height",
+					Default = 0.15,
+				},
+				Input_BubbleCenter = InstanceInput {
+					SourceOp = "_SizeControls",
+					Source = "Center",
+					Name = "Cener",
+					Default = 1,
+				},
+				Input23 = InstanceInput {
+					SourceOp = "_SizeControls",
+					Source = "Angle",
+					Name = "Rotation",
+					Default = 0,
+				},
+
+				LabelPointer = InstanceInput {
+					SourceOp = "_BubbleShape",
+					Source = "LabelPointer",
+				},
+				Input6 = InstanceInput {
+					SourceOp = "_SizePointer",
+					Source = "Height",
+					Name = "Length",
+					Default = 0.5,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "_SizePointer",
+					Source = "Width",
+					Name = "Width",
+					Default = 0.05,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "_SizePointer",
+					Source = "Angle",
+					Name = "Angle",
+					Default = 30,
+				},
+
+				Input_LabelOutline = InstanceInput {
+					SourceOp = "_BubbleShape",
+					Source = "LabelOutline",
+				},
+				Input9 = InstanceInput {
+					SourceOp = "_Outline",
+					Source = "Thickness",
+					Name = "Thickness",
+					MinScale = 0,
+					Default = 0.005,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "_Outline",
+					Source = "JoinStyle",
+					Name = "Style",
+					ControlGroup = 10,
+					Default = 2,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "_OutlineColor",
+					Source = "Red",
+					Name = "Color",
+					ControlGroup = 11,
+					Default = 1,
+				},
+				Input12 = InstanceInput {
+					SourceOp = "_OutlineColor",
+					Source = "Green",
+					ControlGroup = 11,
+					Default = 1,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "_OutlineColor",
+					Source = "Blue",
+					ControlGroup = 11,
+					Default = 1,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "_OutlineColor",
+					Source = "Alpha",
+					ControlGroup = 11,
+					Default = 1,
+				},
+
+				Input_LabelBackground = InstanceInput {
+					SourceOp = "_BubbleShape",
+					Source = "LabelBackground",
+				},
+				Input_EnableBackground = InstanceInput {
+					SourceOp = "_BubbleShape",
+					Source = "EnableBackground",
+				},
+				Show_Background = InstanceInput {
+					SourceOp = "_BubbleShape",
+					Source = "Show_Background",
+				},
+				Input16 = InstanceInput {
+					SourceOp = "_Background",
+					Source = "Red",
+					Name = "Color",
+					ControlGroup = 13,
+					Default = 0.022872,
+				},
+				Input17 = InstanceInput {
+					SourceOp = "_Background",
+					Source = "Green",
+					ControlGroup = 13,
+					Default = 0.6746405255474,
+				},
+				Input18 = InstanceInput {
+					SourceOp = "_Background",
+					Source = "Blue",
+					ControlGroup = 13,
+					Default = 0.953,
+				},
+				Input19 = InstanceInput {
+					SourceOp = "_Background",
+					Source = "Alpha",
+					ControlGroup = 13,
+					Default = 1,
+				},
+				LabelBlankLine1 = InstanceInput {
+					SourceOp = "_BubbleShape",
+					Source = "LabelBlankLine",
+				},
+				InputDonate = InstanceInput {
+					SourceOp = "_BubbleShape",
+					Source = "DonateButton",
+				},
+				InputSubscribe = InstanceInput {
+					SourceOp = "_BubbleShape",
+					Source = "SubscribeButton",
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Merge1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				_PointerSize = sNGon {
+					NameSet = true,
+					Inputs = {
+						Sides = Input { Value = 4, },
+						JoinStyle = Input { Value = 2, },
+						Width = Input {
+							Expression = "_SizePointer.Width",
+						},
+						Height = Input {
+							Expression = "_SizePointer.Height/1.7777777778",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -389.939, 64.0982 } },
+				},
+				sBoolean1 = sBoolean {
+					Inputs = {
+						Input1 = Input {
+							SourceOp = "_PointerSize",
+							Source = "Output",
+						},
+						Input2 = Input {
+							SourceOp = "sRectangle2",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -279.939, 64.0982 } },
+				},
+				sRectangle2 = sRectangle {
+					Inputs = {
+						["Translate.Y"] = Input {
+							Value = -0.125,
+							Expression = "-_PointerSize.Height/2",
+						},
+						Width = Input {
+							Value = 0.1,
+							Expression = "_PointerSize.Width",
+						},
+						Height = Input {
+							Value = 0.25,
+							Expression = "_PointerSize.Height",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -279.939, 31.0982 } },
+				},
+				_PointerAngle = sTransform {
+					NameSet = true,
+					Inputs = {
+						ZRotation = Input { Value = 30, Expression = "_SizePointer.Angle", },
+						Input = Input {
+							SourceOp = "sBoolean1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -114.939, 64.0982 } },
+				},
+				_OutlineColor = sBoolean {
+					NameSet = true,
+					Inputs = {
+						Operation = Input { Value = FuID { "Union" }, },
+						Input1 = Input {
+							SourceOp = "_BubbleShape",
+							Source = "Output",
+						},
+						Input2 = Input {
+							SourceOp = "_PointerAngle",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -114.939, 130.098 } },
+				},
+				_BubbleShape = sBoolean {
+					NameSet = true,
+					Inputs = {
+						Operation = Input { Expression = "iif(BubbleShape==0, \"Intersection\", \"Union\")", },
+						Input1 = Input {
+							SourceOp = "_RectangleCorner",
+							Source = "Output",
+						},
+						Input2 = Input {
+							SourceOp = "_BubbleSize",
+							Source = "Output",
+						},
+						Show_CornerRadius = Input { Expression = "BubbleShape", },
+						PointerWidth = Input { Value = 0.05, },
+						PointerLength = Input { Value = 0.25, },
+						Show_Background = Input { Expression = "Input_EnableBackground", },
+					},
+					ViewInfo = OperatorInfo { Pos = { -279.939, 130.098 } },
+					UserControls = ordered() {
+						BubbleShape = {
+							{ MBTNC_AddButton = "Ellipse" },
+							{ MBTNC_AddButton = "Rectangle" },
+							INP_Integer = false,
+							INPID_InputControl = "MultiButtonControl",
+							MBTNC_ShowBasicButton = true,
+							ICS_ControlPage = "Controls",
+							LINKID_DataType = "Number",
+							MBTNC_ShowName = false,
+							MBTNC_StretchToFit = false,
+							MBTNC_ShowToolTip = false,
+							LINKS_Name = "Bubble Shape",
+						},
+						LabelPointer = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 3,
+							LINKS_Name = "Pointer",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						LabelOutline = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 6,
+							LINKS_Name = "Outline",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						LabelBackground = {
+							INP_Integer = false,
+							LBLC_DropDownButton = true,
+							LINKID_DataType = "Number",
+							LBLC_NumInputs = 6,
+							LINKS_Name = "Background",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+						},
+						LabelBlankLine = {
+							INP_Integer = false,
+							LBLC_DropDownButton = false,
+							LINKID_DataType = "Number",
+							LINKS_Name = "",
+							INPID_InputControl = "LabelControl",
+							INP_Default = 1,
+							INP_External = false,
+						},
+						Show_CornerRadius = {
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							LBLC_NumInputs = 1,
+							IC_Visible = false,
+						},
+						EnableBackground = {
+							LINKS_Name = "Enable Background",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "CheckboxControl",
+							INP_Integer = false,
+							INP_Default = 1,
+							CBC_TriState = false,
+						},
+						Show_Background = {
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							LBLC_NumInputs = 5,
+							IC_Visible = false,
+						},
+						DonateButton = { 
+							INPID_InputControl = "ButtonControl", 
+							BTNCS_Execute = "os.execute('open https://www.buymeacoffee.com/essentialvideo'); os.execute('start https://www.buymeacoffee.com/essentialvideo');", 
+							LINKID_DataType = "Number", 
+							LINKS_Name = "Donate!", 
+							ICD_Width = 0.5,
+						},
+						SubscribeButton = { 
+							INPID_InputControl = "ButtonControl", 
+							BTNCS_Execute = "os.execute('open https://www.youtube.com/@EssentialVideoEditing/videos?sub_confirmation=1'); os.execute('start https://www.youtube.com/@EssentialVideoEditing/videos?sub_confirmation=1');", 
+							LINKID_DataType = "Number", 
+							LINKS_Name = "Subscribe!", 
+							ICD_Width = 0.5,
+						}
+
+					}
+				},
+				_BubbleSize = sEllipse {
+					NameSet = true,
+					Inputs = {
+						Width = Input {
+							Value = 0.25,
+							Expression = "_SizeControls.XSize",
+						},
+						Height = Input {
+							Value = 0.15,
+							Expression = "_SizeControls.YSize/1.7777777778",
+						},
+						Angle = Input {
+							Value = 0,
+							Expression = "_SizeControls.Angle",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -389.939, 130.098 } },
+				},
+				_Outline = sOutline {
+					NameSet = true,
+					Inputs = {
+						Thickness = Input { Value = 0.005, },
+						JoinStyle = Input { Value = 2, },
+						Input = Input {
+							SourceOp = "_OutlineColor",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 50.0609, 130.098 } },
+				},
+				_RectangleCorner = sRectangle {
+					NameSet = true,
+					Inputs = {
+						Width = Input {
+							Value = 0.25,
+							Expression = "_BubbleSize.Width",
+						},
+						Height = Input {
+							Value = 0.15,
+							Expression = "_BubbleSize.Height",
+						},
+						Angle = Input {
+							Value = 0,
+							Expression = "_BubbleSize.Angle",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -389.939, 163.098 } },
+				},
+				sMerge2 = sMerge {
+					Inputs = {
+						Input1 = Input {
+							SourceOp = "_Background",
+							Source = "Output",
+						},
+						Input2 = Input {
+							SourceOp = "_Outline",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 50.0609, 196.098 } },
+				},
+				_Background = sBoolean {
+					NameSet = true,
+					Inputs = {
+						Operation = Input { Value = FuID { "Union" }, },
+						Input1 = Input {
+							SourceOp = "_BubbleShape",
+							Source = "Output",
+						},
+						Input2 = Input {
+							SourceOp = "_PointerAngle",
+							Source = "Output",
+						},
+						Red = Input { Value = 0.2, },
+						Green = Input { Value = 0.4, },
+						Blue = Input { Value = 0.6, },
+						FrameRenderScript = Input { Value = "if (_BubbleShape.EnableBackground==0) then\n	Red=0; Green=0; Blue=0;Alpha=0;\nend", },
+					},
+					ViewInfo = OperatorInfo { Pos = { -114.939, 196.098 } },
+				},
+				_Position = sTransform {
+					NameSet = true,
+					Inputs = {
+						XOffset = Input { Expression = "_SizeControls.Center.X-0.5", },
+						YOffset = Input { Expression = "(_SizeControls.Center.Y-0.5)/1.7777777778", },
+						YSize = Input { Expression = "XSize", },
+						Input = Input {
+							SourceOp = "sMerge2",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 215.061, 196.098 } },
+				},
+				_SizeControls = Transform {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						UseSizeAndAspect = Input { Value = 0, },
+						XSize = Input { Value = 0.25, },
+						YSize = Input { Value = 0.25, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 215.061, 130.098 } },
+				},
+				_SizePointer = RectangleMask {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							SourceOp = "Vector_SizePointer_Center",
+							Source = "Position",
+						},
+						Width = Input { Value = 0.05, },
+						Angle = Input { Value = 30, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 215.061, 90.0758 } },
+				},
+				Vector_SizePointer_Center = Vector {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Origin = Input {
+							Value = { 0.5, 0.5 },
+							Expression = "_SizeControls.Center",
+						},
+						Distance = Input { Value = 0.01, },
+						Angle = Input {
+							Value = -60,
+							Expression = "_SizePointer.Angle-90",
+						},
+					},
+				},
+	
+				sRender1 = sRender {
+					CtrlWZoom = false,
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 3840, },
+						Height = Input { Value = 2160, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Input = Input {
+							SourceOp = "_Position",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 380.061, 196.098 } },
+				},
+				Text1 = TextPlus {
+					Inputs = {
+						GlobalOut = Input { Value = 149, },
+						Width = Input { Value = 3840, },
+						Height = Input { Value = 2160, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Expression = "_SizeControls.Center", },
+						AngleZ = Input { Expression = "_SizeControls.Angle", },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input { Value = "Essential", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "SemiBold", },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 384, 108.167 } },
+				},
+				Merge1 = Merge {
+					CtrlWZoom = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "sRender1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Text1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 523.667, 172.651 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "EssentialSpeechBubble"
+}

@@ -1,0 +1,168 @@
+{
+	Tools = ordered() {
+		VEL_FIRE_EFFECT = GroupOperator {
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "pEmitter1",
+					Source = "Number",
+					Default = 200,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "pEmitter1",
+					Source = "Lifespan",
+					Default = 30,
+				},
+				MainInput1 = InstanceInput {
+					SourceOp = "pEmitter1",
+					Source = "BitmapRgn.Bitmap",
+				},
+				Input3 = InstanceInput {
+					SourceOp = "pDirectionalForce1",
+					Source = "Strength",
+					Default = 0.032,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "pDirectionalForce1",
+					Source = "Direction",
+					Default = 90,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "pTurbulence1",
+					Source = "XStrength",
+					Default = 0.1,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "pTurbulence1",
+					Source = "YStrength",
+					Default = 0,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "pTurbulence1",
+					Source = "ZStrength",
+					Default = 0,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "pRender1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				pEmitter1 = pEmitter {
+					ID = 1,
+					Inputs = {
+						Number = Input { Value = 200, },
+						Lifespan = Input { Value = 30, },
+						Style = Input { Value = FuID { "ParticleStyleBlob" }, },
+						Region = Input { Value = FuID { "BitmapRgn" }, },
+						["ParticleStyle.ColorControls"] = Input { Value = 1, },
+						["ParticleStyle.ColorOverLifeControls"] = Input { Value = 1, },
+						["ParticleStyle.ColorOverLife"] = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 1, 1, 0, 1 },
+									[1] = { 1, 0, 0, 1 }
+								}
+							},
+						},
+						["ParticleStyle.SizeControls"] = Input { Value = 1, },
+						["ParticleStyle.Size"] = Input { Value = 3, },
+						["ParticleStyle.SizeOverLife"] = Input {
+							SourceOp = "pEmitter1SizeOverLife",
+							Source = "Value",
+						},
+						["ParticleStyle.FadeControls"] = Input { Value = 1, },
+						["ParticleStyle.FadeOut"] = Input { Value = 0.5, },
+						["ParticleStyle.BlurOverLife"] = Input {
+							SourceOp = "pEmitter1BlurOverLife2D",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, -16.5 } },
+				},
+				pEmitter1SizeOverLife = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0.5, RH = { 0.333333333333333, 0.433806146572104 }, Flags = { Linear = true } },
+							[1] = { 0.301418439716312, LH = { 0.666666666666667, 0.367612293144208 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 192, Green = 128, Blue = 64 },
+					CtrlWZoom = false,
+				},
+				pEmitter1BlurOverLife2D = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0.5, RH = { 0.333333333333333, 0.5 }, Flags = { Linear = true } },
+							[1] = { 0.5, LH = { 0.666666666666667, 0.5 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				pDirectionalForce1 = pDirectionalForce {
+					ID = 4,
+					Inputs = {
+						Strength = Input { Value = 0.032, },
+						Direction = Input { Value = 90, },
+						Input = Input {
+							SourceOp = "pEmitter1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 440, -16.5 } },
+				},
+				pTurbulence1 = pTurbulence {
+					ID = 5,
+					Inputs = {
+						YStrength = Input { Value = 0, },
+						ZStrength = Input { Value = 0, },
+						StrengthOverLifeLUT = Input {
+							SourceOp = "pTurbulence1StrengthOverLifeLUT",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "pDirectionalForce1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 550, -16.5 } },
+				},
+				pTurbulence1StrengthOverLifeLUT = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0.5, RH = { 0.333333333333333, 0.5 }, Flags = { Linear = true } },
+							[1] = { 0.5, LH = { 0.666666666666667, 0.5 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				pRender1 = pRender {
+					CtrlWZoom = false,
+					Inputs = {
+						_MotionBlurWarning = Input { Disabled = true, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						OutputMode = Input { Value = FuID { "TwoD" }, },
+						Blur = Input { Value = 1.6, },
+						Glow = Input { Value = 0.11, },
+						PreGenerateFrames = Input { Value = 80, },
+						["MaterialID.MaterialID"] = Input { Value = 1, },
+						["ObjectID.ObjectID"] = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "pTurbulence1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 715, -16.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "VEL_FIRE_EFFECT"
+}
